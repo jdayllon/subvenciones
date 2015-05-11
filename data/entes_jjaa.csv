@@ -1,0 +1,351 @@
+Tipo de Ente,Código de Ente,Nombre,CIF,Alta Desde
+A. G. COMUNIDAD AUTÓNOMA,01-00-000-B-B-000,Comunidad Autónoma de Andalucía,S4111001F,30/12/1981
+OO.AA.ADMINISTRATIVOS,01-00-000-B-V-002,Inst. Andaluz Administración Pública,Q9150007D,18/12/1985
+OO.AA.ADMINISTRATIVOS,01-00-000-B-V-004,Inst. Estadística y Cartografía de Andalucía (I.E.C.A.),Q9150014J,08/01/1990
+OO.AA.ADMINISTRATIVOS,01-00-000-B-V-005,P. Alhambra y Generalife,Q1818001H,01/01/1986
+OO.AA.ADMINISTRATIVOS,01-00-000-B-V-006,Inst. Andaluz Mujer,Q9150012D,01/01/1989
+OO.AA.ADMINISTRATIVOS,01-00-000-B-V-007,Ctro. Andaluz Arte Contemporáneo,Q9150015G,06/02/1990
+OO.AA.ADMINISTRATIVOS,01-00-000-B-V-008,Inst. Andaluz Juventud,Q9150017C,01/01/1997
+OO.AA.ADMINISTRATIVOS,01-00-000-B-V-009,Serv. Andaluz Salud,Q9150013B,30/05/1986
+OO.AA.ADMINISTRATIVOS,01-00-000-B-V-014,"Inst. Andaluz Inv. y Form. Agraria, Pesquera,Alimentaria y Prod. Eco.",Q4100689A,05/08/2003
+OO.AA.ADMINISTRATIVOS,01-00-000-B-V-017,Instituto Andaluz de Prevención de Riesgos Laborales,Q4100718H,31/12/2006
+OO.AA.ADMINISTRATIVOS,01-00-000-B-V-018,Agencia de defensa de la Competencia de Andalucía,Q4100713I,05/07/2007
+OO.AA.ADMINISTRATIVOS,01-00-000-B-V-019,Agencia Andaluza de Evaluacion Educativa,S4100025H,25/01/2008
+OO.AA.ADMINISTRATIVOS,01-00-000-B-V-020,Instituto Andaluz de enseñanzas artísticas superiores,,25/01/2008
+ENTIDADES PÚBLICAS EMPRESARIALES,01-00-000-B-I-001,Instituto Andaluz de Patrimonio Histórico,Q4100720D,06/07/2007
+ENTIDADES PÚBLICAS EMPRESARIALES,01-00-000-B-I-002,Agencia Andaluza de Cooperación Internacional para el Desarrollo,Q4100719F,25/05/2006
+ENTIDADES PÚBLICAS EMPRESARIALES,01-00-000-B-I-003,Agencia Publica Emp. de la Radio y Televisión de Andalucía,Q4191001I,16/01/2008
+ENTIDADES PÚBLICAS EMPRESARIALES,01-00-000-B-I-004,Agencia Andaluza del Conocimiento,Q4100812I,22/12/2007
+ENTIDADES PÚBLICAS EMPRESARIALES,01-00-000-B-I-005,Agencia de Servicios Sociales y Dependencia de Andalucía,Q4100811A,30/04/2011
+ENTIDADES PÚBLICAS EMPRESARIALES,01-00-000-B-I-006,Agencia de Medio Ambiente y Agua de Andalucía,Q4100799H,30/04/2011
+ENTIDADES PÚBLICAS EMPRESARIALES,01-00-000-B-I-012,Agencia de Obra Pública de la Junta de Andalucía,Q4100686G,30/04/2011
+ENTIDADES PÚBLICAS EMPRESARIALES,01-00-000-B-I-013,Agencia Pública Empresarial Costa del Sol,Q7955060D,30/04/2011
+ENTIDADES PÚBLICAS EMPRESARIALES,01-00-000-B-I-014,Agencia Pca. Empres. Sanitaria Hospital Alto Guadalquivir,Q2300601H,30/04/2011
+ENTIDADES PÚBLICAS EMPRESARIALES,01-00-000-B-I-015,Agencia Pca. Empresarial Sanitaria Bajo Guadalquivir,Q4100710E,30/04/2011
+ENTIDADES PÚBLICAS EMPRESARIALES,01-00-000-B-I-016,Agencia Andaluza de Instituciones Culturales,Q9155027G,30/04/2011
+ENTIDADES PÚBLICAS EMPRESARIALES,01-00-000-B-I-017,Agencia Pca. Empresarial Hospital de Poniente de Almería,Q5450010C,30/04/2011
+ENTIDADES PÚBLICAS EMPRESARIALES,01-00-000-B-I-018,Ente Público Andaluz de Infraestructuras y Servicios Educativos,Q4100702B,01/07/2011
+ENTIDADES PÚBLICAS EMPRESARIALES,01-00-000-B-I-019,E. Pca. Emergencias Sanitarias (EPES),Q2900463G,01/07/2011
+ENTIDADES PÚBLICAS EMPRESARIALES,01-00-000-B-I-020,Agencia de Vivienda y Rehabilitación de Andalucía (AVRA),Q9155006A,01/07/2011
+ENTIDADES PÚBLICAS EMPRESARIALES,01-00-000-B-I-021,Agencia Pública de Puertos de Andalucía,Q9155023F,01/07/2011
+ENTIDADES PÚBLICAS EMPRESARIALES,01-00-000-B-I-022,Agencia de Innovación y Desarrollo de Andalucía,Q9150009J,01/07/2011
+ENTIDADES PÚBLICAS EMPRESARIALES,01-00-000-B-I-023,Agencia Andaluza de la Energía,Q4100698B,01/07/2011
+ENTES PÚBLICOS,01-00-000-B-U-011,Consejo Audiovisual de Andalucia,S4111001F,31/12/2004
+ENTES PÚBLICOS,01-00-000-B-U-015,Instituto Andaluz de Finanzas,,01/01/2000
+AGENCIAS,01-00-000-B-Y-001,Agencia Tributaria de Andalucía,Q4100778B,01/01/2008
+AGENCIAS,01-00-000-B-Y-003,Agencia de Gestión Agraria y Pesquera de Andalucía (AGAPA),Q4100797B,30/04/2011
+AGENCIAS,01-00-000-B-Y-004,Servicio Andaluz de Empleo,Q4100684B,22/02/2011
+CONSORCIOS,01-00-002-C-C-000,C. Unidad Territ. Emp. y Desar. Local y tecn. Arquillos y Otros,P2300030J,17/04/2002
+CONSORCIOS,01-00-003-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Campiña Sur,P2300028D,16/04/2002
+CONSORCIOS,01-00-004-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Los Vélez,S0400012A,24/04/2002
+CONSORCIOS,01-00-005-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Zona Norte de Granada,G18609222,26/03/2002
+CONSORCIOS,01-00-007-C-C-000,C. Unidad territ. Emp. y Desar. Local y Tecn. Vega Media,S4100010J,19/04/2002
+CONSORCIOS,01-00-008-C-C-000,C. Unidad territ. Emp. y Desar. Local y Tecn. Aznalcollar y Otros,S4100011H,22/04/2002
+CONSORCIOS,01-00-010-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Zona Oeste de Granada,G18609164,19/03/2002
+CONSORCIOS,01-00-011-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. La Algarbia,P2900033H,26/03/2002
+CONSORCIOS,01-00-013-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Sierra Sur,P2300020A,15/03/2002
+CONSORCIOS,01-00-012-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Zona L de Granada,G18609172,18/03/2002
+CONSORCIOS,01-00-019-C-C-000,"C. Unidad Territ. Emp. y Desar. Local y Tecn. Enix, Vicar y Otros",S0400006C,23/04/2002
+CONSORCIOS,01-00-020-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Comarca Guadiato,Q1400459B,22/04/2002
+CONSORCIOS,01-00-023-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Loma Occidental,P2300031H,15/03/2002
+CONSORCIOS,01-00-027-C-C-000,Consorcio de Transporte Metropolitano del Campo de Gibraltar,G93063550,28/07/2005
+CONSORCIOS,01-00-028-C-C-000,Consorcio para la mejora de la Hacienda Local,P4100063I,16/12/2005
+CONSORCIOS,01-00-029-C-C-000,C. Centro Federico García Lorca,V18863878,05/06/2007
+CONSORCIOS,01-00-030-C-C-000,Consorcio Unidad para la Calidad de las Universidades Andaluzas,V18863878,20/10/1998
+CONSORCIOS,01-00-031-C-C-000,Consorcio para la excelencia de la investigación forense de Andalucía,V18796821,01/10/2006
+CONSORCIOS,01-00-032-C-C-000,C. para la Conmem. del Primer Milenio de la Fund. del Reino de Granada,P1800053I,02/03/2009
+CONSORCIOS,01-00-033-C-C-000,Consorcio de Transporte Metropolitano de la Costa de Huelva,P2100036I,27/09/2010
+CONSORCIOS,01-00-034-C-C-000,GUADALQUIVIR,,19/05/2011
+CONSORCIOS,01-00-035-C-C-000,C. Desarrollo y Turismo de la Costa del Sol Occidental,S2900005F,15/09/2008
+CONSORCIOS,01-00-036-C-C-000,Instituto de Biomédica de Sevilla (IBIS),,24/03/2006
+CONSORCIOS,01-04-005-C-C-000,Consorcio Escuela del Mármol de Fines,Q5455059E,10/03/1992
+CONSORCIOS,01-04-022-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Adra,S0400013I,12/03/2002
+CONSORCIOS,01-04-023-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Albánchez y Otros,S0400015D,24/04/2002
+CONSORCIOS,01-04-024-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Armuña de Almanzora,S0400007A,24/04/2002
+CONSORCIOS,01-04-025-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Alboloduy y Otros,S0400014G,17/04/2002
+CONSORCIOS,01-04-026-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Carboneras,S0400010E,17/04/2002
+CONSORCIOS,01-04-027-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Antas y Otros,S0400009G,13/03/2002
+CONSORCIOS,01-04-028-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Alcolea y otros,S0400011C,12/03/2002
+CONSORCIOS,01-04-030-C-C-000,C. Almería 2005,G04502407,30/12/2003
+CONSORCIOS,01-04-032-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Tabernas,S0400008I,23/04/2002
+CONSORCIOS,01-04-033-C-C-000,Consorcio de Transporte Metropolitano del Área de Almería,Q0400122H,28/09/2007
+CONSORCIOS,01-11-005-C-C-000,Consorcio Escuela de Hostelería de Cádiz,Q6155017D,14/09/1993
+CONSORCIOS,01-11-008-C-C-000,C. Prom. del Empleo Prov. Cádiz,G11374261,05/02/1996
+CONSORCIOS,01-11-011-C-C-000,Consorcio Tecnológico de Cádiz,Q1100470B,19/12/2000
+CONSORCIOS,01-11-013-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Jerez de la Frontera,S1100038G,10/04/2002
+CONSORCIOS,01-11-014-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Puerto Real,S1100016C,09/04/2002
+CONSORCIOS,01-11-015-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Cm. Sierra de Cádiz,P1100037I,09/04/2002
+CONSORCIOS,01-11-016-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Cm. La Janda,Q1100478E,09/04/2002
+CONSORCIOS,01-00-026-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Sierra de las Nieves,P2900035C,16/04/2002
+CONSORCIOS,01-11-017-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. El Puerto de Sta. María,S1100017A,09/04/2002
+CONSORCIOS,01-11-021-C-C-000,C. Metropolitano Transportes La Bahía de Cádiz,V11579893,18/04/2002
+CONSORCIOS,01-11-022-C-C-000,C. para la conmemoración del II Centenario de la Constitución de 1812,S1100023I,19/03/2007
+CONSORCIOS,01-11-024-C-C-000,Consorcio de Aguas de la Zona Gaditana,P1100049D,17/07/2006
+CONSORCIOS,01-14-004-C-C-000,Consorcio Escuela de Joyería de Córdoba,Q6455041A,12/01/1993
+CONSORCIOS,01-14-005-C-C-000,Consorcio Escuela de la Madera de Encinas Reales,Q6455040C,22/07/1992
+CONSORCIOS,01-14-006-C-C-000,Consorcio Orquesta de Córdoba,Q6455042I,16/03/1993
+CONSORCIOS,01-14-018-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Campiña Sur Cordobesa,Q1400456H,19/03/2002
+CONSORCIOS,01-14-019-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. del Alto Guadalquivir,Q1400453E,19/03/2002
+CONSORCIOS,01-14-020-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Vega del Guadalquivir,Q1400452G,19/03/2002
+CONSORCIOS,01-14-021-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Subbética Cordobesa,Q1400457F,19/03/2002
+CONSORCIOS,01-14-022-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Zona Pozoblanco,Q1400458D,22/04/2002
+CONSORCIOS,01-14-023-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Zona Hinojosa del Duque,Q1400455J,16/04/2002
+CONSORCIOS,01-14-024-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Guadajoz y Campiña Este,Q1400454C,16/04/2002
+CONSORCIOS,01-14-028-C-C-000,Consorcio de Transporte Metropolitano del Área de Córdoba,Q1400513F,19/09/2008
+CONSORCIOS,01-18-001-C-C-000,C. Palacio Exposiciones y Congresos Granada,P6808904D,26/01/1988
+CONSORCIOS,01-11-018-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Campo de Gibraltar,S1100018I,11/04/2002
+CONSORCIOS,01-11-019-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Chiclana de la Frontera,Q1100477G,09/04/2002
+CONSORCIOS,01-11-020-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. San Fernando,Q1100479C,19/04/2002
+CONSORCIOS,01-18-013-C-C-000,Consorcio Parque de las Ciencias de Granada,P6890002F,22/08/1995
+CONSORCIOS,01-18-017-C-C-000,C. Ctro. Transporte de Mercancias de Guadix,P1800030G,13/03/1999
+CONSORCIOS,01-18-024-C-C-000,Consorcio Granada Cultural,,22/06/2001
+CONSORCIOS,01-18-027-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Alicún de Ortega y Otros,G18608562,17/04/2002
+CONSORCIOS,01-18-028-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Albolote y Otros,G18608505,17/04/2002
+CONSORCIOS,01-18-029-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Baza y Otros,G18608554,25/03/2002
+CONSORCIOS,01-18-030-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Alpujarra de la Sierra,G18609180,23/04/2002
+CONSORCIOS,01-18-031-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Benalúa Villas y Otros,G18609206,17/04/2002
+CONSORCIOS,01-18-033-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Agrón y Otros,G18608497,14/03/2002
+CONSORCIOS,01-18-034-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Alhama Granada y Otros,G18608521,27/03/2002
+CONSORCIOS,01-18-035-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Alfacar y Otros,G18608513,27/03/2002
+CONSORCIOS,01-18-036-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Rio Verde,G18608539,24/04/2002
+CONSORCIOS,01-18-037-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Almegíjar y Otros,G18609198,23/04/2002
+CONSORCIOS,01-18-041-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Cm. del Huéscar,G18608570,25/03/2002
+CONSORCIOS,01-18-045-C-C-000,Consorcio Centro Albayzin,Q1800630D,25/10/2001
+CONSORCIOS,01-18-047-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Marquesado Granada,G18608547,17/04/2002
+CONSORCIOS,01-18-048-C-C-000,Consorcio de Transporte Metropolitano del Área de Granada,Q1800638G,25/01/2003
+CONSORCIOS,01-18-049-C-C-000,C. Unidad Territ. Emp. y Desr. Local y Tecn. Santa Fe,G18609156,19/03/2002
+CONSORCIOS,01-18-050-C-C-000,Consorcio de Bibliotecas Universitarias de Andalucía,Q1800647H,04/07/2002
+CONSORCIOS,01-18-051-C-C-000,C. Celebración 27ª Universiada de Invierno 2015 en Granada,,14/02/2013
+CONSORCIOS,01-18-052-C-C-000,C.Ctro.Investigación y Formación Agricultura Ecológ. y Desarrollo Rural,P1800040F,08/07/2005
+CONSORCIOS,01-18-021-C-C-000,C. Unidad Territ. Emp. y Desar. Loja,G18609214,27/03/2002
+CONSORCIOS,01-18-019-C-C-000,C. Festival Internacional de Música y Danza Granada,P6808903F,22/01/2001
+CONSORCIOS,01-21-004-C-C-000,Consorcio Escuela de Hostelería de Islantilla,Q7150009D,16/03/1994
+CONSORCIOS,01-21-009-C-C-000,Consorcio Administrativo Fundación Vázquez Díaz,P2100020C,08/03/1999
+CONSORCIOS,01-21-012-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Campiña Andévalo,Q2100257A,30/04/2002
+CONSORCIOS,01-21-013-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Condado de Huelva,Q2100253J,16/04/2002
+CONSORCIOS,01-21-014-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Sierra Oriental,Q2100254H,23/04/2002
+CONSORCIOS,01-21-015-C-C-000,C. Unidad Territ. Emp. y Desar. Local.y Tecn. Sierra Occid. Huelva,Q2100255E,17/04/2002
+CONSORCIOS,01-21-016-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Beturia,Q2100251D,04/04/2002
+CONSORCIOS,01-21-017-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Andévalo-Minero,Q2100249H,04/04/2002
+CONSORCIOS,01-21-018-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Costa de Huelva,Q2100252B,04/04/2002
+CONSORCIOS,01-21-019-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. C. Mine. Riotinto,Q2100250F,04/04/2002
+CONSORCIOS,01-23-011-C-C-000,Consorcio Hacienda La Laguna de Baeza,P7355008I,03/12/1992
+CONSORCIOS,01-23-023-C-C-000,Consorcio para el Desarrollo Rural de La Loma,P2300002I,18/01/1992
+CONSORCIOS,01-23-033-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Loma Oriental,P2300023E,17/04/2002
+CONSORCIOS,01-23-034-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Aldeaquemada y Otros,P2300027F,20/03/2002
+CONSORCIOS,01-23-035-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Cazorla y Otros,P2300024C,20/03/2002
+CONSORCIOS,01-23-036-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Linares,P2300025J,15/03/2002
+CONSORCIOS,01-23-037-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Iznatoraf y Otros,P2300021I,15/03/2002
+CONSORCIOS,01-23-038-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Albanchez Mágina y Otros,P2300034B,16/04/2002
+CONSORCIOS,01-23-039-C-C-000,C. Unidad Territ. Emp. y Desar. L. y Tecn. Belmez Moraleda y Otros,P2300029B,17/04/2002
+CONSORCIOS,01-23-040-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Campillo Arenas y Otros,C2300032F,16/04/2002
+CONSORCIOS,01-23-041-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Bailen y Otros,P2300026H,17/04/2002
+CONSORCIOS,01-23-042-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Ándujar y Otros,P2300022G,17/04/2002
+CONSORCIOS,01-23-043-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Arroyo Ojanco y Otros,P2300033D,16/04/2002
+CONSORCIOS,01-23-048-C-C-000,Consorcio de Transporte Metropolitano del Área de Jaén,P2300049J,17/12/2007
+CONSORCIOS,01-29-002-C-C-000,C. Orquesta Ciudad de Málaga,Q7955058H,14/02/1992
+CONSORCIOS,01-29-003-C-C-000,Consorcio Escuela Hostelería de Málaga,Q7955056B,27/07/1991
+CONSORCIOS,01-29-006-C-C-000,C. Centro Form. en Comunic. y Tecnolog. de la Inf. de Málaga,Q7955059F,19/11/1992
+CONSORCIOS,01-29-007-C-C-000,Consorcio Escuela de Hostelería de Benalmádena,Q7955061B,31/01/1994
+CONSORCIOS,01-29-013-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Alpandeire y Otros,P2900031B,16/04/2002
+CONSORCIOS,01-29-014-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Archidona y Otros,P2900034F,19/03/2002
+CONSORCIOS,01-29-015-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Vélez-Málaga,P2900038G,30/04/2002
+CONSORCIOS,01-29-016-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Fuengirola y Mijas,P2900026B,16/04/2002
+CONSORCIOS,01-29-017-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Algarrobo y Otros,P2900027J,16/04/2002
+CONSORCIOS,01-29-019-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Alameda y Otros,P2900025D,26/03/2002
+CONSORCIOS,01-29-020-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Casares y Otros,P2900029F,26/03/2002
+CONSORCIOS,01-29-021-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Alora y Otros,P2900036A,19/03/2002
+CONSORCIOS,01-29-022-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Montes-Alta Axarquia,P2900037I,19/03/2002
+CONSORCIOS,01-29-023-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Almáchar y Otros,P2900032J,14/03/2002
+CONSORCIOS,01-29-024-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Guadalteba,P2900030D,14/03/2002
+CONSORCIOS,01-29-027-C-C-000,C. Ctro. Andaluz Form. Integral Industrias del Ocio en Mijas,P2900024G,13/06/2002
+CONSORCIOS,01-29-035-C-C-000,C. Transportes Metropolitano del Area de Málaga,P2900050B,07/06/2003
+CONSORCIOS,01-29-039-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Algatocín y Otros,P2900028H,16/04/2002
+CONSORCIOS,01-41-005-C-C-000,C. Esc. Formación de Artesanos de Gelves,Q9155020B,31/07/1991
+CONSORCIOS,01-41-012-C-C-000,C. Teatro Real Maestranza y Salas del Arenal de Sevilla,Q9155028E,21/01/1992
+CONSORCIOS,01-41-028-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. del Aljarafe,S4100008D,14/03/2002
+CONSORCIOS,01-41-029-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Alcalá de Guadaíra,P4100054H,26/05/2002
+CONSORCIOS,01-41-030-C-C-000,"C. Unidad Territ. Emp. y Desar. Local y Tecn. Carmona, Viso y Mairena",P4100046D,18/03/2002
+CONSORCIOS,01-41-032-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Alcolea del Río y Otros,G91204156,18/03/2002
+CONSORCIOS,01-41-033-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Aguadulce y Otros,G91204073,18/03/2002
+CONSORCIOS,01-41-034-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Cañada Rosal y Otros,V91206045,19/04/2002
+CONSORCIOS,01-41-035-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Dos Hermanas,P4100047B,17/05/2002
+CONSORCIOS,01-41-036-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Arahal y Otros,P4100045F,18/03/2002
+CONSORCIOS,01-41-037-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Sierra Norte Sevilla,G91204222,26/03/2002
+CONSORCIOS,01-41-038-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Tierras de Doñana,S4100009B,14/03/2002
+CONSORCIOS,01-41-039-C-C-000,C. Saneamiento Financiero Municipal,P4100049H,27/07/2002
+CONSORCIOS,01-41-040-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Bajo Guadalquivir,P4100048J,30/04/2002
+CONSORCIOS,01-41-042-C-C-000,C. Ctro. Andaluz Form. Medioambiental Desar. Sostenible,G21327457,23/02/2002
+CONSORCIOS,01-41-046-C-C-000,"Consorcio ""Fernando de los Ríos""",Q1800620E,29/12/1999
+CONSORCIOS,01-41-047-C-C-000,C. Pacto Territorial Empleo en la Bahia de Cádiz,G11470275,14/08/1999
+CONSORCIOS,01-41-049-C-C-000,C. Prov. Aguas de Sevilla,P4100056C,12/03/2003
+CONSORCIOS,01-41-050-C-C-000,C. Sanitario Público del Aljarafe,G91331751,01/12/2003
+CONSORCIOS,01-41-051-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Morón de la Fra. y Otros,P4100044I,19/03/2002
+CONSORCIOS,01-41-052-C-C-000,C. Unidad Territ. Emp. y Desar. Local y Tecn. Osuna y Otros,P4100061C,14/03/2002
+CONSORCIOS,01-41-053-C-C-000,Consorcio de Vivienda para los Vecinos del Área de Sevilla,P4100066B,29/01/2007
+CONSORCIOS,01-41-020-C-C-000,Consorcio de Transporte Metropolitano del Área de Sevilla,P4100040G,22/07/2001
+CONSORCIOS,01-29-009-C-C-000,C. Ctro. Transporte de Mercancías Málaga,P7990001E,21/06/1993
+CONSORCIOS,01-41-018-C-C-000,C. Turismo de Sevilla,P4100027D,12/05/2000
+FUNDACIONES,01-41-018-H-H-000,Fundación de Investigación de la Universidad de Sevilla,G91402941,21/03/2007
+FUNDACIONES,01-29-009-H-H-000,Fundación Rey Fahd Bin Abdulaziz,G29817806,08/10/1998
+FUNDACIONES,01-29-010-H-H-000,Fundación General de la Universidad de Málaga,G29817301,25/02/1997
+FUNDACIONES,01-29-011-H-H-000,Fundación MADECA,G93119287,23/09/2011
+FUNDACIONES,01-41-020-H-H-000,FUNDACIÓN CÁMARA,G91212845,17/01/1986
+FUNDACIONES,01-41-021-H-H-000,Fundación Conocimiento y Cultura-Universidad Pablo de Olavide,G91536060,01/02/2006
+FUNDACIONES,01-41-022-H-H-000,Fundación de Municipios Pablo de Olavide,G91181032,05/11/2001
+FUNDACIONES,01-41-023-H-H-000,Fundación Universidad-Sociedad de la Universidad Pablo de Olavide,G91094235,06/04/2001
+FUNDACIONES,01-41-024-H-H-000,Fundación Naturalia XXI,G91704460,18/05/2009
+FUNDACIONES,01-41-025-H-H-000,"Instituto de Desarrollo Regional, Fundación Universitaria",G41611617,16/07/1993
+FUNDACIONES,01-41-026-H-H-000,F. Pca. Andaluza Centro para la Mediación y el Arbitraje de Andalucía,G91847541,24/02/2010
+FUNDACIONES,01-41-012-H-H-000,F. Púb. Andaluza Gest. Invest. en Salud de Sevilla (FISEVI),G41918830,17/02/1998
+FUNDACIONES,01-41-014-H-H-000,Fundación Centro de Estudios Andaluces,G91122069,04/06/2001
+FUNDACIONES,01-41-015-H-H-000,Fundación Audiovisual de Andalucía,G41756842,20/12/1996
+FUNDACIONES,01-41-016-H-H-000,Fundación Progreso y Salud,G41825811,31/03/1997
+FUNDACIONES,01-41-017-H-H-000,F. Instituto de Estudios sobre la Hacienda Pca. de Andalucía,G91742056,26/05/2008
+FUNDACIONES,01-29-007-H-H-000,Fundacion FIMABIS,G29830643,31/10/1997
+FUNDACIONES,01-29-008-H-H-000,Fundación Museo Picasso de Málaga,G29867405,20/11/1997
+FUNDACIONES,01-23-014-H-H-000,"F.CITOLIVA,C.Innovación y Tecnología del Olivar y del Aceite",G23490584,22/04/2003
+FUNDACIONES,01-23-015-H-H-000,Fundación ANDALTEC I+D+I,G23492655,24/09/2003
+FUNDACIONES,01-23-016-H-H-000,F. Estrategias para el Desarrollo Ecº y Social de la Prov. de Jaén,G23393275,19/04/2000
+FUNDACIONES,01-23-017-H-H-000,Fundación Marín,G23015381,16/01/1998
+FUNDACIONES,01-23-018-H-H-000,F. Campus Científico-Tecnológico de Linares,G23613276,19/11/2009
+FUNDACIONES,01-21-004-H-H-000,Fundación Cultural Festival de Cine Iberoamericano de Huelva,G21275532,12/01/1999
+FUNDACIONES,01-21-005-H-H-000,F. Ctro. innov. y tecn. de pesca y transf. ptos. pesq.-GARUM,G21455381,08/09/2008
+FUNDACIONES,01-18-019-H-H-000,Fundación de Estudios y Prácticas Jurídicas de Granada,G18736777,30/11/2006
+FUNDACIONES,01-18-020-H-H-000,F. Pca. Andaluza El Legado Andalusí,G18411975,22/03/1999
+FUNDACIONES,01-18-021-H-H-000,Fundación General Universidad de Granada-Empresa (FGUGREM),G18218230,02/11/1992
+FUNDACIONES,01-18-022-H-H-000,Fundación Francisco Ayala,G18489856,26/07/2000
+FUNDACIONES,01-18-023-H-H-000,Fundación Euroárabe de Altos Estudios,G18401638,10/10/1995
+FUNDACIONES,01-21-001-H-H-000,Fundación Onubense de Tutela,G21275839,10/10/2007
+FUNDACIONES,01-21-002-H-H-000,F. Desar. Sostenible Doñana y su entorno-DOÑANA21 F.Pca.And.,G21246137,25/06/1997
+FUNDACIONES,01-21-003-H-H-000,Fundación Universidad de Huelva,G21449582,11/03/2008
+FUNDACIONES,01-18-018-H-H-000,F. para la Inv. Biosanitaria en Andalucía Oriental FIBAO,G18374199,17/10/1995
+FUNDACIONES,01-11-020-H-H-000,Agregación de Fundaciones Benéfico Particulares de la Prov. de Cádiz,,28/06/1993
+FUNDACIONES,01-11-019-H-H-000,Fundación Fernando Quiñones,G11482428,08/11/1999
+FUNDACIONES,01-11-018-H-H-000,F. José Manuel Caballero Bonald,G11718632,29/07/1998
+FUNDACIONES,01-14-008-H-H-000,Fundación Córdoba Ciudad Cultural,G14754766,06/02/2007
+FUNDACIONES,01-14-009-H-H-000,Fundación San Andrés y la Magdalena,G14690457,29/07/2004
+FUNDACIONES,01-14-010-H-H-000,Fundación San Juan de Dios y San Rafael,G14570071,10/11/2000
+FUNDACIONES,01-14-011-H-H-000,Fundación Obra Pía Simón Obejo y Valera,G14222533,08/04/2008
+FUNDACIONES,01-14-012-H-H-000,Fundación Patronato Valeriano Pérez,G14488050,20/02/2007
+FUNDACIONES,01-14-013-H-H-000,Fundación para la Investigación Biomédica en Córdoba (FIBICO),G14825277,10/06/2008
+FUNDACIONES,01-11-017-H-H-000,Fundación Migres,G11503679,08/03/2004
+FUNDACIONES,01-00-026-H-H-000,Fundación Federico García Lorca,G18040857,03/11/2005
+FUNDACIONES,01-11-016-H-H-000,Fundación Bahía de Cádiz para el Desarrollo Económico,G11423381,28/05/1998
+FUNDACIONES,01-11-006-H-H-000,Fundación Real Escuela Andaluza de Arte Ecuestre,G11614286,03/06/2004
+FUNDACIONES,01-04-001-H-H-000,F. Mediterránea de la Universidad de Almería,G04318572,03/12/1999
+FUNDACIONES,01-04-002-H-H-000,F. Finca Experimental Universidad de Almería-ANECOOP,G04457495,11/06/2004
+FUNDACIONES,01-00-023-H-H-000,Fundación Juan Nepomuceno Rojas,G41801325,03/12/1997
+FUNDACIONES,01-00-024-H-H-000,Fundación Málaga Ciudad Cultural,G93116259,22/07/2010
+FUNDACIONES,01-00-025-H-H-000,Fundación Andalucía Tech,G93116259,15/06/2011
+FUNDACIONES,01-00-020-H-H-000,Fundación Campus Tecnológico de Algeciras,G72096647,16/09/2008
+FUNDACIONES,01-00-021-H-H-000,Fundación Hospital San Rafael,G41801341,03/12/1997
+FUNDACIONES,01-00-022-H-H-000,Fundación Agragación de Fundaciones de Sevilla,,03/12/1997
+FUNDACIONES,01-00-019-H-H-000,F. Agregación de Fundaciones Benéfico-Particulares de la prov. de Jaén,G23219348,30/12/1981
+FUNDACIONES,01-00-012-H-H-000,F. Centro d Excelencia en Invest. s/ Aceite de Oliva y Salud (F. CEAS),G23585177,28/12/2007
+FUNDACIONES,01-00-013-H-H-000,F. Centro de Innovación Turística de Andalucía (CINNTA),G92798818,09/05/2007
+FUNDACIONES,01-00-014-H-H-000,F. Andaluza del Alcornoque y el Corcho (FALCOR),G91018366,13/11/2000
+FUNDACIONES,01-00-015-H-H-000,Fundación Alberto Jiménez Becerril,G82642935,29/10/1998
+FUNDACIONES,01-00-016-H-H-000,F. para la Inv. y el Des. de las Tecn. de la Inform. en And. (FIDETIA),G91045419,01/03/2000
+FUNDACIONES,01-00-017-H-H-000,Fundación 1884 Casa Museo del Carnaval de Cádiz,G11470697,10/11/2002
+FUNDACIONES,01-00-018-H-H-000,Fundación Centro de Estudios Constitucionales 1812,G11505120,30/04/2002
+FUNDACIONES,01-00-011-H-H-000,Fundación Universidad - Empresa de la Provincia de Cádiz,G11442167,09/12/1998
+FUNDACIONES,01-00-010-H-H-000,Fundación Tres Culturas del Mediterráneo,G41942681,08/09/1998
+FUNDACIONES,01-00-008-H-H-000,Fundación Barenboim-Said,G91381228,28/12/2004
+FUNDACIONES,01-00-009-H-H-000,Fundación Andalucía Olimpica,G41861873,01/12/1997
+FUNDACIONES,01-00-007-H-H-000,Fundación Parque Tecnológico de Ciencias de la Salud de Granada,G18444729,16/04/1997
+FUNDACIONES,01-00-005-H-H-000,Fundación Red Andalucía Emprende,G91019794,08/01/2000
+FUNDACIONES,01-00-004-H-H-000,F. Pca.And. integr. soc. personas enfermedad mental(FAISEM),G41633710,06/06/1994
+OTRAS INSTITUCIONES SIN ÁNIMO DE LUCRO,01-00-002-N-N-000,Asociación de Universidades Públicas Andaluzas (AUPA),G72132152,09/05/2006
+OTRAS INSTITUCIONES SIN ÁNIMO DE LUCRO,01-18-010-N-N-000,Asoc. Prom. Económica de Granada Olímpica 2010,,24/11/2000
+OTRAS INSTITUCIONES SIN ÁNIMO DE LUCRO,01-00-001-N-N-000,Sierra Nevada Sports Club,G18426577,22/02/1995
+SOCIEDADES MERCANTILES,01-00-000-F-P-032,"Ini. Leader Cm. Los Velez, S.A.",A04240107,18/12/1995
+SOCIEDADES MERCANTILES,01-00-000-F-P-033,"Iniciativas Leader Alpujarra, S.A.",A18300772,13/06/1992
+SOCIEDADES MERCANTILES,01-00-000-F-P-042,"Andalucía Aeroespacial, S.A.",A41665860,07/11/1994
+SOCIEDADES MERCANTILES,01-00-000-F-P-046,"Ctro. E. Riotinto, S.A.",A21110986,14/10/1989
+SOCIEDADES MERCANTILES,01-00-000-F-P-081,"Sociedad Eólica de Andalucía, S.A.",A41615816,05/08/1993
+SOCIEDADES MERCANTILES,01-00-000-F-P-130,"Residuos Indus. Madera de Córdoba, S.A.",A14521868,17/02/2000
+SOCIEDADES MERCANTILES,01-00-000-F-P-138,"Prom. y Gest. Parque Temático de Cazorla Las Villas, S.A.",A23390826,12/06/1998
+SOCIEDADES MERCANTILES,01-00-000-F-P-140,"Andalucía Comercio Electrónico, S.A.",A41933664,21/09/1998
+SOCIEDADES MERCANTILES,01-00-000-F-P-164,"Parque Científico-Tecnológico de Córdoba, S.L.",B14588859,12/06/2001
+SOCIEDADES MERCANTILES,01-00-000-X-P-006,Inversión y Gestión de capital Semilla de Andalucía S.C.R.reg.com S.A. INVERSEED,A23288301,08/07/1993
+SOCIEDADES MERCANTILES,01-00-000-X-P-044,"Bic Euronova, S.A.",A29534765,01/06/1992
+SOCIEDADES MERCANTILES,01-00-000-X-P-045,"CEDER Parque Natural Los Alcornocales, S.A.",A11354982,20/07/1995
+SOCIEDADES MERCANTILES,01-00-000-X-P-047,"CEDER Sierra de Cádiz, S.A.",A11095700,15/01/1992
+SOCIEDADES MERCANTILES,01-00-000-X-P-049,"Comercializadora Produc. Marroquineros Ubrique,S.A.",A41138975,04/02/1985
+SOCIEDADES MERCANTILES,01-00-000-X-P-053,"Ecodesarrollo Sierra Morena, S.A.",A41300559,20/06/1991
+SOCIEDADES MERCANTILES,01-00-000-X-P-063,"Iniciativas Noreste de Granada, S.A.",A18408427,27/02/1996
+SOCIEDADES MERCANTILES,01-00-000-X-P-097,"Orquesta de Sevilla, S.A.",A41421231,10/09/1990
+SOCIEDADES MERCANTILES,01-00-000-X-P-106,"Estadio de la Cartuja de Sevilla, S.A",A41770207,16/09/1996
+SOCIEDADES MERCANTILES,01-00-000-X-P-114,"Suraval, S.G.R.",G41132192,14/12/1983
+SOCIEDADES MERCANTILES,01-00-000-X-P-154,"Sierra Cork, S.L.",B41938432,01/01/2000
+SOCIEDADES MERCANTILES,01-00-000-X-P-158,"Ecohorticola, S.L.",B04340741,18/10/1999
+SOCIEDADES MERCANTILES,01-00-000-X-P-164,"Parque Agroalimentario del Sur de Córdoba, S.A.",A14799076,10/10/2007
+SOCIEDADES MERCANTILES,01-00-000-X-P-165,"Teatro de la Maestranza y Salas del Arenal, S.A.",A41634536,11/10/1994
+SOCIEDADES MERCANTILES,01-00-000-X-P-166,"Marinas Puerto de Málaga, S.Prom. Plan Especial Pto. Málaga en liquidación",A92102193,22/10/1999
+SOCIEDADES MERCANTILES,01-00-000-X-P-167,"Málaga Port, AIE",V92635192,18/05/2005
+SOCIEDADES MERCANTILES,01-00-000-X-P-168,"Ferias de Jaén, S.A.",A23398001,12/04/1999
+SOCIEDADES MERCANTILES,01-00-000-X-P-169,"Sociedad Andaluza de Valorización de la Biomasa, SA en liquidación",A91595140,06/02/2008
+SOCIEDADES MERCANTILES,01-00-000-X-P-170,"Almería Alta Velocidad, S.A.",A04700324,18/08/2010
+SOCIEDADES MERCANTILES,01-00-000-X-P-171,Fondo Innotec Desarrollo FCR,V85620771,13/02/2009
+SOCIEDADES MERCANTILES,01-00-000-B-P-001,"Esc. Andaluza de Salud Pública, S.A. (EASP)",A18049635,15/11/1985
+SOCIEDADES MERCANTILES,01-00-000-B-P-004,"Verificaciones Ind. Andalucía, S.A. (VEIASA)",A41398645,18/04/1990
+SOCIEDADES MERCANTILES,01-00-000-B-P-005,Empr. Andaluza Gestión Instalaciones y Turismo Juvenil S.A.,A41445800,24/01/1991
+SOCIEDADES MERCANTILES,01-00-000-B-P-007,"S. Prom. Recon. Econ. Andalucía, S.A. (SOPREA)",A41117441,30/08/1983
+SOCIEDADES MERCANTILES,01-00-000-B-P-008,"Canal Sur Radio, S.A.",A41248907,26/04/1988
+SOCIEDADES MERCANTILES,01-00-000-B-P-009,"Canal Sur Televisión, S.A.",A41248899,26/04/1988
+SOCIEDADES MERCANTILES,01-00-000-B-P-010,Parque Tecnológico de Andalucía,A29429990,05/06/1990
+SOCIEDADES MERCANTILES,01-00-000-B-P-011,"Red Logística de Andalucía, S.A.",A41439142,14/02/1991
+SOCIEDADES MERCANTILES,01-00-000-B-P-014,"Agencia Andaluza Prom. Exterior, S.A. (EXTENDA)",A41147596,20/06/1985
+SOCIEDADES MERCANTILES,01-00-000-B-P-016,S. Desarrollo Energético Andalucía en liquidación (SODEAN),A41101072,27/05/1982
+SOCIEDADES MERCANTILES,01-00-000-B-P-019,"Cetursa Sierra Nevada, S.A.",A18005256,13/03/1985
+SOCIEDADES MERCANTILES,01-00-000-B-P-021,"Sierra Nevada Club Agencia de Viajes, S.A.",A18095166,25/01/1988
+SOCIEDADES MERCANTILES,01-00-000-B-P-026,"Cartuja 93, S.A.",A41502790,08/11/1991
+SOCIEDADES MERCANTILES,01-00-000-B-P-028,Promonevada S.A. en liquidación,A18278085,02/07/1991
+SOCIEDADES MERCANTILES,01-00-000-B-P-029,"Apartahotel Trevenque, S.A.",A18378562,16/02/1995
+SOCIEDADES MERCANTILES,01-00-000-B-P-033,"Santana-Motor, S.A. en Liquidacion",A28069524,15/03/1995
+SOCIEDADES MERCANTILES,01-00-000-B-P-041,"S. Andaluza Desar. Telecomunicaciones, S.A. (SANDETEL)",A41857988,22/05/1997
+SOCIEDADES MERCANTILES,01-00-000-B-P-042,"Unión Andaluza de Avales, S.G.R. (AVALUNION)",A18032425,17/12/1982
+SOCIEDADES MERCANTILES,01-00-000-B-P-047,"Ingenieria y Calidad del Sur, A.I.E.",G91011247,02/11/1999
+SOCIEDADES MERCANTILES,01-00-000-B-P-048,"Infraestructuras Turísticas Andalucía, S.A. (INTASA)",A91252155,17/02/2003
+SOCIEDADES MERCANTILES,01-00-000-B-P-054,"Inversión y Gestión de Capital Riesgo de Andalucía, S.A. (INVERCARIA)",A91442350,25/04/2005
+SOCIEDADES MERCANTILES,01-00-000-B-P-055,"Tecno Bahía, S.L.",B11766474,27/02/2004
+SOCIEDADES MERCANTILES,01-00-000-B-P-057,"Parque Tecnológico y Aeronáutico de Andalucía, S.L. (Aerópolis)",B91225367,04/09/2002
+SOCIEDADES MERCANTILES,01-00-000-B-P-059,"GEOLIT, Parque Científico y Tecnológico, S.A.",A23427966,15/05/2000
+SOCIEDADES MERCANTILES,01-00-000-B-P-062,"UPO-GEST, S.L.U.",B91325498,26/04/2004
+SOCIEDADES MERCANTILES,01-00-000-B-P-064,"Corporación Empresarial de la Universidad de Córdoba, S.A.",A14487961,07/01/1998
+SOCIEDADES MERCANTILES,01-00-000-B-P-066,"Ucoidiomas, S.L.",B14534739,26/08/1999
+SOCIEDADES MERCANTILES,01-00-000-B-P-067,"Ucodeporte, S.L.",B14563035,10/08/2000
+SOCIEDADES MERCANTILES,01-00-000-B-P-068,"Hospital Clínico Veterinario de la Universidad de Córdoba, S.L.",B14575237,22/01/2001
+SOCIEDADES MERCANTILES,01-00-000-B-P-070,"Formación y Gestión de Granada, S.L.",B18432583,12/03/1997
+SOCIEDADES MERCANTILES,01-00-000-B-P-071,"La Bóveda de la Universidad, S.L.",B18509877,02/07/1999
+SOCIEDADES MERCANTILES,01-00-000-B-P-072,"Sociedad de Gestión, Financiación e Inversión Patrimonial, S.A.",A91849125,09/03/2010
+SOCIEDADES MERCANTILES,01-00-000-B-P-074,"EUROCEI, Centro Europeo de Empresas e Innovación, S.A. en liquidación",A41416710,24/10/1990
+SOCIEDADES MERCANTILES,01-00-000-B-P-075,Empresa Pública de Gestión de Activos S.A. (AGESA),A28784957,19/03/2010
+SOCIEDADES MERCANTILES,01-00-000-B-P-080,"Parque Dunar de Doñana, S.L.",B21332226,15/04/2002
+SOCIEDADES MERCANTILES,01-00-000-B-P-081,Metro de Granada S.A,A18952374,15/02/2011
+SOCIEDADES MERCANTILES,01-00-000-B-P-082,Parque de Innovación Empresarial Sanlucar la Mayor S.A (SOLAND),A91848838,19/04/2010
+SOCIEDADES MERCANTILES,01-00-000-B-P-083,E. Pública para la Gestión del Turismo y el Deporte de Andalucía S.A,A93090744,21/12/2010
+SOCIEDADES MERCANTILES,01-00-000-B-P-084,"Inver. Gest. y Desarrollo de Cap. Riesgo de Andalucía, S.G.E.C.R. S.A",A91814244,04/06/2009
+SOCIEDADES MERCANTILES,01-00-000-B-P-086,"01 Innova 24H, S.L.U",B91805655,19/03/2009
+SOCIEDADES MERCANTILES,01-00-000-B-P-088,1908 Puerto de Motril AIE (Motrilport),G18862987,16/05/2008
+SOCIEDADES MERCANTILES,01-00-000-B-P-089,"Parque Científico y Tecnológico de Huelva, S.A.",A21462288,06/08/2012
+UNIVERSIDADES,01-00-000-B-W-001,Universidad de Almería,Q5450008G,07/07/1993
+UNIVERSIDADES,01-00-000-B-W-002,Universidad de Cádiz,Q1132001G,01/07/1986
+UNIVERSIDADES,01-00-000-B-W-003,Universidad de Córdoba,Q1418001B,01/07/1986
+UNIVERSIDADES,01-00-000-B-W-004,Universidad de Granada,Q1818002F,01/07/1986
+UNIVERSIDADES,01-00-000-B-W-005,Universidad de Huelva,Q7150008F,07/07/1993
+UNIVERSIDADES,01-00-000-B-W-006,Universidad de Jaén,Q7350006H,07/07/1993
+UNIVERSIDADES,01-00-000-B-W-007,Universidad de Málaga,Q2918001E,01/07/1986
+UNIVERSIDADES,01-00-000-B-W-008,Universidad Pablo de Olavide,Q9150016E,04/07/1997
+UNIVERSIDADES,01-00-000-B-W-009,Universidad de Sevilla,Q4118001I,01/07/1986
+UNIVERSIDADES,01-00-000-B-W-010,Universidad Internacional de Andalucia,Q7350007F,06/05/1994
+MULTICOMUNIDAD,50-00-003-C-C-000,Consorcio para la presencia y promoción del Alberguismo juvenil (REAJ),V82823337,26/06/2000
+MULTICOMUNIDAD,50-00-013-H-H-000,F. Universitaria para la Cooperación Internacional (FUCI),,22/10/2003
+MULTICOMUNIDAD,50-00-012-H-H-000,Fundación Consejo España-China,G83997460,21/06/2004
+MULTICOMUNIDAD,50-00-011-H-H-000,CENATIC,G06495386,19/06/2007
+MULTICOMUNIDAD,50-00-005-H-H-000,F. Privada Triptólemos para el Desarrollo Agroalimentario,G62809819,13/04/2005
+MULTICOMUNIDAD,50-00-001-H-H-000,Fundación Univespaña,,30/12/1999
+MULTICOMUNIDAD,50-00-002-N-N-000,Conferencia de Rectores de las Universidades Españolas (CRUE),G81093072,14/12/1994
+MULTICOMUNIDAD,50-00-004-N-N-000,Federación de Organismos o Entid. de Radio y Telev. Autonóm. (FORTA),G79362133,05/04/1989
+MULTICOMUNIDAD,50-00-000-X-P-004,SIGMA Gestión Universitaria A.I.E.,G61213641,19/02/1997
