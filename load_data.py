@@ -1,9 +1,31 @@
 # -*- coding: utf-8 -*-
 __author__ = 'jdayllon'
 
-import csv
+import csv,calendar, datetime
+import time, locale
 
 data_file = open("./data/datos_subvenciones.csv")
+
+def string_to_timestamp(str_date):
+    month = int(str_date.split("/")[1])
+    year = int(str_date.split("/")[2])
+    day = calendar.monthrange(year,month)[1]
+    dtt = datetime.date(year,month,day)
+    return time.mktime(dtt.timetuple()) * 1000
+    
+def listar_subvenciones_mes_grupo(datos, grupo):
+    query_importes_mes_grupo = "grupo_pres == '%s'" % grupo
+    importes = datos.query(query_importes_mes_grupo)\
+        .sort('mes_concesion_timestamp')\
+        .set_index('mes_concesion_timestamp')['importe']
+    return list(importes)    
+
+def filtra_importes_grupo(row, grupo):
+    if row['grupo_pres'] == grupo:
+        return row['importe']
+    else:
+        return 0
+    
 
 def obtener_tipo_cif(CIF):
     cif_tipo_mapping = {
@@ -30,9 +52,39 @@ def obtener_tipo_cif(CIF):
     try:
         tipo = cif_tipo_mapping[("%s" % CIF)[0]]
     except:
-        tipo = "NA"
+        tipo = "Personas"
         
     return tipo
+    
+def obtener_tipo_cif_resumen(CIF):
+    cif_tipo_mapping = {
+    "A": "Empresa",
+    "B": "Empresa",
+    "C": "Empresa",
+    "D": "Empresa",
+    "E": "Empresa",
+    "F": "Empresa",
+    "G": "Personas",
+    "H": "Personas",
+    "J": "Empresa",
+    "K": "Formato antiguo",
+    "L": "Formato antiguo",
+    "M": "Formato antiguo",
+    "N": "Empresa",
+    "P": "Administración",
+    "Q": "Administración/Iglesia",
+    "R": "Iglesia",
+    "S": "Administracion",
+    "V": "Empresa",
+    "W": "Empresa",
+    }
+    try:
+        tipo = cif_tipo_mapping[("%s" % CIF)[0]]
+    except:
+        tipo = "Personas"
+        
+    return tipo
+    
 
 def obtener_provincia_cif(CIF):
     cif_mapping = {
@@ -134,11 +186,11 @@ def obtener_provincia_cif(CIF):
     "52":	"Melilla",
     }
     try:
-        if obtener_provincia_cif(CIF) != "NA":
+        if cif_tipo_mapping(CIF) != "NA":
             provincia = cif_mapping[("%s" % CIF)[1:3]]
         else:
             provincia = "ND"
     except:
         provincia = "NA"
-        
+    
     return provincia
