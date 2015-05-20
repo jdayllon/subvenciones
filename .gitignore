@@ -1,2 +1,4 @@
 .idea/
-data/.~lock.datos_subvenciones.csv#
+.ipynb_checkpoints/
+data/.~lock.*.csv#
+*.pyc
