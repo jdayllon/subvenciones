@@ -2,3 +2,5 @@
 .ipynb_checkpoints/
 data/.~lock.*.csv#
 *.pyc
+
+api_secret.py

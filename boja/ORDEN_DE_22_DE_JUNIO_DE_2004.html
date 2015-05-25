@@ -1,0 +1,1675 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+   <head>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/themes/buscador/media/js/jquery-1.4.2.js" space="preserve"> </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/themes/buscador/media/js/jquery-ui-1.8.14.autocomplete.min.js" space="preserve"> </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/themes/buscador/autocomplete/autocomplete-words-json" space="preserve"> </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/themes/buscador/media/js/autocomplete.js" space="preserve"> </script>
+<script type="text/javascript" space="preserve">
+              jQuery(document).ready(function($) {
+                  /* Este parámetro sirve para determinar el número máximo de
+                  sugerencias ofrecidas al usuario en el deplegable */
+                  var autocompleteMaxSuggestions = 5;
+                  /* El número mínimo de carácteres a partir de los cuales se comienza
+                  a sugerir posibles autocompletados */
+                  var minLength = 2;
+                  var options = getAutocompleteOptions(autocompleteData, autocompleteMaxSuggestions);
+                  options.minLength = minLength;
+
+                  $('input[name=\'busquedageneral\']').autocomplete(options);
+                  // Se sobreescribe la función select del autocompletado para que cuando se seleccione un item se llame directamente al buscador 
+                  $('input[name=\'busquedageneral\']').autocomplete({
+                    select: function( event , ui ) {
+                      $('input[name=\'busquedageneral\']').val(ui.item.label);
+                      $('input[name=\'buscargeneral\']').click();
+                    }
+                  });
+              });
+            </script>
+<link type="text/css" rel="stylesheet" href="http://www.juntadeandalucia.es/themes/buscador/media/css/jquery-ui-1.8.14.autocomplete.css"/>
+<link type="text/css" rel="stylesheet" title="common" href="http://www.juntadeandalucia.es/boja/themes/font-face.css" media="screen"/>
+<link type="text/css" rel="stylesheet" title="common" href="http://www.juntadeandalucia.es/boja/themes/mydropdown.css" media="screen"/>
+<link type="text/css" rel="stylesheet" title="common" href="http://www.juntadeandalucia.es/boja/themes/jquery.ui.datepicker.css" media="screen"/>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/boja/themes/jquery.min.js" space="preserve">                  
+           
+        </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/boja/themes/sp.js" space="preserve">                  
+           
+        </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/boja/themes/funcionalidad_comun.js" space="preserve">                  
+           
+        </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/boja/themes/funcionalidad_tabs.js" space="preserve">                  
+           
+        </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/boja/themes/jquery.ba-dotimeout.js" space="preserve">                  
+           
+        </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/boja/themes/funcionalidad_menu.js" space="preserve">                  
+           
+        </script>
+<!--+|start favicon +-->
+<link rel="shortcut icon" href="http://www.juntadeandalucia.es/themes/images/favicon.ico"/>
+<!--+|start favicon +-->
+<meta name="viewport" content="width=device-width, user-scalable=0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, target-densityDpi=medium-dpi" id="testViewport"/>
+<link type="text/css" href="http://www.juntadeandalucia.es/boja/themes/estructura.css" rel="stylesheet" title="common" media="screen and (min-width: 960px)"/>
+<link type="text/css" href="http://www.juntadeandalucia.es/boja/themes/estructura_movil.css" rel="stylesheet" title="common" media="screen and (max-width: 959px)"/>
+<link type="text/css" href="http://www.juntadeandalucia.es/boja/themes/estilos_jda.css" rel="stylesheet" title="common" media="screen and (min-width: 960px)"/>
+<link type="text/css" href="http://www.juntadeandalucia.es/boja/themes/estilos_jda_movil.css" rel="stylesheet" title="common" media="screen and (max-width: 959px)"/>
+<link type="text/css" href="http://www.juntadeandalucia.es/boja/themes/menu.css" rel="stylesheet" title="common" media="screen"/>
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.juntadeandalucia.es/themes/images/iconosmovil/touch-icon-144-precomposed.png"/>
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://www.juntadeandalucia.es/themes/images/iconosmovil/touch-icon-114-precomposed.png"/>
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://www.juntadeandalucia.es/themes/images/iconosmovil/touch-icon-72-precomposed.png"/>
+<link rel="apple-touch-icon-precomposed" href="http://www.juntadeandalucia.es/themes/images/iconosmovil/touch-icon-57-precomposed.png"/>
+<!--[if !(IE) | (gt IE 8) | (IEMobile)]><!-->
+<script type="text/javascript" src="/boja/themes/menu_movil.js" space="preserve"> </script>
+<!--<![endif]-->
+<!--[if lt IE 9 & !IEMobile]>
+		        <link type="text/css" href="http://www.juntadeandalucia.es/boja/themes/estructura.css" rel="stylesheet" title="common" media="screen"/>
+		        <link type="text/css" href="http://www.juntadeandalucia.es/boja/themes/estilos_jda.css" rel="stylesheet" title="common" media="screen"/>
+		        <![endif]-->
+
+      <meta content="es" http-equiv="Content-Language"/>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+      <title>Orden de 22 de junio de 2004, por la que se regula el Régimen de la Calificación de las Explotaciones Agrarias como prioritarias y el Régimen de Ayudas para la mejora y modernización de las estructuras de Producción de las Explotaciones Agrarias. </title>
+      <meta content="Apache Dispatcher" name="Generator"/>
+      <meta content="Página de disposición nº 7 del boletín nº 145 de 2004."
+            name="Description"/>
+      <meta content="2004, Junta de Andalucía, el portal de Andalucía, Administración andaluza, BOJA, B.O.J.A."
+            name="Keywords"/>
+   
+      <link href="http://www.juntadeandalucia.es/boja/distribucion/boja.xml"
+            title="Boletín completo - BOJA"
+            type="application/atom+xml"
+            rel="alternate"/>
+      <link type="application/atom+xml" rel="alternate"
+            title="1. Disposiciones generales - BOJA"
+            href="http://www.juntadeandalucia.es/boja/distribucion/s1.xml"/>
+   </head>
+   <body>
+<div id="cabecera">
+         <div class="container">
+            <div id="logo">
+               <h1>
+                  <a class="logotipo" accesskey="0" href="http://www.juntadeandalucia.es/index.html" title="Portada de la Web oficial de la Junta de Andalucía" shape="rect">
+                     <img alt="" title="Junta de Andalucía" src="http://www.juntadeandalucia.es/themes/images/logo_bg_movil.png"/>
+                  </a>
+               </h1>
+               <div class="clearlogo"> </div>
+               <div class="oculto">
+                  <ul>
+                     <li>
+                        <a accesskey="1" title="Saltar el menú de navegación, e ir directamente a los contenidos del Portal Oficial de la Junta de Andalucía" href="#contenidos" shape="rect">Saltar al contenido del Portal</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="herramienta">
+               <div id="ubicacion">
+                  <img width="275" height="40" alt="" title="Portal de la Junta de Andalucía" src="http://www.juntadeandalucia.es/themes/images/cabecera_ubicacion.gif"/>
+               </div>
+            </div>
+            <div class="buscador">
+               <form action="http://www.juntadeandalucia.es/buscar.html" method="get" class="floatright" target="_self" enctype="application/x-www-form-urlencoded">
+                  <fieldset>
+                     <legend>Buscador general</legend>
+                     <label for="busquedaCabecera" class="oculto">Buscar</label>
+                     <input id="busquedaCabecera" name="busquedageneral" type="text" class="input_text defaultTextActive" title="Buscar" style="position:relative; z-index:99999;"/>
+                     <input alt="Buscar" title="Buscar" type="submit" value="Buscar" class="input_submit" name="buscargeneral"/>
+                     <p>p. ej. <a title="ofertas de empleo" href="http://www.juntadeandalucia.es/buscar.html?busqueda=ofertas+de+empleo&amp;buscar=Buscar" shape="rect">ofertas de empleo</a>, <a title="ayudas" href="http://www.juntadeandalucia.es/buscar.html?busqueda=ayudas&amp;buscar=Buscar" shape="rect">ayudas</a>, <a title="escolarización" href="http://www.juntadeandalucia.es/buscar.html?busqueda=escolarización&amp;buscar=Buscar" shape="rect">escolarización</a>...</p>
+                  </fieldset>
+               </form>
+            </div>
+            <div class="clear"> </div>
+         </div>
+      </div>
+<div id="navegacion">
+         <div id="menu_btn">
+            <div class="img">
+             
+          </div>
+            <span class="menutxt">Menú principal</span>
+         </div>
+         <ul id="menu" class="menu_principal main-nav-horizontal">
+            <li class="li_inicio temas main-nav">
+               <a title="Temas" href="http://www.juntadeandalucia.es/temas.html" class="drop" accesskey="2" shape="rect">Temas</a>
+               <div class="dropdown container">
+                  <div class="grid_4">
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/estudiar.html" title="Estudiar" shape="rect">Estudiar</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/estudiar/infantil.html" title="Infantil (0-6 años)" shape="rect">Infantil (0-6 años)</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/estudiar/primaria-eso.html" title="Primaria y ESO (6-16 años)" shape="rect">Primaria y ESO (6-16 años)</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/estudiar/bachillerato.html" title="Bachillerato" shape="rect">Bachillerato</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/estudiar.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/familias-igualdad.html" title="Familia e igualdad" shape="rect">Familia e igualdad</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/familias-igualdad/formar-familia.html" title="Formar una familia" shape="rect">Formar una familia</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/familias-igualdad/infancia.html" title="Cuidar de los niños" shape="rect">Cuidar de los niños</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/familias-igualdad/dependencia.html" title="Cuidar de personas dependientes" shape="rect">Cuidar de personas dependientes</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/familias-igualdad.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/transporte.html" title="Tráfico y transporte" shape="rect">Tráfico y transporte</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/transporte/vehiculo.html" title="Tu vehículo" shape="rect">Tu vehículo</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/transporte/publico.html" title="Transporte público" shape="rect">Transporte público</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/transporte/carreteras.html" title="Carreteras de Andalucía" shape="rect">Carreteras de Andalucía</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_4">
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/trabajar.html" title="Trabajar" shape="rect">Trabajar</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/trabajar/busqueda.html" title="Buscar trabajo" shape="rect">Buscar trabajo</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/trabajar/autoempleo.html" title="Autoempleo" shape="rect">Autoempleo</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/trabajar/empleo-publico.html" title="Empleo público" shape="rect">Empleo público</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/trabajar.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/vivienda-consumo.html" title="Vivienda y consumo" shape="rect">Vivienda y consumo</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/vivienda-consumo/alquiler.html" title="Alquilar" shape="rect">Alquilar</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/vivienda-consumo/compra.html" title="Compra y venta" shape="rect">Compra y venta</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/vivienda-consumo/rehabilitacion.html" title="Rehabilitación" shape="rect">Rehabilitación</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/vivienda-consumo.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/medio-ambiente.html" title="Medio ambiente" shape="rect">Medio ambiente</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/medio-ambiente/clima.html" title="Clima" shape="rect">Clima</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/medio-ambiente/espacios-naturales.html" title="Espacios naturales" shape="rect">Espacios naturales</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/medio-ambiente/caza-pesca.html" title="Caza y pesca" shape="rect">Caza y pesca</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/medio-ambiente.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_4">
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/salud.html" title="Tu salud" shape="rect">Tu salud</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/salud/servicios.html" title="Servicios sanitarios" shape="rect">Servicios sanitarios</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/salud/urgencias.html" title="Urgencias y primeros auxilios" shape="rect">Urgencias y primeros auxilios</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/salud/derechos.html" title="Derechos y calidad asistencial" shape="rect">Derechos y calidad asistencial</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/salud.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/cultura-ocio.html" title="Cultura y ocio" shape="rect">Cultura y ocio</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/cultura-ocio/actividades.html" title="Actividades culturales" shape="rect">Actividades culturales</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/cultura-ocio/andalucia.html" title="Andalucía: historia y patrimonio" shape="rect">Andalucía: historia y patrimonio</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/cultura-ocio/bibliotecas.html" title="Bibliotecas y lectura" shape="rect">Bibliotecas y lectura</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/cultura-ocio.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas.html" title="Más temas" shape="rect">Más temas</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/administracion.html" title="Atención administrativa e impuestos" shape="rect">Atención administrativa e impuestos</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/seguridad.html" title="Justicia, seguridad y emergencias" shape="rect">Justicia, seguridad y emergencias</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/tic.html" title="Nuevas tecnologías" shape="rect">Nuevas tecnologías</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/participacion.html" title="Asociaciones y voluntariado" shape="rect">Asociaciones y voluntariado</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_4">
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/empresas.html" title="Empresas y profesionales" shape="rect">Empresas y profesionales</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/empresas/creacion.html" title="Crear una empresa" shape="rect">Crear una empresa</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/empresas/obligaciones.html" title="Obligaciones de la empresa" shape="rect">Obligaciones de la empresa</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/empresas/personal.html" title="Contratación de personal" shape="rect">Contratación de personal</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/empresas.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/sectores.html" title="Sectores de actividad" shape="rect">Sectores de actividad</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/sectores/agricultura-ganaderia.html" title="Agricultura y ganadería" shape="rect">Agricultura y ganadería</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/sectores/pesca.html" title="Industria y minas" shape="rect">Pesca y acuicultura</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/sectores/agroalimentaria.html" title="Industrias agroalimentarias" shape="rect">Industrias agroalimentarias</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/sectores.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </li>
+            <li class="junta main-nav">
+               <a title="La Junta" href="http://www.juntadeandalucia.es/organismos.html" class="drop" accesskey="3" shape="rect">La Junta</a>
+               <div class="dropdown container">
+                  <div class="grid_4">
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/organismos/presidenta.html" title="Presidenta" shape="rect">Presidenta</a>
+                     </strong>
+              
+                     <img alt="" src="http://www.juntadeandalucia.es/themes/images/presidente_solapa_la_junta.jpg"/>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/presidenta/biografia" shape="rect">Biografía</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/presidenta/funciones" shape="rect">Funciones</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/presidenta/discursos" shape="rect">Discursos</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/presidenta/correo" shape="rect">Escribir a la Presidenta</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/presidenta/vicepresidente" shape="rect">Vicepresidente</a>
+                        </li>
+                     </ul>
+
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/organismos/parlamento.html" title="Parlamento y otras instituciones" shape="rect">Parlamento y otras instituciones</a>
+                     </strong>
+                  </div>
+                  <div class="grid_8">
+                     <div class="grid_8">
+                        <strong>
+                           <a href="http://www.juntadeandalucia.es/organismos/consejo.html" title="Consejo de Gobierno" shape="rect">Consejo de Gobierno</a>
+                        </strong>
+                
+                        <ul class="ul_simple grid_4 alpha">
+                           <li>
+                              <a title="Sobre el consejo" href="http://www.juntadeandalucia.es/organismos/consejo/sobreconsejo.html" shape="rect">Sobre el consejo</a>
+                           </li>
+                           <li>
+                              <a title="Proxima sesión" href="http://www.juntadeandalucia.es/organismos/consejo/proximasesion.html" shape="rect">Próxima sesión</a>
+                           </li>
+                        </ul>
+                        <ul class="ul_simple grid_4 omega">
+                           <li>
+                              <a title="Última sesión" href="http://www.juntadeandalucia.es/organismos/consejo/ultimo.html" shape="rect">Última sesión</a>
+                           </li>
+                           <li>
+                              <a title="Histórico de sesioneso" href="http://www.juntadeandalucia.es/organismos/consejo/historico.html" shape="rect">Histórico de sesiones</a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="grid_8">
+                        <strong>
+                           <a href="http://www.juntadeandalucia.es/organismos.html" shape="rect">Consejerías</a>
+                        </strong>
+                        <div class="grid_4 alpha">
+                           <ul class="ul_simple">
+                              <li>
+                                 <a title="Consejería de la Presidencia" shape="rect" href="http://www.juntadeandalucia.es/organismos/presidencia.html">Presidencia</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Administración Local y Relaciones Institucionales" shape="rect" href="http://www.juntadeandalucia.es/organismos/administracionlocalyrelacionesinstitucionales.html">Administración Local y Relaciones Institucionales</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Hacienda y Administración Pública" shape="rect" href="http://www.juntadeandalucia.es/organismos/haciendayadministracionpublica.html">Hacienda y Administración Pública</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Economía, Innovación, Ciencia y Empleo" shape="rect" href="http://www.juntadeandalucia.es/organismos/economiainnovacioncienciayempleo.html">Economía, Innovación, Ciencia y Empleo</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Igualdad, Salud y Políticas Sociales" shape="rect" href="http://www.juntadeandalucia.es/organismos/igualdadsaludypoliticassociales.html">Igualdad, Salud y Políticas Sociales</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Educación, Cultura y Deporte" shape="rect" href="http://www.juntadeandalucia.es/organismos/educacionculturaydeporte.html">Educación, Cultura y Deporte</a>
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="grid_4 omega">
+                           <ul class="ul_simple">
+                              <li>
+                                 <a title="Consejería de Justicia e Interior" shape="rect" href="http://www.juntadeandalucia.es/organismos/justiciaeinterior.html">Justicia e Interior</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Fomento y Vivienda" shape="rect" href="http://www.juntadeandalucia.es/organismos/fomentoyvivienda.html">Fomento y Vivienda</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Agricultura, Pesca y Desarrollo Rural" shape="rect" href="http://www.juntadeandalucia.es/organismos/agriculturapescaydesarrollorural.html">Agricultura, Pesca y Desarrollo Rural</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Medio Ambiente y Desarrollo Rural" shape="rect" href="http://www.juntadeandalucia.es/organismos/medioambienteyordenaciondelterritorio.html">Medio Ambiente y Ordenación del Territorio</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Turismo y Comercio" shape="rect" href="http://www.juntadeandalucia.es/organismos/turismoycomercio.html">Turismo y Comercio</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="grid_4">
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/organismos/sobre-junta.html" title="Sobre la Junta" shape="rect">Sobre la Junta</a>
+                     </strong>
+              
+                     <img alt="" src="http://www.juntadeandalucia.es/themes/images/lajunta_solapa_sobrelajunta.jpg"/>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/sobre-junta/organizacion.html" title="Organización institucional" shape="rect">Organización institucional</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/sobre-junta/estatuto.html" title="Estatuto de autonomía" shape="rect">Estatuto de autonomía</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/sobre-junta/planes.html" title="Planes y programas" shape="rect">Planes y programas</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/sobre-junta/funcionamiento.html" title="Funcionamiento de la Administración" shape="rect">Funcionamiento de la Administración</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/sobre-junta/simbolos.html" title="Símbolos de Andalucía" shape="rect">Símbolos de Andalucía</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/sobre-junta/historia.html" title="Historia de la autonomía" shape="rect">Historia de la autonomía</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </li>
+            <li class="transparencia main-nav">
+               <a title="Transparencia" href="http://www.juntadeandalucia.es/transparencia.html" class="drop" accesskey="8" shape="rect">Transparencia</a>
+               <div class="dropdown container">
+                  <div class="grid_5">
+                     <strong>
+                        <a title="Publicidad activa" href="http://www.juntadeandalucia.es/transparencia/publicidad-activa.html" shape="rect">Publicidad activa</a>
+                     </strong>
+                     <img alt="Publicidad activa" src="http://www.juntadeandalucia.es/themes/images/transparencia/solapa_transparencia_activa.jpg"/>
+                     <p>Consulta la información que la Junta de Andalucía difunde a iniciativa propia para facilitar el conocimiento de su actividad.</p>
+                  </div>
+                  <div class="grid_6">
+                     <strong>
+                        <a title="Solicitud de información" href="http://www.juntadeandalucia.es/transparencia/solicitud-informacion.html" shape="rect">Solicitud de información</a>
+                     </strong>
+                     <img alt="Solicitud de información" src="http://www.juntadeandalucia.es/themes/images/transparencia/solapa_solicitud_informacion.jpg"/>
+                     <p>La Ley de Transparencia Pública de Andalucía recoge el derecho de la ciudadanía a reclamar información de los poderes públicos. Descubre qué podrás hacer cuando entre en vigor.</p>
+                  </div>
+                  <div class="grid_5">
+                     <strong>
+                        <a title="Transparencia en Andalucía" href="http://www.juntadeandalucia.es/transparencia/transparencia-andalucia.html" shape="rect">Transparencia en Andalucía</a>
+                     </strong>
+                     <img alt="Transparencia en Andalucía" src="http://www.juntadeandalucia.es/themes/images/transparencia/solapa_normativa.jpg"/>
+                     <p>Descubre tus derechos en materia de transparencia, aprende las vías para reclamarlos y consulta los portales de transparencia de otras administraciones públicas.</p>
+                  </div>
+               </div>
+            </li>
+            <li class="servicios main-nav">
+               <a title="Servicios y trámites" href="http://www.juntadeandalucia.es/servicios.html" class="drop" accesskey="4" shape="rect">Servicios y trámites</a>
+               <div class="dropdown container">
+                  <div class="grid_6">
+                     <p class="encabezado">
+                        <strong>¿Qué quieres hacer?</strong>
+                     </p>
+              
+                     <div class="buscador">
+                        <form target="_self" class="floatright" method="get" action="http://www.juntadeandalucia.es/buscar.html" enctype="application/x-www-form-urlencoded">
+                           <fieldset>
+                              <legend>Buscador general</legend>
+                              <label for="busquedaNavegacionServiciosTramitesFijos" class="oculto">Buscar</label>
+                              <input type="text" class="input_text defaultTextActive" size="20" name="busqueda" id="busquedaNavegacionServiciosTramitesFijos" title="Buscar" alt="Buscar"/>
+                              <input type="hidden" name="filtroServicios" value="true"/>
+                              <input type="hidden" name="organismo" value="index"/>
+                              <input type="submit" class="input_submit" value="Buscar" title="Buscar" alt="Buscar" name="buscar"/>
+                           </fieldset>
+                        </form>
+                        <p>Utiliza este buscador para localizar los trámites y servicios ofrecidos por la administración andaluza.</p>
+                     </div>
+
+                     <p class="encabezado">
+                        <strong>Directo a</strong>
+                     </p>
+              
+                     <ul class="ul_simple">
+                        <li>
+                           <a title="Ayudas y subvenciones" href="http://www.juntadeandalucia.es/servicios/ayudas.html" shape="rect">Ayudas y subvenciones</a>
+                        </li>
+                        <li>
+                           <a title="Becas, premios y concursos" href="http://www.juntadeandalucia.es/servicios/premios-concursos.html" shape="rect">Becas, premios y
+                      concursos</a>
+                        </li>
+                        <li>
+                           <a title="Ofertas de empleo público" href="https://ws045.juntadeandalucia.es/empleadopublico/emp-plazofer-.html?p=/Categorias_Principales/&amp;s=/Categorias_Principales/Procesos_Selectivos/" shape="rect">Ofertas de empleo público</a>
+                        </li>
+                        <li>
+                           <a title="Plataforma de contratación" href="http://www.juntadeandalucia.es/contratacion/ContractNoticeSearch.action?profileId=&amp;pkCegr=" shape="rect">Plataforma de
+                      contratación</a>
+                        </li>
+                        <li>
+                           <a title="Otros trámites y servicios" href="http://www.juntadeandalucia.es/servicios/otros-tramites.html" shape="rect">Otros trámites y
+                    servicios</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_5">
+                     <p class="encabezado">
+                        <strong>Trámites destacados</strong>
+                     </p>
+              
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/salud/sites/csalud/galerias/enlaces/oficina_virtual/cita_medico" title="Cita con el médico" shape="rect">Cita con el médico</a>
+                        </li>
+                        <li>
+                           <a href="https://ws054.juntadeandalucia.es/autenticacion/login?service=https://ws054.juntadeandalucia.es/apdweb/c/portal/login%3Fp_l_id%3D10116%26_58_redirect%3D%252Fapdweb%252Fgroup%252F10210%252F2" title="Renovar demanda de empleo" shape="rect">Renovar demanda de empleo</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/haciendayadministracionpublica/clara/cprDetalleTramites.html?c=1-59-780&amp;nombre=Grado+de+Discapacidad%3A+Reconocimiento%2C+Calificaci%F3n" title="Grado de Discapacidad: Reconocimiento, Calificación" shape="rect">Grado de Discapacidad: Reconocimiento, Calificación</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/servicios/otros-tramites/detalle/11215.html" title="Familia numerosa: solicitud del título" shape="rect">Familia numerosa: solicitud del título</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/haciendayadministracionpublica/clara/cprDetalleTramites.html?c=1-EBU42&amp;nombre=Quejas+y+Reclamaciones+de+las+Personas+Consumidoras+y+Usuarias%3A+Hojas+Electr%F3nicas" title="Quejas y Reclamaciones de las Personas Consumidoras y Usuarias" shape="rect">Quejas y Reclamaciones de las Personas Consumidoras y Usuarias</a>
+                        </li>
+                     </ul>
+
+                     <p class="encabezado">
+                        <strong>Ayuda</strong>
+                     </p>
+              
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/servicios/ayuda/tramitar-internet.html" title="Cómo hacer trámites por internet" shape="rect">Cómo hacer trámites por internet</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/servicios/ayuda/estado-tramites.html" title="Consulta el estado de tus trámites" shape="rect">Consulta el estado de tus trámites</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/servicios/ayuda/correo-andaluz.html" title="Correo Andaluz" shape="rect">Correo Andaluz</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/servicios/ayuda/notificaciones.html" title="Sistema de notificaciones telemáticas" shape="rect">Sistema de notificaciones telemáticas</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_5">
+                     <p class="encabezado">
+                        <strong>Servicios de información</strong>
+                     </p>
+              
+                     <ul class="ul_img">
+                        <li>
+                           <a title="Normativa" href="http://www.juntadeandalucia.es/servicios/normativa.html" shape="rect">
+                              <img alt="" src="http://www.juntadeandalucia.es/themes/images/buscador-de-normativas--38x38.gif"/>
+                              <span>Normativa</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a title="Normativa en elaboración" href="http://www.juntadeandalucia.es/servicios/normas-elaboracion.html" shape="rect">
+                              <img alt="" src="http://www.juntadeandalucia.es/themes/images/thrum38_normativa-en-elaboracion.jpg"/>
+                              <span>Normativa en elaboración</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a title="Participación" href="http://www.juntadeandalucia.es/servicios/participacion.html" shape="rect">
+                              <img alt="" src="http://www.juntadeandalucia.es/themes/images/thrum38_participacion.jpg"/>
+                              <span>Participación</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a title="Catálogo de publicaciones" href="http://www.juntadeandalucia.es/servicios/publicaciones.html" shape="rect">
+                              <img alt="" src="http://www.juntadeandalucia.es/themes/images/catalogo-de-publicaciones--38x38.gif"/>
+                              <span>Catálogo de publicaciones</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a title="WebTV" href="http://www.juntadeandalucia.es/servicios/videos.html" shape="rect">
+                              <img alt="" src="http://www.juntadeandalucia.es/themes/images/38_canalvideo.jpg"/>
+                              <span>WebTV</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/servicios.html" title="Más servicios" class="enlace_menu_mas" shape="rect">Más servicios</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </li>
+            <li class="boja main-nav">
+               <a title="BOJA" href="http://www.juntadeandalucia.es/eboja.html" class="drop" accesskey="5" shape="rect">BOJA</a>
+               <div class="dropdown boja container">
+                  <div class="grid_5">
+                     <strong>
+                        <a title="Último Boletín" href="http://www.juntadeandalucia.es/eboja/2015/97/" shape="rect">
+          Último Boletín
+        </a>
+                     </strong>
+                     <p>Número 97 de 22 de mayo de 2015</p>
+                     <ul class="ul">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/eboja/2015/97/s1.html" title="1. Disposiciones generales" shape="rect">1. Disposiciones generales</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/eboja/2015/97/s2.2.html" title="2.2. Oposiciones, concursos y otras convocatorias" shape="rect">2.2. Oposiciones, concursos y otras convocatorias</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/eboja/2015/97/s3.html" title="3. Otras disposiciones" shape="rect">3. Otras disposiciones</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/eboja/2015/97/s4.html" title="4. Administración de Justicia" shape="rect">4. Administración de Justicia</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/eboja/2015/97/s5.1.html" title="5.1. Licitaciones públicas y adjudicaciones" shape="rect">5.1. Licitaciones públicas y adjudicaciones</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/eboja/2015/97/s5.2.html" title="5.2. Otros anuncios oficiales" shape="rect">5.2. Otros anuncios oficiales</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_6">
+                     <strong>
+                        <a title="Boletines por fecha" href="http://www.juntadeandalucia.es/eboja/2015.html" shape="rect">
+          Boletines por fecha 
+        </a>
+                     </strong>
+                     <div class="contenedor_calendario_tabla">
+                        <table>
+                           <caption>mayo</caption>
+                           <tr>
+                              <th colspan="1" rowspan="1">L</th>
+                              <th colspan="1" rowspan="1">M</th>
+                              <th colspan="1" rowspan="1">X</th>
+                              <th colspan="1" rowspan="1">J</th>
+                              <th colspan="1" rowspan="1">V</th>
+                              <th colspan="1" rowspan="1">S</th>
+                              <th colspan="1" rowspan="1">D</th>
+                           </tr>
+                           <tr>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="domingo" rowspan="1" colspan="1">1</td>
+                              <td rowspan="1" colspan="1">2</td>
+                              <td class="domingo" rowspan="1" colspan="1">3</td>
+                           </tr>
+                           <tr>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/83/index.html" title="Boletín nº 83" shape="rect">4</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/84/index.html" title="Boletín nº 84" shape="rect">5</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/85/index.html" title="Boletín nº 85" shape="rect">6</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/86/index.html" title="Boletín nº 86" shape="rect">7</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/87/index.html" title="Boletín nº 87" shape="rect">8</a>
+                              </td>
+                              <td rowspan="1" colspan="1">9</td>
+                              <td class="domingo" rowspan="1" colspan="1">10</td>
+                           </tr>
+                           <tr>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/88/index.html" title="Boletín nº 88" shape="rect">11</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/89/index.html" title="Boletín nº 89" shape="rect">12</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/90/index.html" title="Boletín nº 90" shape="rect">13</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/91/index.html" title="Boletín nº 91" shape="rect">14</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/92/index.html" title="Boletín nº 92" shape="rect">15</a>
+                              </td>
+                              <td rowspan="1" colspan="1">16</td>
+                              <td class="domingo" rowspan="1" colspan="1">17</td>
+                           </tr>
+                           <tr>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/93/index.html" title="Boletín nº 93" shape="rect">18</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/94/index.html" title="Boletín nº 94" shape="rect">19</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/95/index.html" title="Boletín nº 95" shape="rect">20</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/96/index.html" title="Boletín nº 96" shape="rect">21</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/97/index.html" title="Boletín nº 97" shape="rect">22</a>
+                              </td>
+                              <td rowspan="1" colspan="1">23</td>
+                              <td class="domingo" rowspan="1" colspan="1">24</td>
+                           </tr>
+                           <tr>
+                              <td rowspan="1" colspan="1">25</td>
+                              <td rowspan="1" colspan="1">26</td>
+                              <td rowspan="1" colspan="1">27</td>
+                              <td rowspan="1" colspan="1">28</td>
+                              <td rowspan="1" colspan="1">29</td>
+                              <td rowspan="1" colspan="1">30</td>
+                              <td class="domingo" rowspan="1" colspan="1">31</td>
+                           </tr>
+                           <tr>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <div class="grid_5 alpha omega">
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/eboja/buscador/" title="Buscador de BOJA" shape="rect">Buscador de BOJA</a>
+                     </strong>
+                     <div class="buscador">
+                        <form action="http://www.juntadeandalucia.es/eboja/buscador/search.do" method="get" class="floatright" target="_self" enctype="application/x-www-form-urlencoded">
+                           <input id="eboja" value="on" name="eboja" type="hidden"/>
+                           <fieldset>
+                              <legend>Buscador general</legend>
+                              <label class="oculto" for="buscador_boja">Buscar</label>
+                              <input alt="Buscar" title="Buscar" id="buscador_boja" name="q" size="20" class="input_text defaultTextActive" type="text"/>
+                              <input alt="Buscar" title="Buscar" value="Buscar" class="input_submit" type="submit"/>
+                           </fieldset>
+                        </form>
+                        <div class="grid_4 alpha">
+                           <a href="http://www.juntadeandalucia.es/eboja/buscador/" title="Búsqueda avanzada" class="enlace_menu_mas" shape="rect">Búsqueda avanzada</a>
+                        </div>
+                     </div>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/eboja/sobre-boja/" title="Sobre BOJA" shape="rect">Sobre BOJA</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a title="¿Qué es el BOJA?" href="http://www.juntadeandalucia.es/eboja/sobre-boja/informacion-general.html" shape="rect">¿Qué es el BOJA?</a>
+                        </li>
+                        <li>
+                           <a title="Verificación de autenticidad" href="http://www.juntadeandalucia.es/eboja/sobre-boja/verificacion-autenticidad.html" shape="rect">Verificación de autenticidad</a>
+                        </li>
+                        <li>
+                           <a title="Como publicar en BOJA" href="http://www.juntadeandalucia.es/eboja/sobre-boja/publicar.html" shape="rect">Como publicar en BOJA</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a title="Histórico del BOJA" href="http://www.juntadeandalucia.es/boja.html" shape="rect">Histórico del BOJA</a>
+                     </strong>
+                  </div>
+               </div>
+            </li>
+            <li class="andalucia main-nav">
+               <a title="Andalucía" href="http://www.juntadeandalucia.es/andalucia.html" class="drop" accesskey="6" shape="rect">Andalucía</a>
+               <div class="dropdown container js">
+             
+            <div class="grid_4">
+                     <strong>
+                        <a title="Al sur" href="http://www.juntadeandalucia.es/andalucia/alsur.html" shape="rect">Al sur</a>
+                     </strong>
+                     <p>
+	Enclavada entre dos mares y dos continentes, la singularidad geográfica de Andalucía le otorga una identidad abierta y multicultural</p>
+
+                     <strong>
+                        <a title="Naturaleza y paisajes" href="http://www.juntadeandalucia.es/andalucia/naturalezapaisajes.html" shape="rect">Naturaleza y paisajes</a>
+                     </strong>
+                     <p>
+	Andalucía ofrece una gran diversidad geográfica y una contrastada riqueza de paisajes.</p>
+
+                     <strong>
+                        <a title="Clima" href="http://www.juntadeandalucia.es/andalucia/clima.html" shape="rect">Clima</a>
+                     </strong>
+                     <p>
+	Amplia variedad climática: sierras de abundantes lluvias, comarcas áridas, montañas nevadas, costas soleadas...</p>
+                  </div>
+                  <div class="grid_4">
+                     <strong>
+                        <a title="Historia" href="http://www.juntadeandalucia.es/andalucia/historia.html" shape="rect">Historia</a>
+                     </strong>
+                     <p>
+	Andalucía ha sido foco de civilización y escenario de una historia milenaria de convivencia entre culturas.</p>
+
+                     <strong>
+                        <a title="Economía" href="http://www.juntadeandalucia.es/andalucia/economia.html" shape="rect">Economía</a>
+                     </strong>
+                     <p>
+	En las tres últimas décadas, Andalucía ha logrado una profunda transformación económica y social.</p>
+
+                     <strong>
+                        <a title="Cultura y tradiciones" href="http://www.juntadeandalucia.es/andalucia/cultura.html" shape="rect">Cultura y tradiciones</a>
+                     </strong>
+                     <p>
+	Andalucía cuenta con una milenaria y rica herencia cultural.</p>
+                  </div>
+                  <div class="grid_4">
+                     <strong>
+                        <a title="El autogobierno andaluz" href="http://www.juntadeandalucia.es/andalucia/autogobierno.html" shape="rect">El autogobierno andaluz</a>
+                     </strong>
+                     <p>
+	Andalucía cuenta con amplios poderes legislativos, ejecutivos y judiciales, similares a los del resto de comunidades históricas de España.</p>
+
+                     <strong>
+                        <a title="Símbolos" href="http://www.juntadeandalucia.es/andalucia/simbolos.html" shape="rect">Símbolos</a>
+                     </strong>
+                     <p>
+	La bandera, el escudo y el himno de Andalucía.</p>
+                  </div>
+
+             
+            <div class="grid_4">
+                     <strong>
+                        <a title="Datos básicos" href="http://www.juntadeandalucia.es/andalucia.html" shape="rect">Datos básicos</a>
+                     </strong>
+                     <img src="http://www.juntadeandalucia.es/export/drupaljda/solapa_andalucia_imagen_0.jpg" alt="imagen auxiliar" title="imagen auxiliar"/>
+                     <ul class="listado_simple datos_andalucia">
+                        <li>
+		Denominación oficial: Comunidad Autónoma de Andalucía</li>
+                     </ul>
+                     <ul class="listado_simple datos_andalucia">
+                        <li>
+		Superficie: 87.597 Km2</li>
+	                       <li>
+		Población: 8.402.305</li>
+	                       <li>
+		Idioma: Castellano</li>
+	                       <li>
+		Presidenta: Susana Díaz Pacheco</li>
+                     </ul>
+                     <a class="enlace_menu_mas" title="Más datos" href="http://www.juntadeandalucia.es/andalucia.html" shape="rect">Más datos</a>
+                  </div>
+               </div>
+            </li>
+            <li class="noticias main-nav">
+               <a title="Noticias" href="http://www.juntadeandalucia.es/presidencia/portavoz/" class="drop" accesskey="7" shape="rect">Noticias</a>
+               <div class="dropdown container">
+                  <div class="grid_4">
+                     <p class="encabezado">
+                        <strong>Actualidad</strong>
+                     </p>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/" title="Portada" shape="rect">Portada</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/noticiasdeldia" title="Noticias del día" shape="rect">Noticias del día</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/listadoConvocatorias" title="Convocatorias" shape="rect">Convocatorias</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/listadoReportajes" title="Reportajes" shape="rect">Reportajes</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/listadoEspeciales" title="Especiales" shape="rect">Especiales</a>
+                        </li>
+                     </ul>
+                     <p class="encabezado">
+                        <strong>Portavoz del Gobierno</strong>
+                     </p>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/oficinaPortavoz" title="¿Qué es la Oficina del Portavoz?" shape="rect">¿Qué es la Oficina del Portavoz?</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/oficinaPortavoz" title="Funciones" shape="rect">Funciones</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_4">
+                     <p class="encabezado">
+                        <strong>Canales</strong>
+                     </p>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/gobierno" title="Gobierno" shape="rect">Gobierno</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/administracion" title="Administración" shape="rect">Administración</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/economia" title="Economía" shape="rect">Economía</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/salud" title="Salud" shape="rect">Salud</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/innovacion" title="Innovacion" shape="rect">Innovación</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/infraestructuras" title="Infraestructuras" shape="rect">Infraestructuras</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/agricultura" title="Agricultura" shape="rect">Agricultura</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/turismo" title="Turismo" shape="rect">Turismo</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/sociedad" title="Sociedad" shape="rect">Sociedad</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/medioambiente" title="Medioambiente" shape="rect">Medio ambiente</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/cultura" title="Cultura" shape="rect">Cultura</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_4">
+                     <p class="encabezado">
+                        <strong>Consejo de Gobierno</strong>
+                     </p>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/consejo/sobreconsejo.html" title="Sobre el Consejo" shape="rect">Sobre el Consejo</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/consejo/proximasesion.html" title="Próxima sesión" shape="rect">Próxima sesión</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/consejo/ultimo.html" title="Última sesión" shape="rect">Última sesión</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/consejo/historico.html" title="Histórico de sesiones" shape="rect">Histórico de sesiones</a>
+                        </li>
+                     </ul>
+                     <p class="encabezado">
+                        <strong>Multimedia</strong>
+                     </p>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/videos" title="Vídeo" shape="rect">Vídeo</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/audios" title="Audio" shape="rect">Audio</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/fotogalerias" title="Fotogalería" shape="rect">Fotogalería</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/fotogaleriasAlta" title="Fotos en alta resolución" shape="rect">Fotos en alta resolución</a>
+                        </li>
+                     </ul>
+                     <p class="encabezado">
+                        <strong>Noticias en redes</strong>
+                     </p>
+                     <div class="social">
+                        <ul class="listado_social">
+                           <li>
+                              <a class="ico_social_30 twitter" title="Noticias de la Junta en Twitter" href="http://www.twitter.com/JuntaInforma" shape="rect">
+                                 <img alt="" src="http://www.juntadeandalucia.es/themes/images/social/30_v_twitter.gif"/>
+                                 <span>Twitter</span>
+                              </a>
+                           </li>
+                           <li>
+                              <a class="ico_social_30 facebook" title="Noticias de la Junta en Facebook" href="http://www.facebook.com/juntainforma" shape="rect">
+                                 <img alt="" src="http://www.juntadeandalucia.es/themes/images/social/30_v_facebook.gif"/>
+                                 <span>Facebook</span>
+                              </a>
+                           </li>
+                           <li>
+                              <a class="ico_social_30 youtube" title="Noticias de la Junta en Youtube" href="http://www.youtube.com/user/juntainforma" shape="rect">
+                                 <img alt="" src="http://www.juntadeandalucia.es/themes/images/social/30_v_youtube.gif"/>
+                                 <span>Youtube</span>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+
+                  <div class="grid_4">
+                     <ul class="ul_img">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/agenda/" title="Agenda de la comunicación" shape="rect">
+                              <img src="http://www.juntadeandalucia.es/themes/images/thrum38_agenda_comunicacion.jpg" alt=""/>
+                              <span>Agenda de la comunicación</span>
+                           </a>
+                        </li>
+                     </ul>
+                     <p class="encabezado">
+                        <strong>Documentación</strong>
+                     </p>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/listadoDiscursoPresidente" title="Discursos" shape="rect">Discursos</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/listadoDocumentosInteres" title="Documentos" shape="rect">Documentos</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/ixlegislatura/gobiernosanteriores/linea.html" title="Histórico Gobiernos" shape="rect">Histórico Gobiernos</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/portadasperiodicos" title="Prensa" shape="rect">Prensa</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </li>
+         </ul>
+      </div>
+<div id="miga">
+         <div class="container">
+            <div class="texto">
+               <span>
+                  <a title="BOJA Histórico" href="http://www.juntadeandalucia.es/boja">BOJA Histórico</a> &gt;
+					<a href="http://www.juntadeandalucia.es/boja/2004.html" title="2004">2004</a>
+            &gt;
+          <a href="http://www.juntadeandalucia.es/boja/2004/145/" title="Boletín 145">Boletín 145</a>
+            &gt;
+          <a href="http://www.juntadeandalucia.es/boja/2004/145/s1.html" title="1. Disposiciones generales">1. Disposiciones generales</a>
+            &gt;
+          </span>
+            </div>
+         </div>
+      </div>
+      <div id="contenidos">
+         <div class="container separacion_vertical_superior_1 js">
+            <div id="cuerpo" class="grid_11 contenidos_nivel3 boja_disposicion">
+               <div>
+                  <h1>
+               Boletín Oficial de la Junta de Andalucía - 
+			   Histórico del BOJA<span class="nota">
+                 Boletín número 
+                 145
+                 de 
+                 26/07/2004</span>
+                  </h1>
+                  <!--+ |end content-main-heading +--><div class="punteado_izquierda cabecera_detalle_disposicion">
+                     <h2>1. Disposiciones generales</h2>
+                     <h3>Consejería de Agricultura y Pesca</h3>
+                     <h4>Orden de 22 de junio de 2004, por la que se regula el Régimen de la Calificación de las Explotaciones Agrarias como prioritarias y el Régimen de Ayudas para la mejora y modernización de las estructuras de Producción de las Explotaciones Agrarias. </h4>
+                  </div>
+                  <div class="alerta">
+                     <p>
+                        <strong>Atención:</strong> La información contenida en estas
+						páginas no tiene validez legal.
+						<a href="http://www.juntadeandalucia.es/boja/historico/informacion-general.html">Ver
+							más</a>
+                     </p>
+                     <p> Esta disposición incluye elementos no textuales, que no se
+							muestran en esta página. Para visualizarlos, consulte la
+							versión en
+							<a title="Ir al final de la&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;disposición" href="http://www.juntadeandalucia.es/boja/2004/145/&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;#descargas"> PDF. </a>
+                     </p>
+                  </div>
+                  <p>El Plan de Modernización de la Agricultura Andaluza para la consecución de una agricultura moderna, multifuncional y sostenible, contempla en su Programa 2.2 "Mejora de la estructura productiva y territorial de las explotaciones agrarias", actuaciones en inversiones para la modernización de las explotaciones y ayudas a la incorporación de jóvenes y la adecuación de la base territorial y de la propiedad de las explotaciones, mediante el desarrollo de la ley 19/1995, de 4 de julio, de modernización de explotaciones agrarias La citada Ley, nace al amparo del mandato constitucional establecido en el articulo 130.1 de la Constitución Española y contiene las prescripciones, desarrolladas en el Real Decreto </p>
+                  <p>204/1996, de 9 de febrero, sobre mejoras estructurales y modernización de las explotaciones agrarias. Mediante la Orden de 20 de noviembre de 1996 de la Consejería de Agricultura y Pesca, se desarrollan determinados aspectos de la mencionada Ley, se crea el Registro Autonómico de Explotaciones prioritarias y se regula el procedimiento para la calificación de las explotaciones agrarias como prioritarias y su inscripción en el Registro. </p>
+                  <p>La promulgación del Reglamento (CE) 1257/1999, del Consejo, de </p>
+                  <p>17 de mayo, sobre ayuda al desarrollo rural a cargo del Fondo Europeo de Orientación y de Garantía Agrícola (FEOGA) y del Reglamento (CE) 1750/1999, de la Comisión, de 23 de julio de </p>
+                  <p>1999, derogado por el Reglamento (CE) 445/2002 de la Comisión de 26 de febrero, por el que se establecen disposiciones de aplicación del Reglamento (CE) núm. 1257/1999, hicieron necesaria la modificación del Real Decreto 204/1996, de 9 de febrero, lo que se realizó mediante el Real Decreto 2067/1999, de 30 de diciembre. </p>
+                  <p>Por su parte la Orden de 26 de julio de 2000, de la Consejería de Agricultura y Pesca, modificada por la Orden de 24 de octubre de 2000, establece las normas de aplicación y el procedimiento del régimen de ayudas sobre mejoras estructurales y modernización de las explotaciones agrarias en el ámbito de la Comunidad Autónoma de Andalucía, con la finalidad de adaptar a esta Comunidad Autónoma el Real Decreto 2067/1999, de 30 de diciembre. </p>
+                  <p>Por último el Real Decreto 613/2001, de 8 de junio, para la mejora y modernización de las estructuras de producción de las explotaciones agrarias, es aprobado con la finalidad de contemplar los obligados cambios impuestos por la reglamentación comunitaria antes referenciada, simplificando y refundiendo la dispersa normativa existente en materia de mejora y modernización de las estructuras de producción de las explotaciones agrarias. </p>
+                  <p>En la Comunidad Autónoma de Andalucía, la Orden de 9 de octubre de 2001, de la Consejería de Agricultura y Pesca, responde de manera transitoria, a la necesidad de actualizar el marco normativo que rige las acciones desarrolladas por la Junta de Andalucía en fomento de la modernización y mejora de las estructuras de producción de las explotaciones agrarias, dado el carácter de normativa básica del Real Decreto 613/2001. Se hace necesario, por tanto, actualizar el procedimiento para la calificación de las explotaciones agrarias como prioritarias, desarrollar de manera definitiva la normativa estatal que regula las líneas de ayuda para inversiones en explotaciones agrarias mediante planes de mejora, para la instalación de agricultores jóvenes y para las inversiones en planes de mejora destinadas a adecuar la base territorial de las explotaciones, así como mantener la ayuda con cargo a los fondos de esta Comunidad Autónoma destinada a complementar la cuantía de la prima por primera instalación y regular la coordinación entre estos procedimientos, en los casos en que intervengan conjuntamente. </p>
+                  <p>La Comunidad Autónoma de Andalucía es competente de manera exclusiva en materia de agricultura, ganadería, reforma y desarrollo del sector agrario y la mejora y ordenación de las explotaciones agrícolas, ganaderas y forestales, conforme a lo dispuesto en el artículo 18.1.4. del Estatuto de Autonomía, de acuerdo con las bases y la ordenación de la actuación económica general, en los términos dispuestos en los artículos 38, 131 y </p>
+                  <p>149.1.11 y 13 de la Constitución española. </p>
+                  <p>En virtud de lo anterior, oídas las Organizaciones </p>
+                  <p>Profesionales Agrarias, a propuesta del Director General de Regadíos y Estructuras y de acuerdo con los Decretos 11/2004, de 24 de abril, sobre reestructuración de Consejerías, y </p>
+                  <p>204/2004 de 23 de mayo, por el que se establece la estructura orgánica de la Consejería de Agricultura y Pesca, </p>
+                  <p>D I S P O N G O </p>
+                  <p>CAPITULO I </p>
+                  <p>Objeto y definiciones </p>
+                  <p>Articulo 1. Objeto. </p>
+                  <p>El objeto de la presente Orden, es establecer en el ámbito de la Comunidad Autónoma de Andalucía, el procedimiento para la calificación de las explotaciones agrarias como prioritarias, de acuerdo con la Ley 19/1995, de 4 de julio, de modernización de explotaciones agrarias, las normas de aplicación del régimen de ayudas previsto en el Real Decreto 613/2001, de 8 de junio para la mejora y modernización de las estructuras de producción de las explotaciones agrarias y la regulación de los dos procedimientos en los casos en que intervengan conjuntamente. Articulo 2. Definiciones. </p>
+                  <p>A los efectos de la presente Orden serán de aplicación las definiciones establecidas en la normativa comunitaria, en el artículo 2 de la Ley 19/1995, de 4 de julio de Modernización de las Explotaciones Agrarias y en el artículo 2 del Real Decreto </p>
+                  <p>613/2001, de 8 de junio. </p>
+                  <p>CAPITULO II </p>
+                  <p>Explotaciones prioritarias </p>
+                  <p>Articulo 3.Calificación. </p>
+                  <p>1. Una explotación agraria podrá calificarse como explotación prioritaria cuando concurran las circunstancias siguientes: </p>
+                  <p>a) Que la explotación posibilite la ocupación de, al menos, una Unidad de Trabajo Agrario (UTA) y que la renta de trabajo unitario que se obtenga de la misma sea igual o superior al 35 por ciento de la renta de referencia e inferior al 120 por ciento de ésta (véase anexo 1 de la presente Orden). </p>
+                  <p>b) Que el titular de la explotación agraria reúna los </p>
+                  <p>requisitos establecidos en los artículos 4, 5 y 6 de la Ley </p>
+                  <p>19/1995 de 4 de julio. </p>
+                  <p> Disposición Transitoria Primera. Solicitudes ayuda sector fresa, fresón y frambuesa ejercicio 2005. </p>
+                  <p>En relación con las solicitudes de ayuda relativa a </p>
+                  <p>explotaciones del sector de la fresa, fresón y frambuesa, para el ejercicio 2005, el plazo de presentación se adelanta al ejercicio anterior, quedando comprendido entre la entrada en vigor de la presente Orden y hasta el 30 de noviembre de 2004. Disposición Transitoria Segunda. Solicitudes pendientes de resolución. </p>
+                  <p>Las solicitudes de ayuda presentadas al amparo de la Orden de la Consejería de Agricultura y Pesca de la Orden de 9 de octubre de 2001, relativa al régimen de las ayudas para la mejora y modernización' de las estructuras de producción de las explotaciones agrarias en el ámbito de la Comunidad Autónoma de Andalucía, así como las solicitudes de calificación presentadas al amparo de la Orden de 20 de noviembre de 1996 por la que se crea el Registro Autonómico de Explotaciones Prioritarias: creación y calificación de las mismas, que a la entrada en vigor de la presente Orden, se encuentren sin resolución expresa, se resolverán de conformidad a lo dispuesto en las citadas Ordenes </p>
+                  <p>Disposición Derogatoria Unica. Derogación normativa </p>
+                  <p>Quedan derogadas cuantas disposiciones de igual o inferior rango se opongan a lo dispuesto en la presente Orden, y en particular: </p>
+                  <p>- La Orden de la Consejería de Agricultura y Pesca, de 20 de noviembre de 1996, por la que se crea el Registro Autonómico de Explotaciones Prioritarias y se regula el procedimiento para la calificación de explotaciones agrarias como prioritarias. </p>
+                  <p>- De la Orden de la Consejería de Agricultura y Pesca, de 26 de julio de 2000, por la que se establecen las normas de </p>
+                  <p>aplicación y el procedimiento del régimen de ayudas sobre mejoras estructurales y modernización de las explotaciones agrarias en el ámbito de la Comunidad Autónoma de Andalucía, reguladas por el Real Decreto 204/1996, de 9 de febrero, los capítulos: I, II, IV y V. </p>
+                  <p>- La Orden de 9 de Octubre de 2001 relativa al régimen de las ayudas para la mejora y modernización de las estructuras de producción de las explotaciones agrarias en el ámbito de la Comunidad Autónoma de Andalucía. </p>
+                  <p>Disposición Final Primera. Desarrollo y aplicación. </p>
+                  <p>Se habilita al titular de la Dirección General de Regadíos y Estructuras para dictar cuantas disposiciones sean necesarias para el desarrollo y aplicación de la presente Orden. Disposición Final Segunda. Entrada en vigor. </p>
+                  <p>La presente Orden entrará en vigor el día siguiente al de su publicación en el Boletín Oficial de la Junta de Andalucía. Sevilla, 22 de junio de 2004 </p>
+                  <p>Isaias Perez Saldaña </p>
+                  <p>Consejero de Agricultura y Pesca </p>
+                  <p>ANEXO 1 </p>
+                  <p>DEFINICIONES Y REQUISITOS TECNICOS-ECONOMICOS A CONSIDERAR EN EXPLOTACIONES AGRARIAS. </p>
+                  <p>La Unidad de trabajo agrario (UTA) es el trabajo efectuado por una persona dedicada a tiempo completo durante un año a la actividad agraria, equivalente a 920 horas ó 240 jornales. Para cuantificar la aportación de mano de obra, se computará el número de unidades de trabajo agrario que corresponda en función de módulos objetivos, determinados con base a criterios técnicos. </p>
+                  <p>Se entenderá por Margen Neto (MN) la diferencia entre los ingresos de la explotación, derivados del conjunto de </p>
+                  <p>actividades productivas, incluyendo las subvenciones de explotación y los gastos fijos y variables, excepto los atribuidos a la retribución de los capitales propios y a la mano de obra familiar. </p>
+                  <p>Para determinar el rendimiento económico de la explotación, se utilizarán módulos de márgenes brutos determinados sobre la base de criterios técnicos a los que se les sustraerán los gastos fijos, modulados o contabilizados, de la explotación. Los salarios pagados serán los determinados en el Margen Neto. La Renta Unitaria del Trabajo (RUT): se obtendrá dividiendo entre el numero de unidades de trabajo agrario dedicados a la explotación, la cifra resultante de sumar el margen neto y el importe de los salarios pagados. </p>
+                  <p>En cualquier caso los titulares de las explotaciones podrán solicitar la determinación de la renta unitaria del trabajo con base en los datos de su contabilidad documentalmente </p>
+                  <p>acreditados, y en su caso, de la documentación relativa a la Seguridad Social. </p>
+                  <p>Se considerará que una explotación es viable económicamente cuando su renta unitaria del trabajo no sea inferior al 20% de la renta de referencia. </p>
+                  <p>En el caso de ayudas a la primera instalación de un agricultor joven se considerará viable económicamente la explotación cuyo plan de explotación prevea para aquél una renta procedente de la explotación, medida en términos de margen neto igual o superior al 35 % de la renta de referencia. </p>
+                  <p>Validez temporal de módulos e indicadores determinados: </p>
+                  <p>a) Los módulos de carácter económico establecidos para la determinación de la renta unitaria de trabajo se actualizarán regularmente. </p>
+                  <p>b) Las variaciones producidas en la renta unitaria de trabajo de una explotación agraria durante los cinco años siguientes al de su clasificación como prioritaria, a consecuencia de la actualización anual de los módulos referenciados, no surtirá efectos sobre aquella calificación, durante el referido periodo. </p>
+                  <p>ANEXO 4 </p>
+                  <p>NORMAS MINIMAS EN MATERIA DE MEDIO AMBIENTE </p>
+                  <p>En cualquier caso, los beneficiarios deberán respetar la legislación medioambiental al respecto, contenida en la siguiente normativa: </p>
+                  <p>- Ley 7/1994, de 18 de mayo, de Protección Ambiental (BOJA núm. </p>
+                  <p>79, de 31.5.94). </p>
+                  <p>- Decreto 292/1995, de 12 de diciembre, Reglamento de EIA.(BOJA núm. 166, de 28.12.95). </p>
+                  <p>- Decreto 153/1996, de 30 de abril, Reglamento Informe </p>
+                  <p>Ambiental.(BOJA núm. 69, de 18.6.96). </p>
+                  <p>- Decreto 297/1995, de 19 de diciembre, Reglamento de </p>
+                  <p>Calificación Ambiental.(BOJA núm. 3, de 11.1.96). </p>
+                  <p>- Real Decreto Legislativo 1/2001, de 20 de julio, de Aguas (BOE núm. 176/2001, de 24.7.01), de Aguas. </p>
+                  <p>- Real Decreto 1310/1990, de 29 de octubre, por el que se regula la utilización de los lodos de depuración en el sector agrario. (BOE núm. 262/1990, de 1.11.90), del Ministerio de Agricultura, Pesca y Alimentación. </p>
+                  <p>- Orden de 26 de octubre de 1993, desarrolla el Real Decreto </p>
+                  <p>1310/1990, regula la utilización de lodos de depuración en el sector agrario. (BOE núm. 265/1993, de 5.11.93), del Ministerio de Agricultura, Pesca y Alimentación. </p>
+                  <p>- Orden de 22 de noviembre de 1993, por la que se desarrolla en el ámbito de la Comunidad Autónoma Andaluza el Real Decreto </p>
+                  <p>1310/90 y Orden de 2 de octubre d e1993 del Ministerio de Agricultura, Pesca y Alimentación, sobre utilización de lodos de depuración en el sector agrícola. (BOJA núm. 137/1993, de </p>
+                  <p>18.12.93). </p>
+                  <p>- Decreto 54/1999, de 2 de marzo, de aguas residuales, por el que se declaran las Zonas sensibles, normales y menos sensibles en las aguas del litoral y de las cuencas hidrográficas intracomunitarias de la Comunidad Autónoma de Andalucía. (BOJA núm. 35/1999, de 23.03.99). </p>
+                  <p>- Ley 10/1999, de 21 de abril, sobre residuos. (BOE núm. </p>
+                  <p>5/1999, de 12.1.99). </p>
+                  <p>- Real Decreto 261/1996, de 16 de febrero, sobre protección contra la contaminación producida por de nitratos procedentes de fuentes agrarias. (BOE núm. 61/1966, de 11.3.96). </p>
+                  <p>- Decreto 261/1998, de 15 de diciembre, designa las zonas vulnerables, a la contaminación de las aguas por nitratos procedentes de fuentes agrarias. (BOJA núm. 5/1999, de </p>
+                  <p>11.3.99). </p>
+                  <p>- Decreto 283/1995, de 21 de noviembre, por el que se aprueba el Reglamento de Residuos de la Comunidad Autónoma de Andalucía (BOJA núm. 161, de 19.12.95). </p>
+                  <p>- Decreto 134/1998, de 23 de junio, por el que se aprueba el Plan de Gestión de Residuos tóxicos y peligrosos (BOJA núm. </p>
+                  <p>91, de 13.8.98). </p>
+                  <p>- Decreto 104/2000, de 21 de marzo, por el que se regulan las autorizaciones administrativas de las actividades de valoración y eliminación de residuos y la gestión de residuos plásticos agrícolas. (BOJA núm. 47, de 22.4.00). </p>
+                  <p>- Orden de 7 de febrero de 2000, por la que se establecen sistemas de gestión para los envases y residuos de envases de productos fitosanitarios (BOJA núm. 34, de 21.3.00). </p>
+                  <p>- Ley 16/2002, de 1 de julio, sobre prevención y control integrado de la contaminación. (BOE núm. 157/2002, de 2.7.02). </p>
+                  <p>- Resolución de 12 de diciembre de 1997 de la Dirección General de Producción Agraria. </p>
+                  <p>- Orden de 12 de diciembre de 2001, por la que se establecen las medidas de control obligatorias así como las recomendadas en la lucha contra las enfermedades víricas en los cultivos hortícolas. ( BOJA núm. 3 de 8.1.02). </p>
+                  <p>- Ley 10/1998, de 21 de abril, de residuos (BOE núm. 96 de </p>
+                  <p>22/04/98). </p>
+                  <p>- RD 2224/1993, de 17 de diciembre sanidad animal. Normas sanitarias de eliminación y transformación de animales muertos y desperdicios de origen animal y protección frente a agentes patógenos en piensos de origen animal. (BOE núm. 16, de </p>
+                  <p>19.1.94). </p>
+                  <p>- RD 1749/1998, de 31 de julio, por el que se establecen medidas de control aplicables a determinadas sustancias y residuos animales vivos y sus productos (BOE núm. 187, de </p>
+                  <p>7.8.98). </p>
+                  <p>- Orden 145/2002, de 24 de enero, por la que se modifican los anexos II de los Reales Decretos 280/1994, de 18 de febrero, y </p>
+                  <p>569/1990, de 27 de abril, por los que se establecen los límites máximos de residuos de plangicidas y su control en determinados productos de origen vegetal y animal (BOE. núm.. 27, de </p>
+                  <p>31.1.02). </p>
+                  <p>- Ley 7/1994, de 18 de mayo, de Protección Ambiental (BOE núm. </p>
+                  <p>156, de 1.7.94). </p>
+                  <p>Cuando las explotaciones se encuentren en las zonas vulnerables de acuerdo con la Directiva Nitratos, se definirá la gestión medioambiental adecuada para el control de estiércol </p>
+                  <p>almacenado, en lo que se refiere a evitar la lixiviación de líquidos (estercoleros estancos) o en el cálculo del </p>
+                  <p>almacenamiento del producto, en función de las salidas y distribución del mismo. </p>
+                  <p>En lo que respecta a sectores de producción vegetal se deberán mantener las siguientes prácticas: </p>
+                  <p>- Prohibición de la quema de rastrojos. De forma excepcional y a causa de problemas sanitarios o fitosanitarios, podrá quedar sin efecto esta limitación cuando a juicio de la autoridad de gestión las soluciones alternativas puedan tener efectos ambientales más positivos. </p>
+                  <p>- Prohibición de laboreo convencional a favor de pendiente. Las correspondientes Unidades Regionales de Gestión podrán </p>
+                  <p>autorizar de forma excepcional esta práctica. </p>
+                  <p>- La aplicación del abonado mineral deberá tener en cuenta las recomendaciones comarcales y locales emitidas por los servicios técnicos de las Consejerías de Agricultura de las CCAA. </p>
+                  <p>- Los restos derivados de podas, plásticos usados y otros materiales residuales, deberán retirarse de las parcelas y depositarse en lugares apropiados. </p>
+                  <p>- En la zona de pastos, en especial en dehesas en las que haya claro riesgo de incendio, las autoridades regionales de gestión podrán recomendar el laboreo de una franja perimetral de 3 metros como máximo. </p>
+                  <p>- En el uso de productos fitosanitarios y herbicidas deberán respetarse las indicaciones de los fabricantes, retirando los residuos una vez efectuada la aplicación correspondiente. </p>
+                  <p>NORMAS MINIMAS EN MATERIA DE HIGIENE Y BIENESTAR DE LOS ANIMALES </p>
+                  <p>- Real Decreto 3/2002, de 11 de enero, por el que se establecen las normas mínimas de protección de las gallinas ponedoras. </p>
+                  <p>- Real Decreto 1047/1994, de 20 de mayo, relativo a las normas mínimas para la protección de terneros. </p>
+                  <p>- Real Decreto 229/1998, de 16 de febrero, por el que se modifica el Real Decreto 1047/1994, de 20 de mayo, relativo a las normas mínimas para la protección de terneros. </p>
+                  <p>- Real Decreto 1048/1994, de 20 de mayo, relativo a las normas mínimas para la protección de cerdos. </p>
+                  <p>- Real Decreto 54/1995, de 20 de enero, sobre la protección de animales en el momento de su sacrificio o matanza. </p>
+                  <p>- Decreto 324/2000, de 3 de marzo, por el que se establecen normas básicas de ordenación de las explotaciones porcinas. </p>
+                  <p>- Real Decreto 348/2000, de 10 de marzo, por el que se </p>
+                  <p>incorpora el ordenamiento jurídico de la Directiva 98/58/CE, relativa a la protección de los animales en las explotaciones ganaderas. </p>
+                  <p>- La norma española reguladora de esta medida de inversiones en explotaciones agrarias, prevé la posibilidad de acogerse a estas ayudas para adaptar la explotación a lo que </p>
+                  <p>posteriormente se promulgue. </p>
+                  <p> Ver anexo en facsímil BOJA (PAG. 16533)
+ </p>
+                  <p>ANEXO 7 </p>
+                  <p>AUTORIZACION PARA LA CESION DE INFORMACION RELATIVA A </p>
+                  <p>OBLIGACIONES CON LA COMUNIDAD AUTONOMA </p>
+                  <p>DE ANDALUCIA EN PROCEDIMIENTOS DE SUBVENCIONES Y AYUDAS PUBLICAS </p>
+                  <p>Don/doña </p>
+                  <p>............................................................... ............................................................... ................................................ con DNI ............................................................... ......................................, en nombre propio/ como representante legal de la entidad con CIF	 </p>
+                  <p>y domicilio </p>
+                  <p>social......................................................... .......................................en calidad de </p>
+                  <p>............................................................. (cumplimentar lo que proceda). </p>
+                  <p>A U T O R I Z A </p>
+                  <p>A la Delegación Provincial de la Consejería de Agricultura y Pesca de .............................................de la Junta de Andalucía a solicitar la cesión de información, por medios informáticos o telemáticos, sobre la circunstancia de estar o no al corriente de sus obligaciones tributarias con la Comunidad Autónoma de Andalucía, así como sobre la </p>
+                  <p>circunstancia de ser o no deudor de la misma por cualquier otro ingreso de Derecho Público a efectos del cobro de la subvención o ayuda pública para la mejora y modernización de las </p>
+                  <p>estructuras de producción de las explotaciones agrarias, línea/s Primera Instalación de Agricultores Jóvenes y/o Inversiones en Explotaciones mediante Planes de Mejora, concedidas por resolución de .............. de </p>
+                  <p>.............................. de .................., del Delegado Provincial de la Consejería de Agricultura y Pesca de ........................, de acuerdo con lo establecido en la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal y demás disposiciones de aplicación. </p>
+                  <p>En ............................., a..... de ............. de </p>
+                  <p>20...... </p>
+                  <p>Fdo.: </p>
+                  <p>(Sello de la empresa, en su caso) </p>
+                  <p>ANEXO 8 </p>
+                  <p>AUTORIZACION PARA LA CESION DE INFORMACION RELATIVA A </p>
+                  <p>OBLIGACIONES TRIBUTARIAS CON EL ESTADO </p>
+                  <p>EN PROCEDIMIENTOS DE SUBVENCIONES Y AYUDAS PUBLICAS </p>
+                  <p>Don/doña </p>
+                  <p>............................................................... ............................................................... ............................................. con DNI </p>
+                  <p>............................................................... ................................................, en nombre propio / como representante legal de la entidad con CIF  </p>
+                  <p>y domicilio </p>
+                  <p>social......................................................... .......................................en calidad de </p>
+                  <p>............................................................. (cumplimentar lo que proceda). </p>
+                  <p>A U T O R I Z A </p>
+                  <p>A la Delegación Provincial de la Consejería de Agricultura y Pesca de ..................................... de la Junta de Andalucía a solicitar la cesión de la información a la Agencia Estatal de Administración Tributaria, por medios informáticos o telemáticos, sobre la circunstancia de estar o no al corriente de sus obligaciones tributarias con el Estado, a efectos del cobro de la subvención concedida, para la mejora y </p>
+                  <p>modernización de las estructuras de producción de las </p>
+                  <p>explotaciones agrarias, línea/s Primera Instalación de </p>
+                  <p>Agricultores Jóvenes y/o Inversiones en Explotaciones mediante Planes de Mejora, concedidas por Resolución de ............... de .......................de .............., del Delegado Provincial de la Consejería de Agricultura y Pesca de </p>
+                  <p>.............................. y reguladas por Orden . de .................de......................de ............... de la Consejería de Agricultura y Pesca, de acuerdo con lo establecido en la disposición adicional cuarta de la Ley </p>
+                  <p>40/1998, de 9 de diciembre, del Impuesto sobre la Renta de las Personas Físicas y otras Normas Tributarias, y demás </p>
+                  <p>disposiciones de aplicación. </p>
+                  <p> 2. La calificación de una explotación como prioritaria se actualizará de oficio por periodos de cinco años contados a partir de la correspondiente notificación de la resolución de calificación. En este caso se recabará del interesado la documentación necesaria. </p>
+                  <p>3. El titular de una explotación agraria está obligado a comunicar a la Delegación Provincial que corresponda los cambios en sus circunstancias personales y los relativos a su explotación que pudieran afectar a la calificación de </p>
+                  <p>explotación agraria prioritaria desde el momento en que se produzcan tales cambios. </p>
+                  <p>Artículo 4. Pérdida de la calificación. </p>
+                  <p>1. La explotación agraria calificada como prioritaria perderá esta condición, previa Resolución dictada por el titular de la Delegación Provincial correspondiente, cuando se pierda un requisito no subsanable que sea necesario para la calificación y en los supuestos previstos en los apartados siguientes. Sin perjuicio de lo anterior, la pérdida de la calificación como explotación agraria prioritaria podrá efectuarse a instancias del titular de la explotación. </p>
+                  <p>2. La calificación de explotación agraria prioritaria se perderá cuando se detecte por medio de controles establecidos o que se establezcan el incumplimiento de alguna de las </p>
+                  <p>condiciones exigidas para calificar una explotación como prioritaria. </p>
+                  <p>3. La negativa u obstrucción por parte del interesado a las actuaciones de control que pudiera llevar a cabo el órgano competente, no facilitando el acceso a las dependencias y documentación objeto de investigación, será causa de revocación de la calificación como explotación agraria prioritaria. </p>
+                  <p>4. La baja en el Registro Autonómico de Explotaciones </p>
+                  <p>Prioritarias traerá como consecuencia la pérdida de las situaciones de preferencia de los titulares de explotaciones prioritarias establecidas en la Ley 19/95 y demás normativa concordante. </p>
+                  <p>Artículo 5. Solicitudes de calificación de explotación agraria prioritaria. </p>
+                  <p>1. La calificación de una explotación agraria como explotación prioritaria, se realizará a solicitud de los interesados, según el modelo que aparece como anexo 2 de la presente Orden, acompañada de la documentación que se indica en el artículo siguiente. </p>
+                  <p>2. La solicitud de calificación, se presentará preferentemente en las Oficinas Comarcales Agrarias, o en las Delegaciones Provinciales de la Consejería de Agricultura y Pesca, sin perjuicio de que puedan presentarse igualmente, en los demás lugares previstos en el artículo 38.4 de la Ley 30/1992, de 26 de noviembre, de Régimen Jurídico de las Administraciones Públicas y del Procedimiento Administrativo Común, y en el articulo 51.2 de la Ley 6/83, de 21 de julio, del Gobierno y la Administración General de la Comunidad Autónoma de Andalucía </p>
+                  <p>3. Las solicitudes de calificación se podrán presentar, a lo largo de todo el año. </p>
+                  <p>Artículo 6. Documentación acreditativa de cumplimiento de requisitos. </p>
+                  <p>El solicitante de calificación de explotación agraria </p>
+                  <p>prioritaria, tanto persona física como jurídica, respecto de sus integrantes, y de la explotación agraria, deberán presentar copia compulsada de la documentación que se indica en el anexo </p>
+                  <p>9, para acreditar el cumplimiento de requisitos referentes a personalidad del solicitante, condición de agricultor </p>
+                  <p>profesional, capacitación profesional agraria, afiliación a Seguridad Social, edad, titularidad de la explotación agraria y técnico-económicos de la explotación agraria. </p>
+                  <p>Artículo 7. Tramitación. </p>
+                  <p>1. La instrucción del procedimiento corresponderá a las Delegaciones Provinciales de la Consejería de Agricultura y Pesca o a las Oficinas Comarcales Agrarias dependientes de las mismas, que podrán realizar de oficio cuantas actuaciones estimen necesarias para la determinación, conocimiento y comprobación de los datos en virtud de los cuales deba </p>
+                  <p>pronunciarse la resolución. </p>
+                  <p>2. Si la solicitud no reuniera los requisitos exigidos a la misma o no se acompañasen los documentos preceptivos, se requerirá al interesado para que el plazo de diez días subsane la falta o presente dichos documentos, con la indicación de que si no lo hiciera, se le tendrá por desistido de su petición, previa resolución que deberá ser dictada en los términos y plazos previstos en el artículo 42 de la Ley 30/92, de 26 de noviembre, de Régimen Jurídico de las Administraciones Públicas y del Procedimiento Administrativo Común. </p>
+                  <p>3. El órgano encargado de la tramitación podrá requerir del solicitante la documentación complementaria que resulte necesaria en cada caso concreto. Dicho requerimiento tendrá la consideración de mejora de la solicitud a que se refiere el artículo 76 de la Ley 30 /1992 de 26 de noviembre, de Régimen Jurídico de las Administraciones Públicas y del Procedimiento Administrativo Común. </p>
+                  <p>4. Con las solicitudes de calificación de explotación agraria prioritaria ligadas a solicitudes de ayuda, se realizará la siguiente actuación: Una vez informada la calificabilidad de la explotación en la situación actual o prevista, para </p>
+                  <p>solicitantes de planes de mejora y de primera instalación, quedará en suspenso el procedimiento de calificación hasta la acreditación por el interesado de la ejecución de las </p>
+                  <p>inversiones del plan de mejora o de las inversiones del plan de explotación, de su condición de agricultor profesional y de su capacitación profesional para primera instalación. </p>
+                  <p> Artículo 8. Certificado a efectos de beneficios económicos. </p>
+                  <p>1. Antes de dictarse la resolución de calificación de la explotación agraria como prioritaria, el interesado podrá solicitar en la Delegación Provincial correspondiente, la emisión de un certificado a efectos de los beneficios fiscales previstos en la Ley 19/1995, de 4 de julio. </p>
+                  <p>2. La Delegación Provincial emitirá el correspondiente </p>
+                  <p>certificado, una vez valorados favorablemente los compromisos adquiridos por el solicitante de instalarse o consolidarse en una explotación prioritaria. Los requisitos que podrán faltar inicialmente y que se acreditarán en su momento, según casos, serán los siguientes: </p>
+                  <p>a) El referente a titularidad para solicitante de calificación de explotación agraria prioritaria sola o ligada a solicitud de ayudas de plan de mejora. </p>
+                  <p>b) Los referentes a titularidad, capacitación, agricultor profesional y régimen de la Seguridad Social para solicitante de calificación con solicitud de ayudas para primera </p>
+                  <p>instalación. </p>
+                  <p>3. En el certificado se hará constar, entre otros, los </p>
+                  <p>siguientes extremos: </p>
+                  <p>a) La finalidad para la que se solicita. </p>
+                  <p>b) La descripción de la explotación. </p>
+                  <p>c) Los compromisos para alcanzar la calificación de explotación agraria prioritaria. </p>
+                  <p>d) Advertencia de que se dictará resolución denegatoria de calificación, de la que se dará traslado al órgano competente de la Consejería de Economía y Hacienda, si no se justificase documentalmente, antes del plazo máximo para dictar resolución, el cumplimiento de los compromisos adquiridos. En caso de certificados vinculados a solicitudes de ayudas, la </p>
+                  <p>documentación justificativa deberá presentarse en el plazo que establezca la resolución de ayudas </p>
+                  <p>Artículo 9. Resolución. </p>
+                  <p>1. Se delega en los titulares de las respectivas Delegaciones Provinciales la competencia para resolver el procedimiento de calificación de explotaciones prioritarias. </p>
+                  <p>2. El plazo máximo para resolver y notificar la Resolución expresa será de seis meses, desde la fecha en que la solicitud haya tenido entrada en el registro del órgano competente para su tramitación. </p>
+                  <p>3. Transcurrido el plazo indicado en el apartado anterior sin haberse dictado y notificado la resolución expresa, los interesados podrán entender estimadas sus solicitudes por silencio administrativo, de conformidad con lo dispuesto en el artículo 43 de la Ley 30/1992, de 26 de noviembre, de Régimen Jurídico de las Administraciones Públicas y del Procedimiento Administrativo Común. </p>
+                  <p>4. La resolución de calificación de una explotación agraria como prioritaria, contendrá como mínimo los siguientes </p>
+                  <p>extremos: </p>
+                  <p>a) Descripción de los elementos que componen la explotación agraria. </p>
+                  <p>b) Referencias catastrales y registrales en su caso. </p>
+                  <p>c) Descripción del titular de la misma, y la modalidad de acceso de la explotación a la calificación como prioritaria. </p>
+                  <p>d) Advertencia al beneficiario de la obligación de comunicar los cambios que se produzcan tanto en la explotación como a su titular. </p>
+                  <p>5. En el caso de solicitudes de calificación de explotación agraria prioritaria vinculadas a la obtención de ayudas a inversiones mediante primeras instalaciones, planes de mejora presentados por personas jurídicas o que incluyan compra de tierras, se procederá a dictar resolución de calificación de la explotación agraria como prioritaria, tras la justificación de la ejecución de las inversiones y consiguiente acreditación del cumplimiento de los compromisos adquiridos, referidos al titular y a la explotación. </p>
+                  <p>6. En el caso de solicitudes de calificación de explotaciones agrarias prioritarias vinculadas a ayudas de primera </p>
+                  <p>instalación, el requisito de agricultor profesional se </p>
+                  <p>acreditará mediante aportación de las rentas fiscalmente declaradas durante los cuatro ejercicios siguientes a la fecha de notificación de la Resolución de Calificación. </p>
+                  <p>Artículo 10. Acreditación de la calificación de explotación agraria prioritaria. </p>
+                  <p>1. La condición de explotación agraria únicamente se acreditará mediante: </p>
+                  <p>a) Certificación expedida por el órgano competente del </p>
+                  <p>Ministerio de Agricultura, Pesca y Alimentación, acreditativa de la calificación de la explotación agraria como prioritaria en el Catálogo de Explotaciones Prioritarias. </p>
+                  <p>b) Certificación expedida por la Dirección General de Regadíos y Estructuras, acreditativa de la calificación de la </p>
+                  <p>explotación agraria como prioritaria en el Registro Autonómico de Explotaciones Prioritarias. </p>
+                  <p>c) Certificación expedida por la Delegación Provincial de la Consejería de Agricultura y Pesca, de la calificación de la explotación como prioritaria en el Registro Autonómico de Explotaciones Prioritarias. </p>
+                  <p>2. Las solicitudes de certificación acreditativas de la calificación de explotación prioritaria, deberán acompañarse de declaración responsable del interesado de que no se han producido cambios ni en sus circunstancias personales, ni en las de la explotación respecto de las que ya consten en el Registro Autonómico de Explotaciones Prioritarias. </p>
+                  <p>3. Una vez emitido el certificado acreditativo de inscripción de la explotación agraria en el Registro Autonómico de </p>
+                  <p>Explotaciones Prioritarias, éste tendrá una validez de tres meses desde la fecha de su notificación. </p>
+                  <p> Artículo 11. Registro Autonómico de Explotaciones Prioritarias. </p>
+                  <p>1. Se adscribe a la Dirección General de Regadíos y Estructuras el Registro Autonómico de Explotaciones Prioritarias de carácter público, creado por Orden de la Consejería de </p>
+                  <p>Agricultura y Pesca de 20 de noviembre de 1996, por la que se regula el Registro Autonómico de Explotaciones Prioritarias y el procedimiento para la calificación de las explotaciones agrarias como prioritarias. </p>
+                  <p>2. Los datos relativos a las explotaciones y sus titulares se contienen en un fichero automatizado creado por Orden de 15 de abril de 1997 (BOJA núm. 29 de abril), </p>
+                  <p>3. La Dirección General de Regadíos y Estructuras inscribirá en el Registro las explotaciones que, hayan obtenido la </p>
+                  <p>calificación de explotación agraria prioritaria. Del mismo modo anotará en el Registro las modificaciones que afecten a la calificación, así como las bajas. </p>
+                  <p>4. Por parte de las Delegaciones Provinciales se facilitará a la Dirección General de Regadíos y Estructuras la información necesaria para la actualización del Registro Autonómico de Explotaciones Prioritarias. </p>
+                  <p>Artículo 12. Inclusión en el Catálogo de Explotaciones </p>
+                  <p>Prioritarias. </p>
+                  <p>La Dirección General de Regadíos y Estructuras comunicará al Ministerio de Agricultura, Pesca y Alimentación, dentro de los diez primeros días de cada mes, las altas, modificaciones o bajas producidas en el Registro Autonómicas de Explotaciones Prioritarias durante el mes anterior, mediante el suministro de la información a que se refiere el anexo de la Orden </p>
+                  <p>Ministerial de 13 de diciembre de 1995. </p>
+                  <p>CAPITULO III </p>
+                  <p>Líneas de ayuda </p>
+                  <p>Articulo 13. Líneas de ayuda. </p>
+                  <p>La Consejería de Agricultura y Pesca podrá conceder ayudas en sus cuantías máximas y condiciones establecidas en el Real Decreto 613/2001, de 8 de junio, a las siguientes líneas de ayudas: </p>
+                  <p>1. Ayudas nacionales: </p>
+                  <p>a) Inversiones en las explotaciones agrarias mediante planes de mejora. </p>
+                  <p>b) Primera instalación de agricultores jóvenes. </p>
+                  <p>c) Inversiones en planes de mejora destinadas a adecuar la base territorial de la explotación. </p>
+                  <p>2. Del mismo modo, podrá concederse con cargo al presupuesto de la Comunidad Autónoma una ayuda complementaria para la primera instalación de agricultores jóvenes en los términos previstos en esta Orden. </p>
+                  <p>Articulo 14. Inversiones en la explotación agraria mediante planes de mejora. </p>
+                  <p>1. Se podrán conceder ayudas a los titulares de explotaciones agrarias, que propongan la realización de inversiones en su explotación siempre que: </p>
+                  <p>a) Se cumplan las condiciones establecidas en el articulo 4 y en el anexo II del Real Decreto 613/2001 de 8 de junio. Dichas condiciones deberán cumplirse en el momento de presentar la solicitud de ayuda, con la excepción de lo regulado en apartado </p>
+                  <p>5 del citado artículo y en los casos en los que el plan de mejora sea simultáneo a la primera instalación. </p>
+                  <p>b) Las inversiones tengan el destino previsto en el articulo 5 del Real Decreto 613/2001 de 8 de junio. </p>
+                  <p>c) No se incurra en las limitaciones sectoriales recogidas en el artículo 6 y anexo 1 del RD 613/2001 de 8 de junio. </p>
+                  <p>d) Se comprometan a llevar la contabilidad simplificada de su explotación durante al menos cinco años, contados a partir de la fecha de notificación de la resolución de concesión de la ayuda, que incluya por lo menos: Ficha descriptiva de las características de la explotación y en particular de los factores y medios de producción utilizados; Diario de ingresos y gastos de la explotación, con documentos justificativos; Inventario anual de apertura y cierre de ejercicio; Balance anual del activo y del pasivo de la explotación; Cuenta anual de explotación (ingresos y gastos detallados) y Libro-registro de bienes de inversión. </p>
+                  <p>e) En el caso de solicitantes de ayudas a planes de mejora mayores de 60 años, efectuarán compromiso elevado a escritura pública, de continuidad de un joven al frente de la explotación agraria, para cuando ellos cumplan los 65 años. </p>
+                  <p>2. En cuanto al tipo y cuantía de las ayudas a conceder, por explotación y beneficiario, se estará a lo dispuesto en los artículos 7, 8, 9 y 10 del Real Decreto 613/2001, de 8 de junio. </p>
+                  <p>3. En relación con el número de planes de mejora por </p>
+                  <p>explotación y beneficiario, se estará a lo dispuesto el artículo 11 del RD 613/2001, de 8 de junio. En todo caso, la aprobación de un nuevo plan de mejora estará condicionada, a que esté finalizado y certificado a efectos de pago las inversiones y acciones del expediente de mejora precedente. </p>
+                  <p>4. Para explotaciones de agricultura intensiva, se podrán auxiliar inversiones hasta la cuantía máxima indicada en el artículo 7.2 del Real Decreto 613/2001, de 8 de junio, cuando la especie cultivada o rotación dominante demande una alta inversión inicial y elevado capital circulante como </p>
+                  <p>consecuencia de las prácticas necesarias para su producción comercial. Deberán ser especies cultivadas bajo abrigo en cualquiera de sus variantes con la excepción del acolchado en cultivos extensivos. </p>
+                  <p>5. Los peticionarios de ayudas que presenten Planes de Mejora encaminados a la obtención de productos ecológicos, podrán beneficiarse del porcentaje adicional de ayuda al que se refiere al articulo 8.2 del RD 613/2001, 8 de junio. Para ello, se requerirá certificado expedido por entidad de certificación autorizada por la Consejería de Agricultura y Pesca. </p>
+                  <p> Articulo 15. Primera instalación de agricultores jóvenes. </p>
+                  <p>1. De conformidad a lo dispuesto en el artículo 17 de la Ley </p>
+                  <p>19/95, de 4 de julio y en los artículos 2.10 y 14 del RD </p>
+                  <p>613/2001, de 8 de junio, se podrán conceder ayudas a la primera instalación de agricultores jóvenes siempre que: </p>
+                  <p>a) Se cumplan los requisitos establecidos en el artículo 13 del Real Decreto 613/2001, de 8 de junio. La acreditación de la capacitación profesional suficiente se efectuará, como máximo, antes de la certificación de la ejecución de las inversiones. </p>
+                  <p>b) Se comprometan a llevar la contabilidad simplificada de su explotación durante al menos cinco años, contados a partir de la fecha de notificación de la resolución de concesión de la ayuda, que incluya al menos los extremos previstos en la letra </p>
+                  <p>d) del apartado 1 del artículo anterior. </p>
+                  <p>2. En cuanto al tipo de inversiones auxiliables, cuantía y criterios de aplicación de esta ayuda, se estará a lo dispuesto en el artículo 15 y anexo I del Real Decreto 613/2001 de 8 de junio. </p>
+                  <p>Si en las primeras instalaciones se contempla la adquisición o acondicionamiento de la vivienda, será necesario informe favorable de la Delegación Provincial y que el beneficiario haga extensivo el compromiso de fijar la vivienda como </p>
+                  <p>residencia habitual durante el mismo periodo que haya </p>
+                  <p>establecido para el resto de los compromisos. </p>
+                  <p>3. Cuando el plan de explotación correspondiente a la primera instalación incluya entre sus inversiones la adquisición de capital territorial y de explotación, no serán inversiones auxiliables: </p>
+                  <p>a) La compraventa entre padres e hijos en los casos en que el joven sea hijo único. </p>
+                  <p>b) La compraventa entre miembros de la sociedad conyugal, cualquiera que sea el régimen económico del matrimonio. </p>
+                  <p>c) La compraventa de tierras entre un agricultor joven y una sociedad de la que sea socio o en la que pretenda integrarse como tal, salvo en los casos en que se trate de una aportación económica del joven a la entidad asociativa que posibilite su integración como socio de la misma. </p>
+                  <p>4. En caso de primera instalación de agricultores jóvenes con acceso a la titularidad exclusiva o compartida de la </p>
+                  <p>explotación, cuando ésta sea propiedad de los padres o de ascendientes directos en línea recta hasta el segundo grado por consanguinidad o afinidad, cualquiera que sea el régimen económico del matrimonio, acreditará dicha titularidad por cualquiera de las formas legalmente previstas, debiendo formalizarse en todo caso, mediante escritura pública otorgada ante Notario. </p>
+                  <p>5. La instalación del cónyuge de un titular de una explotación agraria no se considerará auxiliable, salvo en el caso de que el régimen del matrimonio sea el de separación de bienes. </p>
+                  <p>6. A efectos de lo dispuesto en los artículos 13.1.b) y 13.2 del Real Decreto 613/2001 de 8 de junio se entenderá realizada la primera instalación: </p>
+                  <p>a) Si se trata de Instalaciones ex novo: Cuando se formalice el alta de la actividad económica en la Agencia Estatal de la Administración Tributaria y se proceda al alta en el Régimen Especial de Trabajadores Autónomos en actividad agraria o en el Régimen Especial Agrario por cuenta propia de la Seguridad Social y realicen compras o inversiones que permitan el inicio de la actividad agraria o bien desde la toma de posesión de una explotación agraria en situación de generar rentas y no supeditada a la realización de inversiones y mejoras. </p>
+                  <p>b) En el supuesto de primeras instalaciones producidas por acceso a la cotitularidad o por integración del joven en una entidad asociativa titular de una explotación agraria, se tomará como fecha de la primera instalación la del documento que acredite fehacientemente la formalización del acuerdo de cotitularidad o la de adquisición de la calidad de socio. </p>
+                  <p>c) Instalaciones previstas en el artículo 17.2 de la Ley </p>
+                  <p>19/1995, de 4 de julio: se entenderá como fecha de primera instalación la de finalización de las inversiones planteadas en su plan de explotación. </p>
+                  <p>Articulo 16. Ayuda complementaria a la primera instalación de agricultores jóvenes. </p>
+                  <p>1. Se podrá solicitar con cargo al presupuesto de la Comunidad Autónoma, una ayuda complementaria de hasta 25.000 euros a la cuantía de la prima de explotación, regulada en el artículo </p>
+                  <p>15.1. b) del Real Decreto 613/2001, de 8 de junio, para atender los gastos e inversiones derivados de la primera instalación, sin que en ningún caso la ayuda complementaria y la prevista en el artículo anterior pueda superar el importe de la inversión aprobada y efectivamente ejecutada. </p>
+                  <p>2. La concesión de la ayuda complementaria a la primera instalación quedará condicionada a la concesión y certificación de la ayuda prevista en el artículo anterior. </p>
+                  <p>Articulo 17. Primera instalación de agricultores jóvenes con planes de mejora. </p>
+                  <p>La presentación de un plan de mejora a realizar por un </p>
+                  <p>agricultor joven simultáneamente a su primera instalación, será auxiliable cuando se cumplan los siguientes requisitos: </p>
+                  <p>a) El Plan de Mejora se refiera a gastos e inversiones no incluidas en el articulo 15.2.e) del RD 613/2001, de 8 de junio, e incluidos en el artículo 5.1 del R.D. 613/2001 de 8 de junio. </p>
+                  <p>b) Las inversiones auxiliables bajo la forma de inversiones en explotaciones mediante planes de mejora serán las inversiones programadas que excedan a las auxiliadas mediante ayudas a la primera instalación. </p>
+                  <p>c) En cualquier caso las acciones, gastos o inversiones incluidos en el expediente de ayudas a la primera instalación tienen que garantizar la incorporación del joven en una explotación agraria prioritaria. </p>
+                  <p>Articulo 18. Ayuda a inversiones destinadas a adecuar la base territorial de la explotación. </p>
+                  <p>1. Cuando los planes de mejora incluyan como inversión la adquisición de tierras para adecuar la base territorial de la explotación, se podrán conceder ayudas de acuerdo con lo establecido en el artículo 16 del Real Decreto 613/2001 de 8 de junio. </p>
+                  <p>2. En el caso contemplado en el artículo 16.1.b) del Real Decreto 613/2001 de 8 de junio, la fecha de liquidación del Impuesto de Transmisiones Patrimoniales y Actos Jurídicos Documentados del correspondiente contrato de arrendamiento rústico, será la que determine el inicio del cómputo del periodo obligatorio mínimo de un año o ejercicio agrícola completo en la explotación previo a la solicitud, en el que las tierras objeto de compra las venía cultivando el peticionario en régimen de arrendamiento. </p>
+                  <p> Artículo 19. Régimen de concurrencia. </p>
+                  <p>El procedimiento de concesión de las ayudas contenidas en la presente Orden se realizará en régimen de concurrencia no competitiva, de acuerdo con lo establecido en el artículo 10 del Reglamento por el que se regulan los procedimientos para la concesión de subvenciones y ayudas públicas por la </p>
+                  <p>Administración de la Junta de Andalucía y sus Organismos Autónomos y su régimen jurídico, aprobado por Decreto 254/2001 de 20 de noviembre. </p>
+                  <p>Artículo 20. Presentación de solicitudes. Documentación. </p>
+                  <p>1. Las solicitudes de ayuda se formularán conforme al modelo que figura como anexo 3 de la presente Orden y se presentarán, preferentemente en las Oficinas Comarcales Agrarias, o en las Delegaciones Provinciales de la Consejería de Agricultura y Pesca, sin perjuicio de que puedan presentarse igualmente, en los demás lugares previstos en el artículo 38.4 de la Ley </p>
+                  <p>30/1992, de 26 de noviembre, y en el articulo 51.2 de la Ley </p>
+                  <p>6/83, de 21 de julio. </p>
+                  <p>2. Las solicitudes de ayuda irán acompañadas, para la </p>
+                  <p>acreditación de requisitos, en su caso, de la documentación que se indica en los anexos 9 y 10, incluyéndose en este último además referencias a: </p>
+                  <p>- La documentación a presentar relativa a normas mínimas en materia de medio ambiente, higiene y bienestar de los animales, acorde con lo indicado en el anexo 4. </p>
+                  <p>- Autorización, con carácter voluntario, para que la </p>
+                  <p>Administración gestora de las ayudas solicite la cesión de información fiscal necesaria para la mayor información de cara a la resolución de concesión de las ayudas, de acuerdo con lo regulado al efecto en la Orden del Ministerio de Economía y Hacienda de 18 de noviembre de 1999 (B.O.E. núm. 286, de 30 de noviembre), para esto se cumplimentará el anexo 5. </p>
+                  <p>- Los compromisos adquiridos por el solicitante de ayuda, de acuerdo con el modelo que figura en el anexo 6. </p>
+                  <p>3. El plazo de presentación de las solicitudes de ayuda que se regulan en la presente Orden será el comprendido entre el 15 de enero y el 30 de mayo de cada ejercicio. Sin perjuicio de lo anterior por razones técnicas, adversidades climatológicas u otras excepcionales, debidamente justificadas, el titular de la Dirección General competente podrá establecer diferentes fechas de inicio y/o terminación del citado plazo de presentación de solicitudes de ayuda. </p>
+                  <p>4. Junto a la solicitud de ayuda se presentará la solicitud de calificación a que se refiere el artículo 5 de esta Orden, cuando se trate de los siguientes casos: </p>
+                  <p>a) Primera instalación de agricultores jóvenes. </p>
+                  <p>b) Planes de mejora que incluyan como inversión la adquisición de tierras a los que se refiere el artículo 16.1.a del Real Decreto 613/2001 de 8 de junio. </p>
+                  <p>c) Planes de mejora presentados por personas jurídicas de reciente constitución cuya explotación pueda adquirir la condición de prioritaria y calificarse como tal, tras la ejecución de las inversiones y acciones planteadas en su plan de mejora o aquéllas que no siendo de reciente constitución acrediten que no han ejercido la actividad agraria con </p>
+                  <p>anterioridad a la solicitud de ayudas. </p>
+                  <p>5. La solicitud de ayuda en el caso de agricultores jóvenes deberá presentarse: </p>
+                  <p>a) Antes de la primera instalación del peticionario. </p>
+                  <p>b) Dentro de los seis primeros meses posteriores a la primera instalación, entendiéndose como fecha de la misma tal como se define en el punto 6 del artículo 15 de la presente Orden. En este caso, no serán auxiliables ningún gasto o inversión ya realizados. </p>
+                  <p>Articulo 21. Preferencia en la concesión de ayudas. </p>
+                  <p>1. Los titulares de explotaciones prioritarias conforme a lo previsto en el artículo 7.1.d de la Ley 19/1995, de 4 de julio, los de explotaciones con orientación productiva de ganado vacuno lechero y los de explotaciones de ganado vacuno cuyas inversiones tengan por objeto la sustitución parcial o total, de esta actividad productiva, tendrán un trato preferente en la concesión de las ayudas a planes de mejora. </p>
+                  <p>2. Los solicitantes de ayudas a primera instalación realizada bajo el régimen de cotitularidad de una explotación agraria prioritaria a que se refiere el artículo 14 b del Real Decreto </p>
+                  <p>613/2001, de 8 de junio. </p>
+                  <p>3. Los solicitantes de segundo o tercer plan de mejora. </p>
+                  <p>Articulo 22. Tramitación. </p>
+                  <p>1. La instrucción del procedimiento corresponderá a las Delegaciones Provinciales de la Consejería de Agricultura y Pesca o a las Oficinas Comarcales Agrarias dependientes de las mismas, que podrán realizar de oficio cuantas actuaciones estimen necesarias para la determinación, conocimiento y comprobación de los datos en virtud de los cuales deba </p>
+                  <p>pronunciarse la resolución. </p>
+                  <p>2. Si la solicitud no reuniera los requisitos exigidos a la misma o no se acompañasen los documentos preceptivos, se requerirá al interesado para que el plazo de diez días subsane la falta o presente dichos documentos, con la indicación de que si no lo hiciera, se le tendrá por desistido de su petición, previa resolución que deberá ser dictada en los términos y plazos previstos en el artículo 42 de la Ley 30/92, de 26 de noviembre, de Régimen Jurídico de las Administraciones Públicas y del Procedimiento Administrativo Común. </p>
+                  <p>3. El órgano encargado de la tramitación podrá requerir del solicitante la documentación complementaria que resulte necesaria en cada caso concreto. Dicho requerimiento tendrá la consideración de mejora de la solicitud a que se refiere el artículo 76 de la Ley 30/1992, de 26 de noviembre, de Régimen Jurídico de las Administraciones Públicas y del Procedimiento Administrativo Común. </p>
+                  <p>4. Por técnico competente de la Consejería de Agricultura y Pesca se visitará la explotación agraria del solicitante para comprobar que a la fecha de solicitud de la ayuda no se inició la ejecución de las inversiones y/o adquisiciones previstas. De esta visita se levantará acta que será firmada por el </p>
+                  <p>funcionario actuante y, en su caso, por el solicitante de la ayuda. </p>
+                  <p> Articulo 23. Resolución. </p>
+                  <p>1. La competencia para resolver las solicitudes de ayudas para la mejora y modernización de las estructuras de producción de las explotaciones agrarias, se delega en los Delegados </p>
+                  <p>Provinciales de la Consejería de Agricultura y Pesca de la Junta de Andalucía. </p>
+                  <p>2. El plazo máximo para resolver y notificar la Resolución expresa será de seis meses, a contar desde la fecha en que la solicitud haya tenido entrada en el registro del órgano competente para su tramitación. Transcurrido este plazo sin haberse dictado y notificado la resolución expresa, los interesados podrán entender desestimadas sus solicitudes por silencio administrativo, de conformidad a lo dispuesto en el artículo 2.2. de la Ley 9/2001, de 12 de julio, por la que se establece el sentido del silencio administrativo y los plazos de determinados procedimientos como garantías procedimentales para los ciudadanos. </p>
+                  <p>3. La resolución de la ayuda complementaria se efectuará como liquidación tras la certificación de la ayuda ordinaria, quedando suspendida hasta ese momento su tramitación, </p>
+                  <p>contracción del compromiso del gasto y pago </p>
+                  <p>4. Las resoluciones de concesión de ayudas reguladas en la presente Orden, contendrán, entre otros, los siguientes extremos: </p>
+                  <p>a) Gastos e inversiones totales a realizar. Gastos e </p>
+                  <p>inversiones auxiliables. Ayuda máxima autorizada por normativa europea. Porcentaje de contribución de la Unión Europea a la ayuda resuelta. Cuantía total de ayuda concedida y distribución de la misma por conceptos según línea o medida. Datos del préstamo en su caso. Plazo para la formalización de la póliza de préstamo en su caso. Plazo para la ejecución de las </p>
+                  <p>inversiones. </p>
+                  <p>b) En las ayudas comprometidas con cargo al presupuesto de la Comunidad Autónoma: Subvención concedida. Presupuesto </p>
+                  <p>subvencionado. Porcentaje de ayuda respecto al presupuesto subvencionado. Aplicación presupuestaria, forma de pago y secuencia de pago. Actividad a realizar o comportamiento a adoptar por el beneficiario. </p>
+                  <p>Articulo 24. Ejecución de las inversiones. </p>
+                  <p>1. Las inversiones a realizar en las distintas líneas de ayuda reguladas en esta Orden tendrán un plazo de ejecución de un año, desde la notificación de la resolución de concesión de la ayuda. </p>
+                  <p>2. Si la ayuda concedida consiste en todo o en parte en la bonificación de intereses al préstamo concedido, el plazo de ejecución será: </p>
+                  <p>a) Tres meses, contados a partir del día siguiente al de la fecha de notificación de la resolución aprobatoria de ayudas y propuesta de préstamo, para la formalización del mismo con la entidad financiera. El beneficiario viene obligado a aportar a la unidad que le tramitó su solicitud de ayudas, copia de la póliza de préstamo, tan pronto se haya formalizado. </p>
+                  <p>b) Un año para realizar las inversiones y mejoras a contar desde la fecha de la formalización de la póliza del préstamo con la entidad financiera. </p>
+                  <p>3. Los plazos para formalización de préstamos y/o ejecución de inversiones, regulados en el artículo anterior, podrán ser objeto de ampliación en los términos previstos en el artículo </p>
+                  <p>49 de la Ley 30/1992, de 26 de noviembre, previa solicitud del interesado dirigida al Delegado Provincial, que deberá tener lugar de forma inmediata a la aparición de la causa que lo motive y, en cualquier caso, con anterioridad a la expiración del plazo inicialmente concedido. </p>
+                  <p>Artículo 25. Modificación de la resolución de concesión de ayuda. </p>
+                  <p>1. De acuerdo con lo establecido en los artículos 105 y 110 de la Ley 5/1983, de 19 de julio, General de la Hacienda Pública de la Comunidad Autónoma de Andalucía, cualquier variación en las inversiones y mejoras, respecto de las contempladas en la Resolución aprobatoria de ayudas, tanto en el tipo o clase de inversiones como en el valor o gastos de las mismas, que el peticionario estime conveniente introducir, deberá ser </p>
+                  <p>comunicada por éste al órgano competente con anterioridad a su ejecución, pudiendo dar lugar a la modificación de la </p>
+                  <p>Resolución de concesión de ayudas, e incluso, en su caso, a la pérdida de las mismas. </p>
+                  <p>2. Junto a la solicitud de modificación de la resolución de concesión, el beneficiario deberá aportar la siguiente </p>
+                  <p>documentación: </p>
+                  <p>a) Justificación de las circunstancias que motivan la </p>
+                  <p>modificación. </p>
+                  <p>b) Plan de mejora o plan de explotación alternativos. </p>
+                  <p>c) Renuncia expresa a las ayudas que se le hubiesen concedido para la realización de inversiones sustituidas. </p>
+                  <p>3. La modificación del plan de mejora o de explotación supondrá la realización de un nuevo acta de no inicio de inversiones referida a las incluidas en el nuevo plan. </p>
+                  <p>Articulo 26. Justificación de la subvención. </p>
+                  <p>1. Vencido el plazo de ejecución de inversiones a que se refiere el artículo 24 de esta Orden, el beneficiario deberá comunicar por escrito y acreditar ante la Oficina Comarcal Agraria o Delegación Provincial correspondiente la finalización de las inversiones y gastos subvencionados, junto con el cumplimiento de los compromisos adquiridos, del siguiente modo: </p>
+                  <p>a) Realizadas las inversiones y acciones propuestas, el peticionario presentará justificantes del cumplimiento de la finalidad para la que se concedió la subvención y del gasto total de la actividad subvencionada por medio de copia </p>
+                  <p>compulsada de las facturas originales acompañadas de los correspondientes documentos de pago o comprobantes bancarios, que acrediten haber efectuado el desembolso por un importe, al menos, igual a la cuantía de cada una de las inversiones y gastos previstos en el plan auxiliado; dichas facturas, para ser aceptadas, deberán estar cumplimentadas conforme a la normativa fiscal vigente, con una descripción clara y detallada de los productos adquiridos y/o de los servicios recibidos. Si se ha adquirido maquinaria agrícola ésta deberá estar inscrita en el correspondiente Registro de Maquinaria Agrícola. </p>
+                  <p>b) La realización de obras, construcciones y mejoras </p>
+                  <p>permanentes, se justificará mediante la presentación, junto a los comprobantes bancarios de su pago, de las correspondientes facturas justificativas del pago a la empresa constructora, suministradora o de servicios, de todos los gastos auxiliados y mediante las respectivas certificaciones de obras. </p>
+                  <p>c) La compra de tierras, se acreditará mediante la copia compulsada de la escritura pública de compraventa, inscrita en el Registro de la Propiedad, una vez liquidado el impuesto de transmisiones patrimoniales y actos jurídicos documentados. Además deberá acompañarse de documento de pago y extracto bancario acreditativo de haberse realizado el pago. </p>
+                  <p>d) En caso de inversiones que incluyan la adquisición de maquinaria de reposición a la que se refiere la letra b) del artículo 5.2 del Real Decreto 613/2001, además de los </p>
+                  <p>documentos que se citan en la letra a) del apartado 1 de este mismo artículo, deberán aportarse certificados de </p>
+                  <p>achatarramiento y de baja de matriculación de la maquinaria sustituida. </p>
+                  <p> 2. Los beneficiarios de ayuda a la primera instalación deberán acreditar, en el momento de la certificación o en el plazo de dos años contados desde el momento de su instalación, el cumplimiento de los compromisos contraidos a los que se refieren los puntos a), b) y e) del apartado 1 del artículo 13 del Real Decreto 613/2001, de 8 de junio. </p>
+                  <p>3. Los beneficiarios de ayudas a planes de mejora deberán cumplir en el momento de la certificación o en el plazo de dos años, contados desde la concesión de la ayuda el cumplimiento a que se refiere el punto d) del apartado 1 del artículo 5 del Real Decreto 613/2001, de 8 de junio. </p>
+                  <p>Artículo 27. Certificación. Propuesta de pago y pago. </p>
+                  <p>1. Ejecutada la actuación o inversión objeto de ayuda y una vez justificados los gastos de conformidad con lo establecido en el artículo anterior de esta Orden, la Delegación Provincial competente verificará "in situ" la adecuación de las </p>
+                  <p>inversiones al plan de mejora propuesto y, en todo caso a las condiciones de otorgamiento de la subvención. Dicha </p>
+                  <p>comprobación se hará extensiva a las mejoras técnicas </p>
+                  <p>introducidas, a las garantías de la calidad de obra, al gasto realizado conforme a la inversión aprobada, así como al cumplimiento de las condiciones y compromisos sobre la </p>
+                  <p>explotación y el beneficiario. </p>
+                  <p>2. Por parte del técnico competente de la Delegación Provincial o de la Oficina Agraria Comarcal dependiente, se emitirá informe en base y proporción a la medición y valoración final de las inversiones. Dicho informe se elevará al titular de la Delegación Provincial, que emitirá la certificación final de la inversión. </p>
+                  <p>3. Si de la cuantía del gasto justificado relativo a las inversiones que se aprobaron, se desprende una reducción del importe de la subvención concedida, se dictará resolución de modificación junto con la certificación. </p>
+                  <p>4. En cualquier caso, no se emitirá certificación si no estuviesen efectuadas y presentes en la explotación las inversiones auxiliadas, o si no se estuviesen cumpliendo los compromisos suscritos que sean exigibles y los fines que justifican la concesión de la ayuda. </p>
+                  <p>5. La cuantía de las ayudas determinada en la resolución de concesión constituirá la cuantía máxima perceptible, sin perjuicio de su reducción si el coste real de ejecución resultase inferior al previsto. </p>
+                  <p>6. La ayuda en concepto de subvención de capital se hará efectiva y en un solo pago, mediante transferencia bancaria a la cuenta indicada por el beneficiario. </p>
+                  <p>Articulo 28. Seguimiento y control de las subvenciones. </p>
+                  <p>1. Se realizará el seguimiento y control de las subvenciones y ayudas públicas que se hayan concedido, recabando de los perceptores el cumplimiento de los requisitos exigidos en los plazos establecidos y realizando las correspondientes </p>
+                  <p>comprobaciones. </p>
+                  <p>2. Dichas actuaciones podrán ser llevadas a cabo a iniciativa de la correspondiente Delegación Provincial a través de sus servicios técnicos, con independencia del seguimiento y controles que sean necesarios realizar por otros órganos de la administración autonómica y estatal en cumplimiento de lo dispuesto en la normativa comunitaria. </p>
+                  <p>Artículo. 29 Obligaciones de los beneficiarios. </p>
+                  <p>Son obligaciones del beneficiario de ayudas que regula la presente Orden: </p>
+                  <p>a) Realizar la actividad o adoptar el comportamiento que fundamente la concesión de la subvención en la forma y plazos establecidos. </p>
+                  <p>b) Justificar ante la Consejería de Agricultura y Pesca, la realización de la actividad o la adopción del comportamiento, así como el cumplimiento de los requisitos y condiciones que determinen la concesión o disfrute de la subvención. </p>
+                  <p>c) El sometimiento a las actuaciones de comprobación, a efectuar por la Consejería de Agricultura y Pesca y a las de control financiero que corresponden a la Intervención General de la Junta de Andalucía, en relación con las ayudas </p>
+                  <p>concedidas, y a las previstas en la legislación del Tribunal de Cuentas y de la Cámara de Cuentas de Andalucía. </p>
+                  <p>d) Comunicar a la Consejería de Agricultura y Pesca toda alteración de las condiciones tenidas en cuenta para la concesión de la ayuda, y en todo caso la obtención de otras subvenciones o ayudas para la misma finalidad, procedentes de cualesquiera Administraciones o entes públicos o privados, nacionales o internacionales. </p>
+                  <p>e) Acreditar, previamente al cobro de la subvención o ayuda, que se encuentra al corriente de sus obligaciones fiscales con la Comunidad Autónoma de Andalucía y Administración Estatal mediante certificación positiva expedida por el órgano </p>
+                  <p>competente o mediante autorización para la cesión de </p>
+                  <p>información que acompañe a la solicitud conforme se establece en los anexos 7 y 8 de esta Orden, y con la Seguridad Social, mediante la aportación de la correspondiente certificación administrativa positiva expedida por el órgano competente, todo ello de conformidad con la Orden de 12 de septiembre de 2003 de la Consejería de Economía y Hacienda (BOJA núm, 181 de 19 de septiembre), así como que no es deudor de las mismas por cualquier otro ingreso de Derecho Público. </p>
+                  <p>En el supuesto de sociedades civiles o comunidades de bienes, no obligados a liquidar el impuesto de sociedades, se </p>
+                  <p>presentarán las certificaciones individuales, que acrediten que todos sus socios o comuneros están al corriente de sus </p>
+                  <p>obligaciones fiscales así como ante la Tesorería de la </p>
+                  <p>Seguridad Social de la comunidad o de los comuneros según proceda </p>
+                  <p>f) Comunicar los cambios de domicilio a efectos de </p>
+                  <p>notificaciones, durante el periodo en que la ayuda es </p>
+                  <p>reglamentariamente susceptible de control. </p>
+                  <p> Articulo 30. Reintegro de la subvención. </p>
+                  <p>1. Con posterioridad al pago de la totalidad de la ayuda, se procederá por parte del Delegado Provincial de la Consejería de Agricultura y Pesca que hubiere dictado resolución de concesión de la ayuda, a dictar acuerdo de iniciación del procedimiento de reintegro, en los siguientes casos: </p>
+                  <p>a) Cuando el beneficiario incumpla las condiciones y </p>
+                  <p>compromisos establecidos en la resolución de concesión y demás disposiciones legales de aplicación. </p>
+                  <p>b) Cuando no justifique la realización de las inversiones y el cumplimiento de los compromisos adquiridos. </p>
+                  <p>c) Cuando el solicitante de la ayuda sea su vez beneficiario de otras subvenciones o ayudas concedidas o solicitadas para la misma finalidad, procedentes de cualesquiera administración o ente público o privado, nacional o internacional y no las haya declarado previamente con la solicitud de las ayudas. </p>
+                  <p>d) Cuando se oculten o falseen datos, o documentos, dando con ello lugar a su concesión sin que se reuniesen las condiciones y/o requisitos exigidos. </p>
+                  <p>e) Cuando se produzca el incumplimiento de la finalidad para la que se concedieron. </p>
+                  <p>f) Cuando el beneficiario se niegue u obstruya las actuaciones de control, no facilitando el acceso a los locales y </p>
+                  <p>documentación objeto de investigación, así como la posibilidad de obtener copia de aquélla, de conformidad con lo establecido en el artículo 85 bis de la Ley 5/1983, General de la Hacienda Pública de la Comunidad Autónoma de Andalucía. </p>
+                  <p>2. No procederá el reintegro de las ayudas percibidas, cuando el incumplimiento de alguno de los compromisos y condiciones impuestas al beneficiario sea consecuencia de cualesquiera de las causas expresamente contempladas en el artículo 25 del Real Decreto 613/2001. </p>
+                  <p>3. El procedimiento de reintegro se iniciará de oficio por la Delegación Provincial de la Consejería de Agricultura y Pesca, por medio de acuerdo de inicio de expediente para el reintegro de la ayuda concedida, procediéndose a la instrucción del expediente, reconociendo al beneficiario de la misma el derecho a efectuar alegaciones, proponer medios de prueba y el </p>
+                  <p>preceptivo tramite de audiencia previo a la propuesta de resolución. </p>
+                  <p>4. El plazo para resolver y notificar la resolución por la que se acuerde el reintegro de la subvención, será de seis meses, a contar desde la fecha del acuerdo de inicio del expediente de reintegro. El vencimiento del plazo máximo establecido sin que se haya dictado y notificado resolución expresa, producirá la caducidad del procedimiento. </p>
+                  <p>5. Procederá el reintegro y la exigencia del interés de demora desde el momento del pago de la ayuda en los supuestos </p>
+                  <p>previstos en las letras a), b), c), d) e) y f) del apartado 1, de acuerdo con lo establecido en el párrafo 1 del artículo 112 de la Ley General de la Hacienda Pública de la Comunidad Autónoma de Andalucía. </p>
+                  <p>6. La resolución de reintegro será notificada al interesado indicándole el importe a reintegrar, el lugar, la forma y el plazo voluntario de pago, para realizar el ingreso, </p>
+                  <p>advirtiéndole que en caso de no efectuar el reintegro en plazo, se procederá a la recaudación de la subvención en vía de apremio, o en los casos que sea pertinente, de compensación. </p>
+                  <p>7. Transcurrido el plazo de ingreso voluntario de pago sin que se materialice el reintegro de la ayuda, la Delegación </p>
+                  <p>Provincial que dictó la resolución por la que se acuerda el reintegro, dará traslado del expediente al órgano competente de la Consejería de Economía y Hacienda para que inicie el procedimiento de apremio. </p>
+                  <p>8. En la Resolución de reintegro se hará constar que las ayudas abonadas por el Ministerio de Agricultura, Pesca y Alimentación con cargo a sus presupuestos (bonificación de interés, </p>
+                  <p>minoración de anualidades de amortización y coste de aval) les serán reclamadas por el órgano competente de aquél, en las cuantías que por principal y por demora determine dicho órgano </p>
+                  <p>Artículo 31. Infracciones y sanciones. </p>
+                  <p>1. El régimen sancionador en materia de subvenciones de ayudas para la mejora y modernización de las estructuras de producción de las explotaciones agrarias será el previsto en la Ley </p>
+                  <p>38/2003 General de Subvenciones. </p>
+                  <p>2. Constituyen infracciones administrativas en materia de subvenciones de ayudas para la mejora y modernización de las estructuras de producción de las explotaciones agrarias, las siguientes conductas, cuando en ellas intervenga dolo, culpa o simple negligencia: </p>
+                  <p>a) La obtención de la subvención falseando las condiciones requeridas para su concesión u ocultando las que la hubiesen impedido o limitado. </p>
+                  <p>b) La no aplicación de las cantidades recibidas a los fines para los que la subvención fue concedida, siempre que no se haya procedido a su devolución sin previo requerimiento. </p>
+                  <p>c) El incumplimiento, por razones imputables al beneficiario, de las obligaciones asumidas como consecuencia de la concesión de la subvención. </p>
+                  <p>d) A falta de justificación del empleo dado a los fondos recibidos. </p>
+                  <p>3. Cuando se hubiera disfrutado u obtenido indebidamente por el titular de una explotación agraria de beneficios fiscales de los establecidos en la Ley 19/95, de 4 de julio, se estará a lo dispuesto en el capítulo VI del Titulo II de la Ley General Tributaria. </p>
+                  <p>4. La imposición de sanciones en materia de ayudas para la modernización de explotaciones agrarias, se efectuará mediante expediente administrativo en el que, en todo caso, se dará audiencia al interesado antes de dictarse el acuerdo </p>
+                  <p>correspondiente, y que será tramitado conforme a lo dispuesto en el Capítulo II del Título VI de la Ley de Procedimiento Administrativo. </p>
+                  <p>Artículo 32. Disponibilidad presupuestaria. </p>
+                  <p>La concesión de las ayudas contempladas en la presente Orden estará condicionada a las disponibilidades presupuestarias para cada ejercicio económico y dentro de los límites de </p>
+                  <p>distribución del volumen máximo al que se refiere el artículo </p>
+                  <p>19 del Real Decreto 613/2001, de 8 de junio. </p>
+                  <p>Disposición Adicional Primera. Legislación básica. </p>
+                  <p>Dado que las cuantías máximas de estas ayudas y requisitos para su obtención vienen recogidas, con el carácter de legislación básica, en el Real Decreto 613/2001, de 8 de junio, cualquier modificación o regulación del mismo será de aplicación a la Comunidad Autónoma de Andalucía. </p>
+                  <p>Disposición Adicional Segunda. Modificación de la Orden de 18 de enero de 2002, por la que se regula la formación de </p>
+                  <p>agricultores/as en los programas de incorporación de jóvenes a la agricultura, de modernización de explotaciones y de </p>
+                  <p>calificación de explotaciones prioritarias. </p>
+                  <p>El artículo 4 de la Orden de 18 de enero de 2002, por la que se regula la formación de agricultores/as en los programas de incorporación de jóvenes, de modernización de explotaciones y de calificación de explotaciones prioritarias, queda redactado en los siguientes términos: </p>
+                  <p>"Artículo 4. Capacitación profesional exigida. </p>
+                  <p>1. La capacitación profesional agraria suficiente a la que se refiere el artículo 19.a) de la Ley 19/1995, de 4 de julio, y el artículo 13.1.a) del Real Decreto 613/2001, de 8 de junio, para los agricultores jóvenes que se acojan a las ayudas de primera instalación, podrá ser adquirida por el peticionario mediante alguno de los siguientes supuestos: </p>
+                  <p>a) Cuando hayan cursado los módulos indicados en el artículo 12 de esta Orden que componen el curso de Incorporación a la Empresa Agraria, en el sector correspondiente al sector productivo de la explotación objeto de su expediente de incorporación a la empresa agraria. </p>
+                  <p>b) Se comprometan a realizar en el plazo indicado por la normativa reguladora correspondiente los módulos indicados en el apartado anterior. </p>
+                  <p>c) Haber superado las pruebas de capataz agrícola o estar en posesión de títulos académicos de la rama agraria, como mínimo del nivel de Formación Profesional Agraria de primer grado. </p>
+                  <p>d) Haber obtenido el título de técnico en una especialidad de la familia de actividades agrarias (como mínimo nivel de grado medio), según se establece en la estructura educativa de la Formación Profesional que regula la Ley Orgánica 1/1990, de 3 de octubre (RCL 1990\2045) de Ordenación General del Sistema Educativo, en sus artículos 30 y siguientes. </p>
+                  <p>2. La capacitación profesional agraria suficiente a la que se refiere el artículo 4.2.b) del Real Decreto 613/2001, de 8 de junio, para los titulares de explotaciones que se acojan a las ayudas destinadas a inversiones en planes de mejora, y la capacitación profesional agraria suficiente a la que se refiere el artículo 4.1.b) de la Ley 19/1995, de 4 de julio, para los titulares de explotaciones que soliciten la inscripción de su explotación en el Registro de Explotaciones Prioritarias, podrá ser adquirida por el peticionario mediante alguno de los siguientes supuestos: </p>
+                  <p>a) Acreditar el ejercicio de la actividad agraria, como titular de explotación, o cotitular, según regula el artículo 18 de la Ley 19/1995, de 4 de julio, durante al menos cinco años de forma ininterrumpida en los últimos diez años, o en los últimos siete años con interrupción. </p>
+                  <p>b) Acreditar respecto a los años en que no hubiera ejercido la actividad agraria, como titular o cotitular de la explotación, la asistencia a cursos o seminarios de capacitación agraria con una duración mínima de 30 horas lectivas por cada año, en el sector correspondiente a la orientación técnico-económica de la explotación, hasta completar los cinco años a los que se refiere el punto a) de este apartado. En este caso, desde la oficina comarcal agraria se le indicará qué módulos o cursos debe realizar para completar su formación. </p>
+                  <p>c) Cuando posea la capacitación señalada en los apartados a), </p>
+                  <p>c) y d) del punto 1 de este artículo". </p>
+                  <a name="descargas"/>
+                  <a title="Descargar PDF de la&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;disposición"
+                     class="&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;item_pdf_disposicion"
+                     href="http://www.juntadeandalucia.es/boja/2004/145/d7.pdf"
+                     target="_blank">
+							Descargar PDF </a>
+                  <!--+ |end content-main-disposition +-->
+      <div class="boja_nav">
+                     <a href="http://www.juntadeandalucia.es/boja/2004/145/6" title="Ir a la disposición anterior" class="anterior">
+                        <span>
+                           <img src="http://www.juntadeandalucia.es/themes/images/paginado_antes.gif" alt="anterior" title="Anterior"/>
+                           <em>Disposición anterior</em>
+                        </span>
+                     </a>
+                     <a href="http://www.juntadeandalucia.es/boja/2004/145/8" title="Ir a la disposición siguiente" class="siguiente">
+                        <span>
+                           <img src="http://www.juntadeandalucia.es/themes/images/paginado_despues.gif" alt="siguiente" title="Siguiente"/>
+                           <em>Disposición siguiente</em>
+                        </span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div id="columna" class="grid_5 omega">
+               <p class="titular">
+               BOJA nº
+               145
+               de 
+               26/07/2004</p>
+               <!--+ |end column-main-heading +-->
+      <ul class="listado_ordenado">
+                  <li class="actual">
+                     <a href="http://www.juntadeandalucia.es/boja/2004/145/s1" title="1. Disposiciones generales">
+                        <span class="c_000000">1. </span>Disposiciones generales</a>
+                  </li>
+                  <li>
+                     <a href="http://www.juntadeandalucia.es/boja/2004/145/s2.1" title="2.1. Nombramientos, situaciones e incidencias">
+                        <span class="c_000000">2.1. </span>Nombramientos, situaciones e incidencias</a>
+                  </li>
+                  <li>
+                     <a href="http://www.juntadeandalucia.es/boja/2004/145/s2.2" title="2.2. Oposiciones y concursos">
+                        <span class="c_000000">2.2. </span>Oposiciones y concursos</a>
+                  </li>
+                  <li>
+                     <a href="http://www.juntadeandalucia.es/boja/2004/145/s3" title="3. Otras disposiciones">
+                        <span class="c_000000">3. </span>Otras disposiciones</a>
+                  </li>
+                  <li>
+                     <a href="http://www.juntadeandalucia.es/boja/2004/145/s5.1"
+                        title="5.1. Subastas y concursos de obras, suministros y servicios públicos">
+                        <span class="c_000000">5.1. </span>Subastas y concursos de obras, suministros y servicios públicos</a>
+                  </li>
+                  <li>
+                     <a href="http://www.juntadeandalucia.es/boja/2004/145/s5.2" title="5.2. Otros anuncios">
+                        <span class="c_000000">5.2. </span>Otros anuncios</a>
+                  </li>
+               </ul>
+   
+               <ul class="listado_pdf">
+                  <li class="item">
+                     <a target="_blank" title="Descargar el boletín completo en PDF"
+                        href="http://www.juntadeandalucia.es/boja/2004/145/boletin.145.pdf">Descargar boletín nº 
+                    145 completo
+                  </a>
+                     </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      
+<div id="pie">
+         <script type="text/javascript" src="http://www.juntadeandalucia.es/themes/urchin.js" space="preserve"> </script>
+         <script type="text/javascript" space="preserve">urchinTracker();</script>
+         <div class="container js">
+            <div class="grid_8 social">
+               <h2>El portal de la Junta en:</h2>
+               <ul class="listado_social">
+                  <li>
+                     <a class="ico_social_30 twitter" title="El portal de la Junta en Twitter" href="http://twitter.com/PortalJunta" shape="rect">
+                        <img alt="Icono de Twitter" src="http://www.juntadeandalucia.es/boja/themes/images/social/30_g_twitter.png"/>
+                        <span>Twitter</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a class="ico_social_30 facebook" title="El portal de la Junta en Facebook" href="http://www.facebook.com/pages/Portal-Junta-de-Andalucía/224442897628994" shape="rect">
+                        <img alt="Icono de Facebook" src="http://www.juntadeandalucia.es/boja/themes/images/social/30_g_facebook.png"/>
+                        <span>Facebook</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a class="ico_social_30 rss" title="El portal de la Junta en Fuentes Web" href="http://www.juntadeandalucia.es/informacion/fuentesweb.html" shape="rect">
+                        <img alt="Icono de RSS" src="http://www.juntadeandalucia.es/boja/themes/images/social/30_g_rss.png"/>
+                        <span>Rss</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a class="ico_social_30 da" title="El portal de la Junta de Datos abiertos" href="http://www.juntadeandalucia.es/datosabiertos/portal.html" shape="rect">
+                        <img alt="Icono de Datos Abiertos" src="http://www.juntadeandalucia.es/boja/themes/images/social/30_g_da.png"/>
+                        <span>Datos abiertos</span>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+            <div class="grid_8 enlaces">
+               <ul>
+                  <li>
+                     <a title="Lista de correos" href="http://www.juntadeandalucia.es/informacion/lista.html" shape="rect">Lista de correos</a>
+                  </li>
+                  <li>
+                     <a title="Accesibilidad" href="http://www.juntadeandalucia.es/informacion/accesibilidad.html" shape="rect">Accesibilidad</a>
+                  </li>
+                  <li>
+                     <a title="Fuentes web" href="http://www.juntadeandalucia.es/informacion/fuentesweb.html" shape="rect">Fuentes web</a>
+                  </li>
+                  <li>
+                     <a title="Informacion legal" href="http://www.juntadeandalucia.es/informacion/legal.html" shape="rect">Legal</a>
+                  </li>
+                  <li>
+                     <a accesskey="8" title="Mapa del sitio" href="http://www.juntadeandalucia.es/informacion/mapaweb.html" shape="rect">Mapa del sitio</a>
+                  </li>
+                  <li>
+                     <a accesskey="9" title="Contacto" href="http://www.juntadeandalucia.es/informacion/contacto.html" shape="rect">Contacto</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div class="clear">
+            <hr/>
+         </div>
+      </div>
+</body>
+</html>

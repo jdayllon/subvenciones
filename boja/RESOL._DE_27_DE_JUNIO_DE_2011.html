@@ -1,0 +1,3959 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+   <head>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/themes/buscador/media/js/jquery-1.4.2.js" space="preserve"> </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/themes/buscador/media/js/jquery-ui-1.8.14.autocomplete.min.js" space="preserve"> </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/themes/buscador/autocomplete/autocomplete-words-json" space="preserve"> </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/themes/buscador/media/js/autocomplete.js" space="preserve"> </script>
+<script type="text/javascript" space="preserve">
+              jQuery(document).ready(function($) {
+                  /* Este parámetro sirve para determinar el número máximo de
+                  sugerencias ofrecidas al usuario en el deplegable */
+                  var autocompleteMaxSuggestions = 5;
+                  /* El número mínimo de carácteres a partir de los cuales se comienza
+                  a sugerir posibles autocompletados */
+                  var minLength = 2;
+                  var options = getAutocompleteOptions(autocompleteData, autocompleteMaxSuggestions);
+                  options.minLength = minLength;
+
+                  $('input[name=\'busquedageneral\']').autocomplete(options);
+                  // Se sobreescribe la función select del autocompletado para que cuando se seleccione un item se llame directamente al buscador 
+                  $('input[name=\'busquedageneral\']').autocomplete({
+                    select: function( event , ui ) {
+                      $('input[name=\'busquedageneral\']').val(ui.item.label);
+                      $('input[name=\'buscargeneral\']').click();
+                    }
+                  });
+              });
+            </script>
+<link type="text/css" rel="stylesheet" href="http://www.juntadeandalucia.es/themes/buscador/media/css/jquery-ui-1.8.14.autocomplete.css"/>
+<link type="text/css" rel="stylesheet" title="common" href="http://www.juntadeandalucia.es/boja/themes/font-face.css" media="screen"/>
+<link type="text/css" rel="stylesheet" title="common" href="http://www.juntadeandalucia.es/boja/themes/mydropdown.css" media="screen"/>
+<link type="text/css" rel="stylesheet" title="common" href="http://www.juntadeandalucia.es/boja/themes/jquery.ui.datepicker.css" media="screen"/>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/boja/themes/jquery.min.js" space="preserve">                  
+           
+        </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/boja/themes/sp.js" space="preserve">                  
+           
+        </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/boja/themes/funcionalidad_comun.js" space="preserve">                  
+           
+        </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/boja/themes/funcionalidad_tabs.js" space="preserve">                  
+           
+        </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/boja/themes/jquery.ba-dotimeout.js" space="preserve">                  
+           
+        </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/boja/themes/funcionalidad_menu.js" space="preserve">                  
+           
+        </script>
+<!--+|start favicon +-->
+<link rel="shortcut icon" href="http://www.juntadeandalucia.es/themes/images/favicon.ico"/>
+<!--+|start favicon +-->
+<meta name="viewport" content="width=device-width, user-scalable=0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, target-densityDpi=medium-dpi" id="testViewport"/>
+<link type="text/css" href="http://www.juntadeandalucia.es/boja/themes/estructura.css" rel="stylesheet" title="common" media="screen and (min-width: 960px)"/>
+<link type="text/css" href="http://www.juntadeandalucia.es/boja/themes/estructura_movil.css" rel="stylesheet" title="common" media="screen and (max-width: 959px)"/>
+<link type="text/css" href="http://www.juntadeandalucia.es/boja/themes/estilos_jda.css" rel="stylesheet" title="common" media="screen and (min-width: 960px)"/>
+<link type="text/css" href="http://www.juntadeandalucia.es/boja/themes/estilos_jda_movil.css" rel="stylesheet" title="common" media="screen and (max-width: 959px)"/>
+<link type="text/css" href="http://www.juntadeandalucia.es/boja/themes/menu.css" rel="stylesheet" title="common" media="screen"/>
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.juntadeandalucia.es/themes/images/iconosmovil/touch-icon-144-precomposed.png"/>
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://www.juntadeandalucia.es/themes/images/iconosmovil/touch-icon-114-precomposed.png"/>
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://www.juntadeandalucia.es/themes/images/iconosmovil/touch-icon-72-precomposed.png"/>
+<link rel="apple-touch-icon-precomposed" href="http://www.juntadeandalucia.es/themes/images/iconosmovil/touch-icon-57-precomposed.png"/>
+<!--[if !(IE) | (gt IE 8) | (IEMobile)]><!-->
+<script type="text/javascript" src="/boja/themes/menu_movil.js" space="preserve"> </script>
+<!--<![endif]-->
+<!--[if lt IE 9 & !IEMobile]>
+		        <link type="text/css" href="http://www.juntadeandalucia.es/boja/themes/estructura.css" rel="stylesheet" title="common" media="screen"/>
+		        <link type="text/css" href="http://www.juntadeandalucia.es/boja/themes/estilos_jda.css" rel="stylesheet" title="common" media="screen"/>
+		        <![endif]-->
+
+      <meta content="es" http-equiv="Content-Language"/>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+      <title>
+Resolución de 27 de junio de 2011, de la Dirección General de Profesorado y Gestión de Recursos Humanos, por la que se declaran aprobadas las listas provisionales de las personas admitidas y excluidas en los procedimientos selectivos para el acceso al cuerpo de Inspectores de Educación en plazas del ámbito de gestión de la Comunidad Autónoma de Andalucía, convocados por Orden que se cita.</title>
+      <meta content="Apache Dispatcher" name="Generator"/>
+      <meta content="Página de disposición nº 10 del boletín nº 135 de 2011."
+            name="Description"/>
+      <meta content="2011, Junta de Andalucía, el portal de Andalucía, Administración andaluza, BOJA, B.O.J.A."
+            name="Keywords"/>
+   
+      <link href="http://www.juntadeandalucia.es/boja/distribucion/boja.xml"
+            title="Boletín completo - BOJA"
+            type="application/atom+xml"
+            rel="alternate"/>
+      <link type="application/atom+xml" rel="alternate"
+            title="2.2. Oposiciones, concursos y otras convocatorias - BOJA"
+            href="http://www.juntadeandalucia.es/boja/distribucion/s2.2.xml"/>
+   </head>
+   <body>
+<div id="cabecera">
+         <div class="container">
+            <div id="logo">
+               <h1>
+                  <a class="logotipo" accesskey="0" href="http://www.juntadeandalucia.es/index.html" title="Portada de la Web oficial de la Junta de Andalucía" shape="rect">
+                     <img alt="" title="Junta de Andalucía" src="http://www.juntadeandalucia.es/themes/images/logo_bg_movil.png"/>
+                  </a>
+               </h1>
+               <div class="clearlogo"> </div>
+               <div class="oculto">
+                  <ul>
+                     <li>
+                        <a accesskey="1" title="Saltar el menú de navegación, e ir directamente a los contenidos del Portal Oficial de la Junta de Andalucía" href="#contenidos" shape="rect">Saltar al contenido del Portal</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="herramienta">
+               <div id="ubicacion">
+                  <img width="275" height="40" alt="" title="Portal de la Junta de Andalucía" src="http://www.juntadeandalucia.es/themes/images/cabecera_ubicacion.gif"/>
+               </div>
+            </div>
+            <div class="buscador">
+               <form action="http://www.juntadeandalucia.es/buscar.html" method="get" class="floatright" target="_self" enctype="application/x-www-form-urlencoded">
+                  <fieldset>
+                     <legend>Buscador general</legend>
+                     <label for="busquedaCabecera" class="oculto">Buscar</label>
+                     <input id="busquedaCabecera" name="busquedageneral" type="text" class="input_text defaultTextActive" title="Buscar" style="position:relative; z-index:99999;"/>
+                     <input alt="Buscar" title="Buscar" type="submit" value="Buscar" class="input_submit" name="buscargeneral"/>
+                     <p>p. ej. <a title="ofertas de empleo" href="http://www.juntadeandalucia.es/buscar.html?busqueda=ofertas+de+empleo&amp;buscar=Buscar" shape="rect">ofertas de empleo</a>, <a title="ayudas" href="http://www.juntadeandalucia.es/buscar.html?busqueda=ayudas&amp;buscar=Buscar" shape="rect">ayudas</a>, <a title="escolarización" href="http://www.juntadeandalucia.es/buscar.html?busqueda=escolarización&amp;buscar=Buscar" shape="rect">escolarización</a>...</p>
+                  </fieldset>
+               </form>
+            </div>
+            <div class="clear"> </div>
+         </div>
+      </div>
+<div id="navegacion">
+         <div id="menu_btn">
+            <div class="img">
+             
+          </div>
+            <span class="menutxt">Menú principal</span>
+         </div>
+         <ul id="menu" class="menu_principal main-nav-horizontal">
+            <li class="li_inicio temas main-nav">
+               <a title="Temas" href="http://www.juntadeandalucia.es/temas.html" class="drop" accesskey="2" shape="rect">Temas</a>
+               <div class="dropdown container">
+                  <div class="grid_4">
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/estudiar.html" title="Estudiar" shape="rect">Estudiar</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/estudiar/infantil.html" title="Infantil (0-6 años)" shape="rect">Infantil (0-6 años)</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/estudiar/primaria-eso.html" title="Primaria y ESO (6-16 años)" shape="rect">Primaria y ESO (6-16 años)</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/estudiar/bachillerato.html" title="Bachillerato" shape="rect">Bachillerato</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/estudiar.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/familias-igualdad.html" title="Familia e igualdad" shape="rect">Familia e igualdad</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/familias-igualdad/formar-familia.html" title="Formar una familia" shape="rect">Formar una familia</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/familias-igualdad/infancia.html" title="Cuidar de los niños" shape="rect">Cuidar de los niños</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/familias-igualdad/dependencia.html" title="Cuidar de personas dependientes" shape="rect">Cuidar de personas dependientes</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/familias-igualdad.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/transporte.html" title="Tráfico y transporte" shape="rect">Tráfico y transporte</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/transporte/vehiculo.html" title="Tu vehículo" shape="rect">Tu vehículo</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/transporte/publico.html" title="Transporte público" shape="rect">Transporte público</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/transporte/carreteras.html" title="Carreteras de Andalucía" shape="rect">Carreteras de Andalucía</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_4">
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/trabajar.html" title="Trabajar" shape="rect">Trabajar</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/trabajar/busqueda.html" title="Buscar trabajo" shape="rect">Buscar trabajo</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/trabajar/autoempleo.html" title="Autoempleo" shape="rect">Autoempleo</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/trabajar/empleo-publico.html" title="Empleo público" shape="rect">Empleo público</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/trabajar.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/vivienda-consumo.html" title="Vivienda y consumo" shape="rect">Vivienda y consumo</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/vivienda-consumo/alquiler.html" title="Alquilar" shape="rect">Alquilar</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/vivienda-consumo/compra.html" title="Compra y venta" shape="rect">Compra y venta</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/vivienda-consumo/rehabilitacion.html" title="Rehabilitación" shape="rect">Rehabilitación</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/vivienda-consumo.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/medio-ambiente.html" title="Medio ambiente" shape="rect">Medio ambiente</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/medio-ambiente/clima.html" title="Clima" shape="rect">Clima</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/medio-ambiente/espacios-naturales.html" title="Espacios naturales" shape="rect">Espacios naturales</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/medio-ambiente/caza-pesca.html" title="Caza y pesca" shape="rect">Caza y pesca</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/medio-ambiente.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_4">
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/salud.html" title="Tu salud" shape="rect">Tu salud</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/salud/servicios.html" title="Servicios sanitarios" shape="rect">Servicios sanitarios</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/salud/urgencias.html" title="Urgencias y primeros auxilios" shape="rect">Urgencias y primeros auxilios</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/salud/derechos.html" title="Derechos y calidad asistencial" shape="rect">Derechos y calidad asistencial</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/salud.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/cultura-ocio.html" title="Cultura y ocio" shape="rect">Cultura y ocio</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/cultura-ocio/actividades.html" title="Actividades culturales" shape="rect">Actividades culturales</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/cultura-ocio/andalucia.html" title="Andalucía: historia y patrimonio" shape="rect">Andalucía: historia y patrimonio</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/cultura-ocio/bibliotecas.html" title="Bibliotecas y lectura" shape="rect">Bibliotecas y lectura</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/cultura-ocio.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas.html" title="Más temas" shape="rect">Más temas</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/administracion.html" title="Atención administrativa e impuestos" shape="rect">Atención administrativa e impuestos</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/seguridad.html" title="Justicia, seguridad y emergencias" shape="rect">Justicia, seguridad y emergencias</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/tic.html" title="Nuevas tecnologías" shape="rect">Nuevas tecnologías</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/participacion.html" title="Asociaciones y voluntariado" shape="rect">Asociaciones y voluntariado</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_4">
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/empresas.html" title="Empresas y profesionales" shape="rect">Empresas y profesionales</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/empresas/creacion.html" title="Crear una empresa" shape="rect">Crear una empresa</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/empresas/obligaciones.html" title="Obligaciones de la empresa" shape="rect">Obligaciones de la empresa</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/empresas/personal.html" title="Contratación de personal" shape="rect">Contratación de personal</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/empresas.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/sectores.html" title="Sectores de actividad" shape="rect">Sectores de actividad</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/sectores/agricultura-ganaderia.html" title="Agricultura y ganadería" shape="rect">Agricultura y ganadería</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/sectores/pesca.html" title="Industria y minas" shape="rect">Pesca y acuicultura</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/sectores/agroalimentaria.html" title="Industrias agroalimentarias" shape="rect">Industrias agroalimentarias</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/sectores.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </li>
+            <li class="junta main-nav">
+               <a title="La Junta" href="http://www.juntadeandalucia.es/organismos.html" class="drop" accesskey="3" shape="rect">La Junta</a>
+               <div class="dropdown container">
+                  <div class="grid_4">
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/organismos/presidenta.html" title="Presidenta" shape="rect">Presidenta</a>
+                     </strong>
+              
+                     <img alt="" src="http://www.juntadeandalucia.es/themes/images/presidente_solapa_la_junta.jpg"/>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/presidenta/biografia" shape="rect">Biografía</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/presidenta/funciones" shape="rect">Funciones</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/presidenta/discursos" shape="rect">Discursos</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/presidenta/correo" shape="rect">Escribir a la Presidenta</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/presidenta/vicepresidente" shape="rect">Vicepresidente</a>
+                        </li>
+                     </ul>
+
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/organismos/parlamento.html" title="Parlamento y otras instituciones" shape="rect">Parlamento y otras instituciones</a>
+                     </strong>
+                  </div>
+                  <div class="grid_8">
+                     <div class="grid_8">
+                        <strong>
+                           <a href="http://www.juntadeandalucia.es/organismos/consejo.html" title="Consejo de Gobierno" shape="rect">Consejo de Gobierno</a>
+                        </strong>
+                
+                        <ul class="ul_simple grid_4 alpha">
+                           <li>
+                              <a title="Sobre el consejo" href="http://www.juntadeandalucia.es/organismos/consejo/sobreconsejo.html" shape="rect">Sobre el consejo</a>
+                           </li>
+                           <li>
+                              <a title="Proxima sesión" href="http://www.juntadeandalucia.es/organismos/consejo/proximasesion.html" shape="rect">Próxima sesión</a>
+                           </li>
+                        </ul>
+                        <ul class="ul_simple grid_4 omega">
+                           <li>
+                              <a title="Última sesión" href="http://www.juntadeandalucia.es/organismos/consejo/ultimo.html" shape="rect">Última sesión</a>
+                           </li>
+                           <li>
+                              <a title="Histórico de sesioneso" href="http://www.juntadeandalucia.es/organismos/consejo/historico.html" shape="rect">Histórico de sesiones</a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="grid_8">
+                        <strong>
+                           <a href="http://www.juntadeandalucia.es/organismos.html" shape="rect">Consejerías</a>
+                        </strong>
+                        <div class="grid_4 alpha">
+                           <ul class="ul_simple">
+                              <li>
+                                 <a title="Consejería de la Presidencia" shape="rect" href="http://www.juntadeandalucia.es/organismos/presidencia.html">Presidencia</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Administración Local y Relaciones Institucionales" shape="rect" href="http://www.juntadeandalucia.es/organismos/administracionlocalyrelacionesinstitucionales.html">Administración Local y Relaciones Institucionales</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Hacienda y Administración Pública" shape="rect" href="http://www.juntadeandalucia.es/organismos/haciendayadministracionpublica.html">Hacienda y Administración Pública</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Economía, Innovación, Ciencia y Empleo" shape="rect" href="http://www.juntadeandalucia.es/organismos/economiainnovacioncienciayempleo.html">Economía, Innovación, Ciencia y Empleo</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Igualdad, Salud y Políticas Sociales" shape="rect" href="http://www.juntadeandalucia.es/organismos/igualdadsaludypoliticassociales.html">Igualdad, Salud y Políticas Sociales</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Educación, Cultura y Deporte" shape="rect" href="http://www.juntadeandalucia.es/organismos/educacionculturaydeporte.html">Educación, Cultura y Deporte</a>
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="grid_4 omega">
+                           <ul class="ul_simple">
+                              <li>
+                                 <a title="Consejería de Justicia e Interior" shape="rect" href="http://www.juntadeandalucia.es/organismos/justiciaeinterior.html">Justicia e Interior</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Fomento y Vivienda" shape="rect" href="http://www.juntadeandalucia.es/organismos/fomentoyvivienda.html">Fomento y Vivienda</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Agricultura, Pesca y Desarrollo Rural" shape="rect" href="http://www.juntadeandalucia.es/organismos/agriculturapescaydesarrollorural.html">Agricultura, Pesca y Desarrollo Rural</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Medio Ambiente y Desarrollo Rural" shape="rect" href="http://www.juntadeandalucia.es/organismos/medioambienteyordenaciondelterritorio.html">Medio Ambiente y Ordenación del Territorio</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Turismo y Comercio" shape="rect" href="http://www.juntadeandalucia.es/organismos/turismoycomercio.html">Turismo y Comercio</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="grid_4">
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/organismos/sobre-junta.html" title="Sobre la Junta" shape="rect">Sobre la Junta</a>
+                     </strong>
+              
+                     <img alt="" src="http://www.juntadeandalucia.es/themes/images/lajunta_solapa_sobrelajunta.jpg"/>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/sobre-junta/organizacion.html" title="Organización institucional" shape="rect">Organización institucional</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/sobre-junta/estatuto.html" title="Estatuto de autonomía" shape="rect">Estatuto de autonomía</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/sobre-junta/planes.html" title="Planes y programas" shape="rect">Planes y programas</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/sobre-junta/funcionamiento.html" title="Funcionamiento de la Administración" shape="rect">Funcionamiento de la Administración</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/sobre-junta/simbolos.html" title="Símbolos de Andalucía" shape="rect">Símbolos de Andalucía</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/sobre-junta/historia.html" title="Historia de la autonomía" shape="rect">Historia de la autonomía</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </li>
+            <li class="transparencia main-nav">
+               <a title="Transparencia" href="http://www.juntadeandalucia.es/transparencia.html" class="drop" accesskey="8" shape="rect">Transparencia</a>
+               <div class="dropdown container">
+                  <div class="grid_5">
+                     <strong>
+                        <a title="Publicidad activa" href="http://www.juntadeandalucia.es/transparencia/publicidad-activa.html" shape="rect">Publicidad activa</a>
+                     </strong>
+                     <img alt="Publicidad activa" src="http://www.juntadeandalucia.es/themes/images/transparencia/solapa_transparencia_activa.jpg"/>
+                     <p>Consulta la información que la Junta de Andalucía difunde a iniciativa propia para facilitar el conocimiento de su actividad.</p>
+                  </div>
+                  <div class="grid_6">
+                     <strong>
+                        <a title="Solicitud de información" href="http://www.juntadeandalucia.es/transparencia/solicitud-informacion.html" shape="rect">Solicitud de información</a>
+                     </strong>
+                     <img alt="Solicitud de información" src="http://www.juntadeandalucia.es/themes/images/transparencia/solapa_solicitud_informacion.jpg"/>
+                     <p>La Ley de Transparencia Pública de Andalucía recoge el derecho de la ciudadanía a reclamar información de los poderes públicos. Descubre qué podrás hacer cuando entre en vigor.</p>
+                  </div>
+                  <div class="grid_5">
+                     <strong>
+                        <a title="Transparencia en Andalucía" href="http://www.juntadeandalucia.es/transparencia/transparencia-andalucia.html" shape="rect">Transparencia en Andalucía</a>
+                     </strong>
+                     <img alt="Transparencia en Andalucía" src="http://www.juntadeandalucia.es/themes/images/transparencia/solapa_normativa.jpg"/>
+                     <p>Descubre tus derechos en materia de transparencia, aprende las vías para reclamarlos y consulta los portales de transparencia de otras administraciones públicas.</p>
+                  </div>
+               </div>
+            </li>
+            <li class="servicios main-nav">
+               <a title="Servicios y trámites" href="http://www.juntadeandalucia.es/servicios.html" class="drop" accesskey="4" shape="rect">Servicios y trámites</a>
+               <div class="dropdown container">
+                  <div class="grid_6">
+                     <p class="encabezado">
+                        <strong>¿Qué quieres hacer?</strong>
+                     </p>
+              
+                     <div class="buscador">
+                        <form target="_self" class="floatright" method="get" action="http://www.juntadeandalucia.es/buscar.html" enctype="application/x-www-form-urlencoded">
+                           <fieldset>
+                              <legend>Buscador general</legend>
+                              <label for="busquedaNavegacionServiciosTramitesFijos" class="oculto">Buscar</label>
+                              <input type="text" class="input_text defaultTextActive" size="20" name="busqueda" id="busquedaNavegacionServiciosTramitesFijos" title="Buscar" alt="Buscar"/>
+                              <input type="hidden" name="filtroServicios" value="true"/>
+                              <input type="hidden" name="organismo" value="index"/>
+                              <input type="submit" class="input_submit" value="Buscar" title="Buscar" alt="Buscar" name="buscar"/>
+                           </fieldset>
+                        </form>
+                        <p>Utiliza este buscador para localizar los trámites y servicios ofrecidos por la administración andaluza.</p>
+                     </div>
+
+                     <p class="encabezado">
+                        <strong>Directo a</strong>
+                     </p>
+              
+                     <ul class="ul_simple">
+                        <li>
+                           <a title="Ayudas y subvenciones" href="http://www.juntadeandalucia.es/servicios/ayudas.html" shape="rect">Ayudas y subvenciones</a>
+                        </li>
+                        <li>
+                           <a title="Becas, premios y concursos" href="http://www.juntadeandalucia.es/servicios/premios-concursos.html" shape="rect">Becas, premios y
+                      concursos</a>
+                        </li>
+                        <li>
+                           <a title="Ofertas de empleo público" href="https://ws045.juntadeandalucia.es/empleadopublico/emp-plazofer-.html?p=/Categorias_Principales/&amp;s=/Categorias_Principales/Procesos_Selectivos/" shape="rect">Ofertas de empleo público</a>
+                        </li>
+                        <li>
+                           <a title="Plataforma de contratación" href="http://www.juntadeandalucia.es/contratacion/ContractNoticeSearch.action?profileId=&amp;pkCegr=" shape="rect">Plataforma de
+                      contratación</a>
+                        </li>
+                        <li>
+                           <a title="Otros trámites y servicios" href="http://www.juntadeandalucia.es/servicios/otros-tramites.html" shape="rect">Otros trámites y
+                    servicios</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_5">
+                     <p class="encabezado">
+                        <strong>Trámites destacados</strong>
+                     </p>
+              
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/salud/sites/csalud/galerias/enlaces/oficina_virtual/cita_medico" title="Cita con el médico" shape="rect">Cita con el médico</a>
+                        </li>
+                        <li>
+                           <a href="https://ws054.juntadeandalucia.es/autenticacion/login?service=https://ws054.juntadeandalucia.es/apdweb/c/portal/login%3Fp_l_id%3D10116%26_58_redirect%3D%252Fapdweb%252Fgroup%252F10210%252F2" title="Renovar demanda de empleo" shape="rect">Renovar demanda de empleo</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/haciendayadministracionpublica/clara/cprDetalleTramites.html?c=1-59-780&amp;nombre=Grado+de+Discapacidad%3A+Reconocimiento%2C+Calificaci%F3n" title="Grado de Discapacidad: Reconocimiento, Calificación" shape="rect">Grado de Discapacidad: Reconocimiento, Calificación</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/servicios/otros-tramites/detalle/11215.html" title="Familia numerosa: solicitud del título" shape="rect">Familia numerosa: solicitud del título</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/haciendayadministracionpublica/clara/cprDetalleTramites.html?c=1-EBU42&amp;nombre=Quejas+y+Reclamaciones+de+las+Personas+Consumidoras+y+Usuarias%3A+Hojas+Electr%F3nicas" title="Quejas y Reclamaciones de las Personas Consumidoras y Usuarias" shape="rect">Quejas y Reclamaciones de las Personas Consumidoras y Usuarias</a>
+                        </li>
+                     </ul>
+
+                     <p class="encabezado">
+                        <strong>Ayuda</strong>
+                     </p>
+              
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/servicios/ayuda/tramitar-internet.html" title="Cómo hacer trámites por internet" shape="rect">Cómo hacer trámites por internet</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/servicios/ayuda/estado-tramites.html" title="Consulta el estado de tus trámites" shape="rect">Consulta el estado de tus trámites</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/servicios/ayuda/correo-andaluz.html" title="Correo Andaluz" shape="rect">Correo Andaluz</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/servicios/ayuda/notificaciones.html" title="Sistema de notificaciones telemáticas" shape="rect">Sistema de notificaciones telemáticas</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_5">
+                     <p class="encabezado">
+                        <strong>Servicios de información</strong>
+                     </p>
+              
+                     <ul class="ul_img">
+                        <li>
+                           <a title="Normativa" href="http://www.juntadeandalucia.es/servicios/normativa.html" shape="rect">
+                              <img alt="" src="http://www.juntadeandalucia.es/themes/images/buscador-de-normativas--38x38.gif"/>
+                              <span>Normativa</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a title="Normativa en elaboración" href="http://www.juntadeandalucia.es/servicios/normas-elaboracion.html" shape="rect">
+                              <img alt="" src="http://www.juntadeandalucia.es/themes/images/thrum38_normativa-en-elaboracion.jpg"/>
+                              <span>Normativa en elaboración</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a title="Participación" href="http://www.juntadeandalucia.es/servicios/participacion.html" shape="rect">
+                              <img alt="" src="http://www.juntadeandalucia.es/themes/images/thrum38_participacion.jpg"/>
+                              <span>Participación</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a title="Catálogo de publicaciones" href="http://www.juntadeandalucia.es/servicios/publicaciones.html" shape="rect">
+                              <img alt="" src="http://www.juntadeandalucia.es/themes/images/catalogo-de-publicaciones--38x38.gif"/>
+                              <span>Catálogo de publicaciones</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a title="WebTV" href="http://www.juntadeandalucia.es/servicios/videos.html" shape="rect">
+                              <img alt="" src="http://www.juntadeandalucia.es/themes/images/38_canalvideo.jpg"/>
+                              <span>WebTV</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/servicios.html" title="Más servicios" class="enlace_menu_mas" shape="rect">Más servicios</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </li>
+            <li class="boja main-nav">
+               <a title="BOJA" href="http://www.juntadeandalucia.es/eboja.html" class="drop" accesskey="5" shape="rect">BOJA</a>
+               <div class="dropdown boja container">
+                  <div class="grid_5">
+                     <strong>
+                        <a title="Último Boletín" href="http://www.juntadeandalucia.es/eboja/2015/96/" shape="rect">
+          Último Boletín
+        </a>
+                     </strong>
+                     <p>Número 96 de 21 de mayo de 2015</p>
+                     <ul class="ul">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/eboja/2015/96/s1.html" title="1. Disposiciones generales" shape="rect">1. Disposiciones generales</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/eboja/2015/96/s2.1.html" title="2.1. Nombramientos, situaciones e incidencias" shape="rect">2.1. Nombramientos, situaciones e incidencias</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/eboja/2015/96/s2.2.html" title="2.2. Oposiciones, concursos y otras convocatorias" shape="rect">2.2. Oposiciones, concursos y otras convocatorias</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/eboja/2015/96/s3.html" title="3. Otras disposiciones" shape="rect">3. Otras disposiciones</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/eboja/2015/96/s4.html" title="4. Administración de Justicia" shape="rect">4. Administración de Justicia</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/eboja/2015/96/s5.1.html" title="5.1. Licitaciones públicas y adjudicaciones" shape="rect">5.1. Licitaciones públicas y adjudicaciones</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/eboja/2015/96/s5.2.html" title="5.2. Otros anuncios oficiales" shape="rect">5.2. Otros anuncios oficiales</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_6">
+                     <strong>
+                        <a title="Boletines por fecha" href="http://www.juntadeandalucia.es/eboja/2015.html" shape="rect">
+          Boletines por fecha 
+        </a>
+                     </strong>
+                     <div class="contenedor_calendario_tabla">
+                        <table>
+                           <caption>mayo</caption>
+                           <tr>
+                              <th colspan="1" rowspan="1">L</th>
+                              <th colspan="1" rowspan="1">M</th>
+                              <th colspan="1" rowspan="1">X</th>
+                              <th colspan="1" rowspan="1">J</th>
+                              <th colspan="1" rowspan="1">V</th>
+                              <th colspan="1" rowspan="1">S</th>
+                              <th colspan="1" rowspan="1">D</th>
+                           </tr>
+                           <tr>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="domingo" rowspan="1" colspan="1">1</td>
+                              <td rowspan="1" colspan="1">2</td>
+                              <td class="domingo" rowspan="1" colspan="1">3</td>
+                           </tr>
+                           <tr>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/83/index.html" title="Boletín nº 83" shape="rect">4</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/84/index.html" title="Boletín nº 84" shape="rect">5</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/85/index.html" title="Boletín nº 85" shape="rect">6</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/86/index.html" title="Boletín nº 86" shape="rect">7</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/87/index.html" title="Boletín nº 87" shape="rect">8</a>
+                              </td>
+                              <td rowspan="1" colspan="1">9</td>
+                              <td class="domingo" rowspan="1" colspan="1">10</td>
+                           </tr>
+                           <tr>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/88/index.html" title="Boletín nº 88" shape="rect">11</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/89/index.html" title="Boletín nº 89" shape="rect">12</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/90/index.html" title="Boletín nº 90" shape="rect">13</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/91/index.html" title="Boletín nº 91" shape="rect">14</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/92/index.html" title="Boletín nº 92" shape="rect">15</a>
+                              </td>
+                              <td rowspan="1" colspan="1">16</td>
+                              <td class="domingo" rowspan="1" colspan="1">17</td>
+                           </tr>
+                           <tr>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/93/index.html" title="Boletín nº 93" shape="rect">18</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/94/index.html" title="Boletín nº 94" shape="rect">19</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/95/index.html" title="Boletín nº 95" shape="rect">20</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/96/index.html" title="Boletín nº 96" shape="rect">21</a>
+                              </td>
+                              <td rowspan="1" colspan="1">22</td>
+                              <td rowspan="1" colspan="1">23</td>
+                              <td class="domingo" rowspan="1" colspan="1">24</td>
+                           </tr>
+                           <tr>
+                              <td rowspan="1" colspan="1">25</td>
+                              <td rowspan="1" colspan="1">26</td>
+                              <td rowspan="1" colspan="1">27</td>
+                              <td rowspan="1" colspan="1">28</td>
+                              <td rowspan="1" colspan="1">29</td>
+                              <td rowspan="1" colspan="1">30</td>
+                              <td class="domingo" rowspan="1" colspan="1">31</td>
+                           </tr>
+                           <tr>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <div class="grid_5 alpha omega">
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/eboja/buscador/" title="Buscador de BOJA" shape="rect">Buscador de BOJA</a>
+                     </strong>
+                     <div class="buscador">
+                        <form action="http://www.juntadeandalucia.es/eboja/buscador/search.do" method="get" class="floatright" target="_self" enctype="application/x-www-form-urlencoded">
+                           <input id="eboja" value="on" name="eboja" type="hidden"/>
+                           <fieldset>
+                              <legend>Buscador general</legend>
+                              <label class="oculto" for="buscador_boja">Buscar</label>
+                              <input alt="Buscar" title="Buscar" id="buscador_boja" name="q" size="20" class="input_text defaultTextActive" type="text"/>
+                              <input alt="Buscar" title="Buscar" value="Buscar" class="input_submit" type="submit"/>
+                           </fieldset>
+                        </form>
+                        <div class="grid_4 alpha">
+                           <a href="http://www.juntadeandalucia.es/eboja/buscador/" title="Búsqueda avanzada" class="enlace_menu_mas" shape="rect">Búsqueda avanzada</a>
+                        </div>
+                     </div>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/eboja/sobre-boja/" title="Sobre BOJA" shape="rect">Sobre BOJA</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a title="¿Qué es el BOJA?" href="http://www.juntadeandalucia.es/eboja/sobre-boja/informacion-general.html" shape="rect">¿Qué es el BOJA?</a>
+                        </li>
+                        <li>
+                           <a title="Verificación de autenticidad" href="http://www.juntadeandalucia.es/eboja/sobre-boja/verificacion-autenticidad.html" shape="rect">Verificación de autenticidad</a>
+                        </li>
+                        <li>
+                           <a title="Como publicar en BOJA" href="http://www.juntadeandalucia.es/eboja/sobre-boja/publicar.html" shape="rect">Como publicar en BOJA</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a title="Histórico del BOJA" href="http://www.juntadeandalucia.es/boja.html" shape="rect">Histórico del BOJA</a>
+                     </strong>
+                  </div>
+               </div>
+            </li>
+            <li class="andalucia main-nav">
+               <a title="Andalucía" href="http://www.juntadeandalucia.es/andalucia.html" class="drop" accesskey="6" shape="rect">Andalucía</a>
+               <div class="dropdown container js">
+             
+            <div class="grid_4">
+                     <strong>
+                        <a title="Al sur" href="http://www.juntadeandalucia.es/andalucia/alsur.html" shape="rect">Al sur</a>
+                     </strong>
+                     <p>
+	Enclavada entre dos mares y dos continentes, la singularidad geográfica de Andalucía le otorga una identidad abierta y multicultural</p>
+
+                     <strong>
+                        <a title="Naturaleza y paisajes" href="http://www.juntadeandalucia.es/andalucia/naturalezapaisajes.html" shape="rect">Naturaleza y paisajes</a>
+                     </strong>
+                     <p>
+	Andalucía ofrece una gran diversidad geográfica y una contrastada riqueza de paisajes.</p>
+
+                     <strong>
+                        <a title="Clima" href="http://www.juntadeandalucia.es/andalucia/clima.html" shape="rect">Clima</a>
+                     </strong>
+                     <p>
+	Amplia variedad climática: sierras de abundantes lluvias, comarcas áridas, montañas nevadas, costas soleadas...</p>
+                  </div>
+                  <div class="grid_4">
+                     <strong>
+                        <a title="Historia" href="http://www.juntadeandalucia.es/andalucia/historia.html" shape="rect">Historia</a>
+                     </strong>
+                     <p>
+	Andalucía ha sido foco de civilización y escenario de una historia milenaria de convivencia entre culturas.</p>
+
+                     <strong>
+                        <a title="Economía" href="http://www.juntadeandalucia.es/andalucia/economia.html" shape="rect">Economía</a>
+                     </strong>
+                     <p>
+	En las tres últimas décadas, Andalucía ha logrado una profunda transformación económica y social.</p>
+
+                     <strong>
+                        <a title="Cultura y tradiciones" href="http://www.juntadeandalucia.es/andalucia/cultura.html" shape="rect">Cultura y tradiciones</a>
+                     </strong>
+                     <p>
+	Andalucía cuenta con una milenaria y rica herencia cultural.</p>
+                  </div>
+                  <div class="grid_4">
+                     <strong>
+                        <a title="El autogobierno andaluz" href="http://www.juntadeandalucia.es/andalucia/autogobierno.html" shape="rect">El autogobierno andaluz</a>
+                     </strong>
+                     <p>
+	Andalucía cuenta con amplios poderes legislativos, ejecutivos y judiciales, similares a los del resto de comunidades históricas de España.</p>
+
+                     <strong>
+                        <a title="Símbolos" href="http://www.juntadeandalucia.es/andalucia/simbolos.html" shape="rect">Símbolos</a>
+                     </strong>
+                     <p>
+	La bandera, el escudo y el himno de Andalucía.</p>
+                  </div>
+
+             
+            <div class="grid_4">
+                     <strong>
+                        <a title="Datos básicos" href="http://www.juntadeandalucia.es/andalucia.html" shape="rect">Datos básicos</a>
+                     </strong>
+                     <img src="http://www.juntadeandalucia.es/export/drupaljda/solapa_andalucia_imagen_0.jpg" alt="imagen auxiliar" title="imagen auxiliar"/>
+                     <ul class="listado_simple datos_andalucia">
+                        <li>
+		Denominación oficial: Comunidad Autónoma de Andalucía</li>
+                     </ul>
+                     <ul class="listado_simple datos_andalucia">
+                        <li>
+		Superficie: 87.597 Km2</li>
+	                       <li>
+		Población: 8.402.305</li>
+	                       <li>
+		Idioma: Castellano</li>
+	                       <li>
+		Presidenta: Susana Díaz Pacheco</li>
+                     </ul>
+                     <a class="enlace_menu_mas" title="Más datos" href="http://www.juntadeandalucia.es/andalucia.html" shape="rect">Más datos</a>
+                  </div>
+               </div>
+            </li>
+            <li class="noticias main-nav">
+               <a title="Noticias" href="http://www.juntadeandalucia.es/presidencia/portavoz/" class="drop" accesskey="7" shape="rect">Noticias</a>
+               <div class="dropdown container">
+                  <div class="grid_4">
+                     <p class="encabezado">
+                        <strong>Actualidad</strong>
+                     </p>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/" title="Portada" shape="rect">Portada</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/noticiasdeldia" title="Noticias del día" shape="rect">Noticias del día</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/listadoConvocatorias" title="Convocatorias" shape="rect">Convocatorias</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/listadoReportajes" title="Reportajes" shape="rect">Reportajes</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/listadoEspeciales" title="Especiales" shape="rect">Especiales</a>
+                        </li>
+                     </ul>
+                     <p class="encabezado">
+                        <strong>Portavoz del Gobierno</strong>
+                     </p>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/oficinaPortavoz" title="¿Qué es la Oficina del Portavoz?" shape="rect">¿Qué es la Oficina del Portavoz?</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/oficinaPortavoz" title="Funciones" shape="rect">Funciones</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_4">
+                     <p class="encabezado">
+                        <strong>Canales</strong>
+                     </p>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/gobierno" title="Gobierno" shape="rect">Gobierno</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/administracion" title="Administración" shape="rect">Administración</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/economia" title="Economía" shape="rect">Economía</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/salud" title="Salud" shape="rect">Salud</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/innovacion" title="Innovacion" shape="rect">Innovación</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/infraestructuras" title="Infraestructuras" shape="rect">Infraestructuras</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/agricultura" title="Agricultura" shape="rect">Agricultura</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/turismo" title="Turismo" shape="rect">Turismo</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/sociedad" title="Sociedad" shape="rect">Sociedad</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/medioambiente" title="Medioambiente" shape="rect">Medio ambiente</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/cultura" title="Cultura" shape="rect">Cultura</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_4">
+                     <p class="encabezado">
+                        <strong>Consejo de Gobierno</strong>
+                     </p>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/consejo/sobreconsejo.html" title="Sobre el Consejo" shape="rect">Sobre el Consejo</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/consejo/proximasesion.html" title="Próxima sesión" shape="rect">Próxima sesión</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/consejo/ultimo.html" title="Última sesión" shape="rect">Última sesión</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/consejo/historico.html" title="Histórico de sesiones" shape="rect">Histórico de sesiones</a>
+                        </li>
+                     </ul>
+                     <p class="encabezado">
+                        <strong>Multimedia</strong>
+                     </p>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/videos" title="Vídeo" shape="rect">Vídeo</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/audios" title="Audio" shape="rect">Audio</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/fotogalerias" title="Fotogalería" shape="rect">Fotogalería</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/fotogaleriasAlta" title="Fotos en alta resolución" shape="rect">Fotos en alta resolución</a>
+                        </li>
+                     </ul>
+                     <p class="encabezado">
+                        <strong>Noticias en redes</strong>
+                     </p>
+                     <div class="social">
+                        <ul class="listado_social">
+                           <li>
+                              <a class="ico_social_30 twitter" title="Noticias de la Junta en Twitter" href="http://www.twitter.com/JuntaInforma" shape="rect">
+                                 <img alt="" src="http://www.juntadeandalucia.es/themes/images/social/30_v_twitter.gif"/>
+                                 <span>Twitter</span>
+                              </a>
+                           </li>
+                           <li>
+                              <a class="ico_social_30 facebook" title="Noticias de la Junta en Facebook" href="http://www.facebook.com/juntainforma" shape="rect">
+                                 <img alt="" src="http://www.juntadeandalucia.es/themes/images/social/30_v_facebook.gif"/>
+                                 <span>Facebook</span>
+                              </a>
+                           </li>
+                           <li>
+                              <a class="ico_social_30 youtube" title="Noticias de la Junta en Youtube" href="http://www.youtube.com/user/juntainforma" shape="rect">
+                                 <img alt="" src="http://www.juntadeandalucia.es/themes/images/social/30_v_youtube.gif"/>
+                                 <span>Youtube</span>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+
+                  <div class="grid_4">
+                     <ul class="ul_img">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/agenda/" title="Agenda de la comunicación" shape="rect">
+                              <img src="http://www.juntadeandalucia.es/themes/images/thrum38_agenda_comunicacion.jpg" alt=""/>
+                              <span>Agenda de la comunicación</span>
+                           </a>
+                        </li>
+                     </ul>
+                     <p class="encabezado">
+                        <strong>Documentación</strong>
+                     </p>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/listadoDiscursoPresidente" title="Discursos" shape="rect">Discursos</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/listadoDocumentosInteres" title="Documentos" shape="rect">Documentos</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/ixlegislatura/gobiernosanteriores/linea.html" title="Histórico Gobiernos" shape="rect">Histórico Gobiernos</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/portadasperiodicos" title="Prensa" shape="rect">Prensa</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </li>
+         </ul>
+      </div>
+<div id="miga">
+         <div class="container">
+            <div class="texto">
+               <span>
+                  <a title="BOJA Histórico" href="http://www.juntadeandalucia.es/boja">BOJA Histórico</a> &gt;
+					<a href="http://www.juntadeandalucia.es/boja/2011.html" title="2011">2011</a>
+            &gt;
+          <a href="http://www.juntadeandalucia.es/boja/2011/135/" title="Boletín 135">Boletín 135</a>
+            &gt;
+          <a href="http://www.juntadeandalucia.es/boja/2011/135/s2.2.html" title="2.2. Oposiciones y concursos">2.2. Oposiciones y concursos</a>
+            &gt;
+          </span>
+            </div>
+         </div>
+      </div>
+      <div id="contenidos">
+         <div class="container separacion_vertical_superior_1 js">
+            <div id="cuerpo" class="grid_11 contenidos_nivel3 boja_disposicion">
+               <div>
+                  <h1>
+               Boletín Oficial de la Junta de Andalucía - 
+			   Histórico del BOJA<span class="nota">
+                 Boletín número 
+                 135
+                 de 
+                 12/07/2011</span>
+                  </h1>
+                  <!--+ |end content-main-heading +--><div class="punteado_izquierda cabecera_detalle_disposicion">
+                     <h2>2. Autoridades y personal<span class="nota">2.2. Oposiciones y concursos</span>
+                     </h2>
+                     <h3>Consejería de Educación</h3>
+                     <h4>
+Resolución de 27 de junio de 2011, de la Dirección General de Profesorado y Gestión de Recursos Humanos, por la que se declaran aprobadas las listas provisionales de las personas admitidas y excluidas en los procedimientos selectivos para el acceso al cuerpo de Inspectores de Educación en plazas del ámbito de gestión de la Comunidad Autónoma de Andalucía, convocados por Orden que se cita.</h4>
+                  </div>
+                  <div class="alerta">
+                     <p>
+                        <strong>Atención:</strong> La información contenida en estas
+						páginas no tiene validez legal.
+						<a href="http://www.juntadeandalucia.es/boja/historico/informacion-general.html">Ver
+							más</a>
+                     </p>
+                  </div>
+                  <p>La Orden arriba citada dispone en el apartado 5.1 de la base primera que la Dirección General de Profesorado y Gestión de Recursos Humanos dictará resolución declarando aprobadas las listas provisionales de las personas admitidas y excluidas en cada uno de los procedimientos selectivos, que se publicarán en el Boletín Oficial de la Junta de Andalucía. </p>
+                  <p>En consecuencia, publicada la Orden de referencia en el Boletín Oficial de la Junta de Andalucía número 89, de 9 de mayo, esta Dirección General, dando cumplimiento a lo dispuesto en la misma, </p>
+                  <p>HA RESUELTO</p>
+                  <p>Primero. Declarar aprobadas las listas provisionales de las personas aspirantes admitidas y excluidas de los procedimientos convocados, que son las que figuran en los Anexos I y II de la presente Resolución. </p>
+                  <p>De conformidad con lo dispuesto en el apartado 5.1 de la precitada Orden de 26 de abril de 2011, los listados completos de las personas admitidas y excluidas (Anexos I y II) se encontrarán expuestos en los tablones de anuncios de las Delegaciones Provinciales de Educación.</p>
+                  <p>Segundo. De acuerdo con el apartado 5.2 de la Orden de 26 de abril de 2007, el plazo para presentar alegaciones sin carácter de recurso y subsanar los defectos que hayan sido motivo de exclusión, será de diez días naturales, contados a partir del siguiente al de la publicación de las listas en los tablones de anuncios de las Delegaciones Provinciales de Educación y se presentarán en cualquiera de los lugares previstos en el apartado 4.4 de la base primera de la Orden de convocatoria.</p>
+                  <p>Asimismo, y a efectos meramente informativos, los referidos listados se podrán consultar en la página web de la Consejería de Educación, www.juntadeandalucia.es/educación.</p>
+                  <p>Sevilla, 27 de junio de 2011.- El Director General, Manuel Gutiérrez Encina.</p>
+                  <table>
+                     <tr>
+                        <td rowspan="1" colspan="2">
+ANEXO I<br/>LISTADO PROVISIONAL DEL PERSONAL ADMITIDO EN LOS PROCEDIMIENTOS SELECTIVOS PARA ACCESO AL CUERPO DE INSPECTORES DE EDUCACIÓN CONVOCADOS POR ORDEN DE 26 DE ABRIL DE 2011</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="2">
+TURNO: CONCURSO OPOSICIÓN GENERAL LIBRE</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+DNI</td>
+                        <td rowspan="1" colspan="1">
+APELLIDOS Y NOMBRE</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30444269 </td>
+                        <td rowspan="1" colspan="1">
+ACERO DOBLAS, JOSE </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+50172760 </td>
+                        <td rowspan="1" colspan="1">
+ACERO OJEDA, ROSARIO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+75533641 </td>
+                        <td rowspan="1" colspan="1">
+ACOSTA BORT, MARIA JOSEFA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+29789190 </td>
+                        <td rowspan="1" colspan="1">
+AGUADED GOMEZ, PILAR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25298663 </td>
+                        <td rowspan="1" colspan="1">
+AGUILAR TRUJILLO, FRANCISCO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+52485504 </td>
+                        <td rowspan="1" colspan="1">
+AGUILERA JURADO, BEATRIZ </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+75808686 </td>
+                        <td rowspan="1" colspan="1">
+ALBA MORENO, JUAN BOSCO DE </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+26466555 </td>
+                        <td rowspan="1" colspan="1">
+ALGUACIL MARTINEZ, ANDRES </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24846103 </td>
+                        <td rowspan="1" colspan="1">
+ALMENDROS LORENZO, ISIDRO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+28485050 </td>
+                        <td rowspan="1" colspan="1">
+ALVAREZ ALBERCA, CARLOS </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+28682292 </td>
+                        <td rowspan="1" colspan="1">
+ALVAREZ LEIVA, JUAN ANTONIO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+75063531 </td>
+                        <td rowspan="1" colspan="1">
+ALVAREZ MARIN, FERNANDO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25080811 </td>
+                        <td rowspan="1" colspan="1">
+ALVAREZ RIVERA, VICTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+27230227 </td>
+                        <td rowspan="1" colspan="1">
+ALVAREZ ROMERA, ANA MARIA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+26470618 </td>
+                        <td rowspan="1" colspan="1">
+ANTIÑOLO PIÑAR, JOSE LUIS </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+29469457 </td>
+                        <td rowspan="1" colspan="1">
+ANTUNEZ CARACENA, CARMEN </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+33393722 </td>
+                        <td rowspan="1" colspan="1">
+ARIAS GOMEZ, BARBARA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+80131549 </td>
+                        <td rowspan="1" colspan="1">
+ARIZA BAENA, PEDRO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30524972 </td>
+                        <td rowspan="1" colspan="1">
+ARIZA PERALES, ANTONIO JESUS </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30467090 </td>
+                        <td rowspan="1" colspan="1">
+ARIZA VARGAS, MARIA DOLORES </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24848528 </td>
+                        <td rowspan="1" colspan="1">
+ARJONA MUÑOZ, JOSE A </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+34007918 </td>
+                        <td rowspan="1" colspan="1">
+ARMADA PRIETO, ISABEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+26434790 </td>
+                        <td rowspan="1" colspan="1">
+ATIENZA RAYA, CATALINA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+28879743 </td>
+                        <td rowspan="1" colspan="1">
+BAENA GALLE, VIOLETA MARIA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25673707 </td>
+                        <td rowspan="1" colspan="1">
+BAEZ VILLA, CRISTOBALINA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+31216446 </td>
+                        <td rowspan="1" colspan="1">
+BAQUERO PEREZ, JUAN B. </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+28728829 </td>
+                        <td rowspan="1" colspan="1">
+BAREA ROMERO, CRISTOBAL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+74899105 </td>
+                        <td rowspan="1" colspan="1">
+BARQUERO ESCALANTE, LUISA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25981230 </td>
+                        <td rowspan="1" colspan="1">
+BARRAGAN VICARIA, CATALINA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+75007935 </td>
+                        <td rowspan="1" colspan="1">
+BARRANCO GALVEZ, MANUEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30506293 </td>
+                        <td rowspan="1" colspan="1">
+BARRIO VELASCO, CARMEN DEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+31623758 </td>
+                        <td rowspan="1" colspan="1">
+BARRONES BUZON, MIGUEL A. </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+75004141 </td>
+                        <td rowspan="1" colspan="1">
+BAUTISTA TOLEDO, FRANCISCO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+31655748 </td>
+                        <td rowspan="1" colspan="1">
+BELLIDO CALA, JUAN ANTONIO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+31669559 </td>
+                        <td rowspan="1" colspan="1">
+BELLIDO PEÑA, MARIA DOLORES </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30449459 </td>
+                        <td rowspan="1" colspan="1">
+BENITEZ PEREZ, NICOLAS </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+29759369 </td>
+                        <td rowspan="1" colspan="1">
+BERROCAL JURADO, ANA DOLORES </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25972091 </td>
+                        <td rowspan="1" colspan="1">
+BLANCA PEREZ, ANTONIO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+44043342 </td>
+                        <td rowspan="1" colspan="1">
+BLANCO ORTIZ, CRISTINA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30523719 </td>
+                        <td rowspan="1" colspan="1">
+BROTONS RUIZ, LUIS RAFAEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+44586651 </td>
+                        <td rowspan="1" colspan="1">
+BURGOS YAÑEZ, JUAN CARLOS </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25303350 </td>
+                        <td rowspan="1" colspan="1">
+CABELLO BERDUN, SANTIAGO ANTONIO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24850062 </td>
+                        <td rowspan="1" colspan="1">
+CABELLO JIMENEZ, GUILLERMO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+44373156 </td>
+                        <td rowspan="1" colspan="1">
+CABEZAS GARZON, ERIKA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+80117809 </td>
+                        <td rowspan="1" colspan="1">
+CALERO MAZUELAS, JOSEFINA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+26449288 </td>
+                        <td rowspan="1" colspan="1">
+CALVENTE TORRES, JUAN </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+44266246 </td>
+                        <td rowspan="1" colspan="1">
+CALVO RAMOS, LUIS JACOBO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25679665 </td>
+                        <td rowspan="1" colspan="1">
+CANTOS PEREZ, GEMMA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24249981 </td>
+                        <td rowspan="1" colspan="1">
+CANTOS SANCHEZ, EVA MARIA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+05202132 </td>
+                        <td rowspan="1" colspan="1">
+CAÑIBANO TRIVES, JOSE </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+09156277 </td>
+                        <td rowspan="1" colspan="1">
+CARCABOSO PARRA, ISIDORO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+52543857 </td>
+                        <td rowspan="1" colspan="1">
+CARDENAS SANCHEZ, ANTONIA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+34844470 </td>
+                        <td rowspan="1" colspan="1">
+CARMONA MARTOS, JOSE MIGUEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30511273 </td>
+                        <td rowspan="1" colspan="1">
+CARRASCO ARAUZ, DOLORES </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24848058 </td>
+                        <td rowspan="1" colspan="1">
+CASADO GONZALEZ, JUAN JOSE </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+52543527 </td>
+                        <td rowspan="1" colspan="1">
+CASADO MORA, PABLO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30408364 </td>
+                        <td rowspan="1" colspan="1">
+CASADO RAIGON, MANUEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+39883889 </td>
+                        <td rowspan="1" colspan="1">
+CASARES PARDO, ANA BELEN </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24114329 </td>
+                        <td rowspan="1" colspan="1">
+CASTILLO PEREZ, MARIA ANGELES </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24298704 </td>
+                        <td rowspan="1" colspan="1">
+CASTRO GONZALEZ, NICASIO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+27281834 </td>
+                        <td rowspan="1" colspan="1">
+CASTRO MONTAÑO, MANUEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+27309470 </td>
+                        <td rowspan="1" colspan="1">
+CATALAN MORENO, MARIA JOSE </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+75065477 </td>
+                        <td rowspan="1" colspan="1">
+CHECA JODAR, RODRIGO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25984065 </td>
+                        <td rowspan="1" colspan="1">
+CHICA AGUILAR, ENCARNACION DE LA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25310161 </td>
+                        <td rowspan="1" colspan="1">
+CONEJO RODRIGUEZ, RAFAEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+74861857 </td>
+                        <td rowspan="1" colspan="1">
+CONEJO SOBRINO, JUAN ANTONIO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+33363543 </td>
+                        <td rowspan="1" colspan="1">
+CORNAX CASTILLO, JUAN CARLOS </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24264445 </td>
+                        <td rowspan="1" colspan="1">
+CORTES MORENO, MISEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+75402706 </td>
+                        <td rowspan="1" colspan="1">
+COSA MOLINA, JUAN </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30451137 </td>
+                        <td rowspan="1" colspan="1">
+CRESPO CASADO, CARMEN </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+52779580 </td>
+                        <td rowspan="1" colspan="1">
+CRESPO RAMOS, SAMUEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+29793283 </td>
+                        <td rowspan="1" colspan="1">
+DEGRADO GODOY, MARIA DOLORES </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+07469153 </td>
+                        <td rowspan="1" colspan="1">
+DIAZ LINARES, MARIA DE LOS ANGELES </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+23791574 </td>
+                        <td rowspan="1" colspan="1">
+DIAZ LOPEZ, JOSE ANTONIO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+29787238 </td>
+                        <td rowspan="1" colspan="1">
+DIAZ MORA, FRANCISCA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25129290 </td>
+                        <td rowspan="1" colspan="1">
+DOMENECH LLORENS, MARIA DOLORES </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+28727712 </td>
+                        <td rowspan="1" colspan="1">
+DURAN DELGADO, ROSA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+75410609 </td>
+                        <td rowspan="1" colspan="1">
+ESCALERA DURAN, DOLORES </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+52382129 </td>
+                        <td rowspan="1" colspan="1">
+ESPINOSA SANCHEZ DE LA BLANCA, ISIDRO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+27320683 </td>
+                        <td rowspan="1" colspan="1">
+ESQUILICHE MESA, RAQUEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+51058672 </td>
+                        <td rowspan="1" colspan="1">
+ESTEVE MARTIN, FRANCISCO JOSE </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+28567673 </td>
+                        <td rowspan="1" colspan="1">
+FERNANDEZ BULLON, MARIA FELISA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+28459627 </td>
+                        <td rowspan="1" colspan="1">
+FERNANDEZ DE HEREDIA MONTERO, M. ISABEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+52248681 </td>
+                        <td rowspan="1" colspan="1">
+FERNANDEZ FRANCO, FRANCISCO JAVIER </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+80122841 </td>
+                        <td rowspan="1" colspan="1">
+FERNANDEZ GARCIA, ANTONIO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+26214035 </td>
+                        <td rowspan="1" colspan="1">
+FERNANDEZ GARRIDO, ALBERTO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+52573510 </td>
+                        <td rowspan="1" colspan="1">
+FERNANDEZ MORALES, MARIA ESTRELLA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+31249738 </td>
+                        <td rowspan="1" colspan="1">
+FLORES CUETO, BLANCA DEL PILAR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+44299870 </td>
+                        <td rowspan="1" colspan="1">
+FLORES PELAEZ, INMACULADA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+06996447 </td>
+                        <td rowspan="1" colspan="1">
+FUENTES SANCHEZ, JULIO MIGUEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25319212 </td>
+                        <td rowspan="1" colspan="1">
+GALLARDO SEPULVEDA, MARIA PAZ </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24876061 </td>
+                        <td rowspan="1" colspan="1">
+GARCIA CABELLO, ROSARIO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+44580791 </td>
+                        <td rowspan="1" colspan="1">
+GARCIA ESCOBAR, MANUEL ANGEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+75068067 </td>
+                        <td rowspan="1" colspan="1">
+GARCIA GODOY, MARIA DEL CARMEN </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+31219142 </td>
+                        <td rowspan="1" colspan="1">
+GARCIA MEDINA, CRISTOBAL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+26202317 </td>
+                        <td rowspan="1" colspan="1">
+GARCIA PEREZ, MANUELA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+31328680 </td>
+                        <td rowspan="1" colspan="1">
+GARCIA PULIDO, FRANCISCO JOSE </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+28486929 </td>
+                        <td rowspan="1" colspan="1">
+GARCIA RAMOS, ALICIA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+28785861 </td>
+                        <td rowspan="1" colspan="1">
+GARCIA RONCEL, FATIMA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+52331429 </td>
+                        <td rowspan="1" colspan="1">
+GARRAN BAREA, JUAN MANUEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+26197358 </td>
+                        <td rowspan="1" colspan="1">
+GARRIDO CARRASCO, MARIA TERESA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+31242450 </td>
+                        <td rowspan="1" colspan="1">
+GARZON LOPEZ, MERCEDES </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24174369 </td>
+                        <td rowspan="1" colspan="1">
+GEA CAÑAVATE, CASTO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+51349286 </td>
+                        <td rowspan="1" colspan="1">
+GERMAN GOMEZ, PALOMA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+29773475 </td>
+                        <td rowspan="1" colspan="1">
+GIL ALVAREZ, MANUEL JESUS </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30540620 </td>
+                        <td rowspan="1" colspan="1">
+GIL FERNANDEZ, INMACULADA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+27243120 </td>
+                        <td rowspan="1" colspan="1">
+GOMEZ BROTONS, JESUS </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25936634 </td>
+                        <td rowspan="1" colspan="1">
+GOMEZ MARFIL, JOSE </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24203646 </td>
+                        <td rowspan="1" colspan="1">
+GOMEZ RIVERA, GUILLERMO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+07853035 </td>
+                        <td rowspan="1" colspan="1">
+GONZALEZ DEL POZO, JOSE MANUEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+53683049 </td>
+                        <td rowspan="1" colspan="1">
+GONZALEZ RIVERA, FRANCISCO JESUS </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+52660518 </td>
+                        <td rowspan="1" colspan="1">
+GRAU GARRIGUES, MARIA JOSEFA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+31216509 </td>
+                        <td rowspan="1" colspan="1">
+GUERRERO BERNABE, ANTONIO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30540332 </td>
+                        <td rowspan="1" colspan="1">
+HABAS LUQUE, FRANCISCO JAVIER </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+08798623 </td>
+                        <td rowspan="1" colspan="1">
+HAUT HURTADO, MARIA PERSEVERANCIA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24199396 </td>
+                        <td rowspan="1" colspan="1">
+HEREDIA FERNANDEZ, ANA ISABEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+28354954 </td>
+                        <td rowspan="1" colspan="1">
+HERNANDEZ CARRION, ENRIQUE </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+74623362 </td>
+                        <td rowspan="1" colspan="1">
+HERNANDEZ CONTRERAS, MARIA LUISA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+06525602 </td>
+                        <td rowspan="1" colspan="1">
+HERNANDEZ GARCIA, MARIA ANGELES </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+27214394 </td>
+                        <td rowspan="1" colspan="1">
+HERNANDEZ PARRA, ATANASIO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24206093 </td>
+                        <td rowspan="1" colspan="1">
+HERREROS MARTINEZ, PURIFICACION </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+26014417 </td>
+                        <td rowspan="1" colspan="1">
+HIDALGO RUIZ, ANA MARIA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+75414173 </td>
+                        <td rowspan="1" colspan="1">
+HIDALGO SEVILLANO, ANTONIO JESUS </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+26196717 </td>
+                        <td rowspan="1" colspan="1">
+HIGUERAS TORRES, JUAN </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+22655707 </td>
+                        <td rowspan="1" colspan="1">
+IBAÑEZ GONZALEZ, GLORIA MARIA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25972801 </td>
+                        <td rowspan="1" colspan="1">
+ILLANA MARTOS, MANUELA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+00675520 </td>
+                        <td rowspan="1" colspan="1">
+IZQUIERDO CADALSO, BEATRIZ </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+28613605 </td>
+                        <td rowspan="1" colspan="1">
+IZQUIERDO GANDULLO, SAMUEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+11784573 </td>
+                        <td rowspan="1" colspan="1">
+JIMENEZ CRUZ, AVELINO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25064693 </td>
+                        <td rowspan="1" colspan="1">
+JIMENEZ CRUZADO, JESUS MANUEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30528198 </td>
+                        <td rowspan="1" colspan="1">
+JIMENEZ DE CISNEROS ANGUITA, MANUELA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+52704464 </td>
+                        <td rowspan="1" colspan="1">
+JIMENEZ GARCIA, MARIA BEGOÑA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24213397 </td>
+                        <td rowspan="1" colspan="1">
+JIMENEZ GONZALEZ, JUAN JOSE </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24169689 </td>
+                        <td rowspan="1" colspan="1">
+JIMENEZ HERNANDEZ, SALVADOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+26453915 </td>
+                        <td rowspan="1" colspan="1">
+JIMENEZ HURTADO, NATIVIDAD LUCIA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24903633 </td>
+                        <td rowspan="1" colspan="1">
+JIMENEZ MORALES, JUAN ANTONIO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25081254 </td>
+                        <td rowspan="1" colspan="1">
+JIMENEZ VAZQUEZ, JOSE DAMIAN </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24085551 </td>
+                        <td rowspan="1" colspan="1">
+JOVER CAPILLA, FRANCISCO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+17683116 </td>
+                        <td rowspan="1" colspan="1">
+LAFUENTE LACASA, MARIA AURORA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+08802158 </td>
+                        <td rowspan="1" colspan="1">
+LEDESMA FERNANDEZ, MARIA FRANCISCA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+28570676 </td>
+                        <td rowspan="1" colspan="1">
+LEON ALVERTOS, MARIA JOSE </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30433315 </td>
+                        <td rowspan="1" colspan="1">
+LEON CLAVERIA, RAFAEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24904482 </td>
+                        <td rowspan="1" colspan="1">
+LLAMAS PALACIOS, MARIA DOLORES </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+44037875 </td>
+                        <td rowspan="1" colspan="1">
+LLORENS CLEMENTE, INMACULADA CONCEPCIO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30528200 </td>
+                        <td rowspan="1" colspan="1">
+LLORENS PAREDES, FRANCISCO ESTEBAN </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24186102 </td>
+                        <td rowspan="1" colspan="1">
+LOMAS MAYAS, ELOISA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30473980 </td>
+                        <td rowspan="1" colspan="1">
+LOPEZ CAÑAS, JUAN MANUEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+75534788 </td>
+                        <td rowspan="1" colspan="1">
+LOPEZ DE BAYAS REINOSO, JOSE FRANCISCO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+44293427 </td>
+                        <td rowspan="1" colspan="1">
+LOPEZ GARCIA, PABLO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+27522456 </td>
+                        <td rowspan="1" colspan="1">
+LOPEZ LOPEZ, FRANCISCO JESUS </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+53516140 </td>
+                        <td rowspan="1" colspan="1">
+LOPEZ MENENDEZ, LUCIA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+45279312 </td>
+                        <td rowspan="1" colspan="1">
+LOPEZ NAVARRETE, FRANCISCO MIGUEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+80145113 </td>
+                        <td rowspan="1" colspan="1">
+LOPEZ RUIZ, MARIA DEL CARMEN </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+74625994 </td>
+                        <td rowspan="1" colspan="1">
+LUCENA RODRIGUEZ, MIGUEL ANGEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30799962 </td>
+                        <td rowspan="1" colspan="1">
+LUNA ARIZA, PEDRO ANGEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+28450417 </td>
+                        <td rowspan="1" colspan="1">
+LUNA PEREZ, MANUEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+00692623 </td>
+                        <td rowspan="1" colspan="1">
+MACIAS ORTIZ DE GUZMAN, MARIA DEL PILAR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+23779367 </td>
+                        <td rowspan="1" colspan="1">
+MALDONADO GONZALEZ, MIGUEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+26042248 </td>
+                        <td rowspan="1" colspan="1">
+MARCHAL LOPEZ, FRANCISCO MANUEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+26418220 </td>
+                        <td rowspan="1" colspan="1">
+MARCOS ALCALA, MARIA DOLORES </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25954181 </td>
+                        <td rowspan="1" colspan="1">
+MARIN BELLO, MARIA NIEVES </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30420860 </td>
+                        <td rowspan="1" colspan="1">
+MARQUEZ GALLEGO, BERNABE </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+07551904 </td>
+                        <td rowspan="1" colspan="1">
+MARQUEZ GONZALEZ, FRANCISCO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24122707 </td>
+                        <td rowspan="1" colspan="1">
+MARTIN CEBRIAN, FRANCISCO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+23804242 </td>
+                        <td rowspan="1" colspan="1">
+MARTIN CORREA, JOSE ANTONIO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+80131601 </td>
+                        <td rowspan="1" colspan="1">
+MARTIN LOPEZ, JOSE </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+12223006 </td>
+                        <td rowspan="1" colspan="1">
+MARTIN PALOMAR, MARIA DOLORES </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+75419014 </td>
+                        <td rowspan="1" colspan="1">
+MARTIN SANCHEZ, MARIA JOSE </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+13056032 </td>
+                        <td rowspan="1" colspan="1">
+MARTIN-COBOS PUEBLA, IGNACIO SANTIAGO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24199277 </td>
+                        <td rowspan="1" colspan="1">
+MARTINEZ GARCIA, MARIA LUNA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+27301433 </td>
+                        <td rowspan="1" colspan="1">
+MARTINEZ MAGAÑA, MARIA DOLORES </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24288546 </td>
+                        <td rowspan="1" colspan="1">
+MARTINEZ MARTINEZ, FRANCISCO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+34070624 </td>
+                        <td rowspan="1" colspan="1">
+MARTINEZ MATUTE, MARIA CARMEN </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+27517748 </td>
+                        <td rowspan="1" colspan="1">
+MARTINEZ NIETO, CARMEN MARIA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+27518327 </td>
+                        <td rowspan="1" colspan="1">
+MARTINEZ TORRES, ANGELES </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25984588 </td>
+                        <td rowspan="1" colspan="1">
+MARTOS SABARIEGO, FERNANDO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+27275499 </td>
+                        <td rowspan="1" colspan="1">
+MEJIAS QUESADA, JOSE MARIA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+75088957 </td>
+                        <td rowspan="1" colspan="1">
+MELGARES LOPEZ, JUAN JESUS </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+23219613 </td>
+                        <td rowspan="1" colspan="1">
+MENA FERNANDEZ, TOMAS </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+28356924 </td>
+                        <td rowspan="1" colspan="1">
+MERCHAN IGLESIAS, FRANCISCO JAVIER </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+74722435 </td>
+                        <td rowspan="1" colspan="1">
+MERLO VALVERDE, RAFAEL ANGEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+42841256 </td>
+                        <td rowspan="1" colspan="1">
+MIRANDA GARCIA, CARMEN ROSA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+27527054 </td>
+                        <td rowspan="1" colspan="1">
+MOLINA NAVARRO, RAFAEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+28575622 </td>
+                        <td rowspan="1" colspan="1">
+MONTES MARQUEZ, CARMEN </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25963539 </td>
+                        <td rowspan="1" colspan="1">
+MONTILLA TORRES, RAFAEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25933523 </td>
+                        <td rowspan="1" colspan="1">
+MORA CANO, JOSE LUIS </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24248545 </td>
+                        <td rowspan="1" colspan="1">
+MORANTE POYATOS, ENCARNACION </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24175480 </td>
+                        <td rowspan="1" colspan="1">
+MOREIRO VALVERDE, JOSE ANGEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+00681772 </td>
+                        <td rowspan="1" colspan="1">
+MORENO CEBEIRA, ESTHER </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+28550076 </td>
+                        <td rowspan="1" colspan="1">
+MOYA BELLIDO, MARIA JOSE </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+33850304 </td>
+                        <td rowspan="1" colspan="1">
+MUÑOZ MEILAN, MARIA JESUS </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+31628393 </td>
+                        <td rowspan="1" colspan="1">
+MURIEL DIAZ, M. VICTORIA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30449358 </td>
+                        <td rowspan="1" colspan="1">
+NADALES LLAMAS, LEONARDO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+06936018 </td>
+                        <td rowspan="1" colspan="1">
+NARGANES ROBAS, JOSE CLAUDIO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+52512029 </td>
+                        <td rowspan="1" colspan="1">
+NAVAS PLEGUEZUELOS, JUANA MARIA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+00414880 </td>
+                        <td rowspan="1" colspan="1">
+NECHES OLASO, RUTH </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24232406 </td>
+                        <td rowspan="1" colspan="1">
+NIETO IZQUIERDO, MARIA AFRICA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30073945 </td>
+                        <td rowspan="1" colspan="1">
+ORTEGA OSUNA, JOSE LUIS </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24223949 </td>
+                        <td rowspan="1" colspan="1">
+ORTEGA PUERTA, ANTONIO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+45069489 </td>
+                        <td rowspan="1" colspan="1">
+ORTEGA PUERTAS, CATALINA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+28732835 </td>
+                        <td rowspan="1" colspan="1">
+ORTIZ BAUTISTA, CONCEPCION </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24296455 </td>
+                        <td rowspan="1" colspan="1">
+ORTIZ TORRES, BARBARA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24107473 </td>
+                        <td rowspan="1" colspan="1">
+PADILLA ALVAREZ, MANUEL ANTONIO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24784891 </td>
+                        <td rowspan="1" colspan="1">
+PAJARES LADRERO, LUIS FELIPE </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30416160 </td>
+                        <td rowspan="1" colspan="1">
+PECHARROMAN MONTERO, FRANCISCA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+80125945 </td>
+                        <td rowspan="1" colspan="1">
+PELAEZ CABRA, ANGELES </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+27271402 </td>
+                        <td rowspan="1" colspan="1">
+PEÑA MARTIN, JULIA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+28758678 </td>
+                        <td rowspan="1" colspan="1">
+PEREZ AGUILAR, JOSE FRANCISCO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+31863539 </td>
+                        <td rowspan="1" colspan="1">
+PEREZ BLANCO, MARIA JOSE </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+44960192 </td>
+                        <td rowspan="1" colspan="1">
+PEREZ GALAFATE, ROSA MARIA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30419741 </td>
+                        <td rowspan="1" colspan="1">
+PEREZ LAVELA, NICOLAS </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+07951373 </td>
+                        <td rowspan="1" colspan="1">
+PEREZ MARTIN, ALBERTO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+48871122 </td>
+                        <td rowspan="1" colspan="1">
+PEREZ MOLINERO, SUSANA E. </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+31675913 </td>
+                        <td rowspan="1" colspan="1">
+PEREZ RUBIO, SALVADOR DAVID </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+31571395 </td>
+                        <td rowspan="1" colspan="1">
+POZAS FERNANDEZ-GAO, JESUS </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24123072 </td>
+                        <td rowspan="1" colspan="1">
+PRIEGO NUÑEZ, JOSE </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+29767378 </td>
+                        <td rowspan="1" colspan="1">
+PRIETO GONZALEZ, HELENA PILAR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+03841344 </td>
+                        <td rowspan="1" colspan="1">
+PUEBLA MARTIN, OSCAR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24299435 </td>
+                        <td rowspan="1" colspan="1">
+PUENTES MOLINA, ANTONIO FRANCISCO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+29783756 </td>
+                        <td rowspan="1" colspan="1">
+PULGARIN MEDINA, MARIA DEL CARMEN </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+05616103 </td>
+                        <td rowspan="1" colspan="1">
+QUILEZ SERRANO, MANUEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+28617082 </td>
+                        <td rowspan="1" colspan="1">
+RAMIREZ FERNANDEZ, MIGUEL BALDOMERO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24208710 </td>
+                        <td rowspan="1" colspan="1">
+RAMIREZ PEREZ, EMILIA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+29744796 </td>
+                        <td rowspan="1" colspan="1">
+RAMIREZ SEVILLANO, MARIA REMEDIOS </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+28547598 </td>
+                        <td rowspan="1" colspan="1">
+RAMOS CORPAS, MANUEL JESUS </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+29077116 </td>
+                        <td rowspan="1" colspan="1">
+RAMOS LOPEZ, CRISTINA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+74805163 </td>
+                        <td rowspan="1" colspan="1">
+RANEA GOMEZ, OLEGARIO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30403112 </td>
+                        <td rowspan="1" colspan="1">
+RAYA LOPEZ, BERNARDO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30496682 </td>
+                        <td rowspan="1" colspan="1">
+RETAMOSA MUÑOZ, FRANCISCO JOSE </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+28661944 </td>
+                        <td rowspan="1" colspan="1">
+REVUELTA MARCHENA, MANUEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30549540 </td>
+                        <td rowspan="1" colspan="1">
+RICO MUÑOZ, JOSE RAMON </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+27218247 </td>
+                        <td rowspan="1" colspan="1">
+RICO ROMERO, PEDRO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+26212217 </td>
+                        <td rowspan="1" colspan="1">
+RIDAO RIDAO, MARIA DEL AMOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+50966711 </td>
+                        <td rowspan="1" colspan="1">
+RIO PALOMINO, JOSE MIGUEL DEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24847063 </td>
+                        <td rowspan="1" colspan="1">
+RIOS ANGEL, JOSE </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+52226238 </td>
+                        <td rowspan="1" colspan="1">
+RIOS GONZALEZ, FERNANDO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30514514 </td>
+                        <td rowspan="1" colspan="1">
+RIOS ROSAS, ROSA MARIA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+07800779 </td>
+                        <td rowspan="1" colspan="1">
+RIVAS MARTIN, ISABEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+75377213 </td>
+                        <td rowspan="1" colspan="1">
+RIVERO GARCIA, JUAN JESUS </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+31242596 </td>
+                        <td rowspan="1" colspan="1">
+RODRIGUEZ GOMEZ, MARIA DEL MAR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+06560411 </td>
+                        <td rowspan="1" colspan="1">
+RODRIGUEZ MARTIN, MARIA NATIVIDAD </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+44264987 </td>
+                        <td rowspan="1" colspan="1">
+RODRIGUEZ MORATA, JORGE </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+74665646 </td>
+                        <td rowspan="1" colspan="1">
+RODRIGUEZ PAREJA, LUIS EDUARDO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24223204 </td>
+                        <td rowspan="1" colspan="1">
+RODRIGUEZ RUIZ, JOSE </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+52558254 </td>
+                        <td rowspan="1" colspan="1">
+RODRIGUEZ SANCHEZ, JUAN CARLOS </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30409660 </td>
+                        <td rowspan="1" colspan="1">
+RODRIGUEZ TAPIZ, ALFONSO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+80123060 </td>
+                        <td rowspan="1" colspan="1">
+ROJAS LOPEZ, ANTONIO LUIS </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+45582198 </td>
+                        <td rowspan="1" colspan="1">
+ROMAN LORENTE, CARLOS </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+29051130 </td>
+                        <td rowspan="1" colspan="1">
+ROMERO CARMONA, JUAN BAUTISTA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+29077603 </td>
+                        <td rowspan="1" colspan="1">
+ROMERO GARCIA, MANUEL ANGEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24196163 </td>
+                        <td rowspan="1" colspan="1">
+ROMERO HINOJOSA, FRANCISCO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+27239871 </td>
+                        <td rowspan="1" colspan="1">
+ROMERO MARTINEZ, LILIA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+31258105 </td>
+                        <td rowspan="1" colspan="1">
+RUIZ GARCIA, ALICIA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+26214827 </td>
+                        <td rowspan="1" colspan="1">
+RUIZ HUERGA, JOSE ANGEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24091579 </td>
+                        <td rowspan="1" colspan="1">
+RUIZ LUCENA, JUAN ANTONIO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24199116 </td>
+                        <td rowspan="1" colspan="1">
+RUIZ NARVAEZ, JOSE MANUEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+02610463 </td>
+                        <td rowspan="1" colspan="1">
+RUIZ PEREZ, CARMEN </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+75220202 </td>
+                        <td rowspan="1" colspan="1">
+RUIZ SALMERON, JUAN JOSE </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+33257331 </td>
+                        <td rowspan="1" colspan="1">
+SALAS ELLACURIAGA, MARIA FATIMA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+29754318 </td>
+                        <td rowspan="1" colspan="1">
+SALAS TENORIO, MANUELA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+27261050 </td>
+                        <td rowspan="1" colspan="1">
+SALMERON NIETO, ANTONIO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+27532140 </td>
+                        <td rowspan="1" colspan="1">
+SAMPER MARQUEZ, JUAN JOSE </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+52578358 </td>
+                        <td rowspan="1" colspan="1">
+SANCHEZ ALCANTARA, JOSE DANIEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24849631 </td>
+                        <td rowspan="1" colspan="1">
+SANCHEZ ARAPILES, MARIA DEL CARMEN </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+52517916 </td>
+                        <td rowspan="1" colspan="1">
+SANCHEZ BAUTISTA, ALFREDO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+28886077 </td>
+                        <td rowspan="1" colspan="1">
+SANCHEZ BONILLA, CARMEN </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+28593500 </td>
+                        <td rowspan="1" colspan="1">
+SANCHEZ BONILLA, MARIA ROCIO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24838533 </td>
+                        <td rowspan="1" colspan="1">
+SANCHEZ CONESA, AURELIANO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+33370721 </td>
+                        <td rowspan="1" colspan="1">
+SANCHEZ DE LA FUENT SANTILLANA, MARINA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25079462 </td>
+                        <td rowspan="1" colspan="1">
+SANCHEZ FERNANDEZ, MARGARITA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+52329923 </td>
+                        <td rowspan="1" colspan="1">
+SANCHEZ HERMOSILLA, MANUEL JESUS </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+79010617 </td>
+                        <td rowspan="1" colspan="1">
+SANCHEZ MORON, MARIA LUISA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24184716 </td>
+                        <td rowspan="1" colspan="1">
+SANCHEZ OSORIO, EDUARDO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25080409 </td>
+                        <td rowspan="1" colspan="1">
+SANCHEZ TEJADA, BERNARDO MANUEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30489423 </td>
+                        <td rowspan="1" colspan="1">
+SANCHEZ VELASCO, FERNANDO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25315317 </td>
+                        <td rowspan="1" colspan="1">
+SANCHO FRIAS, JUAN ANTONIO </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+42934265 </td>
+                        <td rowspan="1" colspan="1">
+SANTOS IZQUIERDO, FRANCISCO JAVIER </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+28519461 </td>
+                        <td rowspan="1" colspan="1">
+SANTOS RUIZ, GREGORIO DE LOS </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+32027202 </td>
+                        <td rowspan="1" colspan="1">
+SANTOVETY CLAVIJO, ANA MARIA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+27508232 </td>
+                        <td rowspan="1" colspan="1">
+SERRANO MARTINEZ, JOSEFA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+09781387 </td>
+                        <td rowspan="1" colspan="1">
+SILVERA MORON, DORIS BEGOÑA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+51406706 </td>
+                        <td rowspan="1" colspan="1">
+SOLA MONTERO, RAMON JOSE </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24172198</td>
+                        <td rowspan="1" colspan="1">
+SORIA RODRIGUEZ, FRANCISCO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24229411</td>
+                        <td rowspan="1" colspan="1">
+JAVIER SOTO VICENTE, FERNANDO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+33874816</td>
+                        <td rowspan="1" colspan="1">
+TALLON CARMONA, FERNANDO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+08786516</td>
+                        <td rowspan="1" colspan="1">
+TEIJEIRO FUENTES, JOSE CARLOS</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+31582168</td>
+                        <td rowspan="1" colspan="1">
+TELLO BURRUEZO, JOSE MARIA</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+33371387</td>
+                        <td rowspan="1" colspan="1">
+TORRECILLA TORREGROSA, JAVIER</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+03819118</td>
+                        <td rowspan="1" colspan="1">
+TORRES CARRIAZO, JOSE VIRGILIO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+52311876</td>
+                        <td rowspan="1" colspan="1">
+TORRES LETRAN, MARIA JOSE</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+75784109</td>
+                        <td rowspan="1" colspan="1">
+TRAVERSO GARCIA, FRANCISCO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+28674573</td>
+                        <td rowspan="1" colspan="1">
+JAVIER TRINIDAD PEREZ, FRANCISCO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30793406</td>
+                        <td rowspan="1" colspan="1">
+TROCOLI VELASCO, MARIA ROSA</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+75005329</td>
+                        <td rowspan="1" colspan="1">
+UREÑA PADILLA, LUIS</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24255102</td>
+                        <td rowspan="1" colspan="1">
+VALENZUELA MARQUEZ, LUCAS</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+07521907</td>
+                        <td rowspan="1" colspan="1">
+VAQUERIZO GARCIA, LUIS</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+79194115</td>
+                        <td rowspan="1" colspan="1">
+VARGAS PEÑA, JOSE MARIA</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25556083</td>
+                        <td rowspan="1" colspan="1">
+VAZQUEZ CANDILES, ILDEFONSO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+31207580</td>
+                        <td rowspan="1" colspan="1">
+VAZQUEZ CAÑA, JOSE MARIA</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+52323222</td>
+                        <td rowspan="1" colspan="1">
+VAZQUEZ GONZALEZ, ANTONIO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30811999</td>
+                        <td rowspan="1" colspan="1">
+VILCHES MARQUEZ, SUSANA</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+75673441</td>
+                        <td rowspan="1" colspan="1">
+VILLENA GONZALEZ, MANUEL</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+52532936</td>
+                        <td rowspan="1" colspan="1">
+ZAFRA MACHUCA, FRANCISCO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25310055</td>
+                        <td rowspan="1" colspan="1">
+ZORRILLA HIDALGO, ANTONIA MARIA</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+44034227</td>
+                        <td rowspan="1" colspan="1">
+ZULUETA CASTAÑEDA, MANUEL</td>
+                     </tr>
+                  </table>
+                  <table>
+                     <tr>
+                        <td rowspan="1" colspan="2">
+TURNO: CONCURSO OPOSICIÓN RESERVA PERSONAS CON DISCAPACIDAD</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+DNI</td>
+                        <td rowspan="1" colspan="1">
+APELLIDOS Y NOMBRE</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+50081066</td>
+                        <td rowspan="1" colspan="1">
+COBO ROMERO, PLACIDO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30815038</td>
+                        <td rowspan="1" colspan="1">
+COTS MARFIL, MARIA PAZ</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+29728282</td>
+                        <td rowspan="1" colspan="1">
+FERNANDEZ DIAZ, FRANCISCO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+09697116</td>
+                        <td rowspan="1" colspan="1">
+GARCIA DIEZ, ANUNCIACION</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24874039</td>
+                        <td rowspan="1" colspan="1">
+JIMENEZ MUÑOZ, JOSEFA</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+05164581</td>
+                        <td rowspan="1" colspan="1">
+OÑATE NAVARRO, ANTONIO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+06545653</td>
+                        <td rowspan="1" colspan="1">
+SEGOVIA SEGOVIA, FRANCISCO JOSE</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24814694</td>
+                        <td rowspan="1" colspan="1">
+TOMAS GUERRERO, JOSE FERNANDO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+33377215</td>
+                        <td rowspan="1" colspan="1">
+VALADEZ PEÑA, MARIA BELEN</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+28534162</td>
+                        <td rowspan="1" colspan="1">
+VAZQUEZ REYES, CARLOS MARIA </td>
+                     </tr>
+                  </table>
+                  <table>
+                     <tr>
+                        <td rowspan="1" colspan="2">
+TURNO: CONCURSO DE MÉRITOS LIBRE</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+DNI</td>
+                        <td rowspan="1" colspan="1">
+APELLIDOS Y NOMBRE</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+28668313</td>
+                        <td rowspan="1" colspan="1">
+ACEDO ROMERO, SALVADORA</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+23204807</td>
+                        <td rowspan="1" colspan="1">
+BALLESTA MARTINEZ, BEATRIZ</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+80132113</td>
+                        <td rowspan="1" colspan="1">
+BALLESTEROS MORENO, SEBASTIAN</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+27211368</td>
+                        <td rowspan="1" colspan="1">
+BERBEL MARTINEZ, JOSE</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24177754</td>
+                        <td rowspan="1" colspan="1">
+CABELLO PIÑAR, JOSE ALBERTO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25319192</td>
+                        <td rowspan="1" colspan="1">
+CARBONERO PEREZ, FRANCISCO E</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25977917</td>
+                        <td rowspan="1" colspan="1">
+CASTELLANO LUQUE, EUFRASIO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24152470</td>
+                        <td rowspan="1" colspan="1">
+CASTILLO MORENO, EDUARDO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+06994731</td>
+                        <td rowspan="1" colspan="1">
+CORDERO MORENO, PEDRO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+29740817</td>
+                        <td rowspan="1" colspan="1">
+DIAZ MAGRO, ANTONIO J</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+30402324</td>
+                        <td rowspan="1" colspan="1">
+FERNANDEZ LEON, BELEN</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+45265410</td>
+                        <td rowspan="1" colspan="1">
+FRESNEDA RUBIÑO, MARIA ANGELES</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25705095</td>
+                        <td rowspan="1" colspan="1">
+GARCIA MORENO, FRANCISCO JAVIER</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+27203663</td>
+                        <td rowspan="1" colspan="1">
+GARCIA MORENO, JULIA MARIA</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24143248</td>
+                        <td rowspan="1" colspan="1">
+GARCIA PEREZ, CONCEPCION</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25558954</td>
+                        <td rowspan="1" colspan="1">
+GARCIA SORIANO, FRANCISCO J</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25907681</td>
+                        <td rowspan="1" colspan="1">
+GOMEZ RODRIGUEZ, JOSE ANTONIO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24093869</td>
+                        <td rowspan="1" colspan="1">
+GONZALEZ VAZQUEZ, JOSE GABRIEL</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+80122256</td>
+                        <td rowspan="1" colspan="1">
+HIDALGO ARANDA, ANTONIO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+31570783</td>
+                        <td rowspan="1" colspan="1">
+JIMENEZ GOMEZ, FRANCISCO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+76215799</td>
+                        <td rowspan="1" colspan="1">
+JUZGADO RUIZ, EUGENIO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+22451002</td>
+                        <td rowspan="1" colspan="1">
+LOPEZ SOLA, JUAN MIGUEL</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25921860</td>
+                        <td rowspan="1" colspan="1">
+LOPEZ TORRES, PABLO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+06953886</td>
+                        <td rowspan="1" colspan="1">
+MARTIN RODRIGUEZ, JULIO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+74811805</td>
+                        <td rowspan="1" colspan="1">
+MEDINA INFANTES, FRANCISCO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24806070</td>
+                        <td rowspan="1" colspan="1">
+MONTILLA MARTIN, JOSE</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+29740122</td>
+                        <td rowspan="1" colspan="1">
+MORA LIMON, RAFAEL</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24837495</td>
+                        <td rowspan="1" colspan="1">
+MUÑOZ BALLESTA, ALBERTO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+29790583</td>
+                        <td rowspan="1" colspan="1">
+NAVARRETE RAMIREZ-MONTESINOS, ERASMO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24289183</td>
+                        <td rowspan="1" colspan="1">
+OROZCO FERNANDEZ, JUAN CARLOS</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+10064310</td>
+                        <td rowspan="1" colspan="1">
+PACHECO ALVAREZ, ROSA MARIA</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+42909287</td>
+                        <td rowspan="1" colspan="1">
+PEREZ BORGES, JUAN RAMÓN</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25302273</td>
+                        <td rowspan="1" colspan="1">
+PEREZ CAMPOS, JOSE A</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25294364</td>
+                        <td rowspan="1" colspan="1">
+QUINTANA AGUILAR, JUAN ANTONIO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+26434452</td>
+                        <td rowspan="1" colspan="1">
+REAL SUAREZ, GERVASIO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+26447171</td>
+                        <td rowspan="1" colspan="1">
+ROBLES MALDONADO, MATIAS</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+28536291</td>
+                        <td rowspan="1" colspan="1">
+RODRIGUEZ DE LA CRUZ, ANTONIO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+27294720</td>
+                        <td rowspan="1" colspan="1">
+RODRIGUEZ SANCHEZ, HERMINIO</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+29472340</td>
+                        <td rowspan="1" colspan="1">
+RODRIGUEZ TIERRA, RAMON</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+31829523</td>
+                        <td rowspan="1" colspan="1">
+SUCH LLORET, JOSE ENRIQUE</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+25923179</td>
+                        <td rowspan="1" colspan="1">
+UREÑA PORTERO, GABRIEL </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+31250703</td>
+                        <td rowspan="1" colspan="1">
+VIÑOLO GIL, SILVIA</td>
+                     </tr>
+                  </table>
+                  <table>
+                     <tr>
+                        <td rowspan="1" colspan="2">
+TURNO: CONCURSO DE MÉRITOS RESERVA PARA PERSONAS CON DISCAPACIDAD</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+DNI</td>
+                        <td rowspan="1" colspan="1">
+APELLIDOS Y NOMBRE</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+24835251 </td>
+                        <td rowspan="1" colspan="1">
+ARIÑO GIL, JOSE MARIA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+26459833</td>
+                        <td rowspan="1" colspan="1">
+CORRAL RUIZ, FRANCISCO</td>
+                     </tr>
+                  </table>
+                  <table>
+                     <tr>
+                        <td rowspan="1" colspan="3">
+ANEXO II<br/>LISTADO PROVISIONAL DEL PERSONAL EXCLUIDO Y MOTIVOS DE EXCLUSIÓN EN LOS PROCEDIMIENTOS SELECTIVOS PARA ACCESO AL CUERPO DE INSPECTORES DE EDUCACIÓN CONVOCADOS POR ORDEN DE 26 DE ABRIL DE 2011</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="3">
+TURNO: CONCURSO OPOSICIÓN GENERAL LIBRE</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+APELLIDOS Y NOMBRE</td>
+                        <td rowspan="1" colspan="1">
+DNI</td>
+                        <td rowspan="1" colspan="1">
+MOTIVO DE EXCLUSIÓN</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+ALVAREZ LOPEZ, M.ª VICTORIA</td>
+                        <td rowspan="1" colspan="1">
+34035426</td>
+                        <td rowspan="1" colspan="1">
+PARTICIPA POR VARIOS TURNOS</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+ARIZA SERRANO, MARIA ANGELES</td>
+                        <td rowspan="1" colspan="1">
+30823512</td>
+                        <td rowspan="1" colspan="1">
+PARTICIPA POR VARIOS TURNOS</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+BONILLA CODESEDA, DIEGO</td>
+                        <td rowspan="1" colspan="1">
+28749354</td>
+                        <td rowspan="1" colspan="1">
+PARTICIPA POR VARIOS TURNOS</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+CARO SALADO, JOSE ANTONIO</td>
+                        <td rowspan="1" colspan="1">
+52302753</td>
+                        <td rowspan="1" colspan="1">
+PARTICIPA POR VARIOS TURNOS</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+CASTRO MARTIN, JUAN A.</td>
+                        <td rowspan="1" colspan="1">
+24096579</td>
+                        <td rowspan="1" colspan="1">
+NO CUMPLE EL REQUISITO DE 6 AÑOS DE ANTIGUEDAD</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+COBO ROSELL, JOSE RAMON</td>
+                        <td rowspan="1" colspan="1">
+25985500</td>
+                        <td rowspan="1" colspan="1">
+FALTA FIRMA EN LA INSTANCIA DE PARTICIPACIÓN</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+COCA DE LA TORRE, ROSARIO</td>
+                        <td rowspan="1" colspan="1">
+32861312</td>
+                        <td rowspan="1" colspan="1">
+NO APORTA TITULACIÓN SUPERIOR</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+GARCIA PEREZ, MARIA LOURDES</td>
+                        <td rowspan="1" colspan="1">
+75241284</td>
+                        <td rowspan="1" colspan="1">
+NO CUMPLE EL REQUISITO DE 6 AÑOS DE ANTIGUEDAD</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+GOMEZ GALISTEO, GENARO MIGUEL</td>
+                        <td rowspan="1" colspan="1">
+24292318</td>
+                        <td rowspan="1" colspan="1">
+NO APORTA TITULACIÓN SUPERIOR</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+HEREDIA PAVON, MARIA PILAR</td>
+                        <td rowspan="1" colspan="1">
+31221296</td>
+                        <td rowspan="1" colspan="1">
+NO ADJUNTA RESGUARDO ORIGINAL ACREDITATIVO DE HABER ABONADO TASA</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+HORNERO DUQUE, JOSE MIGUEL</td>
+                        <td rowspan="1" colspan="1">
+28946730</td>
+                        <td rowspan="1" colspan="1">
+NO APORTA TITULACIÓN SUPERIOR</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+JIMENEZ JIMENEZ, PEDRO ANGEL</td>
+                        <td rowspan="1" colspan="1">
+25993326</td>
+                        <td rowspan="1" colspan="1">
+NO APORTA TITULACIÓN SUPERIOR</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+LOPEZ GOMEZ, LUISA MARIA</td>
+                        <td rowspan="1" colspan="1">
+28723151</td>
+                        <td rowspan="1" colspan="1">
+PARTICIPA POR VARIOS TURNOS</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+LUQUE REYES, MARIA DEL CARMEN</td>
+                        <td rowspan="1" colspan="1">
+30404552</td>
+                        <td rowspan="1" colspan="1">
+PARTICIPA POR VARIOS TURNOS</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+MALDONADO CASTRO, MARIA PILAR</td>
+                        <td rowspan="1" colspan="1">
+28522394</td>
+                        <td rowspan="1" colspan="1">
+PARTICIPA POR VARIOS TURNOS</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+MARTINEZ ATANCE, JUAN MANUEL</td>
+                        <td rowspan="1" colspan="1">
+24155479</td>
+                        <td rowspan="1" colspan="1">
+NO APORTA TITULACIÓN SUPERIOR</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+MORENO LOPEZ, RUBEN</td>
+                        <td rowspan="1" colspan="1">
+26036895</td>
+                        <td rowspan="1" colspan="1">
+PARTICIPA POR VARIOS TURNOS</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+PARRADO MARTINEZ, ANTONIA</td>
+                        <td rowspan="1" colspan="1">
+29784558</td>
+                        <td rowspan="1" colspan="1">
+NO ADJUNTA RESGUARDO ORIGINAL ACREDITATIVO DE HABER ABONADO TASA</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+PELEGRINA RODRIGUEZ, EDWIN</td>
+                        <td rowspan="1" colspan="1">
+74688972</td>
+                        <td rowspan="1" colspan="1">
+NO CUMPLE EL REQUISITO DE 6 AÑOS DE ANTIGUEDAD</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+QUINTANILLA MATA, JESUS ANGEL</td>
+                        <td rowspan="1" colspan="1">
+13124718</td>
+                        <td rowspan="1" colspan="1">
+NO APORTA TITULACIÓN SUPERIOR</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1"/>
+                        <td rowspan="1" colspan="1">
+13124718</td>
+                        <td rowspan="1" colspan="1">
+PARTICIPA POR VARIOS TURNOS</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+SANZ TORO, MARIA JOSE</td>
+                        <td rowspan="1" colspan="1">
+74658215</td>
+                        <td rowspan="1" colspan="1">
+PARTICIPA POR VARIOS TURNOS</td>
+                     </tr>
+                  </table>
+                  <table>
+                     <tr>
+                        <td rowspan="1" colspan="3">
+TURNO: CONCURSO OPOSICIÓN RESERVA PERSONAS CON DISCAPACIDAD</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+APELLIDOS Y NOMBRE</td>
+                        <td rowspan="1" colspan="1">
+DNI</td>
+                        <td rowspan="1" colspan="1">
+MOTIVO DE EXCLUSIÓN</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+ARNAU CATALA, M CARMEN </td>
+                        <td rowspan="1" colspan="1">
+18981657 </td>
+                        <td rowspan="1" colspan="1">
+NO APORTA TITULACIÓN SUPERIOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+CINTAS VIZCAINO, JOSE ANGEL </td>
+                        <td rowspan="1" colspan="1">
+52527076 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA LA VIGENCIA DEL CERTIFICADO DE MINUSVALÍA </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+GONZALEZ PICAZO, ANTONIO JESUS </td>
+                        <td rowspan="1" colspan="1">
+07549370 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA LA VIGENCIA DEL CERTIFICADO DE MINUSVALÍA </td>
+                     </tr>
+                  </table>
+                  <table>
+                     <tr>
+                        <td rowspan="1" colspan="3">
+TURNO: CONCURSO DE MÉRITOS LIBRE</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+APELLIDOS Y NOMBRE</td>
+                        <td rowspan="1" colspan="1">
+DNI</td>
+                        <td rowspan="1" colspan="1">
+MOTIVO DE EXCLUSIÓN</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+BARRAGAN HERNANDEZ, FRANCISCO</td>
+                        <td rowspan="1" colspan="1">
+28885210 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+CAMACHO IGLESIAS, JUAN ANTONIO</td>
+                        <td rowspan="1" colspan="1">
+75537908 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+CAMPILLO FRUTOS, SEBASTIAN</td>
+                        <td rowspan="1" colspan="1">
+22451832 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+CAÑUELO TORRALBO, ALFONSO</td>
+                        <td rowspan="1" colspan="1">
+25946096 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+CARRASCO DIAZ, JESUS</td>
+                        <td rowspan="1" colspan="1">
+75379650 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+CASTAÑO GOMEZ, ANA MARIA</td>
+                        <td rowspan="1" colspan="1">
+28650143 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+DELGADO PROFUMO, MODESTO</td>
+                        <td rowspan="1" colspan="1">
+75655970 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+DIAZ PAZOS, Mª ENCARNACIÓN</td>
+                        <td rowspan="1" colspan="1">
+32621465 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+DOMINGUEZ AGUILAR, ANTONIO</td>
+                        <td rowspan="1" colspan="1">
+75350324 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+FERNANDEZ CARMONA, JUANA MARIA</td>
+                        <td rowspan="1" colspan="1">
+27492455 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+GARCIA FLORES, M.ª ARACELI</td>
+                        <td rowspan="1" colspan="1">
+30441430 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+GARCIA GAGO, ANA MARIA</td>
+                        <td rowspan="1" colspan="1">
+29716184 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+GARCIA SILVA, ISIDORO</td>
+                        <td rowspan="1" colspan="1">
+27307413 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+GARZON CAMBIL, MIGUEL</td>
+                        <td rowspan="1" colspan="1">
+24155524 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+HERNANDEZ ANDUJAR,<br/>FRANCISCO FERNANDO<br/>
+                        </td>
+                        <td rowspan="1" colspan="1">
+27239079 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1"/>
+                        <td rowspan="1" colspan="1">
+27239079 </td>
+                        <td rowspan="1" colspan="1">
+NO APORTA TITULACIÓN SUPERIOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+HERRERO PRIEGO, JOAQUIN</td>
+                        <td rowspan="1" colspan="1">
+75382064 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+MARTIN MORAN, GUADALUPE</td>
+                        <td rowspan="1" colspan="1">
+28867621 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+MASOT GOMEZ-LANDERO, MARIA ISABEL</td>
+                        <td rowspan="1" colspan="1">
+08780161 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+MESA RUIZ, ANTONIO</td>
+                        <td rowspan="1" colspan="1">
+25955504 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+ORTEGA LUNA, MANUEL</td>
+                        <td rowspan="1" colspan="1">
+30398222 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+POLO ARANDA, DIEGO</td>
+                        <td rowspan="1" colspan="1">
+25929291 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+PORTO LOPEZ, NESTOR</td>
+                        <td rowspan="1" colspan="1">
+24095553 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+RAMIREZ HENARES, JOSE LUIS</td>
+                        <td rowspan="1" colspan="1">
+05144370 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+RAMOS MUELAS, JUAN</td>
+                        <td rowspan="1" colspan="1">
+70020780 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+RICO LEONOR, JUAN CARLOS</td>
+                        <td rowspan="1" colspan="1">
+03437293 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+ROBLES ROSALES, JOSE MANUEL</td>
+                        <td rowspan="1" colspan="1">
+28405325 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+SENIN LUJAN, JUAN FRANCISCO</td>
+                        <td rowspan="1" colspan="1">
+28567558 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+TORRECILLAS RUIZ, FEDERICO</td>
+                        <td rowspan="1" colspan="1">
+75223125 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+TORRES GONZALEZ, MANUEL ESTEBAN</td>
+                        <td rowspan="1" colspan="1">
+28435878 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+TORRES ROMAN, JUAN JOSE</td>
+                        <td rowspan="1" colspan="1">
+24142459 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1"/>
+                        <td rowspan="1" colspan="1">
+24142459</td>
+                        <td rowspan="1" colspan="1">
+NO APORTA TITULACIÓN SUPERIOR</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+TORRES SALGUEIRO, MANUEL ANTONIO</td>
+                        <td rowspan="1" colspan="1">
+28556733 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR </td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1">
+TOVAR LUQUE, JUAN</td>
+                        <td rowspan="1" colspan="1">
+75364256 </td>
+                        <td rowspan="1" colspan="1">
+NO ACREDITA HABER EJERCIDO EVALUACIÓN POS., DURANTE 3 MANDATOS CARGO DIRECTOR</td>
+                     </tr>
+                  </table>
+                  <a name="descargas"/>
+                  <a title="Descargar PDF de la&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;disposición"
+                     class="&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;item_pdf_disposicion"
+                     href="http://www.juntadeandalucia.es/boja/2011/135/d10.pdf"
+                     target="_blank">
+							Descargar PDF </a>
+                  <!--+ |end content-main-disposition +--><div class="boja_nav">
+                     <a href="http://www.juntadeandalucia.es/boja/2011/135/9" title="Ir a la disposición anterior" class="anterior">
+                        <span>
+                           <img src="http://www.juntadeandalucia.es/themes/images/paginado_antes.gif" alt="anterior" title="Anterior"/>
+                           <em>Disposición anterior</em>
+                        </span>
+                     </a>
+                     <a href="http://www.juntadeandalucia.es/boja/2011/135/11" title="Ir a la disposición siguiente" class="siguiente">
+                        <span>
+                           <img src="http://www.juntadeandalucia.es/themes/images/paginado_despues.gif" alt="siguiente" title="Siguiente"/>
+                           <em>Disposición siguiente</em>
+                        </span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div id="columna" class="grid_5 omega">
+               <p class="titular">
+               BOJA nº
+               135
+               de 
+               12/07/2011</p>
+               <!--+ |end column-main-heading +-->
+      <ul class="listado_ordenado">
+                  <li>
+                     <a href="http://www.juntadeandalucia.es/boja/2011/135/s1" title="1. Disposiciones generales">
+                        <span class="c_000000">1. </span>Disposiciones generales</a>
+                  </li>
+                  <li>
+                     <a href="http://www.juntadeandalucia.es/boja/2011/135/s2.1" title="2.1. Nombramientos, situaciones e incidencias">
+                        <span class="c_000000">2.1. </span>Nombramientos, situaciones e incidencias</a>
+                  </li>
+                  <li class="actual">
+                     <a href="http://www.juntadeandalucia.es/boja/2011/135/s2.2" title="2.2. Oposiciones y concursos">
+                        <span class="c_000000">2.2. </span>Oposiciones y concursos</a>
+                  </li>
+                  <li>
+                     <a href="http://www.juntadeandalucia.es/boja/2011/135/s3" title="3. Otras disposiciones">
+                        <span class="c_000000">3. </span>Otras disposiciones</a>
+                  </li>
+                  <li>
+                     <a href="http://www.juntadeandalucia.es/boja/2011/135/s4" title="4. Administración de Justicia">
+                        <span class="c_000000">4. </span>Administración de Justicia</a>
+                  </li>
+                  <li>
+                     <a href="http://www.juntadeandalucia.es/boja/2011/135/s5.1"
+                        title="5.1. Subastas y concursos de obras, suministros y servicios públicos">
+                        <span class="c_000000">5.1. </span>Subastas y concursos de obras, suministros y servicios públicos</a>
+                  </li>
+                  <li>
+                     <a href="http://www.juntadeandalucia.es/boja/2011/135/s5.2" title="5.2. Otros anuncios">
+                        <span class="c_000000">5.2. </span>Otros anuncios</a>
+                  </li>
+               </ul>
+   
+               <ul class="listado_pdf">
+                  <li class="item">
+                     <a target="_blank" title="Descargar el boletín completo en PDF"
+                        href="http://www.juntadeandalucia.es/boja/2011/135/boletin.135.pdf">Descargar boletín nº 
+                    135 completo
+                  </a>
+                     <!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<ul>
+   <li class="item"><a title="Descargar fascículo" target="_blank" href="http://www.juntadeandalucia.es/boja/2011/135/fasciculo-1.pdf"> 
+         	        Descargar fascículo 1</a></li>
+   <li class="item"><a title="Descargar fascículo" target="_blank" href="http://www.juntadeandalucia.es/boja/2011/135/fasciculo-2.pdf"> 
+         	        Descargar fascículo 2</a></li>
+</ul></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      
+<div id="pie">
+         <script type="text/javascript" src="http://www.juntadeandalucia.es/themes/urchin.js" space="preserve"> </script>
+         <script type="text/javascript" space="preserve">urchinTracker();</script>
+         <div class="container js">
+            <div class="grid_8 social">
+               <h2>El portal de la Junta en:</h2>
+               <ul class="listado_social">
+                  <li>
+                     <a class="ico_social_30 twitter" title="El portal de la Junta en Twitter" href="http://twitter.com/PortalJunta" shape="rect">
+                        <img alt="Icono de Twitter" src="http://www.juntadeandalucia.es/boja/themes/images/social/30_g_twitter.png"/>
+                        <span>Twitter</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a class="ico_social_30 facebook" title="El portal de la Junta en Facebook" href="http://www.facebook.com/pages/Portal-Junta-de-Andalucía/224442897628994" shape="rect">
+                        <img alt="Icono de Facebook" src="http://www.juntadeandalucia.es/boja/themes/images/social/30_g_facebook.png"/>
+                        <span>Facebook</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a class="ico_social_30 rss" title="El portal de la Junta en Fuentes Web" href="http://www.juntadeandalucia.es/informacion/fuentesweb.html" shape="rect">
+                        <img alt="Icono de RSS" src="http://www.juntadeandalucia.es/boja/themes/images/social/30_g_rss.png"/>
+                        <span>Rss</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a class="ico_social_30 da" title="El portal de la Junta de Datos abiertos" href="http://www.juntadeandalucia.es/datosabiertos/portal.html" shape="rect">
+                        <img alt="Icono de Datos Abiertos" src="http://www.juntadeandalucia.es/boja/themes/images/social/30_g_da.png"/>
+                        <span>Datos abiertos</span>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+            <div class="grid_8 enlaces">
+               <ul>
+                  <li>
+                     <a title="Lista de correos" href="http://www.juntadeandalucia.es/informacion/lista.html" shape="rect">Lista de correos</a>
+                  </li>
+                  <li>
+                     <a title="Accesibilidad" href="http://www.juntadeandalucia.es/informacion/accesibilidad.html" shape="rect">Accesibilidad</a>
+                  </li>
+                  <li>
+                     <a title="Fuentes web" href="http://www.juntadeandalucia.es/informacion/fuentesweb.html" shape="rect">Fuentes web</a>
+                  </li>
+                  <li>
+                     <a title="Informacion legal" href="http://www.juntadeandalucia.es/informacion/legal.html" shape="rect">Legal</a>
+                  </li>
+                  <li>
+                     <a accesskey="8" title="Mapa del sitio" href="http://www.juntadeandalucia.es/informacion/mapaweb.html" shape="rect">Mapa del sitio</a>
+                  </li>
+                  <li>
+                     <a accesskey="9" title="Contacto" href="http://www.juntadeandalucia.es/informacion/contacto.html" shape="rect">Contacto</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div class="clear">
+            <hr/>
+         </div>
+      </div>
+</body>
+</html>

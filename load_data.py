@@ -2,9 +2,24 @@
 __author__ = 'jdayllon'
 
 import csv,calendar, datetime
-import time, locale
+import time, locale, re
 
 data_file = open("./data/datos_subvenciones.csv")
+
+def get_programa_partida_pres(x):
+    patron = "\/(\d\d\D)\/"
+    matches = re.findall(patron,x)
+    if len(matches) > 0:
+        return matches[0]
+    else:
+        return ""
+        
+def get_resumen_convocatoria(x):
+    patron = '\d\d\d\d'
+    try:
+        return x[0:x.find(re.findall(patron,x)[0])+4]
+    except:
+        return ""
 
 def string_to_timestamp(str_date):
     month = int(str_date.split("/")[1])

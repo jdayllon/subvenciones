@@ -1,0 +1,1590 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+   <head>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/themes/buscador/media/js/jquery-1.4.2.js" space="preserve"> </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/themes/buscador/media/js/jquery-ui-1.8.14.autocomplete.min.js" space="preserve"> </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/themes/buscador/autocomplete/autocomplete-words-json" space="preserve"> </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/themes/buscador/media/js/autocomplete.js" space="preserve"> </script>
+<script type="text/javascript" space="preserve">
+              jQuery(document).ready(function($) {
+                  /* Este parámetro sirve para determinar el número máximo de
+                  sugerencias ofrecidas al usuario en el deplegable */
+                  var autocompleteMaxSuggestions = 5;
+                  /* El número mínimo de carácteres a partir de los cuales se comienza
+                  a sugerir posibles autocompletados */
+                  var minLength = 2;
+                  var options = getAutocompleteOptions(autocompleteData, autocompleteMaxSuggestions);
+                  options.minLength = minLength;
+
+                  $('input[name=\'busquedageneral\']').autocomplete(options);
+                  // Se sobreescribe la función select del autocompletado para que cuando se seleccione un item se llame directamente al buscador 
+                  $('input[name=\'busquedageneral\']').autocomplete({
+                    select: function( event , ui ) {
+                      $('input[name=\'busquedageneral\']').val(ui.item.label);
+                      $('input[name=\'buscargeneral\']').click();
+                    }
+                  });
+              });
+            </script>
+<link type="text/css" rel="stylesheet" href="http://www.juntadeandalucia.es/themes/buscador/media/css/jquery-ui-1.8.14.autocomplete.css"/>
+<link type="text/css" rel="stylesheet" title="common" href="http://www.juntadeandalucia.es/boja/themes/font-face.css" media="screen"/>
+<link type="text/css" rel="stylesheet" title="common" href="http://www.juntadeandalucia.es/boja/themes/mydropdown.css" media="screen"/>
+<link type="text/css" rel="stylesheet" title="common" href="http://www.juntadeandalucia.es/boja/themes/jquery.ui.datepicker.css" media="screen"/>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/boja/themes/jquery.min.js" space="preserve">                  
+           
+        </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/boja/themes/sp.js" space="preserve">                  
+           
+        </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/boja/themes/funcionalidad_comun.js" space="preserve">                  
+           
+        </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/boja/themes/funcionalidad_tabs.js" space="preserve">                  
+           
+        </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/boja/themes/jquery.ba-dotimeout.js" space="preserve">                  
+           
+        </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/boja/themes/funcionalidad_menu.js" space="preserve">                  
+           
+        </script>
+<!--+|start favicon +-->
+<link rel="shortcut icon" href="http://www.juntadeandalucia.es/themes/images/favicon.ico"/>
+<!--+|start favicon +-->
+<meta name="viewport" content="width=device-width, user-scalable=0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, target-densityDpi=medium-dpi" id="testViewport"/>
+<link type="text/css" href="http://www.juntadeandalucia.es/boja/themes/estructura.css" rel="stylesheet" title="common" media="screen and (min-width: 960px)"/>
+<link type="text/css" href="http://www.juntadeandalucia.es/boja/themes/estructura_movil.css" rel="stylesheet" title="common" media="screen and (max-width: 959px)"/>
+<link type="text/css" href="http://www.juntadeandalucia.es/boja/themes/estilos_jda.css" rel="stylesheet" title="common" media="screen and (min-width: 960px)"/>
+<link type="text/css" href="http://www.juntadeandalucia.es/boja/themes/estilos_jda_movil.css" rel="stylesheet" title="common" media="screen and (max-width: 959px)"/>
+<link type="text/css" href="http://www.juntadeandalucia.es/boja/themes/menu.css" rel="stylesheet" title="common" media="screen"/>
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.juntadeandalucia.es/themes/images/iconosmovil/touch-icon-144-precomposed.png"/>
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://www.juntadeandalucia.es/themes/images/iconosmovil/touch-icon-114-precomposed.png"/>
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://www.juntadeandalucia.es/themes/images/iconosmovil/touch-icon-72-precomposed.png"/>
+<link rel="apple-touch-icon-precomposed" href="http://www.juntadeandalucia.es/themes/images/iconosmovil/touch-icon-57-precomposed.png"/>
+<!--[if !(IE) | (gt IE 8) | (IEMobile)]><!-->
+<script type="text/javascript" src="/boja/themes/menu_movil.js" space="preserve"> </script>
+<!--<![endif]-->
+<!--[if lt IE 9 & !IEMobile]>
+		        <link type="text/css" href="http://www.juntadeandalucia.es/boja/themes/estructura.css" rel="stylesheet" title="common" media="screen"/>
+		        <link type="text/css" href="http://www.juntadeandalucia.es/boja/themes/estilos_jda.css" rel="stylesheet" title="common" media="screen"/>
+		        <![endif]-->
+
+      <meta content="es" http-equiv="Content-Language"/>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+      <title>Orden de 5 de diciembre de 2006, por la que se regulan los programas de Escuelas Taller, Casas de Oficio, Talleres de Empleo y Unidades de Promoción y Desarrollo en la Junta de Andalucía, y se establecen las bases reguladoras de la concesión de ayudas públicas a dichos programas. </title>
+      <meta content="Apache Dispatcher" name="Generator"/>
+      <meta content="Página de disposición nº 1 del boletín nº 241 de 2006."
+            name="Description"/>
+      <meta content="2006, Junta de Andalucía, el portal de Andalucía, Administración andaluza, BOJA, B.O.J.A."
+            name="Keywords"/>
+   
+      <link href="http://www.juntadeandalucia.es/boja/distribucion/boja.xml"
+            title="Boletín completo - BOJA"
+            type="application/atom+xml"
+            rel="alternate"/>
+      <link type="application/atom+xml" rel="alternate"
+            title="1. Disposiciones generales - BOJA"
+            href="http://www.juntadeandalucia.es/boja/distribucion/s1.xml"/>
+   </head>
+   <body>
+<div id="cabecera">
+         <div class="container">
+            <div id="logo">
+               <h1>
+                  <a class="logotipo" accesskey="0" href="http://www.juntadeandalucia.es/index.html" title="Portada de la Web oficial de la Junta de Andalucía" shape="rect">
+                     <img alt="" title="Junta de Andalucía" src="http://www.juntadeandalucia.es/themes/images/logo_bg_movil.png"/>
+                  </a>
+               </h1>
+               <div class="clearlogo"> </div>
+               <div class="oculto">
+                  <ul>
+                     <li>
+                        <a accesskey="1" title="Saltar el menú de navegación, e ir directamente a los contenidos del Portal Oficial de la Junta de Andalucía" href="#contenidos" shape="rect">Saltar al contenido del Portal</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="herramienta">
+               <div id="ubicacion">
+                  <img width="275" height="40" alt="" title="Portal de la Junta de Andalucía" src="http://www.juntadeandalucia.es/themes/images/cabecera_ubicacion.gif"/>
+               </div>
+            </div>
+            <div class="buscador">
+               <form action="http://www.juntadeandalucia.es/buscar.html" method="get" class="floatright" target="_self" enctype="application/x-www-form-urlencoded">
+                  <fieldset>
+                     <legend>Buscador general</legend>
+                     <label for="busquedaCabecera" class="oculto">Buscar</label>
+                     <input id="busquedaCabecera" name="busquedageneral" type="text" class="input_text defaultTextActive" title="Buscar" style="position:relative; z-index:99999;"/>
+                     <input alt="Buscar" title="Buscar" type="submit" value="Buscar" class="input_submit" name="buscargeneral"/>
+                     <p>p. ej. <a title="ofertas de empleo" href="http://www.juntadeandalucia.es/buscar.html?busqueda=ofertas+de+empleo&amp;buscar=Buscar" shape="rect">ofertas de empleo</a>, <a title="ayudas" href="http://www.juntadeandalucia.es/buscar.html?busqueda=ayudas&amp;buscar=Buscar" shape="rect">ayudas</a>, <a title="escolarización" href="http://www.juntadeandalucia.es/buscar.html?busqueda=escolarización&amp;buscar=Buscar" shape="rect">escolarización</a>...</p>
+                  </fieldset>
+               </form>
+            </div>
+            <div class="clear"> </div>
+         </div>
+      </div>
+<div id="navegacion">
+         <div id="menu_btn">
+            <div class="img">
+             
+          </div>
+            <span class="menutxt">Menú principal</span>
+         </div>
+         <ul id="menu" class="menu_principal main-nav-horizontal">
+            <li class="li_inicio temas main-nav">
+               <a title="Temas" href="http://www.juntadeandalucia.es/temas.html" class="drop" accesskey="2" shape="rect">Temas</a>
+               <div class="dropdown container">
+                  <div class="grid_4">
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/estudiar.html" title="Estudiar" shape="rect">Estudiar</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/estudiar/infantil.html" title="Infantil (0-6 años)" shape="rect">Infantil (0-6 años)</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/estudiar/primaria-eso.html" title="Primaria y ESO (6-16 años)" shape="rect">Primaria y ESO (6-16 años)</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/estudiar/bachillerato.html" title="Bachillerato" shape="rect">Bachillerato</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/estudiar.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/familias-igualdad.html" title="Familia e igualdad" shape="rect">Familia e igualdad</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/familias-igualdad/formar-familia.html" title="Formar una familia" shape="rect">Formar una familia</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/familias-igualdad/infancia.html" title="Cuidar de los niños" shape="rect">Cuidar de los niños</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/familias-igualdad/dependencia.html" title="Cuidar de personas dependientes" shape="rect">Cuidar de personas dependientes</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/familias-igualdad.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/transporte.html" title="Tráfico y transporte" shape="rect">Tráfico y transporte</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/transporte/vehiculo.html" title="Tu vehículo" shape="rect">Tu vehículo</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/transporte/publico.html" title="Transporte público" shape="rect">Transporte público</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/transporte/carreteras.html" title="Carreteras de Andalucía" shape="rect">Carreteras de Andalucía</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_4">
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/trabajar.html" title="Trabajar" shape="rect">Trabajar</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/trabajar/busqueda.html" title="Buscar trabajo" shape="rect">Buscar trabajo</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/trabajar/autoempleo.html" title="Autoempleo" shape="rect">Autoempleo</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/trabajar/empleo-publico.html" title="Empleo público" shape="rect">Empleo público</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/trabajar.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/vivienda-consumo.html" title="Vivienda y consumo" shape="rect">Vivienda y consumo</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/vivienda-consumo/alquiler.html" title="Alquilar" shape="rect">Alquilar</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/vivienda-consumo/compra.html" title="Compra y venta" shape="rect">Compra y venta</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/vivienda-consumo/rehabilitacion.html" title="Rehabilitación" shape="rect">Rehabilitación</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/vivienda-consumo.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/medio-ambiente.html" title="Medio ambiente" shape="rect">Medio ambiente</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/medio-ambiente/clima.html" title="Clima" shape="rect">Clima</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/medio-ambiente/espacios-naturales.html" title="Espacios naturales" shape="rect">Espacios naturales</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/medio-ambiente/caza-pesca.html" title="Caza y pesca" shape="rect">Caza y pesca</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/medio-ambiente.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_4">
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/salud.html" title="Tu salud" shape="rect">Tu salud</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/salud/servicios.html" title="Servicios sanitarios" shape="rect">Servicios sanitarios</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/salud/urgencias.html" title="Urgencias y primeros auxilios" shape="rect">Urgencias y primeros auxilios</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/salud/derechos.html" title="Derechos y calidad asistencial" shape="rect">Derechos y calidad asistencial</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/salud.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/cultura-ocio.html" title="Cultura y ocio" shape="rect">Cultura y ocio</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/cultura-ocio/actividades.html" title="Actividades culturales" shape="rect">Actividades culturales</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/cultura-ocio/andalucia.html" title="Andalucía: historia y patrimonio" shape="rect">Andalucía: historia y patrimonio</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/cultura-ocio/bibliotecas.html" title="Bibliotecas y lectura" shape="rect">Bibliotecas y lectura</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/cultura-ocio.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas.html" title="Más temas" shape="rect">Más temas</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/administracion.html" title="Atención administrativa e impuestos" shape="rect">Atención administrativa e impuestos</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/seguridad.html" title="Justicia, seguridad y emergencias" shape="rect">Justicia, seguridad y emergencias</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/tic.html" title="Nuevas tecnologías" shape="rect">Nuevas tecnologías</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/participacion.html" title="Asociaciones y voluntariado" shape="rect">Asociaciones y voluntariado</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_4">
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/empresas.html" title="Empresas y profesionales" shape="rect">Empresas y profesionales</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/empresas/creacion.html" title="Crear una empresa" shape="rect">Crear una empresa</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/empresas/obligaciones.html" title="Obligaciones de la empresa" shape="rect">Obligaciones de la empresa</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/empresas/personal.html" title="Contratación de personal" shape="rect">Contratación de personal</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/empresas.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/sectores.html" title="Sectores de actividad" shape="rect">Sectores de actividad</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/sectores/agricultura-ganaderia.html" title="Agricultura y ganadería" shape="rect">Agricultura y ganadería</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/sectores/pesca.html" title="Industria y minas" shape="rect">Pesca y acuicultura</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/sectores/agroalimentaria.html" title="Industrias agroalimentarias" shape="rect">Industrias agroalimentarias</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/sectores.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </li>
+            <li class="junta main-nav">
+               <a title="La Junta" href="http://www.juntadeandalucia.es/organismos.html" class="drop" accesskey="3" shape="rect">La Junta</a>
+               <div class="dropdown container">
+                  <div class="grid_4">
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/organismos/presidenta.html" title="Presidenta" shape="rect">Presidenta</a>
+                     </strong>
+              
+                     <img alt="" src="http://www.juntadeandalucia.es/themes/images/presidente_solapa_la_junta.jpg"/>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/presidenta/biografia" shape="rect">Biografía</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/presidenta/funciones" shape="rect">Funciones</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/presidenta/discursos" shape="rect">Discursos</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/presidenta/correo" shape="rect">Escribir a la Presidenta</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/presidenta/vicepresidente" shape="rect">Vicepresidente</a>
+                        </li>
+                     </ul>
+
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/organismos/parlamento.html" title="Parlamento y otras instituciones" shape="rect">Parlamento y otras instituciones</a>
+                     </strong>
+                  </div>
+                  <div class="grid_8">
+                     <div class="grid_8">
+                        <strong>
+                           <a href="http://www.juntadeandalucia.es/organismos/consejo.html" title="Consejo de Gobierno" shape="rect">Consejo de Gobierno</a>
+                        </strong>
+                
+                        <ul class="ul_simple grid_4 alpha">
+                           <li>
+                              <a title="Sobre el consejo" href="http://www.juntadeandalucia.es/organismos/consejo/sobreconsejo.html" shape="rect">Sobre el consejo</a>
+                           </li>
+                           <li>
+                              <a title="Proxima sesión" href="http://www.juntadeandalucia.es/organismos/consejo/proximasesion.html" shape="rect">Próxima sesión</a>
+                           </li>
+                        </ul>
+                        <ul class="ul_simple grid_4 omega">
+                           <li>
+                              <a title="Última sesión" href="http://www.juntadeandalucia.es/organismos/consejo/ultimo.html" shape="rect">Última sesión</a>
+                           </li>
+                           <li>
+                              <a title="Histórico de sesioneso" href="http://www.juntadeandalucia.es/organismos/consejo/historico.html" shape="rect">Histórico de sesiones</a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="grid_8">
+                        <strong>
+                           <a href="http://www.juntadeandalucia.es/organismos.html" shape="rect">Consejerías</a>
+                        </strong>
+                        <div class="grid_4 alpha">
+                           <ul class="ul_simple">
+                              <li>
+                                 <a title="Consejería de la Presidencia" shape="rect" href="http://www.juntadeandalucia.es/organismos/presidencia.html">Presidencia</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Administración Local y Relaciones Institucionales" shape="rect" href="http://www.juntadeandalucia.es/organismos/administracionlocalyrelacionesinstitucionales.html">Administración Local y Relaciones Institucionales</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Hacienda y Administración Pública" shape="rect" href="http://www.juntadeandalucia.es/organismos/haciendayadministracionpublica.html">Hacienda y Administración Pública</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Economía, Innovación, Ciencia y Empleo" shape="rect" href="http://www.juntadeandalucia.es/organismos/economiainnovacioncienciayempleo.html">Economía, Innovación, Ciencia y Empleo</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Igualdad, Salud y Políticas Sociales" shape="rect" href="http://www.juntadeandalucia.es/organismos/igualdadsaludypoliticassociales.html">Igualdad, Salud y Políticas Sociales</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Educación, Cultura y Deporte" shape="rect" href="http://www.juntadeandalucia.es/organismos/educacionculturaydeporte.html">Educación, Cultura y Deporte</a>
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="grid_4 omega">
+                           <ul class="ul_simple">
+                              <li>
+                                 <a title="Consejería de Justicia e Interior" shape="rect" href="http://www.juntadeandalucia.es/organismos/justiciaeinterior.html">Justicia e Interior</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Fomento y Vivienda" shape="rect" href="http://www.juntadeandalucia.es/organismos/fomentoyvivienda.html">Fomento y Vivienda</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Agricultura, Pesca y Desarrollo Rural" shape="rect" href="http://www.juntadeandalucia.es/organismos/agriculturapescaydesarrollorural.html">Agricultura, Pesca y Desarrollo Rural</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Medio Ambiente y Desarrollo Rural" shape="rect" href="http://www.juntadeandalucia.es/organismos/medioambienteyordenaciondelterritorio.html">Medio Ambiente y Ordenación del Territorio</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Turismo y Comercio" shape="rect" href="http://www.juntadeandalucia.es/organismos/turismoycomercio.html">Turismo y Comercio</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="grid_4">
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/organismos/sobre-junta.html" title="Sobre la Junta" shape="rect">Sobre la Junta</a>
+                     </strong>
+              
+                     <img alt="" src="http://www.juntadeandalucia.es/themes/images/lajunta_solapa_sobrelajunta.jpg"/>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/sobre-junta/organizacion.html" title="Organización institucional" shape="rect">Organización institucional</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/sobre-junta/estatuto.html" title="Estatuto de autonomía" shape="rect">Estatuto de autonomía</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/sobre-junta/planes.html" title="Planes y programas" shape="rect">Planes y programas</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/sobre-junta/funcionamiento.html" title="Funcionamiento de la Administración" shape="rect">Funcionamiento de la Administración</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/sobre-junta/simbolos.html" title="Símbolos de Andalucía" shape="rect">Símbolos de Andalucía</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/sobre-junta/historia.html" title="Historia de la autonomía" shape="rect">Historia de la autonomía</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </li>
+            <li class="transparencia main-nav">
+               <a title="Transparencia" href="http://www.juntadeandalucia.es/transparencia.html" class="drop" accesskey="8" shape="rect">Transparencia</a>
+               <div class="dropdown container">
+                  <div class="grid_5">
+                     <strong>
+                        <a title="Publicidad activa" href="http://www.juntadeandalucia.es/transparencia/publicidad-activa.html" shape="rect">Publicidad activa</a>
+                     </strong>
+                     <img alt="Publicidad activa" src="http://www.juntadeandalucia.es/themes/images/transparencia/solapa_transparencia_activa.jpg"/>
+                     <p>Consulta la información que la Junta de Andalucía difunde a iniciativa propia para facilitar el conocimiento de su actividad.</p>
+                  </div>
+                  <div class="grid_6">
+                     <strong>
+                        <a title="Solicitud de información" href="http://www.juntadeandalucia.es/transparencia/solicitud-informacion.html" shape="rect">Solicitud de información</a>
+                     </strong>
+                     <img alt="Solicitud de información" src="http://www.juntadeandalucia.es/themes/images/transparencia/solapa_solicitud_informacion.jpg"/>
+                     <p>La Ley de Transparencia Pública de Andalucía recoge el derecho de la ciudadanía a reclamar información de los poderes públicos. Descubre qué podrás hacer cuando entre en vigor.</p>
+                  </div>
+                  <div class="grid_5">
+                     <strong>
+                        <a title="Transparencia en Andalucía" href="http://www.juntadeandalucia.es/transparencia/transparencia-andalucia.html" shape="rect">Transparencia en Andalucía</a>
+                     </strong>
+                     <img alt="Transparencia en Andalucía" src="http://www.juntadeandalucia.es/themes/images/transparencia/solapa_normativa.jpg"/>
+                     <p>Descubre tus derechos en materia de transparencia, aprende las vías para reclamarlos y consulta los portales de transparencia de otras administraciones públicas.</p>
+                  </div>
+               </div>
+            </li>
+            <li class="servicios main-nav">
+               <a title="Servicios y trámites" href="http://www.juntadeandalucia.es/servicios.html" class="drop" accesskey="4" shape="rect">Servicios y trámites</a>
+               <div class="dropdown container">
+                  <div class="grid_6">
+                     <p class="encabezado">
+                        <strong>¿Qué quieres hacer?</strong>
+                     </p>
+              
+                     <div class="buscador">
+                        <form target="_self" class="floatright" method="get" action="http://www.juntadeandalucia.es/buscar.html" enctype="application/x-www-form-urlencoded">
+                           <fieldset>
+                              <legend>Buscador general</legend>
+                              <label for="busquedaNavegacionServiciosTramitesFijos" class="oculto">Buscar</label>
+                              <input type="text" class="input_text defaultTextActive" size="20" name="busqueda" id="busquedaNavegacionServiciosTramitesFijos" title="Buscar" alt="Buscar"/>
+                              <input type="hidden" name="filtroServicios" value="true"/>
+                              <input type="hidden" name="organismo" value="index"/>
+                              <input type="submit" class="input_submit" value="Buscar" title="Buscar" alt="Buscar" name="buscar"/>
+                           </fieldset>
+                        </form>
+                        <p>Utiliza este buscador para localizar los trámites y servicios ofrecidos por la administración andaluza.</p>
+                     </div>
+
+                     <p class="encabezado">
+                        <strong>Directo a</strong>
+                     </p>
+              
+                     <ul class="ul_simple">
+                        <li>
+                           <a title="Ayudas y subvenciones" href="http://www.juntadeandalucia.es/servicios/ayudas.html" shape="rect">Ayudas y subvenciones</a>
+                        </li>
+                        <li>
+                           <a title="Becas, premios y concursos" href="http://www.juntadeandalucia.es/servicios/premios-concursos.html" shape="rect">Becas, premios y
+                      concursos</a>
+                        </li>
+                        <li>
+                           <a title="Ofertas de empleo público" href="https://ws045.juntadeandalucia.es/empleadopublico/emp-plazofer-.html?p=/Categorias_Principales/&amp;s=/Categorias_Principales/Procesos_Selectivos/" shape="rect">Ofertas de empleo público</a>
+                        </li>
+                        <li>
+                           <a title="Plataforma de contratación" href="http://www.juntadeandalucia.es/contratacion/ContractNoticeSearch.action?profileId=&amp;pkCegr=" shape="rect">Plataforma de
+                      contratación</a>
+                        </li>
+                        <li>
+                           <a title="Otros trámites y servicios" href="http://www.juntadeandalucia.es/servicios/otros-tramites.html" shape="rect">Otros trámites y
+                    servicios</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_5">
+                     <p class="encabezado">
+                        <strong>Trámites destacados</strong>
+                     </p>
+              
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/salud/sites/csalud/galerias/enlaces/oficina_virtual/cita_medico" title="Cita con el médico" shape="rect">Cita con el médico</a>
+                        </li>
+                        <li>
+                           <a href="https://ws054.juntadeandalucia.es/autenticacion/login?service=https://ws054.juntadeandalucia.es/apdweb/c/portal/login%3Fp_l_id%3D10116%26_58_redirect%3D%252Fapdweb%252Fgroup%252F10210%252F2" title="Renovar demanda de empleo" shape="rect">Renovar demanda de empleo</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/haciendayadministracionpublica/clara/cprDetalleTramites.html?c=1-59-780&amp;nombre=Grado+de+Discapacidad%3A+Reconocimiento%2C+Calificaci%F3n" title="Grado de Discapacidad: Reconocimiento, Calificación" shape="rect">Grado de Discapacidad: Reconocimiento, Calificación</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/servicios/otros-tramites/detalle/11215.html" title="Familia numerosa: solicitud del título" shape="rect">Familia numerosa: solicitud del título</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/haciendayadministracionpublica/clara/cprDetalleTramites.html?c=1-EBU42&amp;nombre=Quejas+y+Reclamaciones+de+las+Personas+Consumidoras+y+Usuarias%3A+Hojas+Electr%F3nicas" title="Quejas y Reclamaciones de las Personas Consumidoras y Usuarias" shape="rect">Quejas y Reclamaciones de las Personas Consumidoras y Usuarias</a>
+                        </li>
+                     </ul>
+
+                     <p class="encabezado">
+                        <strong>Ayuda</strong>
+                     </p>
+              
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/servicios/ayuda/tramitar-internet.html" title="Cómo hacer trámites por internet" shape="rect">Cómo hacer trámites por internet</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/servicios/ayuda/estado-tramites.html" title="Consulta el estado de tus trámites" shape="rect">Consulta el estado de tus trámites</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/servicios/ayuda/correo-andaluz.html" title="Correo Andaluz" shape="rect">Correo Andaluz</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/servicios/ayuda/notificaciones.html" title="Sistema de notificaciones telemáticas" shape="rect">Sistema de notificaciones telemáticas</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_5">
+                     <p class="encabezado">
+                        <strong>Servicios de información</strong>
+                     </p>
+              
+                     <ul class="ul_img">
+                        <li>
+                           <a title="Normativa" href="http://www.juntadeandalucia.es/servicios/normativa.html" shape="rect">
+                              <img alt="" src="http://www.juntadeandalucia.es/themes/images/buscador-de-normativas--38x38.gif"/>
+                              <span>Normativa</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a title="Normativa en elaboración" href="http://www.juntadeandalucia.es/servicios/normas-elaboracion.html" shape="rect">
+                              <img alt="" src="http://www.juntadeandalucia.es/themes/images/thrum38_normativa-en-elaboracion.jpg"/>
+                              <span>Normativa en elaboración</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a title="Participación" href="http://www.juntadeandalucia.es/servicios/participacion.html" shape="rect">
+                              <img alt="" src="http://www.juntadeandalucia.es/themes/images/thrum38_participacion.jpg"/>
+                              <span>Participación</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a title="Catálogo de publicaciones" href="http://www.juntadeandalucia.es/servicios/publicaciones.html" shape="rect">
+                              <img alt="" src="http://www.juntadeandalucia.es/themes/images/catalogo-de-publicaciones--38x38.gif"/>
+                              <span>Catálogo de publicaciones</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a title="WebTV" href="http://www.juntadeandalucia.es/servicios/videos.html" shape="rect">
+                              <img alt="" src="http://www.juntadeandalucia.es/themes/images/38_canalvideo.jpg"/>
+                              <span>WebTV</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/servicios.html" title="Más servicios" class="enlace_menu_mas" shape="rect">Más servicios</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </li>
+            <li class="boja main-nav">
+               <a title="BOJA" href="http://www.juntadeandalucia.es/eboja.html" class="drop" accesskey="5" shape="rect">BOJA</a>
+               <div class="dropdown boja container">
+                  <div class="grid_5">
+                     <strong>
+                        <a title="Último Boletín" href="http://www.juntadeandalucia.es/eboja/2015/97/" shape="rect">
+          Último Boletín
+        </a>
+                     </strong>
+                     <p>Número 97 de 22 de mayo de 2015</p>
+                     <ul class="ul">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/eboja/2015/97/s1.html" title="1. Disposiciones generales" shape="rect">1. Disposiciones generales</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/eboja/2015/97/s2.2.html" title="2.2. Oposiciones, concursos y otras convocatorias" shape="rect">2.2. Oposiciones, concursos y otras convocatorias</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/eboja/2015/97/s3.html" title="3. Otras disposiciones" shape="rect">3. Otras disposiciones</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/eboja/2015/97/s4.html" title="4. Administración de Justicia" shape="rect">4. Administración de Justicia</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/eboja/2015/97/s5.1.html" title="5.1. Licitaciones públicas y adjudicaciones" shape="rect">5.1. Licitaciones públicas y adjudicaciones</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/eboja/2015/97/s5.2.html" title="5.2. Otros anuncios oficiales" shape="rect">5.2. Otros anuncios oficiales</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_6">
+                     <strong>
+                        <a title="Boletines por fecha" href="http://www.juntadeandalucia.es/eboja/2015.html" shape="rect">
+          Boletines por fecha 
+        </a>
+                     </strong>
+                     <div class="contenedor_calendario_tabla">
+                        <table>
+                           <caption>mayo</caption>
+                           <tr>
+                              <th colspan="1" rowspan="1">L</th>
+                              <th colspan="1" rowspan="1">M</th>
+                              <th colspan="1" rowspan="1">X</th>
+                              <th colspan="1" rowspan="1">J</th>
+                              <th colspan="1" rowspan="1">V</th>
+                              <th colspan="1" rowspan="1">S</th>
+                              <th colspan="1" rowspan="1">D</th>
+                           </tr>
+                           <tr>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="domingo" rowspan="1" colspan="1">1</td>
+                              <td rowspan="1" colspan="1">2</td>
+                              <td class="domingo" rowspan="1" colspan="1">3</td>
+                           </tr>
+                           <tr>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/83/index.html" title="Boletín nº 83" shape="rect">4</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/84/index.html" title="Boletín nº 84" shape="rect">5</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/85/index.html" title="Boletín nº 85" shape="rect">6</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/86/index.html" title="Boletín nº 86" shape="rect">7</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/87/index.html" title="Boletín nº 87" shape="rect">8</a>
+                              </td>
+                              <td rowspan="1" colspan="1">9</td>
+                              <td class="domingo" rowspan="1" colspan="1">10</td>
+                           </tr>
+                           <tr>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/88/index.html" title="Boletín nº 88" shape="rect">11</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/89/index.html" title="Boletín nº 89" shape="rect">12</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/90/index.html" title="Boletín nº 90" shape="rect">13</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/91/index.html" title="Boletín nº 91" shape="rect">14</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/92/index.html" title="Boletín nº 92" shape="rect">15</a>
+                              </td>
+                              <td rowspan="1" colspan="1">16</td>
+                              <td class="domingo" rowspan="1" colspan="1">17</td>
+                           </tr>
+                           <tr>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/93/index.html" title="Boletín nº 93" shape="rect">18</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/94/index.html" title="Boletín nº 94" shape="rect">19</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/95/index.html" title="Boletín nº 95" shape="rect">20</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/96/index.html" title="Boletín nº 96" shape="rect">21</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/97/index.html" title="Boletín nº 97" shape="rect">22</a>
+                              </td>
+                              <td rowspan="1" colspan="1">23</td>
+                              <td class="domingo" rowspan="1" colspan="1">24</td>
+                           </tr>
+                           <tr>
+                              <td rowspan="1" colspan="1">25</td>
+                              <td rowspan="1" colspan="1">26</td>
+                              <td rowspan="1" colspan="1">27</td>
+                              <td rowspan="1" colspan="1">28</td>
+                              <td rowspan="1" colspan="1">29</td>
+                              <td rowspan="1" colspan="1">30</td>
+                              <td class="domingo" rowspan="1" colspan="1">31</td>
+                           </tr>
+                           <tr>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <div class="grid_5 alpha omega">
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/eboja/buscador/" title="Buscador de BOJA" shape="rect">Buscador de BOJA</a>
+                     </strong>
+                     <div class="buscador">
+                        <form action="http://www.juntadeandalucia.es/eboja/buscador/search.do" method="get" class="floatright" target="_self" enctype="application/x-www-form-urlencoded">
+                           <input id="eboja" value="on" name="eboja" type="hidden"/>
+                           <fieldset>
+                              <legend>Buscador general</legend>
+                              <label class="oculto" for="buscador_boja">Buscar</label>
+                              <input alt="Buscar" title="Buscar" id="buscador_boja" name="q" size="20" class="input_text defaultTextActive" type="text"/>
+                              <input alt="Buscar" title="Buscar" value="Buscar" class="input_submit" type="submit"/>
+                           </fieldset>
+                        </form>
+                        <div class="grid_4 alpha">
+                           <a href="http://www.juntadeandalucia.es/eboja/buscador/" title="Búsqueda avanzada" class="enlace_menu_mas" shape="rect">Búsqueda avanzada</a>
+                        </div>
+                     </div>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/eboja/sobre-boja/" title="Sobre BOJA" shape="rect">Sobre BOJA</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a title="¿Qué es el BOJA?" href="http://www.juntadeandalucia.es/eboja/sobre-boja/informacion-general.html" shape="rect">¿Qué es el BOJA?</a>
+                        </li>
+                        <li>
+                           <a title="Verificación de autenticidad" href="http://www.juntadeandalucia.es/eboja/sobre-boja/verificacion-autenticidad.html" shape="rect">Verificación de autenticidad</a>
+                        </li>
+                        <li>
+                           <a title="Como publicar en BOJA" href="http://www.juntadeandalucia.es/eboja/sobre-boja/publicar.html" shape="rect">Como publicar en BOJA</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a title="Histórico del BOJA" href="http://www.juntadeandalucia.es/boja.html" shape="rect">Histórico del BOJA</a>
+                     </strong>
+                  </div>
+               </div>
+            </li>
+            <li class="andalucia main-nav">
+               <a title="Andalucía" href="http://www.juntadeandalucia.es/andalucia.html" class="drop" accesskey="6" shape="rect">Andalucía</a>
+               <div class="dropdown container js">
+             
+            <div class="grid_4">
+                     <strong>
+                        <a title="Al sur" href="http://www.juntadeandalucia.es/andalucia/alsur.html" shape="rect">Al sur</a>
+                     </strong>
+                     <p>
+	Enclavada entre dos mares y dos continentes, la singularidad geográfica de Andalucía le otorga una identidad abierta y multicultural</p>
+
+                     <strong>
+                        <a title="Naturaleza y paisajes" href="http://www.juntadeandalucia.es/andalucia/naturalezapaisajes.html" shape="rect">Naturaleza y paisajes</a>
+                     </strong>
+                     <p>
+	Andalucía ofrece una gran diversidad geográfica y una contrastada riqueza de paisajes.</p>
+
+                     <strong>
+                        <a title="Clima" href="http://www.juntadeandalucia.es/andalucia/clima.html" shape="rect">Clima</a>
+                     </strong>
+                     <p>
+	Amplia variedad climática: sierras de abundantes lluvias, comarcas áridas, montañas nevadas, costas soleadas...</p>
+                  </div>
+                  <div class="grid_4">
+                     <strong>
+                        <a title="Historia" href="http://www.juntadeandalucia.es/andalucia/historia.html" shape="rect">Historia</a>
+                     </strong>
+                     <p>
+	Andalucía ha sido foco de civilización y escenario de una historia milenaria de convivencia entre culturas.</p>
+
+                     <strong>
+                        <a title="Economía" href="http://www.juntadeandalucia.es/andalucia/economia.html" shape="rect">Economía</a>
+                     </strong>
+                     <p>
+	En las tres últimas décadas, Andalucía ha logrado una profunda transformación económica y social.</p>
+
+                     <strong>
+                        <a title="Cultura y tradiciones" href="http://www.juntadeandalucia.es/andalucia/cultura.html" shape="rect">Cultura y tradiciones</a>
+                     </strong>
+                     <p>
+	Andalucía cuenta con una milenaria y rica herencia cultural.</p>
+                  </div>
+                  <div class="grid_4">
+                     <strong>
+                        <a title="El autogobierno andaluz" href="http://www.juntadeandalucia.es/andalucia/autogobierno.html" shape="rect">El autogobierno andaluz</a>
+                     </strong>
+                     <p>
+	Andalucía cuenta con amplios poderes legislativos, ejecutivos y judiciales, similares a los del resto de comunidades históricas de España.</p>
+
+                     <strong>
+                        <a title="Símbolos" href="http://www.juntadeandalucia.es/andalucia/simbolos.html" shape="rect">Símbolos</a>
+                     </strong>
+                     <p>
+	La bandera, el escudo y el himno de Andalucía.</p>
+                  </div>
+
+             
+            <div class="grid_4">
+                     <strong>
+                        <a title="Datos básicos" href="http://www.juntadeandalucia.es/andalucia.html" shape="rect">Datos básicos</a>
+                     </strong>
+                     <img src="http://www.juntadeandalucia.es/export/drupaljda/solapa_andalucia_imagen_0.jpg" alt="imagen auxiliar" title="imagen auxiliar"/>
+                     <ul class="listado_simple datos_andalucia">
+                        <li>
+		Denominación oficial: Comunidad Autónoma de Andalucía</li>
+                     </ul>
+                     <ul class="listado_simple datos_andalucia">
+                        <li>
+		Superficie: 87.597 Km2</li>
+	                       <li>
+		Población: 8.402.305</li>
+	                       <li>
+		Idioma: Castellano</li>
+	                       <li>
+		Presidenta: Susana Díaz Pacheco</li>
+                     </ul>
+                     <a class="enlace_menu_mas" title="Más datos" href="http://www.juntadeandalucia.es/andalucia.html" shape="rect">Más datos</a>
+                  </div>
+               </div>
+            </li>
+            <li class="noticias main-nav">
+               <a title="Noticias" href="http://www.juntadeandalucia.es/presidencia/portavoz/" class="drop" accesskey="7" shape="rect">Noticias</a>
+               <div class="dropdown container">
+                  <div class="grid_4">
+                     <p class="encabezado">
+                        <strong>Actualidad</strong>
+                     </p>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/" title="Portada" shape="rect">Portada</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/noticiasdeldia" title="Noticias del día" shape="rect">Noticias del día</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/listadoConvocatorias" title="Convocatorias" shape="rect">Convocatorias</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/listadoReportajes" title="Reportajes" shape="rect">Reportajes</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/listadoEspeciales" title="Especiales" shape="rect">Especiales</a>
+                        </li>
+                     </ul>
+                     <p class="encabezado">
+                        <strong>Portavoz del Gobierno</strong>
+                     </p>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/oficinaPortavoz" title="¿Qué es la Oficina del Portavoz?" shape="rect">¿Qué es la Oficina del Portavoz?</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/oficinaPortavoz" title="Funciones" shape="rect">Funciones</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_4">
+                     <p class="encabezado">
+                        <strong>Canales</strong>
+                     </p>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/gobierno" title="Gobierno" shape="rect">Gobierno</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/administracion" title="Administración" shape="rect">Administración</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/economia" title="Economía" shape="rect">Economía</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/salud" title="Salud" shape="rect">Salud</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/innovacion" title="Innovacion" shape="rect">Innovación</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/infraestructuras" title="Infraestructuras" shape="rect">Infraestructuras</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/agricultura" title="Agricultura" shape="rect">Agricultura</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/turismo" title="Turismo" shape="rect">Turismo</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/sociedad" title="Sociedad" shape="rect">Sociedad</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/medioambiente" title="Medioambiente" shape="rect">Medio ambiente</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/cultura" title="Cultura" shape="rect">Cultura</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_4">
+                     <p class="encabezado">
+                        <strong>Consejo de Gobierno</strong>
+                     </p>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/consejo/sobreconsejo.html" title="Sobre el Consejo" shape="rect">Sobre el Consejo</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/consejo/proximasesion.html" title="Próxima sesión" shape="rect">Próxima sesión</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/consejo/ultimo.html" title="Última sesión" shape="rect">Última sesión</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/consejo/historico.html" title="Histórico de sesiones" shape="rect">Histórico de sesiones</a>
+                        </li>
+                     </ul>
+                     <p class="encabezado">
+                        <strong>Multimedia</strong>
+                     </p>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/videos" title="Vídeo" shape="rect">Vídeo</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/audios" title="Audio" shape="rect">Audio</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/fotogalerias" title="Fotogalería" shape="rect">Fotogalería</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/fotogaleriasAlta" title="Fotos en alta resolución" shape="rect">Fotos en alta resolución</a>
+                        </li>
+                     </ul>
+                     <p class="encabezado">
+                        <strong>Noticias en redes</strong>
+                     </p>
+                     <div class="social">
+                        <ul class="listado_social">
+                           <li>
+                              <a class="ico_social_30 twitter" title="Noticias de la Junta en Twitter" href="http://www.twitter.com/JuntaInforma" shape="rect">
+                                 <img alt="" src="http://www.juntadeandalucia.es/themes/images/social/30_v_twitter.gif"/>
+                                 <span>Twitter</span>
+                              </a>
+                           </li>
+                           <li>
+                              <a class="ico_social_30 facebook" title="Noticias de la Junta en Facebook" href="http://www.facebook.com/juntainforma" shape="rect">
+                                 <img alt="" src="http://www.juntadeandalucia.es/themes/images/social/30_v_facebook.gif"/>
+                                 <span>Facebook</span>
+                              </a>
+                           </li>
+                           <li>
+                              <a class="ico_social_30 youtube" title="Noticias de la Junta en Youtube" href="http://www.youtube.com/user/juntainforma" shape="rect">
+                                 <img alt="" src="http://www.juntadeandalucia.es/themes/images/social/30_v_youtube.gif"/>
+                                 <span>Youtube</span>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+
+                  <div class="grid_4">
+                     <ul class="ul_img">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/agenda/" title="Agenda de la comunicación" shape="rect">
+                              <img src="http://www.juntadeandalucia.es/themes/images/thrum38_agenda_comunicacion.jpg" alt=""/>
+                              <span>Agenda de la comunicación</span>
+                           </a>
+                        </li>
+                     </ul>
+                     <p class="encabezado">
+                        <strong>Documentación</strong>
+                     </p>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/listadoDiscursoPresidente" title="Discursos" shape="rect">Discursos</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/listadoDocumentosInteres" title="Documentos" shape="rect">Documentos</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/ixlegislatura/gobiernosanteriores/linea.html" title="Histórico Gobiernos" shape="rect">Histórico Gobiernos</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/portadasperiodicos" title="Prensa" shape="rect">Prensa</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </li>
+         </ul>
+      </div>
+<div id="miga">
+         <div class="container">
+            <div class="texto">
+               <span>
+                  <a title="BOJA Histórico" href="http://www.juntadeandalucia.es/boja">BOJA Histórico</a> &gt;
+					<a href="http://www.juntadeandalucia.es/boja/2006.html" title="2006">2006</a>
+            &gt;
+          <a href="http://www.juntadeandalucia.es/boja/2006/241/" title="Boletín 241">Boletín 241</a>
+            &gt;
+          <a href="http://www.juntadeandalucia.es/boja/2006/241/s1.html" title="1. Disposiciones generales">1. Disposiciones generales</a>
+            &gt;
+          </span>
+            </div>
+         </div>
+      </div>
+      <div id="contenidos">
+         <div class="container separacion_vertical_superior_1 js">
+            <div id="cuerpo" class="grid_11 contenidos_nivel3 boja_disposicion">
+               <div>
+                  <h1>
+               Boletín Oficial de la Junta de Andalucía - 
+			   Histórico del BOJA<span class="nota">
+                 Boletín número 
+                 241
+                 de 
+                 15/12/2006</span>
+                  </h1>
+                  <!--+ |end content-main-heading +--><div class="punteado_izquierda cabecera_detalle_disposicion">
+                     <h2>1. Disposiciones generales</h2>
+                     <h3>Consejería de Empleo</h3>
+                     <h4>Orden de 5 de diciembre de 2006, por la que se regulan los programas de Escuelas Taller, Casas de Oficio, Talleres de Empleo y Unidades de Promoción y Desarrollo en la Junta de Andalucía, y se establecen las bases reguladoras de la concesión de ayudas públicas a dichos programas. </h4>
+                  </div>
+                  <div class="alerta">
+                     <p>
+                        <strong>Atención:</strong> La información contenida en estas
+						páginas no tiene validez legal.
+						<a href="http://www.juntadeandalucia.es/boja/historico/informacion-general.html">Ver
+							más</a>
+                     </p>
+                  </div>
+                  <p> PREAMBULO </p>
+                  <p> El Real Decreto 467/2003, de 25 de abril, traspasó a la Comunidad Autónoma de Andalucía la competencia sobre la gestión y el control de los Programas Nacionales de Escuelas Taller, Casas de Oficio y Talleres de Empleo, y sobre la concesión de ayudas públicas reguladas por sendas Ordenes del Ministerio de Trabajo y Asuntos Sociales de 14 de noviembre de 2001. </p>
+                  <p> Consecuencia de lo anterior, el Decreto 192/2003, de 1 de julio, asignó a la entonces Consejería de Empleo y Desarrollo Tecnológico las funciones, medios y servicios traspasados por la Administración del Estado a la Comunidad Autónoma de Andalucía. El ejercicio de dichas funciones se atribuye al Servicio Andaluz de Empleo de la Consejería de Empleo, creado por Ley 4/2002, de 16 de diciembre, quién procedió a adecuar los mismos a la organización y procedimientos propios de la Comunidad Autónoma de Andalucía. </p>
+                  <p> En desarrollo de dicha labor, el Servicio Andaluz de Empleo de la Consejería de Empleo dicta la Orden de 8 de marzo de 2004, por la que se regulan los citados programas de Escuelas Taller, Casas de Oficio, Talleres de Empleo y Unidades de Promoción y Desarrollo en la Junta de Andalucía, mientras que por resolución de 14 de julio de 2004 se aprueba el Reglamento Marco de Régimen Interior de desarrollo de la citada Orden. </p>
+                  <p> Por su parte, la Orden de 9 de noviembre de 2005, procedió a modificar la Orden de 8 de marzo de 2004 adecuando su contenido a las previsiones establecidas tanto en la Ley 3/2004, de 28 de diciembre, de Medidas Tributarias, Administrativas y Financieras de la Junta de Andalucía como en la Ley 38/2003, de 17 de noviembre, General de Subvenciones. </p>
+                  <p> Una vez transcurridas dos convocatorias desde la entrada en vigor de la Orden de 8 de marzo de 2004, nos hallamos en disposición de detectar aquellos elementos del procedimiento cuya modificación se hace imprescindible acometer en aras a alcanzar una mayor eficacia y agilidad en la tramitación de los proyectos a la vez que se revisa su contenido a la luz de lo establecido por el Real Decreto 887/2006, de 21 de julio, por el que se aprueba el Reglamento de la Ley 38/2003, de 17 de noviembre, General de Subvenciones. </p>
+                  <p> Tanto los proyectos de Escuelas Taller, Casas de Oficio y Talleres de Empleo, como de los proyectos de Unidades de Promoción y Desarrollo son una eficaz medida de inserción en el mercado de trabajo a través de la cualificación y profesionalización de personas desempleadas, mediante la formación en alternancia con el trabajo y la práctica profesional, y mediante el desarrollo de tareas de acompañamiento e inserción de éstas. Pese a la descrita finalidad genérica de todos ellos, desde el punto de vista material los mismos no admiten comparación en tanto que atienden a objetivos propios y específicos, lo que determina que las ayudas destinadas a la ejecución no puedan quedar sometidas a un régimen de concurrencia competitiva, no resultando necesario establecer comparación de solicitudes ni prelación entre las mismas, de conformidad con lo establecido en el artículo 31.1 de la antes citada Ley 3/2004, de 28 de diciembre, y en los Artículos 22 y 30.7 de la también citada Ley 38/2003, de 17 de noviembre. </p>
+                  <p> La misma causa anteriormente descrita aconsejan beneficiar a las entidades promotoras de dichos proyectos de la excepción establecida por el artículo 29.1, párrafo segundo, de la Ley 3/2004, de 28 de diciembre en concordancia con el artículo 13.2 de Ley 38/2003, de 17 de noviembre. </p>
+                  <p> En cumplimiento del artículo 8.3.f) de la citada Ley 4/2002, de 16 de diciembre, la presente Orden ha sido sometido al Consejo de Administración del Servicio Andaluz de Empleo de la Consejería de Empleo. </p>
+                  <p> En su virtud, y de acuerdo con las competencias atribuidas en la legislación vigente, a propuesta de la Dirección General de Fomento del Empleo del Servicio Andaluz de Empleo de la Consejería de Empleo, </p>
+                  <p> DISPONGO </p>
+                  <p> CAPITULO I </p>
+                  <p> DISPOSICIONES GENERALES </p>
+                  <p> Artículo 1. Objeto. </p>
+                  <p> 1. La presente Orden tiene por objeto, las Ordenes de 14 de noviembre de 2001, del Ministerio de trabajo y Asuntos Sociales y de conformidad con el Real Decreto 467/2003, de 25 de abril, sobre traspaso a la Comunidad Autónoma de Andalucía de la gestión realizada por el Instituto Nacional de Empleo, en el ámbito del trabajo, el empleo y la formación, establecer los programas mixtos de empleo y formación que desarrolla la Administración de la Junta de Andalucía, a través del Servicio Andaluz de Empleo de la Consejería competente en materia de empleo, y cuya finalidad es facilitar la inserción laboral de personas desempleadas, así como los procedimientos de concesión de las ayudas públicas que se destinen a éstos. </p>
+                  <p> 2. Para el cumplimiento del objetivo descrito en el apartado anterior se establece en el ámbito territorial de la Comunidad Autónoma de Andalucía los siguientes Programas: </p>
+                  <p> a) Programa de Escuelas Taller y Casas de Oficio. </p>
+                  <p> b) Programa de Talleres de Empleo. </p>
+                  <p> 3. Junto a ello, y con la finalidad de colaborar en la preparación, acompañamiento y evaluación de los proyectos que se ejecuten al amparo de los anteriores programas así como en la inserción laboral de las personas desempleadas que participen en los mismos, se establece el Programa de Unidades de Promoción y Desarrollo. </p>
+                  <p> b) Actuaciones previstas de acompañamiento, seguimiento y evaluación de los proyectos de Escuelas Taller, Casas de Oficio y Talleres de Empleo. </p>
+                  <p> c) Areas de actuación propuestas para promover, promocionar y facilitar la inserción del alumnado trabajador de los proyectos de Escuelas Taller, Casas de Oficio y Talleres de Empleo, a través del autoempleo. </p>
+                  <p> d) Actuaciones y objetivos que fomenten la inserción laboral del alumnado trabajador de las Escuelas Taller, Casas de Oficio y Talleres de Empleo tanto en empleos por cuenta propia como por cuenta ajena, puestos en marcha en la zona de actuación de la Unidad de Promoción y Desarrollo. </p>
+                  <p> e) Asesoramiento y supervisión de las actividades en prevención de riesgos laborales que se realicen en los proyectos de Escuelas Taller, Casas de Oficio y Talleres de Empleo. </p>
+                  <p> Artículo 22. Incentivos a las Unidades de Promoción y Desarrollo. </p>
+                  <p> 1. La aportación económica del Servicio Andaluz de Empleo de la Consejería de Empleo para cada Unidad de Promoción y Desarrollo se determinará en la resolución aprobatoria de las ayudas correspondientes, destinándose exclusivamente a sufragar los siguientes costes: </p>
+                  <p> Para el supuesto de Unidades de Promoción y Desarrollo de carácter provincial: </p>
+                  <p> a) Los costes salariales derivados de los contratos que se suscriban con personal directivo, técnico y de apoyo, según lo previsto en el artículo 19.3 de la presente Orden. La cuantía de la ayuda para el personal técnico será 32.049,29 </p>
+                  <p> para el año 2007 por jornada completa y por año por cada componente, reduciéndose proporcionalmente, en su caso, en función de la jornada y duración de cada contrato. Esta ayuda se incrementará en un 20% para la persona que ostente la Dirección de la Unidad de Promoción y Desarrollo. </p>
+                  <p> El importe de la ayuda para costes salariales del personal de apoyo será, para el año 2007, de 17.423,53 </p>
+                  <p> por jornada completa y por año por cada componente, reduciéndose proporcionalmente, en su caso, en función de la jornada y duración de cada contrato. </p>
+                  <p> Las cantidades indicadas se estiman como subvenciones medias por costes salariales del personal de las Unidades de Promoción y Desarrollo, sin que ello condicione necesariamente los salarios efectivamente establecidos por la entidad promotora. </p>
+                  <p> b) Los gastos derivados del funcionamiento de las Unidades de Promoción y Desarrollo, que para el año 2007 se establecen en 3.205,38 </p>
+                  <p> por miembro de la unidad y año, reduciéndose proporcionalmente, en su caso, en función de la jornada y duración de cada contrato. </p>
+                  <p> Las ayudas para costes salariales y para gastos de funcionamiento se incrementarán un 3% para años sucesivos, salvo disposición en contrario. El valor de los mismos será único para todo el proyecto aún cuando éste se desarrolle en dos ejercicios anuales distintos, y será el que corresponda al mes de inicio del mismo. </p>
+                  <p> c) Los gastos ocasionados con motivo de la participación en foros, jornadas, encuentros y procesos formativos. </p>
+                  <p> Para el supuesto de Unidades de Promoción y Desarrollo de carácter regional, percibirán como ayudas los costes salariales y los gastos derivados del funcionamiento de las Unidades de Promoción y Desarrollo consignados en los apartados a) y b) para las Unidades de Promoción y Desarrollo de carácter provincial en idénticos términos, si bien para los gastos consignados en el apartado c) además de aquellos ocasionados por la participación en foros, jornadas, encuentros y procesos formativos se incluirán los derivados de la organización de este tipo de eventos. </p>
+                  <p> 2. La financiación de los gastos previstos en el apartado anterior de este artículo se realizará con cargo a las dotaciones que se establezcan anualmente para el Programa de Unidades de Promoción y Desarrollo en los presupuestos del Servicio Andaluz de Empleo de la Consejería de Empleo. </p>
+                  <p> CAPITULO V </p>
+                  <p> Disposiciones comunes </p>
+                  <p> Artículo 23. Solicitudes de incentivos. </p>
+                  <p> 1. Las entidades señaladas en el artículo 2 de esta Orden, cuando deseen promover cualquiera de los proyectos de Escuelas Taller, Casas de Oficio, Talleres de Empleo o Unidades de Promoción y Desarrollo, y obtener las ayudas en ella establecidas, dirigirán el correspondiente impreso de solicitud acompañado de la documentación preceptiva para cada tipo de proyecto, suscrito por su representante legal, a la persona titular de la correspondiente Dirección Provincial del Servicio Andaluz de Empleo de la Consejería de Empleo, cuando el proyecto tenga carácter provincial, y a la persona titular de la Consejería de Empleo en su calidad de Presidente del Servicio Andaluz de Empleo, cuando tenga carácter multiprovincial, y lo presentarán preferentemente ante la Dirección Provincial del Servicio Andaluz de Empleo de la Consejería de Empleo, ante la Dirección General de Fomento del Empleo o ante las Unidades Territoriales de Empleo y Desarrollo Local y Tecnológico, sin perjuicio de lo establecido en el artículo 38.4 de la Ley 30/1992, de 26 de noviembre, de Régimen Jurídico de las Administraciones Públicas y del Procedimiento Administrativo Común. </p>
+                  <p> Los impresos de solicitud de las subvenciones articulados en esta Orden, incluirán sendas declaraciones responsables relativas a otras ayudas concedidas y/o solicitadas por la entidad para la misma finalidad procedente de cualesquiera Administraciones o Entes públicos o privados, nacionales o internacionales, así como a no encontrarse incursa en ninguna de las causas de exclusión previstas en la presente Orden. Así mismo, incluirá compromiso por parte de la entidad promotora del proyecto de que al menos el 50% de las personas integrantes del alumnado trabajador seleccionado serán mujeres, independientemente del sector de actividad en el que se vaya a desarrollar. </p>
+                  <p> 2. Las solicitudes se efectuarán en impresos normalizados por triplicado que serán proporcionados en las dependencias de las Direcciones Provinciales del Servicio Andaluz de Empleo de la Consejería de Empleo, de las Unidades Territoriales de Empleo y Desarrollo Local y Tecnológico o mediante descarga telemática del portal de la Junta de Andalucía (www.andaluciajunta.es). </p>
+                  <p> Artículo 24. Documentación adjunta a la solicitud de proyectos. </p>
+                  <p> 1. El impreso de solicitud de las subvenciones a proyectos de Escuela Taller, Casa de Oficio y Taller de Empleo, debidamente cumplimentado en los términos del artículo anterior de la presente Orden, deberá ser acompañado de la siguiente documentación: </p>
+                  <p> a) Memoria del Proyecto en la que se recogerán los siguientes aspectos: </p>
+                  <p> - Denominación y datos de identificación de la Escuela Taller, Casa de Oficio o Taller de Empleo y de la entidad promotora. </p>
+                  <p> - Resumen del proyecto. </p>
+                  <p> - Descripción detallada de la obra o servicio a realizar. En el caso de que la obra a ejecutar lo requiera, se acompañará proyecto básico firmado por técnico competente. Dicho proyecto básico constará, al menos, de memoria descriptiva, planos generales y presupuesto con estimación global por capítulos. </p>
+                  <p> - Presupuesto de gastos, expresando los costes máximos totales derivados de la contratación del personal directivo, docente y de apoyo, del funcionamiento y gestión de la Escuela Taller, Casa de Oficio o Taller de Empleo. En el supuesto de Escuela Taller o Casa de Oficio incluirá los costes derivados de las becas de los alumnos y alumnas trabajadores durante la etapa formativa y de la posterior contratación de los mismos. En el supuesto de Taller de Empleo se incluirán los costes derivados de la contratación de los alumnos y alumnas trabajadores Todos los costes se presentarán subdivididos en períodos semestrales. </p>
+                  <p> - Presupuesto de ingresos que comprenderá la ayuda que se solicita al Servicio Andaluz de Empleo de la Consejería de Empleo, la parte financiada por aportaciones de la entidad promotora o de otras instituciones u organismos y, en su caso, ingresos previstos como consecuencia de la enajenación de bienes producidos o servicios prestados por la Escuela Taller, Casa de Oficio o Taller de Empleo, siempre que se cumpla lo establecido en el artículo 14.3 de esta Orden. </p>
+                  <p> - Estudio de seguridad y salud laboral básico o normal, de acuerdo con lo establecido en el R.D. 1627/1997 sobre condiciones mínimas de seguridad y salud en las obras de construcción, para las actividades incluidas en el ámbito de esta norma, sin perjuicio de la obligatoriedad de aportar antes del inicio de la actividad plan de seguridad y salud laboral adaptado a las necesidades reales de la actividad a desarrollar, así como el nombramiento de coordinador de seguridad y salud y la aprobación del plan por el mismo. </p>
+                  <p> - Plan formativo de la Escuela Taller, Casa de Oficio o Taller de Empleo por especialidades y en relación con el proyecto de obra o servicio a desarrollar, de forma que se establezca la correspondencia entre el plan formativo por especialidades y las unidades de obra o servicios. Los itinerarios formativos se adecuarán, en la medida de lo posible, a lo establecido en los Reales Decretos de los correspondientes certificados de profesionalidad, en los términos señalados en el párrafo primero del artículo 8 de la presente Orden. </p>
+                  <p> - Fecha prevista para el comienzo y duración del proyecto. En el caso de proyectos de Escuelas Taller y Casas de Oficio también se recogerá la duración de cada una de las etapas en que se dividen. </p>
+                  <p> - Informe sobre las estrategias de desarrollo y perspectiva de empleo de los beneficiarios del proyecto. </p>
+                  <p> b) Fotocopia compulsada de la documentación identificativa de la personalidad jurídica de la entidad solicitante y acreditativa de poder de representación de la entidad promotora firmante de la solicitud. </p>
+                  <p> c) Certificación acreditativa de la financiación de aquella parte del coste del proyecto que no incentive el Servicio Andaluz de Empleo de la Consejería de Empleo. </p>
+                  <p> d) En el caso de asociaciones, fundaciones y otras entidades sin ánimo de lucro, fotocopia compulsada de escritura pública de constitución y estatutos debidamente inscritos en el registro correspondiente y de la documentación que acredite que cuenta con sede en el territorio de la Comunidad Autónoma de Andalucía. </p>
+                  <p> e) Documentación acreditativa de la titularidad jurídica del objeto de actuación y de su disponibilidad para la ejecución de la obra o servicio previstos. En el caso de titularidad privada, fotocopia compulsada de escritura pública de cesión para uso público por un plazo no inferior a veinticinco años. No será necesaria la aportación de escritura de cesión cuando el titular de los bienes sea la Entidad promotora o así lo estime la persona titular de la Dirección General de Fomento del Empleo del Servicio Andaluz de Empleo de la Consejería de Empleo por el carácter social de la obra o servicio a realizar. En estos casos, será suficiente con una autorización de los titulares para la actuación de la Escuela Taller, Casa de Oficio o Taller de Empleo. </p>
+                  <p> f) Declaración responsable de que dispone de las licencias y autorizaciones de las distintas administraciones necesarias para el total desarrollo del proyecto. </p>
+                  <p> g) En el supuesto de que la entidad promotora hubiese obtenido con anterioridad ayudas públicas para la ejecución de proyectos similares, documentación acreditativa de un porcentaje de inserción laboral real de al menos el 30% del alumnado trabajador que participó en los mismos por sí o por terceras entidades. Esta acreditación no será exigida cuando la entidad promotora pertenezca a un municipio de hasta 5.000 habitantes o cuando exista un convenio especifico firmado con la Consejería de Cultura. </p>
+                  <p> h) Compromiso de adaptación del puesto de trabajo para el supuesto de que sean seleccionados como alumnos y alumnas trabajadores o del personal de la Escuela Taller, Casa de Oficio o Taller de Empleo personas con discapacidad, para que éstas puedan desempeñar adecuadamente su ocupación. </p>
+                  <p> i) Compromiso de aportar el plan de prevención de riesgos laborales, evaluación de los riesgos y planificación de la actividad preventiva, como se indica en el artículo 16 de la Ley 31/1995, de Prevención de Riesgos Laborales, para aquellas instalaciones nuevas o informe sobre las actuaciones de la planificación preventivas realizadas durante el ejercicio anterior, antes de iniciar las actividades del proyecto. </p>
+                  <p> 2. El impreso de solicitud de las subvenciones a proyectos de Unidades de Promoción y Desarrollo, debidamente cumplimentado, deberá ser acompañado de la siguiente documentación: </p>
+                  <p> a) Memoria del Proyecto en la que se recogerán los siguientes aspectos: </p>
+                  <p> - Denominación y datos de identificación de la Unidad de Promoción y Desarrollo y de la entidad promotora. </p>
+                  <p> - Resumen del proyecto. </p>
+                  <p> - Objetivos del proyecto, describiendo ámbito geográfico de actuación, funciones a realizar y principales colectivos a los que van a afectar sus actuaciones. </p>
+                  <p> - Fechas previstas de comienzo y duración del proyecto. </p>
+                  <p> - Presupuesto de gastos, expresando costes máximos totales derivados de las contrataciones del personal directivo, técnico y de apoyo, y costes máximos totales derivados del funcionamiento de la Unidad de Promoción y Desarrollo. </p>
+                  <p> - Presupuesto de ingresos, que comprenderá la ayuda que se solicita al Servicio Andaluz de Empleo de la Consejería de Empleo y la parte financiada por aportaciones de la entidad promotora o de otras instituciones u organismos. </p>
+                  <p> b) Fotocopia compulsada de la documentación identificativa de la personalidad jurídica de la entidad solicitante y acreditativa de poder de representación de la entidad promotora firmante de la solicitud. </p>
+                  <p> c) En el caso de asociaciones, fundaciones y otras entidades sin ánimo de lucro, fotocopia compulsada de escritura pública de constitución y estatutos debidamente inscritos en el registro correspondiente y de la documentación que acredite que cuenta con sede en el territorio de la Comunidad Autónoma de Andalucía. </p>
+                  <p> d) Certificación acreditativa de la financiación de aquella parte del coste del proyecto que no incentive el Servicio Andaluz de Empleo de la Consejería de Empleo. </p>
+                  <p> e) Compromiso de adaptación del puesto de trabajo para el supuesto de que sean seleccionados como miembros personal de la Unidad de Promoción y Desarrollo personas con discapacidad, para que éstas puedan desempeñar adecuadamente su ocupación. </p>
+                  <p> f) Compromiso de aportar el plan de prevención de riesgos laborales, evaluación de los riesgos y planificación de la actividad preventiva, como se indica en el artículo 16 de la Ley 31/1995, de Prevención de Riesgos Laborales, antes de iniciar las actividades del proyecto. </p>
+                  <p> 3. En cualquier momento, el órgano concedente podrá requerir la presentación de cualquier otro documento o acreditación que considere oportuna. </p>
+                  <p> Artículo 25. Plazo de presentación de solicitudes. </p>
+                  <p> 1. Las solicitudes de las ayudas a proyectos de Escuelas Taller, Casas de Oficio y Talleres de Empleo reguladas en esta Orden se presentarán a partir del 15 de diciembre del año anterior a aquel en el que se vayan a iniciar y hasta el 15 de enero siguiente. </p>
+                  <p> 2. Las solicitudes de las ayudas a proyectos de Unidades de Promoción y Desarrollo reguladas en esta Orden se presentarán en el plazo de un mes a contar desde el día siguiente a la publicación de la correspondiente convocatoria en el Boletín Oficial de la Junta de Andalucía. </p>
+                  <p> Artículo 26. Tramitación. </p>
+                  <p> 1. Una vez terminado el plazo de presentación de solicitudes, el Servicio competente de la correspondiente Dirección Provincial del Servicio Andaluz de Empleo, en tanto que órgano instructor, procederá a examinar las solicitudes de Escuelas Taller, Casas de Oficio, Talleres de Empleo y Unidades de Promoción y Desarrollo. </p>
+                  <p> Si la solicitud no reuniera los requisitos exigidos o no se acompañasen los documentos preceptivos, el órgano instructor del procedimiento requerirá a de la entidad solicitante para que en el plazo de 10 días subsane la falta o acompañe los documentos preceptivos, con la indicación de que si así no lo hiciera se le tendrá por desistida de su petición, previa resolución dictada en los términos previstos en el artículo 42.1 de la Ley 30/1992, de 26 de noviembre, de Régimen Jurídico de las Administraciones Públicas y del Procedimiento Administrativo Común. </p>
+                  <p> Así mismo realizará todas las actuaciones necesarias para la determinación, conocimiento y comprobación de los datos contenidos en la solicitud, pudiendo requerir a las entidades promotoras cuanta documentación estime necesaria para completar el expediente administrativo. Completadas éstas, si se determina que el proyecto o la entidad promotora del mismo incumple los requisitos establecidos por la presente Orden el órgano instructor resolverá la inadmisión de la solicitud. </p>
+                  <p> 2. Para los supuestos en los que la competencia para resolver sobre las solicitudes de las subvenciones que se regulan en la presente Orden haya sido delegada, una vez completados los expedientes, y en cualquier caso antes del día 1 de marzo del ejercicio en el que se inicien los proyectos, el titular de la correspondiente Dirección Provincial del Servicio Andaluz de Empleo remitirá a la Dirección General de Fomento del Empleo del Servicio Andaluz de Empleo una lista de proyectos incentivables, acompañada de un informe sobre los mismos y de copia de cada uno de los resúmenes de dichos proyectos adjuntados con la solicitud de ayuda. El informe contendrá, al menos, la siguiente información de cada uno de los proyectos incentivables: </p>
+                  <p> a) Entidad promotora y denominación del proyecto. </p>
+                  <p> b) Objeto de actuación. </p>
+                  <p> c) Localidad de ejecución del proyecto. </p>
+                  <p> d) Duración en meses del proyecto. </p>
+                  <p> e) Comprobación del cumplimiento de los requisitos establecidos en los artículos 13, 17 y 21 de esta Orden para cada tipo de proyecto. </p>
+                  <p> f) Importe solicitado por la entidad promotora y el importe propuesto por la Dirección Provincial correspondiente. </p>
+                  <p> g) En el supuesto de proyectos de Escuelas Taller, Casas de Oficio o Talleres de Empleo, el informe contendrá también los siguientes datos: </p>
+                  <p> Especialidades formativas. </p>
+                  <p> Número de alumnos y alumnas trabajadores por especialidad. </p>
+                  <p> Porcentaje de inserción estimado. </p>
+                  <p> A la vista de los citados informes, la persona titular de la Consejería de Empleo, en calidad de Presidente del Servicio Andaluz de Empleo, emitirá informe preceptivo y vinculante sobre los proyectos incentivables. </p>
+                  <p> 3. Teniendo en cuenta las características del proyecto presentado y las tasas de desempleo del ámbito territorial de actuación, podrá minorarse la ayuda solicitada, con respecto, a la cuantía a conceder, la duración, el número de alumnos y alumnas trabajadores y de especialidades formativas para los que se considera viable el proyecto. </p>
+                  <p> Artículo 27. Competencia para resolver. </p>
+                  <p> Corresponde a la persona titular de la Consejería de Empleo, en su calidad de Presidente del Servicio Andaluz de Empleo, la competencia para resolver sobre las subvenciones establecidos en la presente Orden. </p>
+                  <p> Cuando los proyectos de Escuelas Taller, Casas de Oficio y Talleres de Empleo tengan un ámbito de actuación provincial, la competencia para resolver sobre las solicitudes de las subvenciones se delega en la persona titular de la correspondiente Dirección Provincial del Servicio Andaluz de Empleo, previo informe preceptivo y vinculante de la persona titular de la Consejería de Empleo, en calidad de Presidente del Servicio Andaluz de Empleo. </p>
+                  <p> Artículo 28. Resolución. </p>
+                  <p> 1. La resolución se motivará con sucinta referencia de hechos y fundamentos de derecho y deberá contener los extremos exigidos en el artículo 13 del Reglamento por el que se regulan los procedimientos para la concesión de subvenciones y ayudas públicas por la Administración de la Junta de Andalucía y sus Organismos Autónomos, aprobado por el Decreto 254/2001, de 20 de noviembre. Así mismo, en su caso, se señalará, que la Unión Europea participa en la financiación de las mismas y se indicará la cuantía o el porcentaje de ayuda aportada por el instrumento comunitario que corresponda, de conformidad con lo dispuesto en la disposición 6.4 del Reglamento (CE) 1159/2000, de 30 de mayo de 2000, sobre actividades de información y publicidad que deben llevar a cabo los Estados Miembros en relación con las intervenciones de los Fondos Estructurales </p>
+                  <p> El plazo máximo para resolver y notificar sobre las solicitudes de ayudas a proyectos de Escuelas Taller, Casas de Oficio, Talleres de Empleo y Unidades de Promoción y Desarrollo será de seis meses desde la fecha en que la misma haya tenido entrada en el registro del órgano competente para su tramitación. </p>
+                  <p> Transcurrido el citado plazo sin que recaiga resolución expresa, las solicitudes podrán entenderse desestimadas por silencio administrativo conforme a lo establecido en el 31.4 de la Ley 3/2004, de 28 de diciembre, de Medidas Tributarias, Administrativas y Financiaras. </p>
+                  <p> 2. En el plazo máximo de 15 días contados desde el siguiente al de la notificación de la resolución, las entidades promotoras deberán aceptar expresamente la subvención en los términos establecidos en la resolución de concesión. En caso contrario, la resolución dictada perderá su eficacia, acordándose el archivo con notificación al interesado. De la aceptación quedará constancia en el expediente. </p>
+                  <p> En el mismo acto de aceptación la entidad promotora deberá aportar documentación acreditativa de que dispone de las licencias y autorizaciones de las distintas administraciones necesarias para el total desarrollo del proyecto. </p>
+                  <p> 3. El importe de las ayudas previstas en esta Orden en ningún caso podrá ser de tal cuantía que, aisladamente o en concurrencia con ayudas de otras Administraciones Públicas o de otros entes públicos o privados, nacionales o internacionales, supere el coste del proyecto, tal como establece el artícu- </p>
+                  <p> lo </p>
+                  <p> 111 de la Ley 5/1983, de 19 de julio, General de Hacienda Pública de la Comunidad Autónoma de Andalucía. </p>
+                  <p> 4. Toda alteración de las condiciones tenidas en cuenta para la concesión dla subvención y, en todo caso, la obtención concurrente de subvenciones o ayudas otorgadas por otras Administraciones o entes públicos o privados, nacionales o internacionales, podrá dar lugar a la modificación de la resolución de concesión de conformidad con lo dispuesto en el artículo 110 de la Ley 5/1983, de 19 de julio, General de Hacienda Pública de la Comunidad Autónoma de Andalucía y en el artículo 19.4 de la Ley 38/2003, de 17 de noviembre, General de Subvenciones. </p>
+                  <p> Artículo 29. Dotación presupuestaria. </p>
+                  <p> La concesión de las ayudas reguladas en la presente Orden estará condicionada a la existencia de dotación presupuestaria para dicho fin y se podrán adquirir compromisos de carácter plurianual, de acuerdo con lo previsto en el 31.4 de la Ley 3/2004, de 28 de diciembre, de Medidas Tributarias, Administrativas y Financiaras. </p>
+                  <p> Artículo 30. Pagos de la subvención y justificación del anticipo. </p>
+                  <p> 1. Una vez dictada la resolución de concesión de la ayuda, el Servicio Andaluz de Empleo de la Consejería de Empleo transferirá a las entidades promotoras de los proyectos hasta el 75% del coste incentivado, en concepto de anticipo, articulándose en la propia resolución de concesión de la ayuda la secuencia de justificación de dicha cantidad. Una vez alcanzada la ejecución del 50% del proyecto y justificada mediante la aportación de la documentación acreditativa de dicho extremo especificando el importe correspondiente a cada una de las partidas incentivadas, se librará el pago del 25% restante. </p>
+                  <p> Cada vez que la entidad promotora reciba fondos con cargo al proyecto remitirá certificación contable de su recepción al órgano competente según el apartado anterior, aportando junto a la primera de las certificaciones contables la de inicio de la actuación. </p>
+                  <p> 2. Con independencia de la fecha de pago de las ayudas, la entidad promotora pagará puntualmente las becas y las nóminas del alumnado trabajador y del personal directivo, docente y de apoyo de la Escuelas Taller, Casas de Oficio o Talleres de Empleo, así como las nóminas del personal directivo, técnico y de apoyo a las Unidades de Promoción y Desarrollo. Para la comprobación de tal extremo, el Servicio Andaluz de Empleo de la Consejería de Empleo podrá recabar relación nominal de las transferencias efectuadas o copia de los cheques emitidos a tal efecto. Además del deber de reintegro que pudiera derivar del incumplimiento de ésta obligación, la misma podrá determinar su exclusión de futuros proyectos de Escuelas Taller, Casas de Oficio, Talleres de Empleo y Unidades de Promoción y Desarrollo. </p>
+                  <p> Artículo 31. Justificación final de la subvención. </p>
+                  <p> 1. De conformidad con lo dispuesto por el artículo 108.f) de la Ley 5/1983, de 19 de julio, General de la Hacienda Pública de la Comunidad Autónoma de Andalucía, en el mes siguiente a la finalización del proyecto, se remitirán el acta de liquidación acompañada de los justificantes de los pagos efectuados con cargo al Programa, especificando expresamente el importe correspondiente a cada una de las partidas incentivadas, así como el cuadro resumen de justificantes del gasto total del proyecto, aunque la cuantía de la ayuda sea inferior. </p>
+                  <p> Cuando las entidades promotoras sean Organismos Públicos y Entidades Locales remitirá certificado expedido al efecto por los órganos competentes, en las que consten desglosados los pagos correspondientes a cada una de las partidas incentivadas y su correcta imputación, según modelo normalizado, acompañada de los justificantes de los pagos efectuados con cargo al Programa. </p>
+                  <p> La rendición de la cuenta justificativa constituye un acto obligatorio del beneficiario en la que se deben incluir, bajo responsabilidad del declarante, los justificantes de gasto o cualquier otro documento con validez jurídica que permitan acreditar el cumplimiento del objeto de la subvención pública. De conformidad con lo dispuesto en el artículo 31.2 de la Ley General de Subvenciones, así como en el Reglamento (CE) 448/2004, de la Comisión, de 10 de marzo, por el que se modifica el Reglamento (CE) 1685/2000, de 28 de julio de 2000, que aplica el Reglamento (CE) 1260/1999, de 21 de junio, relativo a la financiación de gastos de operaciones cofinanciadas por los Fondos Estructurales, y que deroga el Reglamento (CE) 1145/2003, de 26 de junio, se considerará gasto realizado el que ha sido efectivamente pagado con anterioridad a la finalización del período de justificación, salvo aquellos gastos que por su propia naturaleza hayan de liquidarse en fechas posteriores. </p>
+                  <p> 2. Cuando los proyectos hayan sido financiados, además de con la subvención, con fondos propios de la entidad promotora u otras subvenciones o recursos, deberá acreditarse en la justificación el importe, procedencia y aplicación de tales fondos al proyecto. </p>
+                  <p> 3. El importe de la documentación justificativa deberá corresponderse con el presupuesto aceptado de la actividad, aun en el caso de que la cuantía de la incentivo concedida fuese inferior. </p>
+                  <p> 4. Siempre que se hubiera alcanzado el objetivo o finalidad perseguida si no se justificara debidamente el total de la actividad incentivada, deberá reducirse el importe de la ayuda concedida aplicando el porcentaje de financiación sobre la cuantía correspondiente a los justificantes no presentados o no aceptados. </p>
+                  <p> 5. Las entidades promotoras de proyectos incentivados al amparo de la presente Orden deberán acompañar los documentos justificativos individualizados de los pagos efectuados, sometidos a un sistema de validación y estampillado que permita un control de la concurrencia de subvenciones, así como un certificado que acredite que la relación de facturas imputadas al proyecto se ha verificado con las facturas originales. Tales extremos serán certificados por auditor inscrito en el registro oficial correspondiente. </p>
+                  <p> En cualquier caso, los documentos justificativos individualizados deberán a disposición de los organismos de control correspondientes para las actuaciones de comprobación y control establecidos en el artículo 33.c) de esta Orden. </p>
+                  <p> De conformidad con lo dispuesto por el apartado 3 del artículo 31 de la Ley 38/2003, de 18 de noviembre, General de Subvenciones, cuando el importe del gasto subvencionable supere la cuantía de 30.000 euros en el supuesto de coste por ejecución de obra, o de 12.000 euros en el supuesto de suministro de bienes de equipo o prestación de servicios por empresas de consultoría o asistencia técnica, el beneficiario deberá solicitar como mínimo tres ofertas de diferentes proveedores, con carácter previo a la contracción del compromiso para la prestación del servicio o la entrega del bien, salvo que por las especiales características de los gastos subvencionables no exista en el mercado suficiente número de entidades que lo suministren o presten, o salvo que el gasto se hubiera realizado con anterioridad a la solicitud de la subvención. </p>
+                  <p> 6. La ayuda máxima que se podrá admitir como justificada en cada fase, por gastos de formación y funcionamiento, para cada uno de los módulos A y B no podrá exceder de la cantidad que resulte de multiplicar el número de horas realizadas por el valor de cada módulo. Así mismo, la cantidad máxima a justificar con cargo a las becas de los alumnos y alumnas trabajadores será el resultado de aplicar el número de alumnos por el número de horas efectivamente impartidas. </p>
+                  <p> A estos efectos, se considerarán también como horas efectivas las correspondientes a los alumnos y alumnas trabajadores que abandonen el proyecto y por el período de tiempo comprendido entre la fecha de su baja y el final de la fase o, en su caso, la fecha de alta del alumno o alumna trabajador que sustituya dicha baja, y las correspondientes a los días lectivos no asistidos. A los mismos efectos, se asimilarán igualmente a horas de formación efectivamente impartidas las correspondientes a los períodos de vacaciones anuales retribuidas disfrutadas por el alumnado trabajador, establecidas legal o convencionalmente. </p>
+                  <p> 7. Las cantidades libradas por el Servicio Andaluz de Empleo de la Consejería de Empleo y no aplicadas al finalizar el proyecto serán devueltas en el mes siguiente a dicho término. </p>
+                  <p> 8. Sin perjuicio del procedimiento de justificación de la ayuda recogido en los apartados anteriores y a los efectos de la certificación de gastos al Fondo Social Europeo, la entidad promotora deberá remitir al órgano concedente el Anexo que a estos efectos establezca la resolución de concesión de la ayuda relativo a la ejecución de fondos realmente pagados por cada uno de los periodos semestrales a los que se hace referencia en los artículos 11.2, 12.2, 16.2 y 20.2 de la presente Orden. El Servicio Andaluz de Empleo podrá asignar una clave a las entidades promotoras a fin de que dicha justificación se realice vía telemática. </p>
+                  <p> Artículo 32. Selección del alumnado trabajador y del personal directivo, técnico, docente y de apoyo. </p>
+                  <p> 1. La selección del alumnado trabajador y del personal directivo, docente y de apoyo de las Escuelas Taller, Casas de Oficio y Talleres de Empleo, así como del personal técnico y de apoyo de las Unidades de Promoción y Desarrollo, será efectuada por una Comisión mixta que se constituirá para tal fin entre la entidad promotora y la correspondiente Dirección Provincial del Servicio Andaluz de Empleo de la Consejería de Empleo, cuando se trate de proyectos de carácter provincial, o la Dirección General de Fomento del Empleo cuando se trate de proyectos de carácter multiprovincial. </p>
+                  <p> 2. La composición y funciones de esta Comisión mixta se halla establecida por el Reglamento Marco de Régimen Interior de Escuelas Taller, Casas de Oficio, Talleres de Empleo y Unidades de Promoción y Desarrollo, aprobado por resolución de 14 de julio de 2004 de la Dirección General de Fomento del Empleo del Servicio Andaluz de Empleo, o aquel que lo modifique o sustituya. </p>
+                  <p> 3. Las personas seleccionadas para formar parte del alumnado trabajador de la Escuela Taller, Casa de Oficio o Taller de Empleo deberán cumplir los requisitos de selección a la fecha de su solicitud y mantenerlos a la fecha de la selección. </p>
+                  <p> 4. Independientemente de la especialidad del proyecto, al menos el 50% de las personas integrantes del alumnado trabajador seleccionado habrán de ser mujeres. En caso de no alcanzarse dicho porcentaje, la entidad promotora deberá aportar memoria justificativa que acredite la imposibilidad del cumplimiento de tal extremo. </p>
+                  <p> Artículo 33. Obligaciones de los beneficiarios de las ayudas. </p>
+                  <p> 1. Con independencia de las obligaciones específicas contempladas para cada ayuda en esta Orden, y las que expresamente se recojan en la resolución o convenio de concesión, de conformidad con el artículo 14 de la Ley General de Subvenciones, y del artículo 29 de la Ley de Medidas Tributarias, Administrativas y Financieras, son exigibles las siguientes obligaciones genéricas: </p>
+                  <p> a) Cumplir el objetivo, ejecutar el proyecto, realizar la actividad o adoptar el comportamiento que fundamenta la concesión de las subvenciones. Para el supuesto de proyectos de Escuelas Taller, Casas de Oficio y Talleres de Empleo, esta obligación incluye las de formar a los alumnos y alumnas trabajadores participantes en los aspectos teóricos y prácticos de las actividades profesionales u Oficio objeto del programa, así como contratarles durante la etapa de formación en alternancia. </p>
+                  <p> b) Justificar ante el órgano concedente el cumplimiento de los requisitos y condiciones, así como la realización de la actividad y el cumplimiento de la finalidad que determinen la concesión o disfrute de la subvención. </p>
+                  <p> c) Facilitar cuanta documentación le sea requerida y someterse a las actuaciones de comprobación a efectuar por el órgano concedente, así como cualesquiera otras de comprobación y control financiero que puedan realizar los órganos de control competentes, tanto nacionales como, en su caso, comunitarios, aportando cuanta información le sea requerida en el ejercicio de las actuaciones anteriores. </p>
+                  <p> d) Comunicar al órgano concedente la obtención de otras subvenciones, ayudas, ingresos o recursos que financien las actividades incentivadas. Esta comunicación deberá efectuarse tan pronto como se conozca y, en todo caso, con anterioridad a la justificación de la aplicación dada a los fondos percibidos. </p>
+                  <p> e) Disponer de los libros contables, registros diligenciados y demás documentos debidamente auditados en los términos exigidos por la legislación mercantil y sectorial aplicable a la entidad beneficiaria en cada caso, así como cuantos estados contables y registros específicos sean exigidos por las bases reguladoras de las subvenciones, con la finalidad de garantizar el adecuado ejercicio de las facultades de comprobación y control. </p>
+                  <p> f) Conservar los documentos justificativos de la aplicación de los fondos recibidos, incluidos los documentos electrónicos, en tanto puedan ser objeto de las actuaciones de comprobación y control. </p>
+                  <p> g) Hacer constar en toda información o publicidad que se efectúe de la actividad u objeto de la subvención que la misma está subvencionada por la Junta de Andalucía, Consejería de Empleo, Servicio Andaluz de Empleo, según lo establecido por el artículo 18.4 de la Ley General de Subvenciones, así como el artículo 29.2 de la Ley de Medidas Tributarias, Administrativas y Financieras. En los supuestos de proyectos financiados con fondos comunitarios, las entidades beneficiarias deberán cumplir además con las disposiciones que sobre información y publicidad se dicten por la Unión Europea. Así mismo, deberán cumplir las prescripciones sobre publicidad establecidas por el 37 de la presente Orden. El incumplimiento de cualquiera de estas obligaciones podrá dar lugar al reintegro de las ayudas recibidas. </p>
+                  <p> h) Proceder al reintegro de los fondos percibidos en los supuestos de incumplimiento de las normas medioambientales al realizar el objeto de la ayuda, de acuerdo con lo dispuesto en el artículo 112.f) de la Ley General de Hacienda Pública de la Comunidad Autónoma de Andalucía, así como en los supuestos contemplados por el artículo 34 de la presente Orden. </p>
+                  <p> 2. Así mismo, las entidades beneficiarias están obligadas a facilitar información al órgano concedente de la ayuda, así como a facilitar la comunicación y justificantes que le sean requeridos. </p>
+                  <p> Junto a ello, también están obligadas a comunicar al órgano concedente de la ayuda cualquier cambio de domicilio a efectos de notificaciones durante el período en el que la ayuda es reglamentariamente susceptible de control. </p>
+                  <p> El beneficiario debe de presentar una cuenta justificativa de los gastos incurridos y de otras financiaciones para el objeto de la subvención. </p>
+                  <p> 3. De conformidad con lo establecido en el artículo 13.2 de la Ley General de Subvenciones, en concordancia con lo dispuesto por el artículo 29.1 de la Ley de Medidas Tributarias, Administrativas y Financieras, en tanto que las subvenciones regulados en la presente Orden constituyen una medida eficaz de inserción en el mercado de trabajo a través de la cualificación y profesionalización de desempleados, mediante la formación en alternancia con el trabajo y la práctica profesional y mediante el desarrollo de tareas de acompañamiento e inserción de éstas, las entidades promotoras quedan excepcionadas de aportar la acreditación de hallarse al corriente en el cumplimiento de las obligaciones tributarias o frente a la Seguridad Social impuestas por las disposiciones vigentes, así como la de no tener deudas en periodo ejecutivo de cualquier otro ingreso de Derecho Público de la Comunidad Autónoma de Andalucía. </p>
+                  <p> Artículo 34. Reintegro de ayudas. </p>
+                  <p> 1. Además de los supuestos de invalidez de la resolución de concesión establecidos por el artículo 36 de la Ley General de Subvenciones, procederá el reintegro de las cantidades percibidas y la exigencia del interés de demora desde el momento del pago de la ayuda hasta la fecha en que se acuerde la procedencia del reintegro, en los siguientes casos: </p>
+                  <p> a) Obtención de la subvención falseando las condiciones requeridas para ello u ocultando aquéllas que lo hubieran impedido. </p>
+                  <p> b) Incumplimiento total o parcial del objetivo, de la actividad, del proyecto o la no adopción del comportamiento que fundamentan la concesión de la subvención. </p>
+                  <p> c) Incumplimiento de la obligación de justificación o la justificación insuficiente, en los términos establecidos en el artículo 31 de la presente Orden. </p>
+                  <p> d) Incumplimiento de la obligación de adoptar las medidas de difusión y publicidad contenidas en esta Orden, de conformidad con el artículo 18.4 de la Ley General de Subvenciones, así como el artículo 29.2 de la Ley de Medidas Tributarias, Administrativas y Financieras. </p>
+                  <p> e) Resistencia, excusa, obstrucción o negativa a las actuaciones de comprobación y control financiero previstas en los artículos 14 y 15 de la Ley General de Subvenciones, así como el incumplimiento de las obligaciones contables, registrales o de conservación de documentos cuando de ello se derive la imposibilidad de verificar el empleo dado a los fondos percibidos, el cumplimiento del objetivo, la realidad y regularidad de las actividades subvencionadas, o la concurrencia de subvenciones, ayudas, ingresos o recursos para la misma finalidad, procedentes de cualesquiera Administraciones o entes públicos o privados, nacionales, de la Unión Europea o de organismos internacionales. </p>
+                  <p> f) Incumplimiento de las obligaciones impuestas por la Administración a las entidades beneficiarias, así como de los compromisos por éstas asumidos, con motivo de la concesión de la subvención, siempre que afecten o se refieran al modo en que se han de conseguir los objetivos, realizar la actividad, ejecutar el proyecto o adoptar el comportamiento que fundamenta la concesión de la subvención. </p>
+                  <p> g) Incumplimiento de las obligaciones impuestas por la Administración a las entidades beneficiarias, así como de los compromisos por éstas asumidos, con motivo de la concesión de la subvención, distintos de los anteriores, cuando de ello se derive la imposibilidad de verificar el empleo dado a los fondos percibidos, el cumplimiento del objetivo, la realidad y regularidad de las actividades subvencionadas, o la concurrencia de subvenciones, ayudas, ingresos o recursos para la misma finalidad, procedentes de cualesquiera Administraciones o entes públicos o privados, nacionales, de la Unión Europea o de organismos internacionales. </p>
+                  <p> h) Incumplimiento de las normas medioambientales, en su caso, al realizar el objeto de la subvención o ayuda. En este supuesto, la tramitación del expediente de reintegro exigirá previamente que haya recaído resolución administrativa o judicial firme, en la que quede acreditado el incumplimiento por parte de la entidad beneficiaria de las medidas en materia de protección del medio ambiente a las que viniere obligada. </p>
+                  <p> i) Incumplimiento de la normativa vigente en materia de prevención y riesgos laborales. En este supuesto, la tramitación del expediente de reintegro exigirá previamente que haya recaído resolución administrativa o judicial firme, en la que quede acreditado el incumplimiento por parte de la entidad beneficiaria de las medidas en la referida materia. </p>
+                  <p> 2. En materia de reintegro de las ayudas contempladas en esta Orden serán de aplicación las reglas contenidas por el artículo 33 de la Ley de Medidas Tributarias, Administrativas y Financieras. </p>
+                  <p> 3. Cuando habiéndose producido circunstancias ajenas a la voluntad de la entidad beneficiaria de estas ayudas, que determinen un cumplimiento por parte de ésta que se aproxime de modo significativo al cumplimiento total, previa comunicación motivada y acreditación tanto de las citadas circunstancias como de la actuación inequívocamente tendente a la satisfacción de sus compromisos, el órgano concedente determinará la cantidad de dicha ayuda que proporcionalmente habrá de reintegrarse en función del tiempo en que se haya mantenido la actividad subvencionada. </p>
+                  <p> Artículo 35. Seguimiento y evaluación. </p>
+                  <p> El Servicio Andaluz de Empleo de la Consejería de Empleo realizará cuantas acciones sean necesarias para el seguimiento y evaluación de los programas establecidos en esta Orden por sí mismos o en colaboración con otras entidades, tanto en su aspecto cualitativo como cuantitativo. Las entidades promotoras facilitarán cuantos datos, documentación e información sean necesarias para evaluar las actuaciones realizadas. El incumplimiento de esta obligación podrá determinar su exclusión de futuros proyectos de Escuelas Taller, Casas de Oficio, Talleres de Empleo y Unidades de Promoción y Desarrollo. </p>
+                  <p> Dentro del plazo de seis meses desde la finalización del proyecto, las entidades promotoras deberán acreditar el porcentaje de inserción en el mercado laboral de los alumnos y alumnas trabajadores participantes en el mismo, a los efectos de consideración en la concesión de futuras ayudas. </p>
+                  <p> Artículo 36. Publicidad. </p>
+                  <p> 1. Las ayudas concedidas se publicarán en el Boletín Oficial de la Junta de Andalucía, expresando el programa y el crédito presupuestario al que se imputen, la entidad beneficiaria, la cantidad concedida y la finalidad de las ayudas. La citada publicación no será necesaria en los casos que contenidos por el artículo 18.3 de la Ley General de Subvenciones. </p>
+                  <p> 2. Las entidades que participen en el desarrollo de estos programas deberán manifestar de modo expreso su colaboración con el Servicio Andaluz de Empleo de la Consejería de Empleo. </p>
+                  <p> Para ello, se tendrá en cuenta lo dispuesto en el Manual de Diseño Gráfico para su utilización para el Gobierno y Administración de la Junta de Andalucía, aprobado por Decreto 245/1997, de 15 de octubre. </p>
+                  <p> El Servicio Andaluz de Empleo de la Consejería de Empleo podrá establecer las características que a tal efecto deberán reunir los materiales impresos o audiovisuales que elaboren las Entidades promotoras. Con independencia de ello, la entidad promotora vendrá obligada a cumplir los siguientes extremos: </p>
+                  <p> - Siempre que se elabore cualquier tipo de material o indumentaria de trabajo con cargo a la ayuda concedida, deberá llevar la identificación de su financiación por parte de la Consejería de Empleo en el formato que el Servicio Andaluz de Empleo establezca, teniendo la Entidad promotora la obligación de conservar un original de los mismos a disposición de los órganos de gestión y control competentes, por cuanto que el Servicio Andaluz de Empleo podrá darle la utilidad y publicidad que estime conveniente. </p>
+                  <p> - Cuando las Escuelas Taller, Casas de Oficio o Taller de Empleo, en el desarrollo de su actividad, produzcan bienes o preste servicios cuya comercialización ha sido autorizada por el Servicio Andaluz de Empleo en los términos establecidos por los artículos 14.3 y 18.3 deberá quedar identificado en el formato que el Servicio Andaluz de Empleo establezca que los mismos están siendo producidos o prestados por una Escuelas Taller, Casas de Oficio o Taller de Empleo financiado por la Consejería de Empleo. </p>
+                  <p> Además, la entidad promotora estará obligada a publicar en un medio de comunicación local y según el formato establecido por el Servicio Andaluz de Empleo, que el proyecto que se encuentra en desarrollo está siendo financiado por la Consejería de Empleo. Dicha obligación habrá de cumplirse una vez por cada ejercicio que dure el proyecto. </p>
+                  <p> 3. El incumplimiento por parte de la entidad promotora de cualquiera de las obligaciones respecto a la publicidad establecidas en este artículo podrá dar lugar al reintegro de la ayuda en los términos dispuestos por el artículo 34 de la presente Orden. </p>
+                  <p> Disposición derogatoria única. </p>
+                  <p> Quedan derogadas las Disposiciones de igual o inferior rango en cuanto se opongan o contradigan lo dispuesto en la presente Orden. </p>
+                  <p> Disposición transitoria única. Período transitorio. </p>
+                  <p> Excepcionalmente, las solicitudes de ayudas a los proyectos de Unidades de Promoción y Desarrollo para la convocatoria del año 2007 se presentarán en el plazo establecido por el artículo 25.1 de la presente Orden para proyectos de Escuelas Taller, Casas de Oficio y Talleres de Empleo. </p>
+                  <p> Disposición final primera. Habilitación para dictar instrucciones. </p>
+                  <p> Se faculta a la Dirección General de Fomento de Empleo a dictar cuantas instrucciones sean necesarias para la correcta aplicación e interpretación de la presente orden en el ámbito de sus competencias específicas. </p>
+                  <p> Disposición final segunda. Habilitación para adecuación de cuantías a la normativa básica estatal. </p>
+                  <p> Se faculta a la Dirección General de Fomento de Empleo a adecuar mediante Resolución aquellas cuantías relativas a las líneas de ayudas reguladas por la presente Orden a las cuantías que mediante normativa estatal básica se establezcan respecto de las mismas. </p>
+                  <p> Disposición final tercera. Habilitación adecuación Reglamento Marco de Régimen Interior. </p>
+                  <p> Se autoriza al titular de la Dirección General de Fomento del Empleo del Servicio Andaluz de Empleo de la Consejería de Empleo a adecuar el Reglamento Marco de Régimen Interior aprobado mediante Resolución de 14 de julio de 2004, publicado en BOJA núm. </p>
+                  <p> 155, de 9 de agosto de 2004, al contenido de la presente Orden. </p>
+                  <p> Disposición Final Cuarta. Entrada en vigor. </p>
+                  <p> La presente Orden entrará en vigor el mismo día de su publicación en el "Boletín Oficial de la Junta de Andalucía. </p>
+                  <p> Sevilla, 5 de diciembre de 2006 </p>
+                  <p> ANTONIO FERNANDEZ GARCIA </p>
+                  <p> Consejero de Empleo </p>
+                  <p> Artículo 2. Beneficiarios. </p>
+                  <p> 1. Los proyectos de Escuelas Taller, Casas de Oficio y Talleres de Empleo podrán ser promovidos, en el ámbito territorial de la Comunidad Autónoma de Andalucía, por las siguientes entidades: </p>
+                  <p> a) Corporaciones Locales de la Comunidad Autónoma de Andalucía, sus organismos autónomos y entidades con competencias en materia de promoción de empleo, dependientes o asimiladas a las mismas, cuya titularidad corresponda íntegramente a dichas Corporaciones locales. </p>
+                  <p> b) Consorcios y entidades de Derecho Público con sede en el ámbito territorial de la Comunidad Autónoma de Andalucía. </p>
+                  <p> c) Asociaciones, Fundaciones y otras entidades sin ánimo de lucro con sede en el ámbito territorial de la Comunidad Autónoma de Andalucía. </p>
+                  <p> 2. Los proyectos de Unidades de Promoción y Desarrollo podrán ser promovidos por Corporaciones Locales y Entidades de Derecho Público de la Comunidad Autónoma de Andalucía. En ambos supuestos deberá tratarse de una entidad de ámbito geográfico regional o provincial. </p>
+                  <p> 3. En cualquier caso, las entidades promotoras deberán ser competentes para la ejecución de las correspondientes obras o servicios y disponer de la capacidad técnica y de gestión suficientes. </p>
+                  <p> Artículo 3. Requisitos para obtener la condición de beneficiario. </p>
+                  <p> 1. Con carácter general, y de conformidad con lo establecido por el artículo 13.2 y 3 de la Ley General de Subvenciones, podrán obtener la condición de beneficiarias de las subvenciones establecidos en la presente Orden, las entidades en las que no concurra alguna de las siguientes causas de exclusión: </p>
+                  <p> a) Haber sido condenadas mediante sentencia firme a la pena de pérdida de la posibilidad de obtener subvenciones o ayudas públicas. </p>
+                  <p> b) Haber solicitado la declaración de concurso, haber sido declaradas insolventes en cualquier procedimiento, hallarse declaradas en concurso, estar sujetas a intervención judicial o haber sido inhabilitadas conforme a la Ley Concursal sin que haya concluido el período de inhabilitación fijado en la sentencia de calificación del concurso. </p>
+                  <p> c) Haber dado lugar, por causa de la que hubiesen sido declaradas culpables, a la resolución firme de cualquier contrato celebrado con la Administración. </p>
+                  <p> d) Estar incursa la persona física, los administradores de las sociedades mercantiles o aquellos que ostenten la representación legal de otras personas jurídicas, en alguno de los supuestos de la Ley 12/1995, de 11 de mayo, de Incompatibilidades de los Miembros del Gobierno de la Nación y de los Altos Cargos de la Administración General del Estado, de la Ley 53/1984, de 26 de diciembre, de Incompatibilidades del Personal al Servicio de las Administraciones Públicas, de la Ley 3/2005, de 8 de abril, de Incompatibilidades de Altos Cargos de la Administración de la Junta de Andalucía y de Declaración de Actividades, Bienes e Intereses de Altos Cargos y otros Cargos Públicos, o tratarse de cualquiera de los cargos electivos regulados en la Ley Orgánica 5/1985, de 19 de junio, del Régimen Electoral General, en los términos establecidos en la misma o en la normativa autonómica que regule estas materias. </p>
+                  <p> e) Tener la residencia fiscal en un país o territorio calificado reglamentariamente como paraíso fiscal. </p>
+                  <p> f) No hallarse al corriente del pago de obligaciones por reintegro de subvenciones. </p>
+                  <p> g) Haber sido sancionada mediante resolución firme con la pérdida de la posibilidad de obtener subvenciones según de la Ley General de Subvenciones o la Ley General Tributaria. </p>
+                  <p> h) Las asociaciones incursas en las causas de prohibición previstas en el artículo 4.5 y 6 de la Ley Orgánica 1/2002, de 22 de marzo, reguladora del Derecho de Asociación, ni aquellas respecto las que hubiera suspendido el procedimiento administrativo de inscripción por encontrarse indicios racionales de ilicitud penal, en aplicación de lo dispuesto por el artículo 30.4 de la Ley Orgánica 1/2002, en tanto no recaiga resolución judicial firme en cuya virtud pueda practicarse la inscripción en el correspondiente registro. </p>
+                  <p> 2. Sin perjuicio de las exclusiones generales establecidas en el apartado anterior, tampoco podrán obtener la condición de posibles beneficiarias de las subvenciones previstos en la presente Orden aquellas entidades promotoras que se encuentren en alguna de las situaciones siguientes: </p>
+                  <p> a) Haber sido condenadas por sentencia judicial firme o sancionadas por resolución administrativa firme en los tres últimos años por falta muy grave en materia de prevención de riesgos laborales. </p>
+                  <p> b) Haber sido condenadas por sentencia judicial firme o resolución administrativa firme en los tres últimos años por prácticas de discriminación laboral o en materia de género. </p>
+                  <p> c) Haber obtenido con anterioridad ayudas públicas para la ejecución de proyectos similares, y no acreditar un porcentaje de inserción laboral real de al menos el 30% del alumnado trabajador que participó en los mismos por sí o por terceras entidades. Esta causa de exclusión no se apreciará cuando la entidad promotora pertenezca a un municipio de hasta 5.000 habitantes o cuando exista un convenio especifico firmado con la Consejería de Cultura. </p>
+                  <p> d) Haber obtenido con anterioridad ayudas públicas y no acreditar la realización de la planificación preventiva incluida en el Plan de Prevención de Riesgos Laborales de los centros de trabajo. </p>
+                  <p> Artículo 4. Destinatarios </p>
+                  <p> 1. Las medidas contenidas en los programas establecidos en el artículo 1.2 de la presente Orden están dirigidas a las personas desempleadas que cumplan los requisitos específicos propios de cada uno de ellos y, preferentemente, los requisitos establecidos en la normativa de aplicación para formalizar el contrato de formación. </p>
+                  <p> A estos efectos se entenderá por personas desempleadas aquellas que sean demandantes de empleo no ocupadas, registradas en las oficinas del Servicio Andaluz de Empleo de la Consejería de Empleo y que estén disponibles para el empleo. </p>
+                  <p> 2. Una vez acreditado el cumplimiento de los requisitos mínimos, y de los específicos de cada programa se considerarán colectivos preferentes los siguientes: </p>
+                  <p> a) Mujeres. </p>
+                  <p> b) Usuarios de Andalucía Orienta, que tengan incluida en su itinerario de inserción la especialidad de la Escuela Taller, Casa de Oficio o Taller de Empleo. </p>
+                  <p> c) Demandantes de empleo de larga duración, entendiéndose por tales aquellos que superen un periodo de antigüedad en la demanda de empleo de seis meses. </p>
+                  <p> d) Demandantes de empleo en riesgo de exclusión, entendiéndose por tales quienes pertenezcan a alguno de los colectivos señalados en el artículo 3 del Decreto 85/2003, de 1 abril, por el que se establecen los Programas para la Inserción Laboral de la Junta de Andalucía. </p>
+                  <p> e) Personas con un grado de discapacidad de al menos el 33%. </p>
+                  <p> f) Minorías étnicas. </p>
+                  <p> g) Inmigrantes legalmente documentados. </p>
+                  <p> h) En los Programas de Escuelas Taller y de Casas de Oficio, los jóvenes mayores de dieciséis años y de hasta veintitrés años sin formación reglada en la ocupación en la que van a ser posteriormente contratados. </p>
+                  <p> i) No haber participado anteriormente como alumno o alumna trabajador en más de uno de los Programas establecidos en esta Orden. </p>
+                  <p> 3. Los requisitos y prioridades descritos en los anteriores apartados, así como los criterios de selección del alumnado trabajador que se acuerdan en cada proyecto, estarán sujetos a las pautas que determine el Servicio Andaluz de Empleo de la Consejería de Empleo, de acuerdo con lo que establezcan las Directrices de Empleo Europeas, en el marco de la Estrategia Europea de Empleo. </p>
+                  <p> 4. Independientemente de lo dispuesto en los apartados anteriores, y respecto del computo total plazas de alumnos y alumnas trabajadores a cubrir en la convocatoria anual de los proyectos que se ejecuten al amparo de los programas establecidos en la presente Orden, se reserva un cupo de al menos el 5% para personas con discapacidad igual o superior al 33%. </p>
+                  <p> Artículo 5. Procedimiento de concesión </p>
+                  <p> Las ayudas desarrolladas en la presente Orden para proyectos tanto de Escuelas Taller, Casas de Oficio y Talleres de Empleo, como de Unidades de Promoción y Desarrollo, constituyen una eficaz medida de inserción en el mercado de trabajo a través de la cualificación y profesionalización de personas desempleadas, mediante la formación en alternancia con el trabajo y la práctica profesional, y mediante el desarrollo de tareas de acompañamiento e inserción de éstas, lo que determina que las mismas no puedan quedar sometidas a un régimen de concurrencia competitiva, no resultando necesario establecer comparación entre solicitudes ni prelación entre las mismas, de conformidad con lo establecido en el artículo 31.1 de la antes citada Ley 3/2004, de 28 de diciembre. </p>
+                  <p> Artículo 6. Módulos obligatorios. </p>
+                  <p> En todos los proyectos de Escuelas Taller, Casas de Oficio y Talleres de Empleo se impartirán los siguientes módulos complementarios que se incluirán dentro del plan formativo exigido en el artículo 24.1 de la presente Orden, con los contenidos que, en su caso, determine el Servicio Andaluz de Empleo de la Consejería de Empleo, y la duración mínima que a continuación se establece: </p>
+                  <p> a) Módulo de alfabetización informática, cuya duración será de al menos 30 horas, salvo que el contenido del proyecto requiera una duración menor. </p>
+                  <p> b) Módulo de prevención de riesgos laborales, cuya duración será de 30 horas, salvo cuando la especialidad del proyecto esté incluida en el Anexo I del Real Decreto 39/1997, de 17 de enero, por el que se establece el Reglamento de los Servicios de Prevención, en cuyo caso la duración será de 50 horas. </p>
+                  <p> c) Módulo de sensibilización medioambiental, cuya duración será de 10 horas. </p>
+                  <p> d) Módulo de fomento para la actividad emprendedora, de 10 horas de duración. </p>
+                  <p> e) Módulo de igualdad de género, de 10 horas de duración. </p>
+                  <p> f) Módulo de igualdad para colectivos desfavorecidos, de 10 horas de duración. </p>
+                  <p> Artículo 7. Formación básica. </p>
+                  <p> Para aquellos alumnos y alumnas trabajadores participantes en una Escuela Taller, Casa de Oficio y Taller de Empleo que no hayan alcanzado los objetivos de la educación secundaria obligatoria, previstos en la normativa vigente en materia de educación y/o normas reglamentarias que la desarrollen, así como en el artículo 11.2.e) del Texto Refundido de la Ley del Estatuto de los Trabajadores, se organizarán programas específicos con el fin de proporcionarles una formación básica y profesional que les permita incorporarse a la vida activa o proseguir sus estudios en las distintas enseñanzas reguladas en las normas educativas vigentes. </p>
+                  <p> Lo dispuesto en el párrafo anterior será de aplicación a todos aquellos que no posean el título de Graduado Escolar, al tener este título los mismos efectos profesionales que el título de Graduado en Educación Secundaria, de acuerdo con la legislación vigente en la materia. </p>
+                  <p> Esta formación básica se realizará dentro de las horas de formación del proyecto de Escuela Taller, Casa de Oficio y Taller de Empleo. </p>
+                  <p> Artículo 8. Certificaciones de la formación y cualificación. </p>
+                  <p> Al término de su participación en una Escuela Taller, Casa de Oficio o Taller de Empleo cada uno de los alumnos y alumnas trabajadores recibirá un certificado expedido por la entidad promotora, en los términos recogidos en el artícu­lo 11.2.g) del Texto Refundido de la Ley del Estatuto de los Trabajadores. En dicho certificado constará la duración en horas de su participación en el programa, el nivel de formación teórico-práctica adquirida, los módulos formativos cursados, así como el nivel de cualificación profesional obtenido. </p>
+                  <p> Este certificado podrá servir total o parcialmente, y previos los requisitos que se determinen, para ser convalidado en su momento por el certificado de profesionalidad previsto en el Real Decreto 1506/2003, de 28 de noviembre, por el que se establecen las directrices de los certificados de profesionalidad o norma que lo sustituya. </p>
+                  <p> Artículo 9. Orientación, información profesional, formación empresarial y asistencia técnica. </p>
+                  <p> 1. El alumnado trabajador de Escuelas Taller, Casas de Oficio o Talleres de Empleo recibirá durante todo el proceso formativo orientación, asesoramiento para la búsqueda de empleo, información laboral y profesional así como formación empresarial. Para ello, la Escuela Taller, Casa de Oficio, Taller de Empleo o Unidad de Promoción y Desarrollo deberán contar con el personal y métodos adecuados. </p>
+                  <p> 2. Durante al menos seis meses desde la finalización del proyecto de Escuela Taller, Casa de Oficio, Taller de Empleo o Unidad de Promoción y Desarrollo, las entidades promotoras prestarán asistencia técnica a los alumnos y alumnas trabajadores, tanto para la búsqueda de empleo por cuenta ajena como para el establecimiento por cuenta propia. Para ello contarán con la Red de servicios que pone a su disposición el Servicio Andaluz de Empleo de la Consejería de Empleo. </p>
+                  <p> CAPITULO II </p>
+                  <p> PROGRAMA DE ESCUELAS TALLER Y CASAS DE OFICIO </p>
+                  <p> Artículo 10. Objeto. </p>
+                  <p> 1. El Programa de Escuelas Taller y Casas de Oficio tiene por objeto el desarrollo de proyectos de carácter temporal destinado a personas jóvenes desempleadas mayores de dieciséis años y menores de veinticinco años en los que el aprendizaje y la cualificación se alternan con un trabajo productivo. </p>
+                  <p> 2. Este Programa se articulará mediante el establecimiento de las siguientes medidas: </p>
+                  <p> a) Ayudas a Proyectos de Escuelas Taller. </p>
+                  <p> b) Ayudas a Proyectos de Casas de Oficio. </p>
+                  <p> 3. Los proyectos de Escuelas Taller y Casas de Oficio constarán de dos etapas: </p>
+                  <p> a) Una primera etapa formativa de iniciación en la que el alumnado trabajador recibirá formación profesional ocupacional adecuada a la ocupación a desempeñar, según el plan formativo incluido en la memoria exigida en el artículo 24.1 de la presente Orden. Dicha formación se adecuará, en la medida de lo posible y en función del oficio o puesto de trabajo a desempeñar, a los contenidos mínimos establecidos en los Reales Decretos que regulen los certificados de profesionalidad de las correspondientes ocupaciones, de acuerdo con lo establecido en el Real Decreto 1506/2003, de 28 de noviembre, por el que se establecen las directrices de los certificados de profesionalidad. </p>
+                  <p> Durante esta etapa, el alumnado trabajador tendrá derecho a percibir una beca, en los términos recogidos en el artículo 14.1.c) de la presente Orden. Con independencia de lo establecido en el Reglamento Marco de Régimen Interior de Escuelas Taller, Casas de Oficio, Talleres de Empleo y Unidades de Promoción y Desarrollo, aprobado por resolución de 14 de julio de 2004 de la Dirección General de Fomento del Empleo del Servicio Andaluz de Empleo, o aquel que lo modifique o sustituya, la percepción de la beca será incompatible con la percepción de las siguientes prestaciones o subsidios: </p>
+                  <p> - Subsidios por desempleo, regulados en el Título III del Texto Refundido de la Ley General de la Seguridad Social aprobado por Real Decreto Legislativo 1/1994, de 20 de junio. </p>
+                  <p> - Subsidio por desempleo en favor de personas trabajadoras eventuales incluidas en el Régimen Especial Agrario de la Seguridad Social, regulado en el Real Decreto 5/1997, de 10 de enero. </p>
+                  <p> Los alumnos y alumnas trabajadores que perciban prestaciones o subsidios por desempleo mantendrán la percepción de los mismos y, una vez agotada y a partir de dicha fecha, podrán recibir la beca correspondiente. </p>
+                  <p> b) Una segunda etapa de formación en alternancia con el trabajo y la práctica profesional, en la que los alumnos y alumnas trabajadores complementarán su formación y serán contratados por las entidades promotoras. </p>
+                  <p> Las entidades promotoras formalizarán la contratación de los alumnos y alumnas trabajadores utilizando como modalidad contractual preferente el contrato para la formación, de acuerdo con lo establecido en el artículo 11.2 del Texto Refundido de la Ley del Estatuto de los Trabajadores, sin perjuicio de que, cuando las características y circunstancias de alguno de éstos lo exijan, la entidad promotora podrá optar por la formalización de un contrato distinto al de formación. </p>
+                  <p> Durante esta etapa los alumnos y alumnas trabajadores percibirán las retribuciones salariales que les correspondan de conformidad con lo previsto en la normativa aplicable y en la presente Orden. </p>
+                  <p> La duración de los contratos de trabajo suscritos con los alumnos y alumnas trabajadores no podrá exceder a la fecha de finalización del proyecto de Escuela Taller o Casa de Oficio. </p>
+                  <p> 4. Aquellos alumnos y alumnas trabajadores que finalicen la realización del proyecto y presenten proyectos viables para constituirse en trabajadores o trabajadoras autónomos serán colectivo prioritario, en función del proyecto, en relación con las ayudas que para potenciar el trabajo autónomo establece la Junta de Andalucía. Asimismo, los contratos indefinidos que se formalicen con alumnos y alumnas trabajadores que finalicen la realización del proyecto serán incentivables de conformidad con lo establecido en la normativa reguladora. </p>
+                  <p> Artículo 11. Proyectos de Escuelas Taller. Duración. </p>
+                  <p> 1. En los proyectos de Escuelas Taller el aprendizaje y la cualificación se alternan con un trabajo productivo en actividades relacionadas con la recuperación o promoción del patrimonio artístico, histórico, cultural o natural; con la rehabilitación de entornos urbanos o del medio ambiente; la recuperación o creación de infraestructuras públicas, así como con cualquier otra actividad de utilidad pública o social que permita la inserción, a través de la profesionalización y adquisición de experiencia, de los participantes. </p>
+                  <p> 2. Los proyectos de Escuelas Taller constarán de una primera etapa de carácter formativo de iniciación, cuya duración mínima será de 6 meses, y otra segunda etapa de formación en alternancia con el trabajo y la práctica profesional. La duración de ambas etapas no será inferior a un año ni superior a dos, divididas en períodos semestrales. </p>
+                  <p> En el caso de que la resolución aprobatoria inicial estableciera un período de duración inferior a dos años se podrá prorrogar el proyecto hasta agotar la duración máxima de dos años, mediante nueva resolución previa solicitud de la entidad promotora y, en cualquier caso, con anterioridad a la finalización del plazo inicialmente concedido. Agotado el periodo máximo de duración se entenderá finalizado el proyecto. </p>
+                  <p> Artículo 12. Proyectos de Casas de Oficio. Duración. </p>
+                  <p> 1. En los proyectos de Casas de Oficio el aprendizaje y la cualificación se alternan con un trabajo productivo en actividades relacionadas con el mantenimiento y cuidado de entornos urbanos, rurales o del medio ambiente, con la mejora de las condiciones de vida de pueblos y ciudades a través de la prestación de servicios sociales y comunitarios, así como con cualquier otra actividad de utilidad pública, social o artesana, que permita la inserción, a través de la profesionalización y adquisición de experiencia, de los participantes. </p>
+                  <p> 2. Los proyectos de Casas de Oficio constarán de una primera etapa de carácter formativo de iniciación y otra segunda etapa de formación en alternancia con el trabajo y la práctica profesional, teniendo cada una de ellas una duración de seis meses. La duración de las Casas de Oficio será, por tanto, de un año y una vez transcurrido dicho plazo se entenderán finalizados los proyectos. </p>
+                  <p> Artículo 13. Requisitos de los proyectos de Escuelas Taller y Casas de Oficio. </p>
+                  <p> 1. Podrán beneficiarse de las ayudas desarrolladas en esta Orden las entidades promotoras que, no estando afectadas por alguna de las exclusiones establecidas en el artículo 3 de la misma, presenten proyectos de Escuelas Taller y Casas de Oficio que cumplan los siguientes requisitos: </p>
+                  <p> a) Que no contenga sucesivas fases de proyectos ya subvencionados anteriormente con cargo al mismo programa y ejecutados por la misma entidad promotora. </p>
+                  <p> b) Que contemple un porcentaje de inserción laboral estimado de al menos el 30% del alumnado trabajador que participará en el mismos por sí o por terceras entidades. </p>
+                  <p> Cuando el proyecto se vaya a ejecutar en un municipio de hasta 5.000 habitantes o cuando exista un convenio especifico firmado con la Consejería de Cultura, no serán exigibles los requisitos establecidos en el presente apartado. </p>
+                  <p> 2. Sin perjuicio de lo anterior, y a los efectos de la concesión de las ayudas establecidas en la presente Orden se tomará en consideración el que los proyectos sean promovidos a partir de estudios realizados por las Unidades Territoriales de Empleo y Desarrollo Tecnológico sobre potenciales de nuevas actividades económicas a través del autoempleo. </p>
+                  <p> Artículo 14. Incentivos a los proyectos de Escuelas Taller y Casas de Oficio. </p>
+                  <p> 1. La aportación económica del Servicio Andaluz de Empleo de la Consejería de Empleo para cada Escuela Taller o Casa de Oficio se determinará en la resolución aprobatoria de las ayudas correspondientes, destinándose exclusivamente a sufragar los siguientes costes: </p>
+                  <p> a) Los de formación profesional ocupacional y educación complementaria durante todas las etapas del proyecto. Las ayudas compensarán los costes de personal directivo, docente y de apoyo, medios didácticos, material escolar y de consumo y otros gastos de funcionamiento que el Servicio Andaluz de Empleo de la Consejería de Empleo considere justificados. Además, durante la primera etapa formativa, se compensará el coste del seguro de accidentes de los alumnos y alumnas trabajadores. </p>
+                  <p> El cálculo de la ayuda se efectuará por hora/alumno de formación y por módulos y fases: </p>
+                  <p> - Con el módulo A se compensarán los costes salariales del personal directivo, docente y de apoyo que hayan sido seleccionados y contratados para la Escuela Taller o Casa de Oficio, incluidos los originados por las cuotas a cargo del empleador a la Seguridad Social por todos los conceptos, desempleo, fondo de garantía salarial y formación profesional. No se incentivarán, en ningún caso, las indemnizaciones por fallecimiento y las correspondientes a traslados, suspensiones, despidos, ceses o finalizaciones de contrato. </p>
+                  <p> - Con el módulo B se compensarán los demás gastos de formación y funcionamiento señalados a continuación: </p>
+                  <p> Medios y material didáctico y de consumo para la formación. </p>
+                  <p> Gastos de desplazamiento para la formación. </p>
+                  <p> Material de oficina. </p>
+                  <p> Alquiler de equipo y maquinaria, excluido leasing. </p>
+                  <p> Gastos generales. </p>
+                  <p> Amortización de instalaciones y equipos. Para el cálculo de la misma se utilizarán las tablas de coeficiente anuales de amortización establecidas por el Ministerio de Hacienda. </p>
+                  <p> Seguro de accidente de los alumnos y alumnas trabajadores durante la fase de formación. </p>
+                  <p> Otros gastos de funcionamiento necesarios para el desarrollo del proyecto formativo, siempre que cuenten con la autorización del Servicio Andaluz de Empleo de la Consejería de Empleo. </p>
+                  <p> En ningún caso serán susceptibles de financiarse con cargo a la ayuda: </p>
+                  <p> - Gastos de inversión, adquisición de inmuebles, instalaciones, maquinaria o equipos. </p>
+                  <p> - Alquileres de edificios, locales, naves, aulas y acondicionamiento de los mismo, cuando este no sea resultado de la práctica profesional del alumnado trabajador participante. </p>
+                  <p> - Gastos financieros. </p>
+                  <p> Dado que el alumnado trabajador recibe formación, bien sea teórica o teórica-práctica, durante toda la jornada en la Escuela Taller o Casa de Oficio, se considerarán horas formativas las correspondientes a la totalidad de la misma, tanto en la etapa formativa como en la etapa de formación en alternancia con la práctica profesional. Para el año 2007 se establecen los siguientes importes: </p>
+                  <p> - Primera etapa de formación inicial: </p>
+                  <p> Módulo A: 2,89 euros/hora/alumno. </p>
+                  <p> Módulo B: 1,61 euros/hora/alumno. </p>
+                  <p> - Segunda etapa de formación en alternancia: </p>
+                  <p> Módulo A: 2,89 euros/hora/alumno. </p>
+                  <p> Módulo B: 0,80 euros/hora/alumno. </p>
+                  <p> Para el cálculo del importe del módulo A se tiene en cuenta una relación de un docente a jornada completa para cada ocho alumnos y alumnas trabajadores. A efectos de calculo se considerará la jornada de 40 horas semanales. </p>
+                  <p> Los incrementos anuales para años naturales sucesivos de estos módulos serán del 3%, mientras no se dicte disposición en contra. El valor de los mismos será único para todo el proyecto aún cuando éste se desarrolle en dos ejercicios anuales distintos, y será el que corresponda al mes de inicio del mismo. </p>
+                  <p> b) Los costes salariales derivados de los contratos que se suscriban con los alumnos y alumnas trabajadores previstos en el artículo 10.3.b) de esta Orden. </p>
+                  <p> En los contratos para la formación, el Servicio Andaluz de Empleo de la Consejería de Empleo incentivará el 75% del Salario Mínimo Interprofesional anualmente establecido. Asimismo, se incentivarán la totalidad de las cuotas a cargo del empleador correspondientes a la Seguridad Social, Fondo de Garantía Salarial y Formación Profesional establecidas para dichos contratos en su normativa específica incluyéndose en estas cuantías la parte proporcional de dos pagas extraordinarias. </p>
+                  <p> Cuando las características y circunstancias del algún alumno o alumna trabajador exijan la formulación de un contrato en modalidad distinta al de formación, el Servicio Andaluz de Empleo de la Consejería de Empleo incentivará la misma cuantía que la señalada en el párrafo anterior, para la parte de sueldo y salarios. Para la cotización empresarial a la Seguridad Social la ayuda será equivalente al importe de todas las cuotas a la Seguridad Social a cargo del empresario, referidas a una retribución equivalente al 75% del Salario Mínimo Interprofesional. </p>
+                  <p> Cuando la duración del proyecto determine que se actúe en dos ejercicios distintos, la resolución de concesión contemplará con carácter estimativo, según dicha duración, uno o varios incrementos anuales para años sucesivos del 3,5%, aplicados sobre el Salario Mínimo Interprofesional y las cuotas patronales que correspondan a la anualidad en que se inicia el proyecto. Cuando, en los términos establecidos por el artículo 31 de esta Orden, se proceda a la liquidación del proyecto, se habrá de corregir dicho porcentaje en función del Salario Mínimo Interprofesional aprobado para cada anualidad correspondiendo, en su caso, la minoración de la partida dla subvención aplicada a dichos costes salariales. </p>
+                  <p> c) Las becas de los alumnos y alumnas trabajadores durante la etapa formativa y siempre que no incurran en las causas de incompatibilidad establecidas por el artículo 10.3.c) de esta Orden. </p>
+                  <p> En relación con este concepto los alumnos y alumnas trabajadores no percibirán las becas correspondientes a los días lectivos que, sin causa justificada, no hayan asistido a la Escuela Taller o Casa de Oficio. </p>
+                  <p> El importe de la beca se calculará en base a 6,01 </p>
+                  <p> por día lectivo, pudiendo ser esta cantidad actualizada cuando legalmente corresponda mediante Resolución de la Dirección General de Fomento de Empleo del Servicio Andaluz de Empleo. </p>
+                  <p> 2. La financiación de los gastos previstos en el apartado anterior de este artículo se realizará con cargo a las dotaciones que se establezcan anualmente para el Programa de Escuelas Taller y Casas de Oficio en los presupuestos del Servicio Andaluz de Empleo de la Consejería de Empleo. </p>
+                  <p> 3. Cuando las Escuelas Taller o Casas de Oficio, en el desarrollo de su actividad, produzcan bienes susceptibles de comercialización se informará y solicitará autorización previa al Servicio Andaluz de Empleo, pudiéndose enajenarse siempre que no se incurra en competencia desleal y se disponga de las autorizaciones necesarias. Igualmente, podrán prestarse servicios remunerados que incidan directamente en la formación, para la realización de prácticas o perfeccionamiento de los conocimientos adquiridos siempre que esté previsto en el proyecto aprobado y sea necesario para la formación práctica. En cualquier caso, deberá quedar identificado que los mismos se están siendo producidos o prestados por una Escuela Taller o Casa de Oficio financiada por la Consejería de Empleo. </p>
+                  <p> Los ingresos procedentes de tales enajenaciones o de la prestación de servicios deberán aplicarse a las actividades de la Escuela Taller o Casa de Oficio, quedando constancia documental y contable tanto de los ingresos obtenidos como del destino dado a los mismos. </p>
+                  <p> 4. En el supuesto de que el proyecto conlleve la adquisición, construcción, rehabilitación y mejora de bienes inventariables se estará a lo dispuesto en la resolución de concesión con pleno sometimiento al artículo 31.4 de la Ley General de Subvenciones. Así mismo, los bienes deberán destinarse al fin concreto para el que se concedió la subvención durante los plazos establecidos por la letra a) del apartado 4 del citado artículo. </p>
+                  <p> CAPITULO III </p>
+                  <p> PROGRAMA DE TALLERES DE EMPLEO </p>
+                  <p> Artículo 15. Objeto. </p>
+                  <p> 1. El Programa de Talleres de Empleo tiene por objeto el desarrollo de proyectos de carácter temporal destinado a personas desempleadas de más de veinticinco años, en los que el aprendizaje y la cualificación se alternan con el trabajo productivo </p>
+                  <p> 2. Este Programa se articulará mediante el establecimiento de ayudas a proyectos de Talleres de Empleo. </p>
+                  <p> 3. En los proyectos de Talleres de Empleo el alumnado trabajador recibirá formación profesional ocupacional adecuada a la ocupación a desempeñar en alternancia con el trabajo y la práctica profesional y serán contratados por las entidades promotoras. </p>
+                  <p> Las entidades promotoras formalizarán la contratación de los alumnos y alumnas trabajadores utilizando como modalidad contractual preferente el contrato para la formación, de acuerdo con lo establecido en el artículo 11.2 del Texto Refundido de la Ley del Estatuto de los Trabajadores, sin perjuicio de que, cuando las características y circunstancias de alguno de éstos lo exijan, la entidad promotora podrá optar por la formalización de un contrato distinto al de formación. </p>
+                  <p> Durante todo el proyecto los alumnos y alumnas trabajadores percibirán las retribuciones salariales que les correspondan de conformidad con lo previsto en la normativa aplicable y en la presente Orden. </p>
+                  <p> La duración de los contratos de trabajo suscritos con los alumnos y alumnas trabajadores no podrá exceder a la fecha de finalización del proyecto de Taller de Empleo. </p>
+                  <p> 4. Aquellos alumnos y alumnas trabajadores que finalicen la realización del proyecto y presenten proyectos viables para constituirse en trabajadores o trabajadoras autónomos serán colectivo prioritario, en función del proyecto, en relación con las ayudas que para potenciar el trabajo autónomo establece la Junta de Andalucía. Asimismo, los contratos indefinidos que se formalicen con alumnos y alumnas trabajadores que finalicen la realización del proyecto serán incentivables de conformidad con lo establecido en la normativa reguladora. </p>
+                  <p> Artículo 16. Proyectos de Talleres de Empleo. Duración. </p>
+                  <p> 1. En los proyectos de Talleres de Empleo el aprendizaje y la cualificación se alternan con un trabajo productivo en actividades de interés público, social o artesanal que permitan la inserción a través de la profesionalización y adquisición de experiencia de los participantes. </p>
+                  <p> 2. Los Talleres de Empleo tendrán una duración mínima de seis meses y máxima de un año, dividida en periodos semestrales. </p>
+                  <p> En el caso de que la resolución aprobatoria inicial estableciera un período de duración inferior a un año se podrá prorrogar el proyecto hasta agotar la duración máxima de un año, mediante nueva resolución previa solicitud de la entidad promotora y, en cualquier caso, con anterioridad a la finalización del plazo inicialmente concedido. Agotado el período máximo de duración se entenderá finalizado el proyecto. </p>
+                  <p> Artículo 17. Requisitos de los proyectos de Talleres de Empleo. </p>
+                  <p> 1. Podrán beneficiarse de las ayudas desarrolladas en esta Orden las entidades promotoras que, no estando afectadas por alguna de las exclusiones establecidas en el artícu- </p>
+                  <p> lo </p>
+                  <p> 3 de la misma, presenten proyectos de Taller de Empleo que cumplan los siguientes requisitos: </p>
+                  <p> a) Que no contenga sucesivas fases de proyectos ya subvencionadas anteriormente con cargo al mismo programa y ejecutadas por la misma entidad promotora. </p>
+                  <p> b) Que contemple un porcentaje de inserción laboral estimado de al menos el 30% del alumnado trabajador que participará en el mismos por sí o por terceras entidades. </p>
+                  <p> Los requisitos establecidos en el presente apartado no serán exigibles cuando la entidad promotora pertenezca a un municipio de hasta 5.000 habitantes o cuando exista un convenio especifico firmado con la Consejería de Cultura. </p>
+                  <p> 2. Sin perjuicio de lo anterior, tendrán preferencia aquellos proyectos promovidos a partir de estudios realizados por las Unidades Territoriales de Empleo y Desarrollo Tecnológico sobre potenciales de nuevas actividades económicas a través del autoempleo. </p>
+                  <p> Artículo 18. Incentivos para Talleres de Empleo. </p>
+                  <p> 1. La aportación económica del Servicio Andaluz de Empleo de la Consejería de Empleo para cada Taller de Empleo se determinará en la resolución aprobatoria de las ayudas correspondientes con pleno sometimiento, en su caso, a lo dispuesto por el artículo 31 de la Ley 38/2003, de 17 de noviembre, General de Subvenciones, y se destinará exclusivamente a sufragar los siguientes costes: </p>
+                  <p> a) Los de formación profesional ocupacional y educación complementaria durante todo el proyecto. Las ayudas compensarán los costes de personal directivo, docente y de apoyo, medios didácticos, material escolar y de consumo y otros gastos de funcionamiento que el Servicio Andaluz de Empleo de la Consejería de Empleo considere justificados. </p>
+                  <p> b) El cálculo de la ayuda se efectuará por hora/alumno de formación y por módulos y fases: </p>
+                  <p> - Con el módulo A se compensarán los costes salariales del personal directivo, docente y de apoyo que hayan sido seleccionados y contratados para el Taller de Empleo, incluidos los originados por las cuotas a cargo del empleador a la Seguridad Social por todos los conceptos, desempleo, fondo de garantía salarial y formación profesional. No se incentivarán, en ningún caso, las indemnizaciones por fallecimiento y las correspondientes a traslados, suspensiones, despidos, ceses o finalizaciones de contrato. </p>
+                  <p> - Con el módulo B se compensarán los demás gastos de formación y funcionamiento señalados a continuación: </p>
+                  <p> Medios y material didáctico y de consumo para la formación. </p>
+                  <p> Gastos de desplazamiento para la formación. </p>
+                  <p> Material de oficina. </p>
+                  <p> Alquiler de equipo y maquinaria, excluido leasing. </p>
+                  <p> Gastos generales. </p>
+                  <p> Amortización de instalaciones y equipos. Para el cálculo de la misma se utilizarán las tablas de coeficiente anuales de amortización establecidas por el Ministerio de Hacienda. </p>
+                  <p> Otros gastos de funcionamiento necesarios para el desarrollo del proyecto formativo. </p>
+                  <p> En ningún caso serán susceptibles de financiarse con cargo a la ayuda: </p>
+                  <p> - Gastos de inversión, adquisición de inmuebles, instalaciones, maquinaria o equipos. </p>
+                  <p> - Alquileres de edificios, locales, naves, aulas y acondicionamiento de los mismo, cuando este no sea resultado de la práctica profesional de los trabajadores participantes. </p>
+                  <p> - Gastos financieros. </p>
+                  <p> Dado que el alumnado trabajador reciben formación, bien sea teórica o teórica-práctica durante toda la jornada en el Taller de Empleo, se considerarán horas formativas las correspondientes a la totalidad de la misma. Para el año 2007 se establecen los siguientes importes: </p>
+                  <p> - Módulo A: 2,89 euros/hora/alumno. </p>
+                  <p> - Módulo B: 0,80 euros/hora/alumno. </p>
+                  <p> Para el cálculo del importe del módulo A se tiene en cuenta una relación de un docente a jornada completa para cada ocho alumnos y alumnas trabajadores. A efectos de calculo se considerará la jornada de 40 horas semanales. </p>
+                  <p> Los incrementos anuales para años naturales sucesivos de estos módulos serán del 3%, mientras no se dicte disposición en contra. El valor de los mismos será único para todo el proyecto aún cuando éste se desarrolle en dos ejercicios anuales distintos, y será el que corresponda al mes de inicio del mismo. </p>
+                  <p> c) Los costes salariales derivados de los contratos que se suscriban con el alumnado trabajador previstos en el artículo 10 de esta Orden. </p>
+                  <p> En los contratos para la formación el Servicio Andaluz de Empleo de la Consejería de Empleo incentivará 1,5 veces el Salario Mínimo Interprofesional anualmente establecido, incluida la parte proporcional de dos pagas extraordinarias. Asimismo, se incentivará la totalidad de las cuotas a cargo del empleador correspondientes a la Seguridad Social, fondo de garantía salarial y formación profesional establecidas para dichos contratos en su normativa específica. </p>
+                  <p> Cuando las características y circunstancias de algún los alumnos y alumnas trabajadores exijan la formulación de un contrato en modalidad distinta a la de formación, el Servicio Andaluz de Empleo de la Consejería de Empleo incentivará la misma cuantía que la señalada en el párrafo anterior, para la parte de sueldo y salarios. Para la cotización empresarial a la Seguridad Social la ayuda del Servicio Andaluz de Empleo de la Consejería de Empleo será equivalente al importe de todas las cuotas a la Seguridad Social a cargo del empresario, referidas a una retribución equivalente al 1,5 veces el Salario Mínimo Interprofesional. </p>
+                  <p> Cuando la duración del proyecto supere una anualidad, la resolución de concesión contemplará con carácter estimativo, según dicha duración, uno o varios incrementos anuales para años sucesivos del 3,5%, aplicados sobre el Salario Mínimo Interprofesional y las cuotas patronales que correspondan a la anualidad en que se inicia el proyecto. Cuando, en los términos establecidos por el 33 de esta Orden, se proceda a la liquidación del proyecto, se habrá de corregir dicho porcentaje en función del Salario Mínimo Interprofesional aprobado para cada anualidad correspondiendo, en su caso, la minoración de la partida dla subvención aplicada a dichos costes salariales. </p>
+                  <p> 2. La financiación de los gastos previstos en el apartado anterior se realizará con cargo a las dotaciones que se establezcan anualmente para el Programa de Talleres de Empleo en los presupuestos del Servicio Andaluz de Empleo de la Consejería de Empleo. </p>
+                  <p> 3. Cuando los Talleres de Empleo en el desarrollo de su actividad produzcan bienes susceptibles de comercialización podrán enajenarse, siempre que no se incurra en competencia desleal y se disponga de las autorizaciones necesarias. Igualmente, podrán prestarse servicios remunerados que incidan directamente en la formación, para la realización de prácticas o perfeccionamiento de los conocimientos adquiridos siempre que esté previsto en el proyecto aprobado y sea necesario para la formación práctica. Los ingresos procedentes de tales enajenaciones o de la prestación de servicios deberán aplicarse a las actividades del Taller de Empleo, debiendo quedar constancia documental y contable tanto de los ingresos obtenidos como del destino dado a los mismos. </p>
+                  <p> 4. En el supuesto de que el proyecto conlleve la adquisición, construcción, rehabilitación y mejora de bienes inventariables se estará a lo dispuesto en la resolución de concesión con pleno sometimiento al artículo 31.4 de la Ley General de Subvenciones. Así mismo, los bienes deberán destinarse al fin concreto para el que se concedió la subvención durante los plazos establecidos por la letra a) del apartado 4 del citado artículo. </p>
+                  <p> CapItulo IV </p>
+                  <p> PROGRAMA DE Unidades de Promoción y Desarrollo </p>
+                  <p> Artículo 19. Objeto. </p>
+                  <p> 1. El Programa de Unidades de Promoción y Desarrollo tiene por objeto el desarrollo de proyectos de carácter temporal destinados a colaborar en la preparación, acompañamiento y evaluación de los proyectos de Escuelas Taller, Casas de Oficio y Talleres de Empleo así como en tarea de promoción e inserción del alumnado trabajador. </p>
+                  <p> 2. Este Programa se articulará mediante el establecimiento de ayudas a proyectos de Unidades de Promoción y Desarrollo. </p>
+                  <p> 3. Para la ejecución de estos proyectos, las entidades promotoras deberán contratar a una persona encargada de la dirección del proyecto, a técnicos especialistas en las materias objeto de estudio, así como al personal de apoyo preciso, utilizando para ello la modalidad contractual más adecuada en cada caso a las funciones y tareas a desarrollar. Las contrataciones de los técnicos se formalizarán con carácter de exclusividad y para el desempeño de tareas destinadas a dar apoyo y asistencia a las entidades promotoras para el desarrollo de los proyectos y de promoción e inserción del alumnado trabajador tanto durante como tras los mismos. </p>
+                  <p> Artículo 20. Proyectos de Unidades de Promoción y Desarrollo. Duración. </p>
+                  <p> 1. Los proyectos de Unidades de Promoción y Desarrollo tendrán por finalidad investigar y determinar las potencialidades de desarrollo y empleo de su territorio, elaborando planes integrales de intervención de las Escuelas Taller, Casas de Oficio y Talleres de Empleo, fomentando, bien directamente o en colaboración con el Servicio Andaluz de Empleo de la Consejería de Empleo y las entidades promotoras, la inserción laboral de los participantes en dichos proyectos. Así mismo, colaborarán en los planes de formación de los Programas de Escuelas Taller y Casas de Oficio y de Talleres de Empleo. </p>
+                  <p> 2. Los proyectos de Unidad de Promoción y Desarrollo tendrán una duración máxima de dos años computados en períodos semestrales. </p>
+                  <p> En el caso de que la resolución aprobatoria inicial estableciera un período de duración inferior a dos años, se podrá prorrogar el proyecto, hasta agotar la duración máxima de dos años, mediante nueva resolución previa solicitud de la entidad promotora y, en cualquier caso, con anterioridad a la finalización del plazo inicialmente concedido. Agotado el período máximo de duración se entenderá finalizado el proyecto. </p>
+                  <p> Artículo 21. Contenido de los Proyectos de Unidades de Promoción y Desarrollo. </p>
+                  <p> Podrán beneficiarse de las ayudas desarrolladas en esta Orden las entidades promotoras que, no estando afectadas por alguna de las exclusiones establecidas en el artículo 3 de la misma, presenten proyectos de Unidades de Promoción y Desarrollo que contengan las siguientes actuaciones: </p>
+                  <p> a) Actuaciones previstas de preparación y elaboración de proyectos de Escuelas Taller, Casas de Oficio y Talleres de Empleo. </p>
+                  <a name="descargas"/>
+                  <a title="Descargar PDF de la&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;disposición"
+                     class="&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;item_pdf_disposicion"
+                     href="http://www.juntadeandalucia.es/boja/2006/241/d1.pdf"
+                     target="_blank">
+							Descargar PDF </a>
+                  <!--+ |end content-main-disposition +-->
+      <div class="boja_nav">
+                     <a href="http://www.juntadeandalucia.es/boja/2006/241/2" title="Ir a la disposición siguiente" class="siguiente">
+                        <span>
+                           <img src="http://www.juntadeandalucia.es/themes/images/paginado_despues.gif" alt="siguiente" title="Siguiente"/>
+                           <em>Disposición siguiente</em>
+                        </span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div id="columna" class="grid_5 omega">
+               <p class="titular">
+               BOJA nº
+               241
+               de 
+               15/12/2006</p>
+               <!--+ |end column-main-heading +-->
+      <ul class="listado_ordenado">
+                  <li class="actual">
+                     <a href="http://www.juntadeandalucia.es/boja/2006/241/s1" title="1. Disposiciones generales">
+                        <span class="c_000000">1. </span>Disposiciones generales</a>
+                  </li>
+                  <li>
+                     <a href="http://www.juntadeandalucia.es/boja/2006/241/s2.1" title="2.1. Nombramientos, situaciones e incidencias">
+                        <span class="c_000000">2.1. </span>Nombramientos, situaciones e incidencias</a>
+                  </li>
+                  <li>
+                     <a href="http://www.juntadeandalucia.es/boja/2006/241/s3" title="3. Otras disposiciones">
+                        <span class="c_000000">3. </span>Otras disposiciones</a>
+                  </li>
+                  <li>
+                     <a href="http://www.juntadeandalucia.es/boja/2006/241/s4" title="4. Administración de justicia">
+                        <span class="c_000000">4. </span>Administración de justicia</a>
+                  </li>
+                  <li>
+                     <a href="http://www.juntadeandalucia.es/boja/2006/241/s5.1"
+                        title="5.1. Subastas y concursos de obras, suministros y servicios públicos">
+                        <span class="c_000000">5.1. </span>Subastas y concursos de obras, suministros y servicios públicos</a>
+                  </li>
+                  <li>
+                     <a href="http://www.juntadeandalucia.es/boja/2006/241/s5.2" title="5.2. Otros anuncios">
+                        <span class="c_000000">5.2. </span>Otros anuncios</a>
+                  </li>
+               </ul>
+   
+               <ul class="listado_pdf">
+                  <li class="item">
+                     <a target="_blank" title="Descargar el boletín completo en PDF"
+                        href="http://www.juntadeandalucia.es/boja/2006/241/boletin.241.pdf">Descargar boletín nº 
+                    241 completo
+                  </a>
+                     </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      
+<div id="pie">
+         <script type="text/javascript" src="http://www.juntadeandalucia.es/themes/urchin.js" space="preserve"> </script>
+         <script type="text/javascript" space="preserve">urchinTracker();</script>
+         <div class="container js">
+            <div class="grid_8 social">
+               <h2>El portal de la Junta en:</h2>
+               <ul class="listado_social">
+                  <li>
+                     <a class="ico_social_30 twitter" title="El portal de la Junta en Twitter" href="http://twitter.com/PortalJunta" shape="rect">
+                        <img alt="Icono de Twitter" src="http://www.juntadeandalucia.es/boja/themes/images/social/30_g_twitter.png"/>
+                        <span>Twitter</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a class="ico_social_30 facebook" title="El portal de la Junta en Facebook" href="http://www.facebook.com/pages/Portal-Junta-de-Andalucía/224442897628994" shape="rect">
+                        <img alt="Icono de Facebook" src="http://www.juntadeandalucia.es/boja/themes/images/social/30_g_facebook.png"/>
+                        <span>Facebook</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a class="ico_social_30 rss" title="El portal de la Junta en Fuentes Web" href="http://www.juntadeandalucia.es/informacion/fuentesweb.html" shape="rect">
+                        <img alt="Icono de RSS" src="http://www.juntadeandalucia.es/boja/themes/images/social/30_g_rss.png"/>
+                        <span>Rss</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a class="ico_social_30 da" title="El portal de la Junta de Datos abiertos" href="http://www.juntadeandalucia.es/datosabiertos/portal.html" shape="rect">
+                        <img alt="Icono de Datos Abiertos" src="http://www.juntadeandalucia.es/boja/themes/images/social/30_g_da.png"/>
+                        <span>Datos abiertos</span>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+            <div class="grid_8 enlaces">
+               <ul>
+                  <li>
+                     <a title="Lista de correos" href="http://www.juntadeandalucia.es/informacion/lista.html" shape="rect">Lista de correos</a>
+                  </li>
+                  <li>
+                     <a title="Accesibilidad" href="http://www.juntadeandalucia.es/informacion/accesibilidad.html" shape="rect">Accesibilidad</a>
+                  </li>
+                  <li>
+                     <a title="Fuentes web" href="http://www.juntadeandalucia.es/informacion/fuentesweb.html" shape="rect">Fuentes web</a>
+                  </li>
+                  <li>
+                     <a title="Informacion legal" href="http://www.juntadeandalucia.es/informacion/legal.html" shape="rect">Legal</a>
+                  </li>
+                  <li>
+                     <a accesskey="8" title="Mapa del sitio" href="http://www.juntadeandalucia.es/informacion/mapaweb.html" shape="rect">Mapa del sitio</a>
+                  </li>
+                  <li>
+                     <a accesskey="9" title="Contacto" href="http://www.juntadeandalucia.es/informacion/contacto.html" shape="rect">Contacto</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div class="clear">
+            <hr/>
+         </div>
+      </div>
+</body>
+</html>

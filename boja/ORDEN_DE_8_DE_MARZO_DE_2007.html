@@ -1,0 +1,1617 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+   <head>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/themes/buscador/media/js/jquery-1.4.2.js" space="preserve"> </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/themes/buscador/media/js/jquery-ui-1.8.14.autocomplete.min.js" space="preserve"> </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/themes/buscador/autocomplete/autocomplete-words-json" space="preserve"> </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/themes/buscador/media/js/autocomplete.js" space="preserve"> </script>
+<script type="text/javascript" space="preserve">
+              jQuery(document).ready(function($) {
+                  /* Este parámetro sirve para determinar el número máximo de
+                  sugerencias ofrecidas al usuario en el deplegable */
+                  var autocompleteMaxSuggestions = 5;
+                  /* El número mínimo de carácteres a partir de los cuales se comienza
+                  a sugerir posibles autocompletados */
+                  var minLength = 2;
+                  var options = getAutocompleteOptions(autocompleteData, autocompleteMaxSuggestions);
+                  options.minLength = minLength;
+
+                  $('input[name=\'busquedageneral\']').autocomplete(options);
+                  // Se sobreescribe la función select del autocompletado para que cuando se seleccione un item se llame directamente al buscador 
+                  $('input[name=\'busquedageneral\']').autocomplete({
+                    select: function( event , ui ) {
+                      $('input[name=\'busquedageneral\']').val(ui.item.label);
+                      $('input[name=\'buscargeneral\']').click();
+                    }
+                  });
+              });
+            </script>
+<link type="text/css" rel="stylesheet" href="http://www.juntadeandalucia.es/themes/buscador/media/css/jquery-ui-1.8.14.autocomplete.css"/>
+<link type="text/css" rel="stylesheet" title="common" href="http://www.juntadeandalucia.es/boja/themes/font-face.css" media="screen"/>
+<link type="text/css" rel="stylesheet" title="common" href="http://www.juntadeandalucia.es/boja/themes/mydropdown.css" media="screen"/>
+<link type="text/css" rel="stylesheet" title="common" href="http://www.juntadeandalucia.es/boja/themes/jquery.ui.datepicker.css" media="screen"/>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/boja/themes/jquery.min.js" space="preserve">                  
+           
+        </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/boja/themes/sp.js" space="preserve">                  
+           
+        </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/boja/themes/funcionalidad_comun.js" space="preserve">                  
+           
+        </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/boja/themes/funcionalidad_tabs.js" space="preserve">                  
+           
+        </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/boja/themes/jquery.ba-dotimeout.js" space="preserve">                  
+           
+        </script>
+<script type="text/javascript" src="http://www.juntadeandalucia.es/boja/themes/funcionalidad_menu.js" space="preserve">                  
+           
+        </script>
+<!--+|start favicon +-->
+<link rel="shortcut icon" href="http://www.juntadeandalucia.es/themes/images/favicon.ico"/>
+<!--+|start favicon +-->
+<meta name="viewport" content="width=device-width, user-scalable=0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, target-densityDpi=medium-dpi" id="testViewport"/>
+<link type="text/css" href="http://www.juntadeandalucia.es/boja/themes/estructura.css" rel="stylesheet" title="common" media="screen and (min-width: 960px)"/>
+<link type="text/css" href="http://www.juntadeandalucia.es/boja/themes/estructura_movil.css" rel="stylesheet" title="common" media="screen and (max-width: 959px)"/>
+<link type="text/css" href="http://www.juntadeandalucia.es/boja/themes/estilos_jda.css" rel="stylesheet" title="common" media="screen and (min-width: 960px)"/>
+<link type="text/css" href="http://www.juntadeandalucia.es/boja/themes/estilos_jda_movil.css" rel="stylesheet" title="common" media="screen and (max-width: 959px)"/>
+<link type="text/css" href="http://www.juntadeandalucia.es/boja/themes/menu.css" rel="stylesheet" title="common" media="screen"/>
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.juntadeandalucia.es/themes/images/iconosmovil/touch-icon-144-precomposed.png"/>
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://www.juntadeandalucia.es/themes/images/iconosmovil/touch-icon-114-precomposed.png"/>
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://www.juntadeandalucia.es/themes/images/iconosmovil/touch-icon-72-precomposed.png"/>
+<link rel="apple-touch-icon-precomposed" href="http://www.juntadeandalucia.es/themes/images/iconosmovil/touch-icon-57-precomposed.png"/>
+<!--[if !(IE) | (gt IE 8) | (IEMobile)]><!-->
+<script type="text/javascript" src="/boja/themes/menu_movil.js" space="preserve"> </script>
+<!--<![endif]-->
+<!--[if lt IE 9 & !IEMobile]>
+		        <link type="text/css" href="http://www.juntadeandalucia.es/boja/themes/estructura.css" rel="stylesheet" title="common" media="screen"/>
+		        <link type="text/css" href="http://www.juntadeandalucia.es/boja/themes/estilos_jda.css" rel="stylesheet" title="common" media="screen"/>
+		        <![endif]-->
+
+      <meta content="es" http-equiv="Content-Language"/>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+      <title>Orden de 8 de marzo de 2007, por la que se establecen las bases reguladoras de los procedimientos para la concesión de subvenciones en materia de organización de acciones formativas y para la financiación de gastos corrientes a organizaciones sindicales, recuperación de la memoria histórica y mejora de las infraestructuras y gastos de equipamiento de los Juzgados de Paz. </title>
+      <meta content="Apache Dispatcher" name="Generator"/>
+      <meta content="Página de disposición nº 2 del boletín nº 73 de 2007."
+            name="Description"/>
+      <meta content="2007, Junta de Andalucía, el portal de Andalucía, Administración andaluza, BOJA, B.O.J.A."
+            name="Keywords"/>
+   
+      <link href="http://www.juntadeandalucia.es/boja/distribucion/boja.xml"
+            title="Boletín completo - BOJA"
+            type="application/atom+xml"
+            rel="alternate"/>
+      <link type="application/atom+xml" rel="alternate"
+            title="1. Disposiciones generales - BOJA"
+            href="http://www.juntadeandalucia.es/boja/distribucion/s1.xml"/>
+   </head>
+   <body>
+<div id="cabecera">
+         <div class="container">
+            <div id="logo">
+               <h1>
+                  <a class="logotipo" accesskey="0" href="http://www.juntadeandalucia.es/index.html" title="Portada de la Web oficial de la Junta de Andalucía" shape="rect">
+                     <img alt="" title="Junta de Andalucía" src="http://www.juntadeandalucia.es/themes/images/logo_bg_movil.png"/>
+                  </a>
+               </h1>
+               <div class="clearlogo"> </div>
+               <div class="oculto">
+                  <ul>
+                     <li>
+                        <a accesskey="1" title="Saltar el menú de navegación, e ir directamente a los contenidos del Portal Oficial de la Junta de Andalucía" href="#contenidos" shape="rect">Saltar al contenido del Portal</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="herramienta">
+               <div id="ubicacion">
+                  <img width="275" height="40" alt="" title="Portal de la Junta de Andalucía" src="http://www.juntadeandalucia.es/themes/images/cabecera_ubicacion.gif"/>
+               </div>
+            </div>
+            <div class="buscador">
+               <form action="http://www.juntadeandalucia.es/buscar.html" method="get" class="floatright" target="_self" enctype="application/x-www-form-urlencoded">
+                  <fieldset>
+                     <legend>Buscador general</legend>
+                     <label for="busquedaCabecera" class="oculto">Buscar</label>
+                     <input id="busquedaCabecera" name="busquedageneral" type="text" class="input_text defaultTextActive" title="Buscar" style="position:relative; z-index:99999;"/>
+                     <input alt="Buscar" title="Buscar" type="submit" value="Buscar" class="input_submit" name="buscargeneral"/>
+                     <p>p. ej. <a title="ofertas de empleo" href="http://www.juntadeandalucia.es/buscar.html?busqueda=ofertas+de+empleo&amp;buscar=Buscar" shape="rect">ofertas de empleo</a>, <a title="ayudas" href="http://www.juntadeandalucia.es/buscar.html?busqueda=ayudas&amp;buscar=Buscar" shape="rect">ayudas</a>, <a title="escolarización" href="http://www.juntadeandalucia.es/buscar.html?busqueda=escolarización&amp;buscar=Buscar" shape="rect">escolarización</a>...</p>
+                  </fieldset>
+               </form>
+            </div>
+            <div class="clear"> </div>
+         </div>
+      </div>
+<div id="navegacion">
+         <div id="menu_btn">
+            <div class="img">
+             
+          </div>
+            <span class="menutxt">Menú principal</span>
+         </div>
+         <ul id="menu" class="menu_principal main-nav-horizontal">
+            <li class="li_inicio temas main-nav">
+               <a title="Temas" href="http://www.juntadeandalucia.es/temas.html" class="drop" accesskey="2" shape="rect">Temas</a>
+               <div class="dropdown container">
+                  <div class="grid_4">
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/estudiar.html" title="Estudiar" shape="rect">Estudiar</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/estudiar/infantil.html" title="Infantil (0-6 años)" shape="rect">Infantil (0-6 años)</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/estudiar/primaria-eso.html" title="Primaria y ESO (6-16 años)" shape="rect">Primaria y ESO (6-16 años)</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/estudiar/bachillerato.html" title="Bachillerato" shape="rect">Bachillerato</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/estudiar.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/familias-igualdad.html" title="Familia e igualdad" shape="rect">Familia e igualdad</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/familias-igualdad/formar-familia.html" title="Formar una familia" shape="rect">Formar una familia</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/familias-igualdad/infancia.html" title="Cuidar de los niños" shape="rect">Cuidar de los niños</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/familias-igualdad/dependencia.html" title="Cuidar de personas dependientes" shape="rect">Cuidar de personas dependientes</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/familias-igualdad.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/transporte.html" title="Tráfico y transporte" shape="rect">Tráfico y transporte</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/transporte/vehiculo.html" title="Tu vehículo" shape="rect">Tu vehículo</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/transporte/publico.html" title="Transporte público" shape="rect">Transporte público</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/transporte/carreteras.html" title="Carreteras de Andalucía" shape="rect">Carreteras de Andalucía</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_4">
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/trabajar.html" title="Trabajar" shape="rect">Trabajar</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/trabajar/busqueda.html" title="Buscar trabajo" shape="rect">Buscar trabajo</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/trabajar/autoempleo.html" title="Autoempleo" shape="rect">Autoempleo</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/trabajar/empleo-publico.html" title="Empleo público" shape="rect">Empleo público</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/trabajar.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/vivienda-consumo.html" title="Vivienda y consumo" shape="rect">Vivienda y consumo</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/vivienda-consumo/alquiler.html" title="Alquilar" shape="rect">Alquilar</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/vivienda-consumo/compra.html" title="Compra y venta" shape="rect">Compra y venta</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/vivienda-consumo/rehabilitacion.html" title="Rehabilitación" shape="rect">Rehabilitación</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/vivienda-consumo.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/medio-ambiente.html" title="Medio ambiente" shape="rect">Medio ambiente</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/medio-ambiente/clima.html" title="Clima" shape="rect">Clima</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/medio-ambiente/espacios-naturales.html" title="Espacios naturales" shape="rect">Espacios naturales</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/medio-ambiente/caza-pesca.html" title="Caza y pesca" shape="rect">Caza y pesca</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/medio-ambiente.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_4">
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/salud.html" title="Tu salud" shape="rect">Tu salud</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/salud/servicios.html" title="Servicios sanitarios" shape="rect">Servicios sanitarios</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/salud/urgencias.html" title="Urgencias y primeros auxilios" shape="rect">Urgencias y primeros auxilios</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/salud/derechos.html" title="Derechos y calidad asistencial" shape="rect">Derechos y calidad asistencial</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/salud.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/cultura-ocio.html" title="Cultura y ocio" shape="rect">Cultura y ocio</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/cultura-ocio/actividades.html" title="Actividades culturales" shape="rect">Actividades culturales</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/cultura-ocio/andalucia.html" title="Andalucía: historia y patrimonio" shape="rect">Andalucía: historia y patrimonio</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/cultura-ocio/bibliotecas.html" title="Bibliotecas y lectura" shape="rect">Bibliotecas y lectura</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/cultura-ocio.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas.html" title="Más temas" shape="rect">Más temas</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/administracion.html" title="Atención administrativa e impuestos" shape="rect">Atención administrativa e impuestos</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/seguridad.html" title="Justicia, seguridad y emergencias" shape="rect">Justicia, seguridad y emergencias</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/tic.html" title="Nuevas tecnologías" shape="rect">Nuevas tecnologías</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/participacion.html" title="Asociaciones y voluntariado" shape="rect">Asociaciones y voluntariado</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_4">
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/empresas.html" title="Empresas y profesionales" shape="rect">Empresas y profesionales</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/empresas/creacion.html" title="Crear una empresa" shape="rect">Crear una empresa</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/empresas/obligaciones.html" title="Obligaciones de la empresa" shape="rect">Obligaciones de la empresa</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/empresas/personal.html" title="Contratación de personal" shape="rect">Contratación de personal</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/empresas.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/temas/sectores.html" title="Sectores de actividad" shape="rect">Sectores de actividad</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/sectores/agricultura-ganaderia.html" title="Agricultura y ganadería" shape="rect">Agricultura y ganadería</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/sectores/pesca.html" title="Industria y minas" shape="rect">Pesca y acuicultura</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/temas/sectores/agroalimentaria.html" title="Industrias agroalimentarias" shape="rect">Industrias agroalimentarias</a>
+                        </li>
+                        <li class="mas">
+                           <a href="http://www.juntadeandalucia.es/temas/sectores.html" title="Más opciones" shape="rect">Más opciones</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </li>
+            <li class="junta main-nav">
+               <a title="La Junta" href="http://www.juntadeandalucia.es/organismos.html" class="drop" accesskey="3" shape="rect">La Junta</a>
+               <div class="dropdown container">
+                  <div class="grid_4">
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/organismos/presidenta.html" title="Presidenta" shape="rect">Presidenta</a>
+                     </strong>
+              
+                     <img alt="" src="http://www.juntadeandalucia.es/themes/images/presidente_solapa_la_junta.jpg"/>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/presidenta/biografia" shape="rect">Biografía</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/presidenta/funciones" shape="rect">Funciones</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/presidenta/discursos" shape="rect">Discursos</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/presidenta/correo" shape="rect">Escribir a la Presidenta</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/presidenta/vicepresidente" shape="rect">Vicepresidente</a>
+                        </li>
+                     </ul>
+
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/organismos/parlamento.html" title="Parlamento y otras instituciones" shape="rect">Parlamento y otras instituciones</a>
+                     </strong>
+                  </div>
+                  <div class="grid_8">
+                     <div class="grid_8">
+                        <strong>
+                           <a href="http://www.juntadeandalucia.es/organismos/consejo.html" title="Consejo de Gobierno" shape="rect">Consejo de Gobierno</a>
+                        </strong>
+                
+                        <ul class="ul_simple grid_4 alpha">
+                           <li>
+                              <a title="Sobre el consejo" href="http://www.juntadeandalucia.es/organismos/consejo/sobreconsejo.html" shape="rect">Sobre el consejo</a>
+                           </li>
+                           <li>
+                              <a title="Proxima sesión" href="http://www.juntadeandalucia.es/organismos/consejo/proximasesion.html" shape="rect">Próxima sesión</a>
+                           </li>
+                        </ul>
+                        <ul class="ul_simple grid_4 omega">
+                           <li>
+                              <a title="Última sesión" href="http://www.juntadeandalucia.es/organismos/consejo/ultimo.html" shape="rect">Última sesión</a>
+                           </li>
+                           <li>
+                              <a title="Histórico de sesioneso" href="http://www.juntadeandalucia.es/organismos/consejo/historico.html" shape="rect">Histórico de sesiones</a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="grid_8">
+                        <strong>
+                           <a href="http://www.juntadeandalucia.es/organismos.html" shape="rect">Consejerías</a>
+                        </strong>
+                        <div class="grid_4 alpha">
+                           <ul class="ul_simple">
+                              <li>
+                                 <a title="Consejería de la Presidencia" shape="rect" href="http://www.juntadeandalucia.es/organismos/presidencia.html">Presidencia</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Administración Local y Relaciones Institucionales" shape="rect" href="http://www.juntadeandalucia.es/organismos/administracionlocalyrelacionesinstitucionales.html">Administración Local y Relaciones Institucionales</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Hacienda y Administración Pública" shape="rect" href="http://www.juntadeandalucia.es/organismos/haciendayadministracionpublica.html">Hacienda y Administración Pública</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Economía, Innovación, Ciencia y Empleo" shape="rect" href="http://www.juntadeandalucia.es/organismos/economiainnovacioncienciayempleo.html">Economía, Innovación, Ciencia y Empleo</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Igualdad, Salud y Políticas Sociales" shape="rect" href="http://www.juntadeandalucia.es/organismos/igualdadsaludypoliticassociales.html">Igualdad, Salud y Políticas Sociales</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Educación, Cultura y Deporte" shape="rect" href="http://www.juntadeandalucia.es/organismos/educacionculturaydeporte.html">Educación, Cultura y Deporte</a>
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="grid_4 omega">
+                           <ul class="ul_simple">
+                              <li>
+                                 <a title="Consejería de Justicia e Interior" shape="rect" href="http://www.juntadeandalucia.es/organismos/justiciaeinterior.html">Justicia e Interior</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Fomento y Vivienda" shape="rect" href="http://www.juntadeandalucia.es/organismos/fomentoyvivienda.html">Fomento y Vivienda</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Agricultura, Pesca y Desarrollo Rural" shape="rect" href="http://www.juntadeandalucia.es/organismos/agriculturapescaydesarrollorural.html">Agricultura, Pesca y Desarrollo Rural</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Medio Ambiente y Desarrollo Rural" shape="rect" href="http://www.juntadeandalucia.es/organismos/medioambienteyordenaciondelterritorio.html">Medio Ambiente y Ordenación del Territorio</a>
+                              </li>
+                              <li>
+                                 <a title="Consejería de Turismo y Comercio" shape="rect" href="http://www.juntadeandalucia.es/organismos/turismoycomercio.html">Turismo y Comercio</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="grid_4">
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/organismos/sobre-junta.html" title="Sobre la Junta" shape="rect">Sobre la Junta</a>
+                     </strong>
+              
+                     <img alt="" src="http://www.juntadeandalucia.es/themes/images/lajunta_solapa_sobrelajunta.jpg"/>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/sobre-junta/organizacion.html" title="Organización institucional" shape="rect">Organización institucional</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/sobre-junta/estatuto.html" title="Estatuto de autonomía" shape="rect">Estatuto de autonomía</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/sobre-junta/planes.html" title="Planes y programas" shape="rect">Planes y programas</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/sobre-junta/funcionamiento.html" title="Funcionamiento de la Administración" shape="rect">Funcionamiento de la Administración</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/sobre-junta/simbolos.html" title="Símbolos de Andalucía" shape="rect">Símbolos de Andalucía</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/sobre-junta/historia.html" title="Historia de la autonomía" shape="rect">Historia de la autonomía</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </li>
+            <li class="transparencia main-nav">
+               <a title="Transparencia" href="http://www.juntadeandalucia.es/transparencia.html" class="drop" accesskey="8" shape="rect">Transparencia</a>
+               <div class="dropdown container">
+                  <div class="grid_5">
+                     <strong>
+                        <a title="Publicidad activa" href="http://www.juntadeandalucia.es/transparencia/publicidad-activa.html" shape="rect">Publicidad activa</a>
+                     </strong>
+                     <img alt="Publicidad activa" src="http://www.juntadeandalucia.es/themes/images/transparencia/solapa_transparencia_activa.jpg"/>
+                     <p>Consulta la información que la Junta de Andalucía difunde a iniciativa propia para facilitar el conocimiento de su actividad.</p>
+                  </div>
+                  <div class="grid_6">
+                     <strong>
+                        <a title="Solicitud de información" href="http://www.juntadeandalucia.es/transparencia/solicitud-informacion.html" shape="rect">Solicitud de información</a>
+                     </strong>
+                     <img alt="Solicitud de información" src="http://www.juntadeandalucia.es/themes/images/transparencia/solapa_solicitud_informacion.jpg"/>
+                     <p>La Ley de Transparencia Pública de Andalucía recoge el derecho de la ciudadanía a reclamar información de los poderes públicos. Descubre qué podrás hacer cuando entre en vigor.</p>
+                  </div>
+                  <div class="grid_5">
+                     <strong>
+                        <a title="Transparencia en Andalucía" href="http://www.juntadeandalucia.es/transparencia/transparencia-andalucia.html" shape="rect">Transparencia en Andalucía</a>
+                     </strong>
+                     <img alt="Transparencia en Andalucía" src="http://www.juntadeandalucia.es/themes/images/transparencia/solapa_normativa.jpg"/>
+                     <p>Descubre tus derechos en materia de transparencia, aprende las vías para reclamarlos y consulta los portales de transparencia de otras administraciones públicas.</p>
+                  </div>
+               </div>
+            </li>
+            <li class="servicios main-nav">
+               <a title="Servicios y trámites" href="http://www.juntadeandalucia.es/servicios.html" class="drop" accesskey="4" shape="rect">Servicios y trámites</a>
+               <div class="dropdown container">
+                  <div class="grid_6">
+                     <p class="encabezado">
+                        <strong>¿Qué quieres hacer?</strong>
+                     </p>
+              
+                     <div class="buscador">
+                        <form target="_self" class="floatright" method="get" action="http://www.juntadeandalucia.es/buscar.html" enctype="application/x-www-form-urlencoded">
+                           <fieldset>
+                              <legend>Buscador general</legend>
+                              <label for="busquedaNavegacionServiciosTramitesFijos" class="oculto">Buscar</label>
+                              <input type="text" class="input_text defaultTextActive" size="20" name="busqueda" id="busquedaNavegacionServiciosTramitesFijos" title="Buscar" alt="Buscar"/>
+                              <input type="hidden" name="filtroServicios" value="true"/>
+                              <input type="hidden" name="organismo" value="index"/>
+                              <input type="submit" class="input_submit" value="Buscar" title="Buscar" alt="Buscar" name="buscar"/>
+                           </fieldset>
+                        </form>
+                        <p>Utiliza este buscador para localizar los trámites y servicios ofrecidos por la administración andaluza.</p>
+                     </div>
+
+                     <p class="encabezado">
+                        <strong>Directo a</strong>
+                     </p>
+              
+                     <ul class="ul_simple">
+                        <li>
+                           <a title="Ayudas y subvenciones" href="http://www.juntadeandalucia.es/servicios/ayudas.html" shape="rect">Ayudas y subvenciones</a>
+                        </li>
+                        <li>
+                           <a title="Becas, premios y concursos" href="http://www.juntadeandalucia.es/servicios/premios-concursos.html" shape="rect">Becas, premios y
+                      concursos</a>
+                        </li>
+                        <li>
+                           <a title="Ofertas de empleo público" href="https://ws045.juntadeandalucia.es/empleadopublico/emp-plazofer-.html?p=/Categorias_Principales/&amp;s=/Categorias_Principales/Procesos_Selectivos/" shape="rect">Ofertas de empleo público</a>
+                        </li>
+                        <li>
+                           <a title="Plataforma de contratación" href="http://www.juntadeandalucia.es/contratacion/ContractNoticeSearch.action?profileId=&amp;pkCegr=" shape="rect">Plataforma de
+                      contratación</a>
+                        </li>
+                        <li>
+                           <a title="Otros trámites y servicios" href="http://www.juntadeandalucia.es/servicios/otros-tramites.html" shape="rect">Otros trámites y
+                    servicios</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_5">
+                     <p class="encabezado">
+                        <strong>Trámites destacados</strong>
+                     </p>
+              
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/salud/sites/csalud/galerias/enlaces/oficina_virtual/cita_medico" title="Cita con el médico" shape="rect">Cita con el médico</a>
+                        </li>
+                        <li>
+                           <a href="https://ws054.juntadeandalucia.es/autenticacion/login?service=https://ws054.juntadeandalucia.es/apdweb/c/portal/login%3Fp_l_id%3D10116%26_58_redirect%3D%252Fapdweb%252Fgroup%252F10210%252F2" title="Renovar demanda de empleo" shape="rect">Renovar demanda de empleo</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/haciendayadministracionpublica/clara/cprDetalleTramites.html?c=1-59-780&amp;nombre=Grado+de+Discapacidad%3A+Reconocimiento%2C+Calificaci%F3n" title="Grado de Discapacidad: Reconocimiento, Calificación" shape="rect">Grado de Discapacidad: Reconocimiento, Calificación</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/servicios/otros-tramites/detalle/11215.html" title="Familia numerosa: solicitud del título" shape="rect">Familia numerosa: solicitud del título</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/haciendayadministracionpublica/clara/cprDetalleTramites.html?c=1-EBU42&amp;nombre=Quejas+y+Reclamaciones+de+las+Personas+Consumidoras+y+Usuarias%3A+Hojas+Electr%F3nicas" title="Quejas y Reclamaciones de las Personas Consumidoras y Usuarias" shape="rect">Quejas y Reclamaciones de las Personas Consumidoras y Usuarias</a>
+                        </li>
+                     </ul>
+
+                     <p class="encabezado">
+                        <strong>Ayuda</strong>
+                     </p>
+              
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/servicios/ayuda/tramitar-internet.html" title="Cómo hacer trámites por internet" shape="rect">Cómo hacer trámites por internet</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/servicios/ayuda/estado-tramites.html" title="Consulta el estado de tus trámites" shape="rect">Consulta el estado de tus trámites</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/servicios/ayuda/correo-andaluz.html" title="Correo Andaluz" shape="rect">Correo Andaluz</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/servicios/ayuda/notificaciones.html" title="Sistema de notificaciones telemáticas" shape="rect">Sistema de notificaciones telemáticas</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_5">
+                     <p class="encabezado">
+                        <strong>Servicios de información</strong>
+                     </p>
+              
+                     <ul class="ul_img">
+                        <li>
+                           <a title="Normativa" href="http://www.juntadeandalucia.es/servicios/normativa.html" shape="rect">
+                              <img alt="" src="http://www.juntadeandalucia.es/themes/images/buscador-de-normativas--38x38.gif"/>
+                              <span>Normativa</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a title="Normativa en elaboración" href="http://www.juntadeandalucia.es/servicios/normas-elaboracion.html" shape="rect">
+                              <img alt="" src="http://www.juntadeandalucia.es/themes/images/thrum38_normativa-en-elaboracion.jpg"/>
+                              <span>Normativa en elaboración</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a title="Participación" href="http://www.juntadeandalucia.es/servicios/participacion.html" shape="rect">
+                              <img alt="" src="http://www.juntadeandalucia.es/themes/images/thrum38_participacion.jpg"/>
+                              <span>Participación</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a title="Catálogo de publicaciones" href="http://www.juntadeandalucia.es/servicios/publicaciones.html" shape="rect">
+                              <img alt="" src="http://www.juntadeandalucia.es/themes/images/catalogo-de-publicaciones--38x38.gif"/>
+                              <span>Catálogo de publicaciones</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a title="WebTV" href="http://www.juntadeandalucia.es/servicios/videos.html" shape="rect">
+                              <img alt="" src="http://www.juntadeandalucia.es/themes/images/38_canalvideo.jpg"/>
+                              <span>WebTV</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/servicios.html" title="Más servicios" class="enlace_menu_mas" shape="rect">Más servicios</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </li>
+            <li class="boja main-nav">
+               <a title="BOJA" href="http://www.juntadeandalucia.es/eboja.html" class="drop" accesskey="5" shape="rect">BOJA</a>
+               <div class="dropdown boja container">
+                  <div class="grid_5">
+                     <strong>
+                        <a title="Último Boletín" href="http://www.juntadeandalucia.es/eboja/2015/97/" shape="rect">
+          Último Boletín
+        </a>
+                     </strong>
+                     <p>Número 97 de 22 de mayo de 2015</p>
+                     <ul class="ul">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/eboja/2015/97/s1.html" title="1. Disposiciones generales" shape="rect">1. Disposiciones generales</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/eboja/2015/97/s2.2.html" title="2.2. Oposiciones, concursos y otras convocatorias" shape="rect">2.2. Oposiciones, concursos y otras convocatorias</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/eboja/2015/97/s3.html" title="3. Otras disposiciones" shape="rect">3. Otras disposiciones</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/eboja/2015/97/s4.html" title="4. Administración de Justicia" shape="rect">4. Administración de Justicia</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/eboja/2015/97/s5.1.html" title="5.1. Licitaciones públicas y adjudicaciones" shape="rect">5.1. Licitaciones públicas y adjudicaciones</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/eboja/2015/97/s5.2.html" title="5.2. Otros anuncios oficiales" shape="rect">5.2. Otros anuncios oficiales</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_6">
+                     <strong>
+                        <a title="Boletines por fecha" href="http://www.juntadeandalucia.es/eboja/2015.html" shape="rect">
+          Boletines por fecha 
+        </a>
+                     </strong>
+                     <div class="contenedor_calendario_tabla">
+                        <table>
+                           <caption>mayo</caption>
+                           <tr>
+                              <th colspan="1" rowspan="1">L</th>
+                              <th colspan="1" rowspan="1">M</th>
+                              <th colspan="1" rowspan="1">X</th>
+                              <th colspan="1" rowspan="1">J</th>
+                              <th colspan="1" rowspan="1">V</th>
+                              <th colspan="1" rowspan="1">S</th>
+                              <th colspan="1" rowspan="1">D</th>
+                           </tr>
+                           <tr>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="domingo" rowspan="1" colspan="1">1</td>
+                              <td rowspan="1" colspan="1">2</td>
+                              <td class="domingo" rowspan="1" colspan="1">3</td>
+                           </tr>
+                           <tr>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/83/index.html" title="Boletín nº 83" shape="rect">4</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/84/index.html" title="Boletín nº 84" shape="rect">5</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/85/index.html" title="Boletín nº 85" shape="rect">6</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/86/index.html" title="Boletín nº 86" shape="rect">7</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/87/index.html" title="Boletín nº 87" shape="rect">8</a>
+                              </td>
+                              <td rowspan="1" colspan="1">9</td>
+                              <td class="domingo" rowspan="1" colspan="1">10</td>
+                           </tr>
+                           <tr>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/88/index.html" title="Boletín nº 88" shape="rect">11</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/89/index.html" title="Boletín nº 89" shape="rect">12</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/90/index.html" title="Boletín nº 90" shape="rect">13</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/91/index.html" title="Boletín nº 91" shape="rect">14</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/92/index.html" title="Boletín nº 92" shape="rect">15</a>
+                              </td>
+                              <td rowspan="1" colspan="1">16</td>
+                              <td class="domingo" rowspan="1" colspan="1">17</td>
+                           </tr>
+                           <tr>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/93/index.html" title="Boletín nº 93" shape="rect">18</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/94/index.html" title="Boletín nº 94" shape="rect">19</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/95/index.html" title="Boletín nº 95" shape="rect">20</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/96/index.html" title="Boletín nº 96" shape="rect">21</a>
+                              </td>
+                              <td class="dia-boja&#xA;                            " rowspan="1" colspan="1">
+                                 <a href="http://www.juntadeandalucia.es/eboja/2015/97/index.html" title="Boletín nº 97" shape="rect">22</a>
+                              </td>
+                              <td rowspan="1" colspan="1">23</td>
+                              <td class="domingo" rowspan="1" colspan="1">24</td>
+                           </tr>
+                           <tr>
+                              <td rowspan="1" colspan="1">25</td>
+                              <td rowspan="1" colspan="1">26</td>
+                              <td rowspan="1" colspan="1">27</td>
+                              <td rowspan="1" colspan="1">28</td>
+                              <td rowspan="1" colspan="1">29</td>
+                              <td rowspan="1" colspan="1">30</td>
+                              <td class="domingo" rowspan="1" colspan="1">31</td>
+                           </tr>
+                           <tr>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                              <td class="dia-relleno" rowspan="1" colspan="1"/>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <div class="grid_5 alpha omega">
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/eboja/buscador/" title="Buscador de BOJA" shape="rect">Buscador de BOJA</a>
+                     </strong>
+                     <div class="buscador">
+                        <form action="http://www.juntadeandalucia.es/eboja/buscador/search.do" method="get" class="floatright" target="_self" enctype="application/x-www-form-urlencoded">
+                           <input id="eboja" value="on" name="eboja" type="hidden"/>
+                           <fieldset>
+                              <legend>Buscador general</legend>
+                              <label class="oculto" for="buscador_boja">Buscar</label>
+                              <input alt="Buscar" title="Buscar" id="buscador_boja" name="q" size="20" class="input_text defaultTextActive" type="text"/>
+                              <input alt="Buscar" title="Buscar" value="Buscar" class="input_submit" type="submit"/>
+                           </fieldset>
+                        </form>
+                        <div class="grid_4 alpha">
+                           <a href="http://www.juntadeandalucia.es/eboja/buscador/" title="Búsqueda avanzada" class="enlace_menu_mas" shape="rect">Búsqueda avanzada</a>
+                        </div>
+                     </div>
+                     <strong>
+                        <a href="http://www.juntadeandalucia.es/eboja/sobre-boja/" title="Sobre BOJA" shape="rect">Sobre BOJA</a>
+                     </strong>
+                     <ul class="ul_simple">
+                        <li>
+                           <a title="¿Qué es el BOJA?" href="http://www.juntadeandalucia.es/eboja/sobre-boja/informacion-general.html" shape="rect">¿Qué es el BOJA?</a>
+                        </li>
+                        <li>
+                           <a title="Verificación de autenticidad" href="http://www.juntadeandalucia.es/eboja/sobre-boja/verificacion-autenticidad.html" shape="rect">Verificación de autenticidad</a>
+                        </li>
+                        <li>
+                           <a title="Como publicar en BOJA" href="http://www.juntadeandalucia.es/eboja/sobre-boja/publicar.html" shape="rect">Como publicar en BOJA</a>
+                        </li>
+                     </ul>
+                     <strong>
+                        <a title="Histórico del BOJA" href="http://www.juntadeandalucia.es/boja.html" shape="rect">Histórico del BOJA</a>
+                     </strong>
+                  </div>
+               </div>
+            </li>
+            <li class="andalucia main-nav">
+               <a title="Andalucía" href="http://www.juntadeandalucia.es/andalucia.html" class="drop" accesskey="6" shape="rect">Andalucía</a>
+               <div class="dropdown container js">
+             
+            <div class="grid_4">
+                     <strong>
+                        <a title="Al sur" href="http://www.juntadeandalucia.es/andalucia/alsur.html" shape="rect">Al sur</a>
+                     </strong>
+                     <p>
+	Enclavada entre dos mares y dos continentes, la singularidad geográfica de Andalucía le otorga una identidad abierta y multicultural</p>
+
+                     <strong>
+                        <a title="Naturaleza y paisajes" href="http://www.juntadeandalucia.es/andalucia/naturalezapaisajes.html" shape="rect">Naturaleza y paisajes</a>
+                     </strong>
+                     <p>
+	Andalucía ofrece una gran diversidad geográfica y una contrastada riqueza de paisajes.</p>
+
+                     <strong>
+                        <a title="Clima" href="http://www.juntadeandalucia.es/andalucia/clima.html" shape="rect">Clima</a>
+                     </strong>
+                     <p>
+	Amplia variedad climática: sierras de abundantes lluvias, comarcas áridas, montañas nevadas, costas soleadas...</p>
+                  </div>
+                  <div class="grid_4">
+                     <strong>
+                        <a title="Historia" href="http://www.juntadeandalucia.es/andalucia/historia.html" shape="rect">Historia</a>
+                     </strong>
+                     <p>
+	Andalucía ha sido foco de civilización y escenario de una historia milenaria de convivencia entre culturas.</p>
+
+                     <strong>
+                        <a title="Economía" href="http://www.juntadeandalucia.es/andalucia/economia.html" shape="rect">Economía</a>
+                     </strong>
+                     <p>
+	En las tres últimas décadas, Andalucía ha logrado una profunda transformación económica y social.</p>
+
+                     <strong>
+                        <a title="Cultura y tradiciones" href="http://www.juntadeandalucia.es/andalucia/cultura.html" shape="rect">Cultura y tradiciones</a>
+                     </strong>
+                     <p>
+	Andalucía cuenta con una milenaria y rica herencia cultural.</p>
+                  </div>
+                  <div class="grid_4">
+                     <strong>
+                        <a title="El autogobierno andaluz" href="http://www.juntadeandalucia.es/andalucia/autogobierno.html" shape="rect">El autogobierno andaluz</a>
+                     </strong>
+                     <p>
+	Andalucía cuenta con amplios poderes legislativos, ejecutivos y judiciales, similares a los del resto de comunidades históricas de España.</p>
+
+                     <strong>
+                        <a title="Símbolos" href="http://www.juntadeandalucia.es/andalucia/simbolos.html" shape="rect">Símbolos</a>
+                     </strong>
+                     <p>
+	La bandera, el escudo y el himno de Andalucía.</p>
+                  </div>
+
+             
+            <div class="grid_4">
+                     <strong>
+                        <a title="Datos básicos" href="http://www.juntadeandalucia.es/andalucia.html" shape="rect">Datos básicos</a>
+                     </strong>
+                     <img src="http://www.juntadeandalucia.es/export/drupaljda/solapa_andalucia_imagen_0.jpg" alt="imagen auxiliar" title="imagen auxiliar"/>
+                     <ul class="listado_simple datos_andalucia">
+                        <li>
+		Denominación oficial: Comunidad Autónoma de Andalucía</li>
+                     </ul>
+                     <ul class="listado_simple datos_andalucia">
+                        <li>
+		Superficie: 87.597 Km2</li>
+	                       <li>
+		Población: 8.402.305</li>
+	                       <li>
+		Idioma: Castellano</li>
+	                       <li>
+		Presidenta: Susana Díaz Pacheco</li>
+                     </ul>
+                     <a class="enlace_menu_mas" title="Más datos" href="http://www.juntadeandalucia.es/andalucia.html" shape="rect">Más datos</a>
+                  </div>
+               </div>
+            </li>
+            <li class="noticias main-nav">
+               <a title="Noticias" href="http://www.juntadeandalucia.es/presidencia/portavoz/" class="drop" accesskey="7" shape="rect">Noticias</a>
+               <div class="dropdown container">
+                  <div class="grid_4">
+                     <p class="encabezado">
+                        <strong>Actualidad</strong>
+                     </p>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/" title="Portada" shape="rect">Portada</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/noticiasdeldia" title="Noticias del día" shape="rect">Noticias del día</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/listadoConvocatorias" title="Convocatorias" shape="rect">Convocatorias</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/listadoReportajes" title="Reportajes" shape="rect">Reportajes</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/listadoEspeciales" title="Especiales" shape="rect">Especiales</a>
+                        </li>
+                     </ul>
+                     <p class="encabezado">
+                        <strong>Portavoz del Gobierno</strong>
+                     </p>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/oficinaPortavoz" title="¿Qué es la Oficina del Portavoz?" shape="rect">¿Qué es la Oficina del Portavoz?</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/oficinaPortavoz" title="Funciones" shape="rect">Funciones</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_4">
+                     <p class="encabezado">
+                        <strong>Canales</strong>
+                     </p>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/gobierno" title="Gobierno" shape="rect">Gobierno</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/administracion" title="Administración" shape="rect">Administración</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/economia" title="Economía" shape="rect">Economía</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/salud" title="Salud" shape="rect">Salud</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/innovacion" title="Innovacion" shape="rect">Innovación</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/infraestructuras" title="Infraestructuras" shape="rect">Infraestructuras</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/agricultura" title="Agricultura" shape="rect">Agricultura</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/turismo" title="Turismo" shape="rect">Turismo</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/sociedad" title="Sociedad" shape="rect">Sociedad</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/medioambiente" title="Medioambiente" shape="rect">Medio ambiente</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/cultura" title="Cultura" shape="rect">Cultura</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid_4">
+                     <p class="encabezado">
+                        <strong>Consejo de Gobierno</strong>
+                     </p>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/consejo/sobreconsejo.html" title="Sobre el Consejo" shape="rect">Sobre el Consejo</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/consejo/proximasesion.html" title="Próxima sesión" shape="rect">Próxima sesión</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/consejo/ultimo.html" title="Última sesión" shape="rect">Última sesión</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/organismos/consejo/historico.html" title="Histórico de sesiones" shape="rect">Histórico de sesiones</a>
+                        </li>
+                     </ul>
+                     <p class="encabezado">
+                        <strong>Multimedia</strong>
+                     </p>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/videos" title="Vídeo" shape="rect">Vídeo</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/audios" title="Audio" shape="rect">Audio</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/fotogalerias" title="Fotogalería" shape="rect">Fotogalería</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/fotogaleriasAlta" title="Fotos en alta resolución" shape="rect">Fotos en alta resolución</a>
+                        </li>
+                     </ul>
+                     <p class="encabezado">
+                        <strong>Noticias en redes</strong>
+                     </p>
+                     <div class="social">
+                        <ul class="listado_social">
+                           <li>
+                              <a class="ico_social_30 twitter" title="Noticias de la Junta en Twitter" href="http://www.twitter.com/JuntaInforma" shape="rect">
+                                 <img alt="" src="http://www.juntadeandalucia.es/themes/images/social/30_v_twitter.gif"/>
+                                 <span>Twitter</span>
+                              </a>
+                           </li>
+                           <li>
+                              <a class="ico_social_30 facebook" title="Noticias de la Junta en Facebook" href="http://www.facebook.com/juntainforma" shape="rect">
+                                 <img alt="" src="http://www.juntadeandalucia.es/themes/images/social/30_v_facebook.gif"/>
+                                 <span>Facebook</span>
+                              </a>
+                           </li>
+                           <li>
+                              <a class="ico_social_30 youtube" title="Noticias de la Junta en Youtube" href="http://www.youtube.com/user/juntainforma" shape="rect">
+                                 <img alt="" src="http://www.juntadeandalucia.es/themes/images/social/30_v_youtube.gif"/>
+                                 <span>Youtube</span>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+
+                  <div class="grid_4">
+                     <ul class="ul_img">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/agenda/" title="Agenda de la comunicación" shape="rect">
+                              <img src="http://www.juntadeandalucia.es/themes/images/thrum38_agenda_comunicacion.jpg" alt=""/>
+                              <span>Agenda de la comunicación</span>
+                           </a>
+                        </li>
+                     </ul>
+                     <p class="encabezado">
+                        <strong>Documentación</strong>
+                     </p>
+                     <ul class="ul_simple">
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/listadoDiscursoPresidente" title="Discursos" shape="rect">Discursos</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/listadoDocumentosInteres" title="Documentos" shape="rect">Documentos</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/ixlegislatura/gobiernosanteriores/linea.html" title="Histórico Gobiernos" shape="rect">Histórico Gobiernos</a>
+                        </li>
+                        <li>
+                           <a href="http://www.juntadeandalucia.es/presidencia/portavoz/portadasperiodicos" title="Prensa" shape="rect">Prensa</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </li>
+         </ul>
+      </div>
+<div id="miga">
+         <div class="container">
+            <div class="texto">
+               <span>
+                  <a title="BOJA Histórico" href="http://www.juntadeandalucia.es/boja">BOJA Histórico</a> &gt;
+					<a href="http://www.juntadeandalucia.es/boja/2007.html" title="2007">2007</a>
+            &gt;
+          <a href="http://www.juntadeandalucia.es/boja/2007/73/" title="Boletín 73">Boletín 73</a>
+            &gt;
+          <a href="http://www.juntadeandalucia.es/boja/2007/73/s1.html" title="1. Disposiciones generales">1. Disposiciones generales</a>
+            &gt;
+          </span>
+            </div>
+         </div>
+      </div>
+      <div id="contenidos">
+         <div class="container separacion_vertical_superior_1 js">
+            <div id="cuerpo" class="grid_11 contenidos_nivel3 boja_disposicion">
+               <div>
+                  <h1>
+               Boletín Oficial de la Junta de Andalucía - 
+			   Histórico del BOJA<span class="nota">
+                 Boletín número 
+                 73
+                 de 
+                 13/4/2007</span>
+                  </h1>
+                  <!--+ |end content-main-heading +--><div class="punteado_izquierda cabecera_detalle_disposicion">
+                     <h2>1. Disposiciones generales</h2>
+                     <h3>Consejería de Justicia y Administración Pública</h3>
+                     <h4>Orden de 8 de marzo de 2007, por la que se establecen las bases reguladoras de los procedimientos para la concesión de subvenciones en materia de organización de acciones formativas y para la financiación de gastos corrientes a organizaciones sindicales, recuperación de la memoria histórica y mejora de las infraestructuras y gastos de equipamiento de los Juzgados de Paz. </h4>
+                  </div>
+                  <div class="alerta">
+                     <p>
+                        <strong>Atención:</strong> La información contenida en estas
+						páginas no tiene validez legal.
+						<a href="http://www.juntadeandalucia.es/boja/historico/informacion-general.html">Ver
+							más</a>
+                     </p>
+                     <p> Esta disposición incluye elementos no textuales, que no se
+							muestran en esta página. Para visualizarlos, consulte la
+							versión en
+							<a title="Ir al final de la&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;disposición" href="http://www.juntadeandalucia.es/boja/2007/73/&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;#descargas"> PDF. </a>
+                     </p>
+                  </div>
+                  <p> El Decreto 200/2004, de 11 de mayo, establece la estructura orgánica de la Consejería de Justicia y Administración Pública y dispone las competencias que corresponden en materia de Justicia y Administración Pública. </p>
+                  <p> En el ejercicio de sus competencias, la Consejería de Justicia y Administración Pública tiene un elenco de diferentes materias o mecanismos para promocionar, incentivar o subvencionar el ejercicio de las atribuciones que tiene conferidas y que ha venido desarrollando dentro del marco legal mediante la aprobación de las distintas bases reguladoras de la concesión de subvenciones. </p>
+                  <p> Razones de eficacia, celeridad y simplificación en el trámite y resolución de los expedientes administrativos aconsejan la aprobación de una única Orden que integre o aglutine la mayoría de las distintas líneas o modalidades de subvenciones existentes en la Consejería de Justicia y Administración Pública, consiguiéndose así racionalizar la documentación a aportar por los posibles beneficiarios de las subvenciones y unificando los plazos y medios de presentación de solicitudes, de resolución, de justificación y, en definitiva, del régimen jurídico aplicable en materia de subvenciones en un único texto legal. </p>
+                  <p> En cumplimiento de lo anterior, la presente Orden engloba las siguientes modalidades de subvenciones existentes en la Consejería de Justicia y Administración Pública y el Instituto Andaluz de Administración Pública: Subvenciones a Organizaciones Sindicales para la organización de acciones formativas, así como para la financiación de sus gastos corrientes, subvenciones a los Ayuntamientos andaluces para la mejora de la infraestructura y gastos de equipamiento de los Juzgados de Paz, y subvenciones a Ayuntamientos y entidades sin ánimo de lucro para desarrollar las medidas previstas en el Decreto 334/2003, de 2 de diciembre, para la coordinación de actuaciones en torno a la recuperación de la Memoria Histórica y el reconocimiento institucional y social de las personas desaparecidas durante la Guerra Civil y la Posguerra. </p>
+                  <p> La modalidad que subvenciona la organización de acciones formativas cuenta con dos fuentes de financiación diferenciadas: de una parte, las ayudas dimanantes del IV Acuerdo de Formación Continua en las Administraciones Públicas de 21 de septiembre de 2005, destinadas a subvencionar, entre otros, a las Organizaciones Sindicales representativas en el conjunto de todas las Administraciones Públicas y presentes en el Consejo Superior de la Función Pública; por otra, el Instituto Andaluz de Administración Pública, Organismo Autónomo adscrito a la Consejería de Justicia y Administración Pública, en el ámbito de sus competencias diseña el Plan de Formación para atender las necesidades de perfeccionamiento del personal de la Administración de la Junta de Andalucía, y destina ayudas a Organizaciones Sindicales con representación en el ámbito de la Comunidad Autónoma de Andalucía para que participen en la gestión de dicho Plan de Formación. </p>
+                  <p> La modalidad de subvenciones de mejora de las infraestructuras y gastos de equipamiento de los Juzgados de Paz tiene como objeto ayudar a los Ayuntamientos en los gastos que han de soportar de conformidad con el artículo 51.3 de la Ley 38/1988, de 28 de diciembre, de Demarcación y Planta Judicial. </p>
+                  <p> En cuanto al régimen y procedimiento de concesión aplicable en esta Orden para las distintas modalidades de subvenciones integradas en el texto, cabe reseñar que las modalidades de subvenciones cuyos beneficiarios son las Organizaciones Sindicales, se tramitarán a solicitud del interesado en atención a la mera concurrencia de la determinada situación del perceptor, de conformidad con lo establecido en el párrafo segundo del apartado primero del artículo 31 de la Ley 3/2004, de 28 de diciembre, de Medidas Tributarias, Administrativas y Financieras. Siendo aplicable, para el resto de modalidades de subvenciones que se integran en la Orden, el procedimiento ordinario de concesión de subvenciones, que se iniciará siempre de oficio, tramitándose en régimen de competencia competitiva, de acuerdo con lo establecido en el apartado 1 del artículo 22 de la Ley 38/2003, de 17 de noviembre. </p>
+                  <p> En este afán de agilizar y simplificar los procedimientos adquiere aquí una especial relevancia la apuesta decidida de la Consejería de Justicia y Administración Pública para facilitar a los interesados la utilización de medios telemáticos y electrónicos eficaces para realizar todos y cada uno de los trámites relativos a la solicitud de las subvenciones, siempre y cuando quede acreditada la autenticidad de su voluntad, y de proporcionarles información tanto de carácter general sobre normativa, requisitos, documentación, plazos, etc., como del estado de tramitación de sus solicitudes. </p>
+                  <p> En el Decreto 183/2003, de 24 de junio, por el que se regula la información y atención al ciudadano y la tramitación de procedimientos administrativos por medios electrónicos, ya se advertía de forma creciente que el uso de redes de telecomunicación permitía entablar relaciones jurídicas con los ciudadanos de forma más ágil e inmediata, abriendo una vía de excepcional potencial para apurar, hasta sus últimas consecuencias, el principio de eficacia en la actuación administrativa que proclama el artículo 103.1 de la Constitución. </p>
+                  <p> En su virtud, en uso de las facultades conferidas por el artículo 107 de la Ley 5/1983, de 19 de julio, General de Hacienda Pública de la Comunidad Autónoma de Andalucía, y el artículo 46.4 de la Ley 6/2006, de 24 de octubre, del Gobierno de la Comunidad Autónoma de Andalucía, </p>
+                  <p> DISPONGO </p>
+                  <p> TITULO I </p>
+                  <p> DISPOSICIONES GENERALES </p>
+                  <p> Artículo 1. Objeto, modalidades y régimen jurídico. </p>
+                  <p> 1. La presente Orden tiene por objeto establecer las bases reguladoras de la concesión de subvenciones a otorgar por la Consejería de Justicia y Administración Pública y el Instituto Andaluz de Administración Pública, en las siguientes modalidades de actuación: </p>
+                  <p> Modalidad 1 (OSAF): Subvenciones a Organizaciones Sindicales para organización de acciones formativas. </p>
+                  <p> Modalidad 2 (OSGC): Subvenciones a Organizaciones Sindicales para la financiación de sus gastos corrientes. </p>
+                  <p> Modalidad 3 (MGJP): Subvenciones a los Ayuntamientos andaluces para la mejora de la infraestructura y gastos de equipamiento de los Juzgados de Paz. </p>
+                  <p> Modalidad 4 (RMH): Subvenciones a Ayuntamientos y entidades sin ánimo de lucro para desarrollar las medidas previstas en el Decreto 334/2003, de 2 de diciembre, para la coordinación de actuaciones en torno a la recuperación de la Memoria Histórica y el reconocimiento institucional y social de las personas desaparecidas durante la Guerra Civil y la Posguerra. </p>
+                  <p> 2. Las subvenciones a que se refiere la presente Orden se regirán por lo dispuesto en la Ley 38/2003, de 17 de noviembre, General de Subvenciones, de acuerdo con lo establecido en su disposición final primera, en el Capítulo I del Título III de la Ley 3/2004, de 28 de diciembre, de Medidas Tributarias, Administrativas y Financieras, en el Título VIII de la Ley 5/1983, de 19 de julio, General de la Hacienda Pública de la Comunidad Autónoma de Andalucía, en las disposiciones de carácter básico del Real Decreto 887/2006, de 21 de julio, por el que se aprueba el Reglamento de la Ley 38/2003, de 17 de noviembre, en el Decreto 254/2001, de 20 de noviembre, por el que se aprueba el Reglamento por el que se regulan los procedimientos para la concesión de subvenciones y ayudas públicas por la Administración de la Junta de Andalucía y sus Organismos Autónomos y su Régimen Jurídico, en lo que no se opongan a los preceptos básicos de la normativa estatal anteriormente mencionados, en las Leyes de Presupuesto de la Comunidad Autónoma de Andalucía para cada ejercicio y por las presentes bases reguladoras. </p>
+                  <p> Artículo 2. Gastos subvencionables. </p>
+                  <p> 1. Las subvenciones que se concedan al amparo de la presente Orden únicamente podrán destinarse a la financiación de los gastos o conceptos subvencionables establecidos, para cada una de las modalidades de subvención de que se trate, en el Título II de la presente Orden. </p>
+                  <p> 2. Se considerará gasto realizado el que ha sido efectivamente pagado con anterioridad a la finalización del período de justificación determinado en el artículo 21 de la presente Orden. No obstante lo anterior, se podrán tener en cuenta pagos realizados con posterioridad siempre que se cumpla la finalidad de la subvención. </p>
+                  <p> 3. Cuando el importe del gasto subvencionable supere la cuantía de 30.000 euros, en el supuesto de coste por ejecución de obra, o de 12.000 euros, en el supuesto de suministro de bienes de equipo o prestación de servicios por empresas de consultoría o asistencia técnica, el beneficiario deberá solicitar como mínimo tres ofertas de diferentes proveedores, con carácter previo a la contracción del compromiso para la prestación del servicio o la entrega del bien, salvo que por las especiales características del gasto subvencionable no exista en el mercado suficiente número de entidades que lo suministren o presten, o salvo que el gasto se hubiera realizado con anterioridad a la solicitud de la subvención. La elección entre las ofertas presentadas, que deberán aportarse en la justificación, o en su caso, en la solicitud de la subvención, se realizará conforme a criterios de eficiencia y economía, debiendo justificarse expresamente en una memoria la elección cuando no recaiga en la propuesta económica más ventajosa. </p>
+                  <p> 4. En el supuesto de la modalidad de subvención que prevea como gasto subvencionable la adquisición, construcción, rehabilitación y mejora de bienes inventariables, el período durante el cual el beneficiario deberá destinar los bienes al fin concreto para el que se concedió la subvención será de cinco años en caso de bienes inscribibles en un registro público y de dos años para el resto de bienes. </p>
+                  <p> En el caso de bienes inscribibles en un registro público, deberá hacerse constar en la escritura esta circunstancia, así como el importe de la subvención concedida, debiendo ser objeto estos extremos de inscripción en el registro público correspondiente. </p>
+                  <p> El incumplimiento de la obligación de destino referida en el párrafo anterior, que se producirá en todo caso con la enajenación o el gravamen del bien, será causa de reintegro, en los términos establecidos en el Capítulo II del Título II de la Ley General de Subvenciones, quedando el bien afecto al pago del reintegro cualquiera que sea su poseedor, salvo que resulte ser un tercero protegido por la fe pública registral o se justifique la adquisición de los bienes con buena fe y justo título o en establecimiento mercantil o industrial, en caso de bienes muebles no inscribibles. </p>
+                  <p> 5. No se considerará incumplida la obligación de destino referida en el anterior apartado cuando: </p>
+                  <p> a) Tratándose de bienes no inscribibles en un registro público, fueran sustituidos por otros que sirvan en condiciones análogas al fin para el que se concedió la subvención y este uso se mantenga hasta completar el período establecido, siempre que la sustitución haya sido autorizada por la Administración concedente. </p>
+                  <p> b) Tratándose de bienes inscribibles en un registro público, el cambio de destino, enajenación o gravamen sea autorizado por la Administración concedente. En este supuesto, el adquirente asumirá la obligación de destino de los bienes por el período restante y, en caso de incumplimiento de la misma, del reintegro de la subvención. </p>
+                  <p> 6. El carácter subvencionable del gasto de amortización estará sujeto a las siguientes condiciones: </p>
+                  <p> a) Que las subvenciones no hayan contribuido a la compra de los bienes. </p>
+                  <p> b) Que la amortización se calcule de conformidad con las normas de contabilidad generalmente aceptadas. </p>
+                  <p> c) Que el coste se refiera exclusivamente al período subvencionable. </p>
+                  <p> 7. Los gastos financieros, los gastos de asesoría jurídica o financiera, los gastos notariales y registrales y los gastos periciales para la realización del proyecto subvencionado y los de administración específicos son subvencionables si están directamente relacionados con la actividad subvencionada y son indispensables para la adecuada preparación o ejecución de la misma. </p>
+                  <p> En ningún caso serán gastos subvencionables: </p>
+                  <p> a) Los gastos de garantía bancaria. </p>
+                  <p> b) Los intereses deudores de las cuentas bancarias. </p>
+                  <p> c) Intereses, recargos y sanciones administrativas y penales. </p>
+                  <p> d) Los gastos de procedimientos judiciales. </p>
+                  <p> 8. Los tributos son gastos subvencionables cuando el beneficiario de la subvención los abona efectivamente. En ningún caso se consideran gastos subvencionables los impuestos indirectos cuando sean susceptibles de recuperación o compensación ni los impuestos personales sobre la renta. </p>
+                  <p> 9. Los costes indirectos habrán de imputarse por el beneficiario a la actividad subvencionada en la parte que razonablemente corresponda de acuerdo con principios y normas de contabilidad generalmente admitidas y, en todo caso, en la medida en que tales costes correspondan al período en que efectivamente se realiza la actividad. </p>
+                  <p> Artículo 3. Beneficiarios. </p>
+                  <p> 1. Tendrán la consideración de beneficiarios a los efectos de las subvenciones previstas en la presente Orden: </p>
+                  <p> a) En la Modalidad 1 (OSAF): Las Organizaciones Sindicales legalmente constituidas que, tras las últimas elecciones, ostenten representatividad a nivel de la Comunidad Autónoma de Andalucía, y cuenten con al menos el 10% de la suma total de los representantes obtenidos en las elecciones para Delegados, Juntas de Personal y Comités de Empresa en los ámbitos del personal funcionario y laboral al servicio de la Administración General de la Junta de Andalucía y de la Administración de Justicia en Andalucía. </p>
+                  <p> b) En la Modalidad 2 (OSGC): Las Organizaciones Sindicales legalmente constituidas que, tras las últimas elecciones, tengan presencia en los ámbitos del personal laboral y del personal vinculado administrativa o estatutariamente a la Administración de la Junta de Andalucía. </p>
+                  <p> c) En la Modalidad 3 (MGJP): Los Ayuntamientos de aquellos municipios de la Comunidad Autónoma de Andalucía que tengan Juzgados de Paz en su término municipal. </p>
+                  <p> d) En la Modalidad 4 (RMH): </p>
+                  <p> d.1. Para las actuaciones descritas en la letra a) del apartado 1 del artículo 35 de la presente Orden, sólo podrán ser beneficiarios los Ayuntamientos de municipios andaluces. </p>
+                  <p> d.2. Para el desarrollo de las actuaciones previstas en la letra b) del apartado 1 del artículo 35 de la presente Orden, podrán ser beneficiarios tanto los Ayuntamientos de municipios andaluces como las entidades sin ánimo de lucro cuyo objeto sea la recuperación de la Memoria Histórica. </p>
+                  <p> 2. Cuando se trate de agrupaciones de personas físicas o jurídicas, públicas o privadas sin personalidad, deberán hacerse constar expresamente, tanto en la solicitud como en la resolución de concesión, los compromisos de ejecución asumidos por cada miembro de la agrupación, así como el importe de la subvención a aplicar por cada uno de ellos, que tendrán igualmente la consideración de beneficiarios. En cualquier caso, deberá nombrarse un representante o apoderado único de la agrupación, con poderes bastantes para cumplir las obligaciones que, como beneficiario, corresponden a la agrupación. No podrá disolverse la agrupación hasta que haya transcurrido el plazo de prescripción previsto en los artículos 39 y 65 de la Ley 38/2003, de 17 de noviembre. </p>
+                  <p> Artículo 4. Requisitos de los beneficiarios. </p>
+                  <p> 1. No podrán obtener la condición de beneficiario de las subvenciones las personas o entidades en quienes concurra alguna de las circunstancias siguientes: </p>
+                  <p> a) Haber sido condenadas mediante sentencia firme a la pena de pérdida de la posibilidad de obtener subvenciones o ayudas públicas. </p>
+                  <p> b) Haber solicitado la declaración de concurso, haber sido declarados insolventes en cualquier procedimiento, hallarse declarados en concurso, estar sujetos a intervención judicial o haber sido inhabilitados conforme a la Ley Concursal sin que haya concluido el período de inhabilitación fijado en la sentencia de calificación del concurso. </p>
+                  <p> c) Haber dado lugar, por causa de la que hubiesen sido declarados culpables, a la resolución firme de cualquier contrato celebrado con la Administración. </p>
+                  <p> d) Estar incursa la persona física, los administradores de las sociedades mercantiles o aquellos que ostenten la representación legal de otras personas jurídicas, en alguno de los supuestos de la Ley 12/1995, de 11 de mayo, de Incompatibilidades de los Miembros del Gobierno de la Nación y de los Altos Cargos de la Administración General del Estado, de la Ley 53/1984, de 26 de diciembre, de Incompatibilidades del Personal al Servicio de las Administraciones Públicas, de la Ley 3/2005, de 8 de abril, de Incompatibilidades de Altos Cargos de la Administración de la Junta de Andalucía y de Declaración de Actividades, Bienes e Intereses de Altos Cargos y otros Cargos Públicos, o tratarse de cualquiera de los cargos electivos regulados en la Ley Orgánica 5/1985, de 19 de junio, del Régimen Electoral General, en los términos establecidos en la misma o en la normativa autonómica que regule estas materias. </p>
+                  <p> e) No hallarse al corriente en el cumplimiento de las obligaciones tributarias o frente a la Seguridad Social impuestas por las disposiciones vigentes, y que no son deudores en período ejecutivo de la Comunidad Autónoma de Andalucía por cualquier otro ingreso de Derecho Público. </p>
+                  <p> f) Tener la residencia fiscal en un país o territorio calificado reglamentariamente como paraíso fiscal. </p>
+                  <p> g) No hallarse al corriente de pago de obligaciones por reintegro de subvenciones. </p>
+                  <p> h) Haber sido sancionado mediante resolución firme con la pérdida de la posibilidad de obtener subvenciones según la Ley General de Subvenciones o la Ley General Tributaria. </p>
+                  <p> 2. No podrán acceder a la condición de beneficiarios las agrupaciones cuando concurra alguna de las prohibiciones anteriores en cualquiera de sus miembros. </p>
+                  <p> 3. En ningún caso podrán obtener la condición de beneficiario de las subvenciones las asociaciones incursas en las causas de prohibición previstas en los apartados 5 y 6 del ar- </p>
+                  <p> tículo 4 de la Ley Orgánica 1/2002, de 22 de marzo, reguladora del Derecho de Asociación. </p>
+                  <p> 4. Tampoco podrán obtener la condición de beneficiario las asociaciones respecto de las que se hubiera suspendido el procedimiento administrativo de inscripción por encontrarse indicios racionales de ilicitud penal, en aplicación de lo dispuesto en el artículo 30.4 de la Ley Orgánica 1/2002, en tanto no recaiga resolución judicial firme en cuya virtud pueda practicarse la inscripción en el correspondiente registro. </p>
+                  <p> 5. Al amparo de lo establecido en el artículo 13.2 de la Ley 38/2003, de 17 de noviembre, General de Subvenciones, así como en el artículo 29.1 de la citada Ley 3/2004, de 28 de diciembre, los beneficiarios que opten por la modalidad 3 (MGJP), esto es, para los Ayuntamientos de municipios andaluces que cuenten con Juzgados de Paz, queda exceptuada la obligación contemplada en la letra e) del apartado 1 del presente artículo, justificado en atención a la naturaleza de esta modalidad de subvención que tiene por finalidad el auxilio al desenvolvimiento del servicio público de la Administración de Justicia, circunstancia ésta imprescindible para garantizar los derechos fundamentales previstos en los artículos 24 y 25 de la Constitución Española. </p>
+                  <p> También quedan exceptuados de la prohibición prevista en la letra e) del apartado 1 los beneficiarios que opten por la modalidad 4 (RMH) siempre que se trate de Ayuntamientos de los municipios andaluces, justificado en atención a la naturaleza de la subvención. </p>
+                  <p> Artículo 5. Limitaciones presupuestarias. </p>
+                  <p> 1. La concesión de las subvenciones estará limitada por las disponibilidades presupuestarias existentes en el ejercicio presupuestario de que se trate. </p>
+                  <p> 2. El importe de las subvenciones podrá tener carácter plurianual, de acuerdo con lo previsto en el artículo 39 de la Ley 5/1983, de 19 de julio, General de la Hacienda Pública de la Comunidad Autónoma de Andalucía. </p>
+                  <p> 3. El importe de las subvenciones en ningún caso podrá ser de tal cuantía que, aisladamente o en concurrencia con otras subvenciones, ayudas, ingresos o recursos, supere el coste de la actividad subvencionada. </p>
+                  <p> Artículo 6. Financiación de las actividades subvencionadas. </p>
+                  <p> 1. Las subvenciones se concederán con cargo a las siguientes aplicaciones presupuestarias: </p>
+                  <p> - Modalidad 1 (OSAF): Concepto presupuestario 482.00, correspondiente al programa 1.2.B. </p>
+                  <p> - Modalidad 2 (OSGC): Concepto presupuestario 482.00, correspondiente al programa 1.2.A. </p>
+                  <p> - Modalidad 3 (MGJP): Concepto presupuestario 761.00, correspondiente al programa 1.4.B. </p>
+                  <p> - Modalidad 4 (RMH): Conceptos presupuestarios 762.01, 462.01 y 489.00, correspondientes al programa 1.4.B. </p>
+                  <p> 2. Las subvenciones que se otorguen al amparo de la presente Orden serán compatibles con la percepción de otras subvenciones, ayudas, ingresos o recursos para la misma finalidad, procedentes de cualesquiera Administraciones o entes públicos o privados, nacionales, de la Unión Europea o de organismos internacionales, sin perjuicio de lo dispuesto en el párrafo siguiente. </p>
+                  <p> 3. La aportación de fondos propios al proyecto o acción subvencionada habrá de acreditarse en la cuenta justificativa de la subvención, conforme al artículo 30 de la Ley 38/2003, de 17 de noviembre, General de Subvenciones. </p>
+                  <p> Artículo 7. Régimen de concesión. </p>
+                  <p> 1. El procedimiento de concesión de subvenciones para las modalidades 3 (MGJP) y 4 (RMH), de acuerdo con los artículos 31.1 de la Ley 3/2004, de 28 de diciembre, y 22.1 de la Ley 38/2003, de 17 de noviembre, se iniciará siempre de oficio, y se tramitará en régimen de concurrencia competitiva, entendiendo por tal el procedimiento mediante el cual la concesión de las subvenciones se realiza mediante la comparación de las solicitudes presentadas, a fin de establecer una prelación entre las mismas de acuerdo con los criterios de valoración fijados en la presente Orden, y adjudicar, dentro del crédito disponible, aquellas que hayan obtenido mayor valoración en aplicación de los citados criterios. </p>
+                  <p> 2. El procedimiento de concesión de subvenciones para las modalidades 1 (OSAF) y 2 (OSGC), se otorgará en atención a la mera concurrencia de la determinada situación del perceptor, iniciándose a solicitud de los interesados, sin que sea necesario establecer, en tales casos, la comparación de las solicitudes ni la prelación entre las mismas. </p>
+                  <p> Así pues, el procedimiento de concesión de las referidas modalidades 1 y 2 se sustanciará conforme a las normas generales de los procedimientos administrativos iniciados a solicitud de interesado, ajustándose a lo establecido en las presentes bases en cuanto a la tramitación, concesión, abono y justificación, salvo en lo dispuesto en los apartados siguientes: </p>
+                  <p> a) El procedimiento se entenderá iniciado desde la fecha en que la correspondiente solicitud haya tenido entrada en el registro del órgano competente para su tramitación, contándose desde dicha fecha el plazo máximo establecido para resolver y notificar la resolución expresa de la solicitud. </p>
+                  <p> b) La tramitación y resolución de los expedientes se realizará para cada una de las solicitudes de forma individual, concediéndose la subvención solicitada sin comparación con otras solicitudes, siempre que se cumplan los requisitos determinados en la presente Orden para cada una de las modalidades de que se trate y exista consignación presupuestaria para ello. </p>
+                  <p> c) La práctica de las notificaciones se realizará de forma individual de acuerdo con las normas generales de aplicación. </p>
+                  <p> d) El plazo para subsanar las solicitudes podrá ser ampliado prudencialmente, hasta cinco días, a petición del interesado o a iniciativa del órgano, cuando la aportación de los documentos requeridos presente dificultades especiales. </p>
+                  <p> 3. La presente Orden tiene vigencia indefinida. Así pues, con independencia del procedimiento de concesión en cada caso, no será necesaria una previa disposición anual que efectúe la convocatoria de las subvenciones. </p>
+                  <p> Artículo 8. Solicitud y documentación obligatoria de carácter general. </p>
+                  <p> 1. La solicitud deberá ajustarse al modelo que figura en los Anexos a la presente Orden, según la modalidad de subvención correspondiente, siendo suscrita y dirigida de la siguiente forma: </p>
+                  <p> a) Para las Modalidades 1 (OSAF) y 2 (OSGC), la solicitud será suscrita por aquella persona que tenga capacidad para representar a la Organización Sindical, y será dirigida en la Modalidad 1 (OSAF) a la persona titular de la Dirección del Instituto Andaluz de Administración Pública, y en la Modalidad 2 (OSGC) a la persona titular de la Secretaría General para la Administración Pública. </p>
+                  <p> b) En la Modalidad 3 (MGJP), la solicitud será suscrita por quien ostenta la condición de Alcalde del Ayuntamiento o quien legalmente le sustituya, y se dirigirá a la persona titular de la respectiva Delegación Provincial de la Consejería de Justicia y Administración Pública. </p>
+                  <p> c) En la Modalidad 4 (RMH), la solicitud será suscrita por quien ostenta la condición de Alcalde del Ayuntamiento o quien legalmente le sustituya o, en su caso, por el representante legal de la entidad sin ánimo de lucro, y será dirigida a la persona titular de la Consejería de Justicia y Administración Pública. </p>
+                  <p> 2. Las solicitudes habrán de recoger en todo caso: </p>
+                  <p> a) Declaración responsable del cumplimiento de los requisitos exigidos en el artículo 4 de la presente Orden. </p>
+                  <p> b) Declaración expresa respecto de otras subvenciones concedidas y/o solicitadas para la misma finalidad, procedentes de cualesquiera Administraciones o entes públicos o privados, nacionales o internacionales, con la indicación, en su caso, de la entidad concedente e importe. </p>
+                  <p> c) Autorización expresa de la posibilidad de que la Administración pueda recabar cualquier documentación o información de otras Administraciones Públicas o entidades, salvo para el supuesto a que se refiere el apartado 2 del artículo 10 de la presente Orden. </p>
+                  <p> d) Declaración responsable sobre el compromiso de aportar la documentación acreditativa referida en el artículo 9 de la presente Orden. </p>
+                  <p> 3. Junto a la documentación declarativa referida en el apartado anterior, la solicitud irá acompañada de la siguiente documentación relativa a los proyectos subvencionables: </p>
+                  <p> a) Una memoria descriptiva de la actividad con indicación de los objetivos, actuaciones o acciones a desarrollar y método de trabajo, así como el calendario, programa y fecha de realización de las actividades para las que se solicita subvención. En ella se contendrá, en su caso, y sólo en el supuesto de que se trate de las Modalidades 3 (MGJP) y 4 (RMH), aquella documentación que acredite el cumplimiento de los distintos criterios de valoración establecidos en el Título II de la presente Orden. </p>
+                  <p> b) Presupuesto detallado y desglosado en el que conste la relación de gastos e ingresos previstos para la relación de la actividad o proyecto objeto de la subvención, así como las cantidades otorgadas por otras entidades para su financiación y las de aportación propias. </p>
+                  <p> Artículo 9. Documentación a aportar sólo a requerimiento del órgano competente. </p>
+                  <p> 1. Una vez examinadas las solicitudes o, en su caso, tras la evaluación previa y sólo en el caso de resultar posible beneficiario de la subvención, el órgano competente en cada caso requerirá a los interesados, en función de la modalidad de subvención solicitada, para que aporten la siguiente documentación acreditativa: </p>
+                  <p> 2. Para las Modalidades 1 (OSAF) y 2 (OSGC): </p>
+                  <p> a) Poder bastanteado por el Gabinete Jurídico de la Junta de Andalucía acreditativo de la representación que ostenta en nombre de la correspondiente Organización Sindical. </p>
+                  <p> b) Copia autenticada del DNI de la persona a cuyo nombre esté otorgado el poder de representación. </p>
+                  <p> c) Copia autenticada de los Estatutos de la Organización Sindical. </p>
+                  <p> d) Copia autenticada del CIF de la Organización Sindical. </p>
+                  <p> e) Copia autenticada acreditativa de la inscripción de la Organización Sindical en el registro correspondiente. </p>
+                  <p> f) Certificado de la correspondiente entidad bancaria acreditativo de la cuenta en la que deba efectuarse, en su caso, el ingreso de la subvención. </p>
+                  <p> 3. Para la Modalidad 3 (MGJP): </p>
+                  <p> a) Certificación expedida por el titular de la Secretaría del Ayuntamiento acreditativa de que quien suscribe la solicitud desempeña la titularidad de la Alcaldía del Ayuntamiento o, su sutitución legal, conforme al modelo que figura en el Anexo V de la presente Orden. </p>
+                  <p> b) CIF del Ayuntamiento solicitante. </p>
+                  <p> c) Informe del técnico competente del Ayuntamiento solicitante sobre las obras de reforma, reparación y conservación, únicamente cuando la subvención se solicite para tales actuaciones. </p>
+                  <p> d) Certificado de la correspondiente entidad bancaria acreditativo de la cuenta en la que deba efectuarse, en su caso, el ingreso de la subvención. </p>
+                  <p> 4. Para la Modalidad 4 (RMH): </p>
+                  <p> a) Certificación expedida por el titular de la Secretaría del Ayuntamiento o de la entidad, conforme al modelo que figura en el Anexo VI de la presente Orden, acreditativa de que quien suscribe la solicitud desempeña la titularidad de la Alcaldía del Ayuntamiento o su sustitución legal o, en su caso, de ser el representante legal de la entidad solicitante, y fotocopia del DNI de este último. </p>
+                  <p> b) Indicación de un orden de prioridad en los casos en que los interesados formulen varias solicitudes para distintas actuaciones dentro de un mismo apartado. </p>
+                  <p> c) CIF del Ayuntamiento o entidad solicitante. </p>
+                  <p> d) Las Entidades sin ánimo de lucro deberán presentar, además, copia compulsada de la escritura pública o acta de constitución, así como certificación de su inscripción en el registro correspondiente, con mención expresa a los fines u objeto de la entidad. </p>
+                  <p> e) Certificado de la correspondiente entidad bancaria acreditativo de la cuenta en la que deba efectuarse, en su caso, el ingreso de la subvención. </p>
+                  <p> 5. La documentación referida en los apartados anteriores deberá presentarse en original o fotocopia debidamente compulsada y en duplicado ejemplar, de acuerdo con lo previsto en el Decreto 204/1995, de 29 de agosto, de Medidas Organizativas para los Servicios de Atención Directa a los Ciudadanos. </p>
+                  <p> 6. Conforme a lo dispuesto en el artículo 35.f) de la Ley 30/1992, de 26 de noviembre, de Régimen Jurídico de las Administraciones Públicas y del Procedimiento Administrativo Común, así como en el artículo 20 del citado Decreto 204/1995, de 29 de agosto, no será necesario aportar la documentación referida en los apartados anteriores cuando ésta se encuentre ya en poder de la Consejería de Justicia y Administración Pública, y no se hayan producido modificaciones respecto a la aportada en convocatorias anteriores. El interesado podrá ejercer este derecho siempre que haga constar la fecha y el órgano o dependencia en que fueron presentados o, en su caso, emitidos, y cuando no hayan transcurrido más de cinco años desde la finalización del procedimiento al que correspondan. </p>
+                  <p> Artículo 10. Presentación de solicitudes y plazo. </p>
+                  <p> 1. Las solicitudes se podrán presentar: </p>
+                  <p> a) Preferentemente en el Registro Telemático Unico de la Administración de la Junta de Andalucía, a través del portal del ciudadano "andaluciajunta.es" y mediante el acceso a la dirección web http://www.juntadeandalucia.es/justiciayadministracionpublica. Para utilizar este medio de presentación, las solicitudes deberán reunir los requisitos exigidos en el apartado 3 del artículo 12 del Decreto 183/2003, de 24 de junio, por el que se regula la información y atención al ciudadano y la tramitación de procedimientos electrónicos (Internet), y los interesados deberán disponer del certificado reconocido de usuario, de acuerdo con lo previsto en su artículo 13. </p>
+                  <p> Las solicitudes así presentadas producirán los mismos efectos jurídicos que las formuladas de acuerdo con el artículo 70.1 de la citada Ley 30/1992, de 26 de noviembre, e incluirán la petición de autorización al interesado para realizar las comunicaciones relativas al procedimiento por medios electrónicos, a través de la suscripción automática al sistema de notificaciones telemáticas de la Junta de Andalucía. </p>
+                  <p> Los documentos acreditativos del cumplimiento de los requisitos serán sustituidos por la declaración responsable del interesado que exprese la concurrencia de dichos requisitos y del compromiso de aportar los justificantes a requerimiento de la Administración. </p>
+                  <p> Además, se emitirá al interesado un recibo electrónico de la presentación telemática de la solicitud, de forma que el interesado tenga constancia de que la comunicación ha sido recibida por la Administración y pueda referirse a ella posteriormente. </p>
+                  <p> b) En los Registros administrativos de la Consejería, de sus Delegaciones Provinciales y del Instituto Andaluz de Administración Pública, sin perjuicio de que también puedan presentarse en los registros de los demás órganos y en las oficinas que correspondan, de conformidad con lo establecido en el artículo 38.4 de la Ley 30/1992, de 26 de noviembre, de Régimen Jurídico de las Administraciones Públicas y del Procedimiento Administrativo Común. </p>
+                  <p> 2. La presentación de la solicitud conllevará la autorización al órgano gestor para recabar las certificaciones, a emitir por la Agencia Estatal de Administración Tributaria, por la Tesorería General de la Seguridad Social y por la Consejería de Economía y Hacienda de la Junta de Andalucía, de acuerdo con lo dispuesto en el apartado 2 del artículo 31 de la citada Ley 3/2004, de 28 de diciembre. </p>
+                  <p> No obstante lo anterior, para la acreditación de estar al corriente en el cumplimiento de sus obligaciones frente a la Seguridad Social, y hasta tanto sea posible la cesión de información autorizada a través de medios telemáticos por parte de la Tesorería General de la Seguridad Social, dicha acreditación se realizará mediante la aportación del correspondiente certificado por parte del beneficiario. </p>
+                  <p> 3. El plazo de presentación de solicitudes será el comprendido entre el 15 de enero y el 15 de marzo de cada año, sin perjuicio de lo establecido en la Disposición Adicional Unica de la presente Orden para el año 2007. </p>
+                  <p> 4. No serán admitidas a trámite las solicitudes que se presenten fuera del plazo establecido en el párrafo anterior, resolviéndose la inadmisión de las mismas, que deberá ser notificada a los interesados en los términos previstos en el artículo 59 de la Ley 30/1992, de 26 de noviembre. </p>
+                  <p> Artículo 11. Subsanación. </p>
+                  <p> 1. Si la solicitud no reúne los requisitos exigidos o no se acompañasen los documentos preceptivos, el órgano competente para su tramitación requerirá al interesado para que subsane la falta o acompañe los documentos preceptivos en el plazo máximo e improrrogable de diez días, sin perjuicio de lo dispuesto en el artículo 7.2.d) de la presente Orden para las Modalidades 1 (OSAF) y 2 (OSGC), con la indicación de que si así no lo hiciera se le tendrá por desistido de su solicitud, previa resolución, que deberá ser dictada en los términos previstos en el artículo 42.1 de la Ley 30/1992, de 26 de noviembre, de Régimen Jurídico de las Administraciones Públicas y del Procedimiento Administrativo Común. </p>
+                  <p> 2. Este requerimiento de subsanación podrá realizarse mediante notificación telemática, siempre que el interesado hubiera expresado en la solicitud su consentimiento para ello, conforme al artículo 15 del citado Decreto 183/2003, de 24 de junio. </p>
+                  <p> Artículo 12. Tramitación y propuesta de resolución. </p>
+                  <p> 1. Para las Modalidades 3 (MGJP) y 4 (RMH), las solicitudes serán objeto de un procedimiento de evaluación previa y selección por el órgano competente según la modalidad de que se trate y de acuerdo con lo dispuesto en el apartado 2 del presente artículo, que evaluará las solicitudes así como la documentación preceptiva atendiendo a los criterios de valoración indicados en la presente Orden, en el plazo máximo de tres meses contados a partir de la finalización del plazo para la presentación de las solicitudes. A tales efectos podrán: </p>
+                  <p> a) Requerir al interesado para que, aporte la documentación complementaria o aclaratoria que permita realizar adecuadamente la evaluación previa, siendo el plazo de presentación de dicha documentación de 10 días hábiles. </p>
+                  <p> b) Realizar cuantas verificaciones o controles considere oportunas. </p>
+                  <p> 2. Son órganos competentes para la evaluación previa y su posterior informe al órgano instructor, con relación a cada una de las modalidades de subvención, los siguientes: </p>
+                  <p> a) Para la Modalidad 3 (MGJP), la evaluación y selección se llevará a cabo por una Comisión de Valoración integrada por quien desempeñe la Secretaría General de la Delegación Provincial, quien ocupe la jefatura de Servicio de Justicia y quien, con categoría funcionarial de los grupos A o B, designe el titular de la respectiva Delegación Provincial. </p>
+                  <p> b) Para la Modalidad 4 (RMH), se constituirá para su evaluación previa y selección una Comisión de Valoración integrada por el titular de la Dirección General de Instituciones y Cooperación con la Justicia, quien ocupe la jefatura del Servicio de Cooperación con la Administración de Justicia y quien, con categoría funcionarial de los grupos A y B, designe aquella. </p>
+                  <p> 3. Serán órganos competentes para la instrucción del procedimiento y su posterior propuesta de resolución, en relación con cada una de las Modalidades de subvención, los siguientes: </p>
+                  <p> a) En la Modalidad 3 (MGJP), el órgano instructor competente para formular la propuesta de resolución será la persona titular de la Secretaría General de la Delegación Provincial respectiva. </p>
+                  <p> b) En la Modalidad 4 (RMH), el órgano instructor competente para formular la propuesta de resolución será la persona titular de la Dirección General de Instituciones y Cooperación con la Justicia. </p>
+                  <p> 4. Una vez completada la documentación y evaluadas las solicitudes por el órgano colegiado correspondiente, el órgano instructor, a la vista del expediente e informe emitido por aquel, formulará la propuesta de resolución provisional, debidamente motivada, que contendrá: </p>
+                  <p> a) Relación de interesados que, cumpliendo los requisitos exigidos según la declaración responsable de los mismos, obtienen puntuación suficiente para tener la consideración de beneficiarios provisionales, por orden de puntuación obtenida en la valoración previa y la cuantía de la subvención otorgable. </p>
+                  <p> A esta relación de beneficiarios provisionales se les requerirá para que aporten, en el plazo máximo de 10 días hábiles, la documentación acreditativa referida en el artículo 9 de la presente Orden y, en concreto, su aceptación a la subvención propuesta. </p>
+                  <p> b) Relación de interesados que, cumpliendo los requisitos exigidos, no obtienen puntuación suficiente en la valoración previa para tener la consideración de beneficiarios provisionales, por orden de puntuación. </p>
+                  <p> c) Relación de interesados que no cumplen con los requisitos exigidos y causas del incumplimiento. </p>
+                  <p> d) En su caso, relación de beneficiarios provisionales susceptibles de poder reformular la solicitud, ajustándose a los compromisos y condiciones de la subvención. </p>
+                  <p> Si existiese la relación referida anteriormente, los incluidos en la misma podrán plantear la oportuna reformulación si lo consideran conveniente, en los términos previstos en el artículo 15 de la presente Orden. </p>
+                  <p> 5. Una vez publicada la propuesta de resolución provisional e inmediatamente antes de redactar la propuesta de resolución definitiva, se procederá a dar trámite de audiencia a los interesados, en un plazo no inferior a diez días ni superior a quince, en el que podrán alegar y presentar los documentos que estimen pertinentes. No obstante, podrá prescindirse del referido trámite en los términos que prevé el artículo 84.4 de la citada Ley 30/1992, de 26 de noviembre. </p>
+                  <p> El resultado del trámite anterior dará lugar a la propuesta de resolución definitiva por el órgano instructor del procedimiento que, en su caso, tendrá en cuenta el informe de evaluación sobre las alegaciones planteadas. Dicha propuesta de resolución definitiva deberá expresar el solicitante o relación de solicitantes para los que se propone la denegación de la subvención y los motivos, relación de solicitantes para los que se propone la concesión de la subvención, y su cuantía, especificando la ponderación obtenida y los criterios de evaluación seguidos para efectuarla. </p>
+                  <p> 6. Para las Modalidades 1 (OSAF) y 2 (OSGC), la Dirección del Instituto Andaluz de la Administración Pública y la Secretaría General para la Administración Pública, respectivamente, examinarán a través de sus órganos administrativos las solicitudes, y una vez comprobada y completada la documentación preceptiva, formularán las correspondientes propuestas de resolución motivadas de acuerdo con los criterios de distribución establecidos para cada Modalidad en los artículos 30 y 32 de la presente Orden. </p>
+                  <p> Artículo 13. Resolución. </p>
+                  <p> 1. Una vez fiscalizada la propuesta de resolución definitiva, salvo en el supuesto de que se trate de la Modalidad 1 (OSAF), en el que la fiscalización previa se sustituirá por la toma de razón, se elevará con todo lo actuado a los siguientes órganos con competencia para resolver en función de la modalidad de subvención de que se trate: </p>
+                  <p> a) En la Modalidad 1 (OSAF), a la persona titular de la Dirección del Instituto Andaluz de Administración Pública. </p>
+                  <p> b) En la Modalidad 2 (OSGC), a la persona titular de la Secretaría General para la Administración Pública por delegación de la persona titular de la Consejería de Justicia y Administración Pública. </p>
+                  <p> c) En la Modalidad 3 (MGJP), a la persona titular de la respectiva Delegación Provincial de la Consejería de Justicia y Administración Pública por delegación de la persona titular de la misma. </p>
+                  <p> d) En la Modalidad 4 (RMH), a la persona titular de la Consejería de Justicia y Administración Pública. </p>
+                  <p> 2. La resolución de concesión de la subvención contendrá los siguientes extremos: </p>
+                  <p> a) Indicación del beneficiario. </p>
+                  <p> b) Cuantía de la subvención otorgada. </p>
+                  <p> c) Proyecto o actividad a realizar o comportamiento a adoptar. </p>
+                  <p> d) Aplicación presupuestaria del gasto y, si procede, su distribución plurianual, de acuerdo con lo previsto en el artículo 39 de la Ley General de la Hacienda Publica de la Comunidad Autónoma de Andalucía y el Decreto 44/1993, de 20 de abril, por el que se regulan los gastos de anualidades futuras. </p>
+                  <p> e) Porcentaje que sobre el presupuesto representa la subvención concedida. </p>
+                  <p> f) Plazo de ejecución del proyecto o actividad subvencionada con expresión del inicio del cómputo del mismo. </p>
+                  <p> g) Las condiciones que se impongan al beneficiario. </p>
+                  <p> h) Forma y secuencia del pago y los requisitos exigidos para su abono y, en el supuesto de contemplarse la posibilidad de efectuar anticipos de pago sobre la subvención concedida, la forma y cuantía de las garantías que, en su caso, habrá de aportar el beneficiario, todo ello de acuerdo con lo establecido en la presente Orden. </p>
+                  <p> i) Plazo y forma de justificación por parte del beneficiario del cumplimiento de las condiciones impuestas y de la consecución de los objetivos y finalidad para los que se concede la subvención así como de la aplicación de los fondos recibidos y del importe, procedencia y aplicación de otros fondos a las actividades subvencionadas, en el supuesto de que fuera financiada, además de con la subvención, con fondos propios u otras subvenciones o recursos. </p>
+                  <p> 3. La referida resolución será motivada fundamentándose la adjudicación de las subvenciones en los criterios establecidos en la presente Orden, debiendo hacer constar expresamente que la resolución es contraria a la estimación del resto de solicitudes. </p>
+                  <p> 4. El plazo máximo para dictar y notificar la resolución del procedimiento será de seis meses. Dicho plazo se computará a partir del día siguiente al de finalización del plazo para la presentación de solicitudes en el caso de las modalidades 3 (MGJP) y 4 (RMH), y a partir del día siguiente en que la solicitud haya tenido entrada en el registro del órgano competente para su tramitación para las Modalidades 1 (OSAF) y 2 (OSGC). El vencimiento del plazo máximo sin haberse notificado la resolución legitima a los interesados para entender desestimada por silencio administrativo la solicitud de concesión de la subvención, de acuerdo con lo dispuesto en el artículo 31.4 de la citada Ley 3/2004, de 28 de diciembre. </p>
+                  <p> 5. Las resoluciones de concesión de subvenciones pondrán fin a la vía administrativa, por lo que podrán ser recurridas potestativamente en reposición ante el mismo órgano que las hubiese dictado o ser impugnadas directamente ante el orden jurisdiccional contencioso-administrativo, de conformidad con el artículo 117 de la Ley 30/1992, de 26 de noviembre, de Régimen Jurídico de las Administraciones Públicas y del Procedimiento Administrativo Común, o el artículo 46 de la Ley 29/1998, de 13 de julio, reguladora de la Jurisdicción Contencioso-Administrativa. </p>
+                  <p> Artículo 14. Terminación convencional. </p>
+                  <p> 1. En todas las modalidades de subvenciones reguladas en la presente Orden, salvo en la modalidad 4 (RMH), el procedimiento de concesión de subvenciones podrá finalizarse mediante la celebración de un convenio con los solicitantes, debiendo respetarse en todo caso el objeto, condiciones y finalidad de las subvenciones, así como los criterios de valoración o distribución establecidos para cada una de ellas. A estos efectos, los solicitantes y el órgano competente para la instrucción del procedimiento podrán, en cualquier momento anterior a la propuesta de resolución, proponer un acuerdo referido a la cuantía de la subvención. </p>
+                  <p> 2. Si la propuesta mereciere la conformidad del órgano instructor y de todos los solicitantes en el procedimiento, se remitirá, con todo lo actuado, al órgano competente para resolver, quien lo hará con libertad de criterio, procediéndose, en su caso, a la correspondiente formalización, de acuerdo con lo establecido en la presente Orden. </p>
+                  <p> 3. Formalizado, en su caso, el acuerdo, éste producirá iguales efectos que la resolución del procedimiento, debiendo contener los extremos mínimos exigidos en el artículo 13.2 de la presente Orden. </p>
+                  <p> Artículo 15. Reformulación de solicitudes. </p>
+                  <p> 1. Cuando la subvención tenga por objeto la financiación de actividades a desarrollar por el solicitante y el importe de la subvención otorgable sea inferior al que figura en la solicitud presentada, se podrá instar del beneficiario la reformulación de su solicitud para ajustar los compromisos y condiciones a la subvención otorgable. </p>
+                  <p> 2. Una vez que la solicitud merezca la conformidad del órgano competente para su tramitación se remitirá con todo lo actuado al órgano competente para que dicte resolución. </p>
+                  <p> 3. En cualquier caso, la reformulación de solicitudes deberá respetar el objeto, condiciones y finalidad de la subvención, así como los criterios de valoración establecidos respecto de las solicitudes. </p>
+                  <p> Artículo 16. Notificación y publicación. </p>
+                  <p> 1. Todas las notificaciones se realizarán de acuerdo con lo previsto en el artículo 58 de la Ley 30/1992, de 26 de noviembre, de Régimen Jurídico de las Administraciones Públicas y del Procedimiento Administrativo Común. La práctica de dicha notificación se realizará en el lugar que el interesado, a tal efecto, haya indicado en su solicitud para las modalidades 1 (OSAF) y 2 (OSGC), salvo para las modalidades 3 (MGJP) y 4 (RMH) que, en los actos que deban notificarse de forma conjunta a todos los interesados y, en particular, los de requerimiento de subsanación, de propuesta de resolución, de trámite de audiencia y de resolución del procedimiento se publicarán en el tablón de anuncios de la Consejería de Justicia y Administración Pública y en sus respectivas Delegaciones Provinciales, así como en la página web de la Consejería http://www.juntadeandalucia.es/justiciayadministracionpublica, en los términos del artículo 59 de la citada Ley 30/1992, sustituyendo dicha publicación a la notificación personal y surtiendo sus mismos efectos. </p>
+                  <p> 2. En los supuestos anteriores, cuando la publicación se efectúe mediante tablón de anuncios y en la página web de la Consejería, se publicará simultáneamente en el Boletín Oficial de la Junta de Andalucía un extracto del contenido de la resolución o acto, indicando los tablones y el acceso a la página web de la Consejería donde se encuentra expuesto su contenido íntegro y, en su caso, el plazo que se computará a partir del día siguiente a aquel en que tenga lugar la publicación en dicho Boletín Oficial. </p>
+                  <p> 3. Para que las notificaciones administrativas puedan llevarse a cabo mediante medios o soportes informáticos y electrónicos, de conformidad con lo previsto en el apartado 3 del artículo 59 de la Ley 30/1992, de 26 de noviembre, de Régimen Jurídico de las Administraciones Públicas y del Procedimiento Administrativo Común, será preciso que el interesado haya señalado o consentido expresamente dicho medio de notificación como preferente, y que disponga del certificado reconocido de usuario, de acuerdo con lo previsto en su ar- </p>
+                  <p> tículo 13 del Decreto 183/2003, de 24 de junio, la notificación se entenderá practicada a todos los efectos legales en los términos del mencionado artículo de la citada Ley. </p>
+                  <p> Dicha manifestación podrá producirse tanto en el momento de iniciación del procedimiento como en cualquier otra fase de tramitación del mismo. </p>
+                  <p> Artículo 17. Obligaciones de los beneficiarios. </p>
+                  <p> De acuerdo con los artículos 29.1 de la Ley 3/2004, de 28 de diciembre, y 14 de la Ley 38/2003, de 17 de noviembre, son obligaciones del beneficiario: </p>
+                  <p> a) Cumplir el objetivo, ejecutar el proyecto, realizar la actividad o adoptar el comportamiento que fundamenta la concesión de las subvenciones. </p>
+                  <p> b) Justificar ante el órgano concedente o la entidad colaboradora, en su caso, el cumplimiento de los requisitos y condiciones, así como la realización de la actividad y el cumplimiento de la finalidad que determinen la concesión o disfrute de la subvención. </p>
+                  <p> c) Someterse a las actuaciones de comprobación, a efectuar por el órgano concedente o la entidad colaboradora, en su caso, a las de control financiero que corresponden a la Intervención General de la Junta de Andalucía, en relación con las subvenciones concedidas, a las previstas en la legislación del Tribunal de Cuentas y de la Cámara de Cuentas de Andalucía, así como cualesquiera otras de comprobación y control financiero que puedan realizar los órganos de control competentes, tanto nacionales como comunitarios, aportando cuanta información le sea requerida en el ejercicio de las actuaciones anteriores. </p>
+                  <p> d) Comunicar al órgano concedente o la entidad colaboradora la obtención de otras subvenciones, ayudas, ingresos o recursos que financien las actividades subvencionadas. </p>
+                  <p> Esta comunicación deberá efectuarse tan pronto como se conozca y, en todo caso, con anterioridad a la justificación de la aplicación dada a los fondos percibidos. </p>
+                  <p> e) Acreditar, salvo en los supuestos exceptuados referidos en el apartado 5 del artículo 4 de la presente Orden, con anterioridad a dictarse la propuesta de resolución de concesión, que se hallan al corriente en el cumplimiento de sus obligaciones tributarias y frente a la Seguridad Social, y que se hallan al corriente en el pago, en período ejecutivo, de cualquier otro ingreso de Derecho Público respecto de la Comunidad Autónoma de Andalucía, y sin perjuicio de lo establecido en la disposición adicional decimoctava de la Ley 30/1992, de 26 de noviembre, de Régimen Jurídico de las Administraciones Públicas y del Procedimiento Administrativo Común. </p>
+                  <p> La acreditación de hallarse al corriente en el pago, en período ejecutivo, de cualquier otro ingreso de Derecho Público respecto de la Comunidad Autónoma de Andalucía, se realizará en la forma que se determine por la Consejería de Economía y Hacienda. </p>
+                  <p> f) Disponer de los libros contables, registros diligenciados y demás documentos debidamente auditados en los términos exigidos por la legislación mercantil y sectorial aplicable al beneficiario en cada caso, así como los estados contables y registros específicos, con la finalidad de garantizar el adecuado ejercicio de las facultades de comprobación y control. </p>
+                  <p> g) Conservar los documentos justificativos de la aplicación de los fondos recibidos, incluidos los documentos electrónicos, en tanto puedan ser objeto de las actuaciones de comprobación y control. </p>
+                  <p> h) Hacer constar en toda información o publicidad que se efectúe de la actividad u objeto de la subvención que la misma está subvencionada por la Junta de Andalucía, indicando que la ha concedido, según sea el caso, la Consejería de Justicia y Administración Pública o el Instituto Andaluz de Administración Pública. </p>
+                  <p> i) Comunicar al órgano concedente de la subvención todos aquellos cambios de domicilio, a efectos de notificaciones, que se produzcan durante el período en que la ayuda es reglamentariamente susceptible de control. </p>
+                  <p> j) Proceder al reintegro de los fondos percibidos en los supuestos contemplados en el artículo 22 de la presente Orden. </p>
+                  <p> Artículo 18. Modificación de la resolución de concesión. </p>
+                  <p> 1. Conforme establecen los artículos 19.4 de la Ley General de Subvenciones y 110 de la Ley General de la Hacienda Pública de la Comunidad Autónoma de Andalucía, toda alteración de las condiciones tenidas en cuenta para la concesión de la subvención, y, en todo caso, la obtención concurrente de subvenciones otorgadas por otras Administraciones o entes públicos o privados, nacionales o internacionales, podrá dar lugar a la modificación de la resolución de concesión, en los siguientes casos: </p>
+                  <p> a) La obtención concurrente de otras aportaciones para la misma actividad, cuando su importe supere el coste de la actividad subvencionada. </p>
+                  <p> b) La no consecución íntegra de los objetivos. </p>
+                  <p> c) La realización parcial de la actividad. </p>
+                  <p> 2. Los criterios de graduación que se aplicarán a los incumplimientos reseñados en el apartado anterior serán los siguientes: </p>
+                  <p> a) En el caso de obtención concurrente de otras aportaciones, el exceso obtenido sobre el coste total en el que se haya incurrido por la realización de la actividad. </p>
+                  <p> b) Cuando no se consigan íntegramente los objetivos previstos, pero el cumplimiento se aproxime de modo significativo al cumplimiento total, se valorará el nivel de consecución y el importe de la subvención será proporcional a dicho nivel. Este nivel de consecución deberá alcanzar, al menos, un 75% de los objetivos previstos. </p>
+                  <p> c) Si la actividad subvencionable se compone de varias fases o actuaciones y se pueden identificar objetivos vinculados a cada una de ellas, el importe de la subvención será proporcional al volumen de las fases o actuaciones de la actividad en las que se hayan conseguido los objetivos previstos. </p>
+                  <p> 3. Sin perjuicio de la obligación contenida en la letra d) del artículo 17 de la presente Orden, el beneficiario de la subvención podrá solicitar del órgano concedente la modificación de la resolución de concesión, incluidos la ampliación de los plazos de ejecución y justificación, sin que en ningún caso pueda variarse el destino o finalidad de la subvención o ayuda pública. </p>
+                  <p> La solicitud de modificación deberá estar suficientemente justificada, presentándose de forma inmediata a la aparición de las circunstancias que la motiven, y con antelación a la finalización del plazo de ejecución y, en su caso, de justificación inicialmente concedido. </p>
+                  <p> 4. En el caso de existir modificaciones que supongan una disminución del importe total otorgado en la resolución de concesión, como consecuencia de la presentación por parte del beneficiario de la documentación justificativa que acredite la actividad subvencionada, y valoración y aceptación por el órgano competente, siempre y cuando no se altere el objeto del proyecto subvencionado, el importe de la subvención se minorará de oficio, si procede, en la parte proporcional a la justificación no presentada o no aceptada. </p>
+                  <p> 5. La minoración podrá conllevar el reintegro por la parte no justificada o no aceptada su justificación y abonada. </p>
+                  <p> La resolución por la que se acuerde la modificación de la resolución de concesión de la subvención será adoptada por el órgano concedente de la misma, previa instrucción del correspondiente expediente en el que junto a la propuesta razonada del órgano instructor se acompañarán los informes pertinentes y, según proceda, la solicitud o las alegaciones del beneficiario. </p>
+                  <p> Artículo 19. Subcontratación de las actividades subvencionadas por los beneficiarios. </p>
+                  <p> 1. De conformidad con lo establecido en la Ley 38/2003, de 17 de noviembre, General de Subvenciones, los beneficiarios podrán subcontratar hasta la totalidad de la actividad subvencionada, en el supuesto de que se trate de las modalidades de subvenciones 1 (OSAF) y 2 (OSGC) de la presente Orden. </p>
+                  <p> 2. Para el supuesto que se trate de las modalidades de subvenciones 3 (MGJP) y 4 (RMH), la actividad subvencionada que los beneficiarios podrán subcontratar con terceros no excederá del 70% del importe total de la subvención. </p>
+                  <p> 3. Las subcontrataciones se llevarán a cabo en la forma y con sujeción a los límites establecidos en el artículo 29 de la citada Ley 38/2003, de 17 de noviembre. </p>
+                  <p> En ningún caso podrán realizarse subcontrataciones con terceros que, aumentando el coste de la actividad, no aporten valor añadido al contenido de la misma. </p>
+                  <p> 4. Cuando la actividad concertada con tercero exceda del 20% del importe de la subvención y dicho importe sea superior a 60.000 euros, la celebración del correspondiente contrato deberá formalizarse mediante documento escrito y ser autorizado previamente. </p>
+                  <p> Para la obtención de dicha autorización, los beneficiarios deberán solicitarla junto a la solicitud de la subvención, mediante escrito dirigido al órgano competente para resolver la concesión, de conformidad con lo previsto en el artículo 13.1 de la presente Orden, quien resolverá una vez analizada la documentación y en el momento inmediatamente anterior a la propuesta provisional referida en el artículo 12.4 de la presente Orden. Se entenderá otorgada la autorización una vez haya transcurrido el citado trámite sin pronunciamiento alguno. </p>
+                  <p> 5. En ningún caso podrá fraccionarse un contrato con el objeto de disminuir la cuantía del mismo y eludir el cumplimiento de este requisito. </p>
+                  <p> Artículo 20. Forma y secuencia del pago. </p>
+                  <p> 1. El abono de las subvenciones previstas en la presente Orden se realizará en un único pago por importe total de las mismas, cuando su importe no supere los 6.050 euros. </p>
+                  <p> 2. Como regla general, si el importe de la subvención fuera superior a 6.050 euros, se abonará al beneficiario un primer pago anticipado de hasta el 75% del importe total de la subvención concedida, tras la firma de la resolución de concesión, abonándose el 25% restante una vez justificado el primer pago. No obstante, para el abono de este 25% restante, en el supuesto de que se trate de la modalidad 1 (OSAF) de subvenciones, y siempre que haya sido justificado el primer pago anticipado, será necesario haber finalizado la actividad subvencionada. </p>
+                  <p> 3. El importe definitivo de la subvención se liquidará aplicando al coste de la actividad efectivamente realizada por el beneficiario, conforme a la justificación presentada y aceptada, el porcentaje de financiación establecido en la Resolución de concesión, sin que, en ningún caso, pueda sobrepasar su cuantía el importe autorizado en la citada resolución. </p>
+                  <p> 4. No podrá proponerse el pago de subvenciones a beneficiarios que no hayan justificado en tiempo y forma las subvenciones concedidas con anterioridad con cargo al mismo programa presupuestario por la Administración Autonómica y sus Organismos Autónomos. </p>
+                  <p> No obstante lo anterior, de acuerdo con el artículo 32.2 de la Ley 3/2004, de 28 de diciembre, el órgano que, a tenor del artículo 104 de la Ley General de la Hacienda Pública de la Comunidad Autónoma de Andalucía y del artículo 13.1 de la presente Orden, sea titular de la competencia para la concesión de subvenciones, así como el competente para proponer el pago, podrán, mediante resolución motivada, exceptuar las limitaciones contenidas en este apartado cuando concurran circunstancias de especial interés social, sin que en ningún caso pueda delegarse esta competencia. </p>
+                  <p> 6. En los supuestos en que los beneficiarios sean deudores de la Hacienda de la Comunidad Autónoma de Andalucía por deudas vencidas, líquidas y exigibles, por los órganos competentes de la Consejería de Economía y Hacienda podrá acordarse la compensación con arreglo a lo previsto en el artículo 37.4 de la Ley General de la Hacienda Pública de la Comunidad Autónoma de Andalucía. </p>
+                  <p> 7. El pago se efectuará mediante transferencia bancaria a la cuenta que el solicitante haya indicado en la solicitud. </p>
+                  <p> Artículo 21. Justificación de las subvenciones. </p>
+                  <p> 1. La justificación del cumplimiento de las condiciones impuestas y de la consecución de los objetivos previstos en el acto de concesión de la subvención revestirá la forma de cuenta justificativa del gasto realizado. La rendición de la cuenta justificativa constituye un acto obligatorio del beneficiario o de la entidad colaboradora en su caso, en la que se deben incluir, bajo responsabilidad del declarante, los justificantes de gasto o cualquier otro documento con validez jurídica que permitan acreditar el cumplimiento del objeto de la subvención pública. </p>
+                  <p> 2. La cuenta deberá incluir declaración de las actividades realizadas que han sido financiadas con la subvención y su coste, con el desglose de cada uno de los gastos incurridos, y su presentación se realizará, como máximo, en el plazo de tres meses desde la finalización del plazo para la realización de la actividad. La justificación del 75% de la subvención concedida, cuando aquella fuera superior a 6.050 euros, se realizará dentro de los tres meses siguientes a la completa aplicación de dicha cuantía a la actuación subvencionada. </p>
+                  <p> A estos efectos, según la Modalidad de subvención concedida, el beneficiario deberá presentar ante la Consejería de Justicia y Administración Pública o el Instituto Andaluz de la Administración Pública en su caso, certificación justificativa en la que conste: </p>
+                  <p> a) Para la Modalidad 1 (OSAF): </p>
+                  <p> - Declaración de las acciones formativas realizadas con cargo a la subvención, así como su coste desglosado según los conceptos subvencionables enumerados en el artículo 29 de la presente Orden. </p>
+                  <p> b) Para la Modalidad 2 (OSGC): </p>
+                  <p> - Documentación original que acredite suficientemente la aplicación de las cuantías otorgadas al ejercicio de la acción sindical en los ámbitos del personal laboral y del personal vinculado administrativa o estatutariamente a la Administración de la Junta de Andalucía. </p>
+                  <p> - Escrito en el que se relacionen las facturas aportadas de acuerdo con los conceptos enumerados en el artículo 31 de la presente Orden. </p>
+                  <p> - Certificado del órgano competente de cada Organización Sindical en el que conste la recepción e inscripción en contabilidad de la subvención concedida con expresión del número del asiento practicado. </p>
+                  <p> c) Para la Modalidad 3 (MGJP): </p>
+                  <p> - Haber sido registrado en la contabilidad del Ayuntamiento el ingreso de la cantidad percibida, con indicación expresa del asiento contable practicado y la fecha del mismo. </p>
+                  <p> - La relación de gastos efectuados en la ejecución del proyecto tanto el correspondiente a la parte subvencionada, como en su caso, a la aportada por los Entidades Locales, en caso de ser aquella menor. </p>
+                  <p> d) Para la Modalidad 4 (RMH): </p>
+                  <p> - Haber sido registrado en la contabilidad del Ayuntamiento o Entidad el ingreso de la cantidad percibida, con indicación expresa del asiento contable practicado y la fecha del mismo. </p>
+                  <p> - La relación de gastos efectuados en la ejecución del proyecto, tanto el correspondiente a la parte subvencionada como, en su caso, a la aportada por los Entes Locales y entidades, en caso de ser aquella menor. </p>
+                  <p> 3. Con independencia de la Modalidad de subvención de que se trate, será requisito incluir en la certificación justificativa referida en el apartado anterior, bajo responsabilidad del declarante, los justificantes de gastos o cualquier otro documento con validez jurídica que acrediten el cumplimiento del objeto de la subvención, así como una declaración de las actividades realizadas que han sido financiadas con la subvención y su coste, junto con el desglose de cada uno de los gastos acumulados. </p>
+                  <p> 4. Los gastos se acreditarán mediante facturas y demás documentos de valor probatorio equivalente con validez en el tráfico jurídico mercantil o con eficacia administrativa, en original, sin perjuicio de lo establecido en el apartado 5 del presente artículo. La acreditación de los gastos también podrá efectuarse mediante facturas electrónicas, siempre que cumplan los requisitos exigidos para su aceptación en el ámbito tributario. </p>
+                  <p> En los casos en que los justificantes sean facturas, para que éstas tengan valor probatorio deberán cumplir con los requisitos de las facturas y de los documentos sustitutivos establecidos en el Capítulo II del Título I del Reglamento por el que se regulan las obligaciones de facturación contenidos en el Real Decreto 1496/2003, de 28 de noviembre, modificado por el Real Decreto 87/2005, de 31 de enero. </p>
+                  <p> 5. Los justificantes originales presentados se marcarán con una estampilla con el sello de la Consejería, indicando en la misma la subvención para cuya justificación han sido presentados y si el importe del justificante se imputa total o parcialmente a la subvención, debiéndose indicar en este último caso, además, la cuantía exacta que resulte afectada por la subvención. Dichos justificantes originales, una vez estampillados y, en su caso, autenticada la copia, serán devueltos al beneficiario para su custodia. </p>
+                  <p> 6. Cuando las actividades hayan sido financiadas, además de con la subvención, con fondos propios u otras subvenciones o recursos, deberá acreditarse en la justificación el importe, procedencia y aplicación de tales fondos a las actividades subvencionadas. </p>
+                  <p> 7. El importe de la documentación justificativa deberá corresponderse con el presupuesto aceptado de la actividad, aun en caso de que la cuantía de la subvención concedida fuese menor. </p>
+                  <p> 8. Siempre que se hubiera alcanzado el objetivo o finalidad perseguida, si no se justificara debidamente el total de la actividad subvencionada, deberá reducirse el importe de la subvención concedida, aplicando el porcentaje de financiación sobre la cuantía correspondiente a los justificantes no presentados o no aceptados. </p>
+                  <p> Artículo 22. Reintegro. </p>
+                  <p> 1. Además de los casos de nulidad y anulabilidad previstos en el artículo 36 de la Ley General de Subvenciones, y de acuerdo con el artículo 37 de la citada Ley, procederá también el reintegro de las cantidades percibidas y la exigencia del interés de demora correspondiente desde el momento del pago de la subvención hasta la fecha en que se acuerde la procedencia del reintegro, en los siguientes casos: </p>
+                  <p> a) Obtención de la subvención falseando las condiciones requeridas para ello u ocultando aquellas que lo hubieran impedido. </p>
+                  <p> b) Incumplimiento total o parcial del objetivo, de la actividad, del proyecto o la no adopción del comportamiento que fundamentan la concesión de la subvención. </p>
+                  <p> c) Incumplimiento de la obligación de justificación o la justificación insuficiente. </p>
+                  <p> d) Incumplimiento de la obligación de adoptar las medidas de difusión a las que se refiere el artículo 17.h) de la presente Orden. </p>
+                  <p> e) Resistencia, excusa, obstrucción o negativa a las actuaciones de comprobación y control financiero previstas en el Título VIII LGHP y en los artículos 14 y 15 de la Ley General de Suvbenciones, así como el incumplimento de las obligaciones contables, registrales o de conservación de documentos cuando de ello se derive la imposibilidad de verificar el empleo dado a los fondos percibidos, el cumplimiento del objetivo, la realidad y regularidad de las actividades subvencionadas, o la concurrencia de subvenciones, ayudas, ingresos o recursos para la misma finalidad, procedentes de cualesquiera Administraciones o entes públicos o privados, nacionales, de la Unión Europea o de organismos internacionales. </p>
+                  <p> f) Incumplimiento de las obligaciones impuestas por la Administración a las entidades colaboradoras y beneficiarios, así como de los compromisos por éstos asumidos, con motivo de la concesión de la subvención, siempre que afecten o se refieran al modo en que se han de conseguir los objetivos, realizar la actividad, ejecutar el proyecto o adoptar el comportamiento que fundamenta la concesión de la subvención. </p>
+                  <p> g) Incumplimiento de las normas medioambientales al realizar el objeto de la subvención o ayuda. En este supuesto, la tramitación del expediente de reintegro exigirá previamente que haya recaído resolución administrativa o judicial firme, en la que quede acreditado el incumplimiento por parte del beneficiario de las medidas en materia de protección del medio ambiente a las que viniere obligado. </p>
+                  <p> h) Incumplimiento de las obligaciones impuestas por la Administración a las entidades colaboradoras y beneficiarios, así como de los compromisos por éstos asumidos, con motivo de la concesión de la subvención, distintos de los anteriores, cuando de ello se derive la imposibilidad de verificar el empleo dado a los fondos percibidos, el cumplimiento del objetivo, la realidad y regularidad de las actividades subvencionadas, o la concurrencia de subvenciones, ayudas, ingresos o recursos para la misma finalidad, procedentes de cualesquiera Administraciones o entes públicos o privados, nacionales, de la Unión Europea o de organismos internacionales. </p>
+                  <p> i) La adopción, en virtud de lo establecido en los artículos 87 a 89 del Tratado de la Unión Europea, de una decisión de la cual se derive una necesidad de reintegro. </p>
+                  <p> 2. Cuando el cumplimiento por el beneficiario o, en su caso, entidad colaboradora se aproxime de modo significativo al cumplimiento total y se acredite por éstos una actuación inequívocamente tendente a la satisfacción de sus compromisos, la cantidad a reintegrar vendrá determinada una vez analizada la memoria explicativa que exprese el grado de cumplimiento alcanzado con la realización de la actividad en relación al objeto de la presente Orden. </p>
+                  <p> 3. En el supuesto de que el importe de las subvenciones resulte ser de tal cuantía que, aisladamente o en concurrencia con otras subvenciones, ayudas, ingresos o recursos, supere el coste de la actividad subvencionada, procederá el reintegro del exceso obtenido sobre el coste de la actividad subvencionada, así como la exigencia del interés de demora correspondiente. </p>
+                  <p> 4. Las cantidades a reintegrar tendrán la consideración de ingresos de derecho público, resultando de aplicación para su cobranza lo previsto en la Ley General de Hacienda Pública. De conformidad con lo establecido en el artículo 33.a) de la Ley 3/2004, de 28 de diciembre, el interés de demora aplicable en materia de subvenciones será el interés legal del dinero incrementado en un 25%, salvo que la Ley de Presupuestos Generales del Estado establezca otro diferente. Los procedimientos para la exigencia del reintegro de las subvenciones tendrán siempre carácter administrativo. </p>
+                  <p> Artículo 23. Procedimiento de reintegro. </p>
+                  <p> 1. El órgano competente para el otorgamiento de la subvención lo es también para la tramitación y resolución, en su caso, del correspondiente expediente de reintegro, de acuerdo con las siguientes reglas: </p>
+                  <p> a) El procedimiento se inicia de oficio por acuerdo del órgano competente, debiendo reconocer, en todo caso, a las personas interesadas el derecho a efectuar alegaciones, proponer medios de prueba y el preceptivo trámite de audiencia previo a la propuesta de resolución. </p>
+                  <p> b) Será competente para iniciar y resolver el procedimiento de reintegro el mismo órgano que sea competente para el otorgamiento de la modalidad de subvención de que se trate, de acuerdo con lo previsto en el artículo 13.1 de la presente Orden. </p>
+                  <p> c) De conformidad con lo establecido en el artículo 33.c) de la citada Ley 3/2004, de 28 de diciembre, el plazo máximo para resolver y notificar la resolución del procedimiento de reintegro será de doce meses, a contar desde la fecha del acuerdo de iniciación. El vencimiento del plazo máximo establecido sin que se haya dictado y notificado resolución expresa producirá la caducidad del procedimiento. </p>
+                  <p> d) Si como consecuencia de reorganizaciones administrativas se modifica la denominación del órgano o entidad concedente, o la competencia para la concesión de las subvenciones o ayudas de la línea o programa se atribuye a otro órgano, la competencia para acordar la resolución y el reintegro corresponderá al órgano o entidad que sea titular del programa o línea de subvenciones en el momento de adoptarse el acuerdo de reintegro. </p>
+                  <p> e) La resolución de reintegro será notificada al interesado indicándole lugar, forma y plazo para realizar el ingreso; advirtiéndole que, en el caso de no efectuar el reintegro en plazo, se aplicará procedimiento de recaudación en vía de apremio o, en los casos que sea pertinente, de compensación. </p>
+                  <p> Transcurrido el plazo de ingreso voluntario sin que se materialice el reintegro, el órgano concedente de la subvención dará traslado del expediente a la Consejería de Economía y Hacienda para que inicie el procedimiento de apremio. </p>
+                  <p> Artículo 24. Publicidad de las subvenciones concedidas. </p>
+                  <p> 1. Las subvenciones concedidas por la Consejería de Justicia y Administración Pública y el Instituto Andaluz de Administración Pública se publicarán en el Boletín Oficial de la Junta de Andalucía con expresión de la convocatoria, el programa y crédito presupuestario al que se imputen, beneficiario, cantidad concedida y finalidad o finalidades de la subvención. </p>
+                  <p> 2. No será necesaria la publicidad de las subvenciones concedidas en los supuestos contemplados en el apartado 3 del artículo 18 de la Ley 38/2003, de 17 de noviembre, General de Subvenciones, de conformidad con lo dispuesto en el artículo 32.1 de la Ley 3/2004, de 28 de diciembre. </p>
+                  <p> Artículo 25. Información de carácter general. </p>
+                  <p> 1. La información que la Consejería de Justicia y Administración Pública y el Instituto Andaluz de Administración Pública pondrán a disposición del ciudadano en Internet, en su página web http://www.juntadeandalucia.es/justiciayadministracionpublica, a la que se podrá acceder desde el portal de la Junta de Andalucía, relativa a los procedimientos de subvenciones, deberá contener para cada procedimiento, al menos: </p>
+                  <p> a) Denominación del procedimiento. </p>
+                  <p> b) Objeto y finalidad del procedimiento. </p>
+                  <p> c) Organo que tramita, Organo que resuelve y Organo titular de la competencia. </p>
+                  <p> d) Normativa aplicable. </p>
+                  <p> e) Requisitos previos que debe cumplir el interesado. </p>
+                  <p> f) Documentación que debe presentar el interesado. </p>
+                  <p> g) Modelos de formularios que sean de aplicación. </p>
+                  <p> h) Plazo máximo de notificación de la resolución. </p>
+                  <p> i) Sentido del silencio. </p>
+                  <p> 2. La difusión de información o documentación a través de redes abiertas de telecomunicación no eximirá del deber de publicar en los diarios oficiales correspondientes los actos jurídicos y disposiciones normativas cuando así esté legalmente establecido. </p>
+                  <p> Artículo 26. Información de carácter particular. </p>
+                  <p> 1. Las personas solicitantes de una subvención a otorgar por la Consejería de Justicia y Administración Pública o el Instituto Andaluz de Administración Pública podrán consultar en todo momento la información específica de la tramitación de su solicitud a través de medios telemáticos en su página web http://www.juntadeandalucia.es/justiciayadministracionpublica, a la que se podrá acceder desde el portal de la Junta de Andalucía. </p>
+                  <p> 2. Para poder acceder a esta información la persona solicitante de la subvención deberá disponer de un certificado reconocido de usuario, de acuerdo con lo establecido en el artículo 13 del Decreto 183/2003, de 24 de junio. </p>
+                  <p> Artículo 27. Aceptación. </p>
+                  <p> 1. Si como resultado de la evaluación, el interesado apareciese como beneficiario en la propuesta provisional objeto de publicación, se le requerirá a éste para que comunique su aceptación a la propuesta en el plazo máximo de 15 días naturales, entendiéndose en caso contrario aceptada la misma. </p>
+                  <p> 2. La subvención se tendrá por aceptada: </p>
+                  <p> a) Cuando se conceda en los importes propuestos o solicitados sin que se comunique el desistimiento por el solicitante. </p>
+                  <p> b) Transcurrido el plazo para reformular la solicitud sin que se comunique el desistimiento por el solicitante. </p>
+                  <p> Artículo 28. Responsabilidad y régimen sancionador. </p>
+                  <p> El régimen sancionador en materia de subvenciones será el previsto en el Título IV de la Ley 38/2003, de 17 de noviembre, General de Subvenciones. </p>
+                  <p> TITULO II </p>
+                  <p> DISPOSICIONES ESPECIFICAS </p>
+                  <p> CAPITULO I </p>
+                  <p> Modalidad 1. Subvenciones a Organizaciones Sindicales para organización de acciones formativas (OSAF) </p>
+                  <p> Artículo 29. Conceptos subvencionables. </p>
+                  <p> Las subvenciones que se concedan a las Organizaciones Sindicales al amparo de la presente Orden únicamente podrán destinarse a la financiación de los gastos generados por la ejecución de acciones formativas dirigidas a personal al servicio de la Administración General de la Junta de Andalucía y de la Administración de Justicia cuya gestión corresponde a la Comunidad Autónoma, y por los siguientes conceptos subvencionables: </p>
+                  <p> a) Retribución del profesorado. </p>
+                  <p> b) Adquisición de material didáctico y de apoyo a la formación, que en ningún caso tendrá carácter de gastos de inversión. </p>
+                  <p> c) Contratación de la prestación de servicios por agentes externos, directamente imputables a la organización de las acciones formativas subvencionadas. </p>
+                  <p> d) Comunicación y difusión de las actividades. </p>
+                  <p> e) Arrendamientos de aulas y locales en que se desarrollen las concretas actividades subvencionadas, y únicamente por la cantidad imputable a éstas. </p>
+                  <p> Artículo 30. Criterios de distribución. </p>
+                  <p> 1. La cuantía de la subvención concedida a cada organización sindical se determinará en función del número de representantes con que cuente, a 31 de diciembre del año anterior, con arreglo a los resultados obtenidos en las últimas elecciones sindicales celebradas en el ámbito de los empleados públicos al servicio de la Administración General de la Junta de Andalucía y del personal al servicio de la Administración de Justicia cuya gestión corresponde a la Comunidad Autónoma. </p>
+                  <p> 2. La concreta asignación de los fondos se efectuará mediante la distribución, de manera directamente proporcional al referido número de representantes, del total de los créditos disponibles en las aplicaciones presupuestarias correspondientes. </p>
+                  <p> CAPITULO II </p>
+                  <p> Modalidad 2. Subvenciones a Organizaciones Sindicales para la financiación de sus gastos corrientes (OSGC) </p>
+                  <p> Artículo 31. Conceptos subvencionables. </p>
+                  <p> Las subvenciones que se concedan a las Organizaciones Sindicales al amparo de la presente Orden únicamente podrán destinarse a la financiación de los gastos corrientes correspondientes al ejercicio en el que se solicita la subvención, enumerados en el presente artículo: </p>
+                  <p> a) Arrendamiento de sedes. </p>
+                  <p> b) Reparaciones, mantenimiento y conservación de instalaciones sindicales y equipos de oficina. </p>
+                  <p> c) Material de oficina y suministros. </p>
+                  <p> d) Comunicaciones, publicidad y propaganda. </p>
+                  <p> e) Transportes. </p>
+                  <p> f) Reuniones y conferencias. </p>
+                  <p> g) Gastos jurídicos. </p>
+                  <p> h) Servicios prestados por personas ajenas a la Organización Sindical. </p>
+                  <p> i) Gastos de manutención, estancia y desplazamiento originados por la actividad sindical. </p>
+                  <p> Artículo 32. Criterios de distribución. </p>
+                  <p> La cuantía de la subvención concedida a cada organización sindical se determinará en función de los siguientes criterios: </p>
+                  <p> a) El número de representantes obtenidos en las últimas elecciones sindicales celebradas en los ámbitos del personal laboral y del personal vinculado administrativa o estatutariamente a la Administración de la Junta de Andalucía. </p>
+                  <p> b) Su presencia en la Mesa General y Mesas Sectoriales de Negociación de la Administración de la Junta de Andalucía. </p>
+                  <p> CAPITULO III </p>
+                  <p> Modalidad 3. Subvenciones a los Ayuntamientos andaluces para la mejora de la infraestructura y gastos de equipamiento de los Juzgados de Paz (MGJP) </p>
+                  <p> Artículo 33. Conceptos subvencionables y cuantía de la subvención. </p>
+                  <p> 1. Podrán ser objeto de esta modalidad de subvenciones las actuaciones encaminadas a mejorar la infraestructura, así como el mobiliario y los enseres de los Juzgados de Paz cuyas carencias impidan o dificulten la adecuada realización de las funciones que legalmente tienen atribuidas y, preferentemente, las relativas a: </p>
+                  <p> a) Adquisición de bienes inventariables, excluidos los de carácter informático. </p>
+                  <p> b) Adquisición de equipamiento para las dependencias y edificios destinados a la prestación de las funciones de los Juzgados de Paz. </p>
+                  <p> c) Obras de reforma, reparación y conservación de las dependencias y edificios destinados a la prestación de las funciones de los Juzgados de Paz y, en su caso, las distintas fases de los proyectos de ejecución de tales obras. </p>
+                  <p> 2. En esta modalidad de subvenciones podrá concederse hasta un máximo del ochenta por ciento del coste presupuestado en la solicitud presentada por el Ayuntamiento. No obstante, cuando el importe de la subvención solicitada por el Ayuntamiento y el coste de la actuación presupuestado en la solicitud sea inferior a 6.050 euros, la concesión de la subvención podrá alcanzar el cien por cien de la cantidad solicitada. </p>
+                  <p> 3. En cualquier caso, los bienes que hayan sido objeto de subvención deberán mantenerse y dedicarse a los fines previstos en la solicitud y concesión durante un período mínimo de 5 años, en caso de bienes inscribibles en un registro público, o de 2 años, para el resto de bienes. En el caso de bienes inscribibles en un registro público, deberá hacerse constar en la escritura esta circunstancia, así como el importe de la subvención concedida, debiendo ser objeto estos extremos de inscripción en el registro público correspondiente, sin perjuicio de lo dispuesto en el artículo 31.5 de la Ley 38/2003, de 17 de noviembre, General de Subvenciones. </p>
+                  <p> Artículo 34. Criterios de valoración. </p>
+                  <p> Las solicitudes presentadas por los Ayuntamientos serán evaluadas de acuerdo con los criterios objetivos que se enumeran a continuación: </p>
+                  <p> a) La población del municipio, valorándose de forma inversa al número de habitantes de derecho hasta un máximo del 20% de la puntuación total. </p>
+                  <p> b) La superficie de las dependencias o edificios destinados a las funciones propias del Juzgado de Paz en relación con la superficie total destinada por el Ayuntamiento a oficinas. Se valorará hasta un máximo del 20% de la puntuación total. </p>
+                  <p> c) No haber recibido con anterioridad otras subvenciones o ayudas públicas para la finalidad prevista en la presente Orden provenientes de la Administración de la Junta de Andalucía. Se valorará hasta un máximo del 20% de la puntuación total. </p>
+                  <p> d) El esfuerzo inversor del Ayuntamiento solicitante medido en función de la proporción existente entre los gastos destinados a inversión respecto al total de gastos, conforme a los datos que arroje el último presupuesto liquidado de la entidad. Se valorará hasta un máximo del 15% de la puntuación total. </p>
+                  <p> e) La menor capacidad presupuestaria del municipio. Se valorará hasta un máximo del 10% de la puntuación total. </p>
+                  <p> f) El nivel de equipamientos básicos del Juzgado de Paz, que se valorará hasta un máximo del 5% de la puntuación total. </p>
+                  <p> g) Las obras de reforma que conlleven la accesibilidad y la eliminación de barreras arquitectónicas a las personas con discapacidad en los Juzgados de Paz, conforme a lo dispuesto en el Decreto 72/1992, de 5 de mayo, por el que se aprueban las normas técnicas para la accesibilidad y la eliminación de barreras arquitectónicas, urbanísticas y en el transporte en Andalucía. Esta circunstancia se valorará con un 5% de la puntuación total. </p>
+                  <p> h) La ponderación en el grado de compromiso medioambiental del solicitante, que se valorará hasta un máximo del 5% de la puntuación total. </p>
+                  <p> CAPITULO IV </p>
+                  <p> Modalidad 4. Subvenciones a Ayuntamientos y entidades sin ánimo de lucro para desarrollar las medidas previstas en el Decreto 334/2003, de 2 de diciembre, para la coordinación de actuaciones en torno a la recuperación de la Memoria Histórica y el reconocimiento institucional y social de las personas desaparecidas durante la Guerra Civil y la Posguerra (RMH) </p>
+                  <p> Artículo 35. Conceptos subvencionables y cuantía de la subvención. </p>
+                  <p> 1. Se podrán conceder subvenciones en esta modalidad para las siguientes actuaciones: </p>
+                  <p> a) El levantamiento de monolitos u otros monumentos conmemorativos, llevados a cabo por los Ayuntamientos andaluces, de los hechos que dieran lugar a la desaparición de personas causadas por las fuerzas sublevadas durante la Guerra Civil española y la posterior Dictadura Franquista en los lugares de enterramiento de esas víctimas, y, cuando no sea posible localizarlo con exactitud, constando datos históricos, en una zona próxima que determine el Ayuntamiento. </p>
+                  <p> b) La elaboración y edición de libros y otras publicaciones que divulguen los hechos y circunstancias objeto de la recuperación de la Memoria Histórica, la celebración de jornadas, seminarios u otras actividades divulgativas o de estudio, sobre los hechos y circunstancias relativos a las desapariciones de personas, causadas por las fuerzas sublevadas durante la Guerra Civil española y la posterior Dictadura Franquista. Todas las actuaciones anteriores podrán llevarse a cabo por los Ayuntamientos andaluces o entidades sin ánimo de lucro. </p>
+                  <p> 2. En la actuación de la modalidad de subvenciones a Ayuntamientos andaluces para erigir monolitos o monumentos conmemorativos podrá concederse hasta un máximo del 100% del coste presupuestado en la solicitud presentada por el Ayuntamiento, sin que en ningún caso la cuantía de la subvención concedida pueda ser superior a 5.000 euros. </p>
+                  <p> 3. Para la actuación de la modalidad de subvenciones a publicaciones o actividades de estudio o divulgativas, los Ayuntamientos andaluces y las entidades sin ánimo de lucro podrán ser subvencionados por una cantidad dineraria que alcance hasta el total del coste de la actividad o publicación presupuestada con el límite máximo de 6.000 euros. </p>
+                  <p> Artículo 36. Criterios de valoración. </p>
+                  <p> 1. En la modalidad de subvenciones dirigidas al levantamiento de monolitos u otros monumentos conmemorativos, las solicitudes serán evaluadas de acuerdo con los criterios objetivos que se enumeran a continuación: </p>
+                  <p> a) La existencia de documentos y estudios históricos que avalen la certeza de los hechos que ocasionaron la desaparición de personas y el lugar de los enterramientos. Se valorará hasta un máximo del 50% de la puntuación total. </p>
+                  <p> b) La trascendencia social de los hechos objeto de la actuación conmemorativa. Se valorará hasta un máximo del 20% de la puntuación total. </p>
+                  <p> c) No haber recibido con anterioridad otras subvenciones o ayudas públicas para la finalidad de la recuperación de la Memoria Histórica provenientes de la Administración de la Junta de Andalucía. Se valorará hasta un máximo del 20% de la puntuación total. </p>
+                  <p> d) La menor capacidad presupuestaria del municipio. Se valorará hasta un máximo del 5% de la puntuación total. </p>
+                  <p> e) La ponderación en el grado de compromiso medioambiental del solicitante, que se valorará hasta un máximo del 5% de la puntuación total. </p>
+                  <p> 2. En las modalidades de subvenciones tendentes a financiar publicaciones, libros y actividades divulgativas o de estudio, la valoración de las solicitudes se realizará conforme a los siguientes criterios objetivos: </p>
+                  <p> a) La mayor difusión de los hechos y estudios relativos a la recuperación de la Memoria Histórica que tenga la actuación subvencionable, teniendo en consideración la incorporación de las tecnologías de la información. Se valorará hasta un máximo del 30% de la puntuación total. </p>
+                  <p> b) El interés social del proyecto. Se valorará hasta un máximo del 25% de la puntuación total. </p>
+                  <p> c) El mayor número de actividades de esta tipología que hayan realizado con anterioridad o en los que hayan participado. Se valorará hasta un máximo del 25% de la puntuación total. </p>
+                  <p> d) No haber recibido con anterioridad subvenciones o ayudas públicas para la finalidad de la recuperación de la Memoria Histórica concedidas por la Administración de la Junta de Andalucía. Se valorará hasta un máximo del 15% de la puntuación total. </p>
+                  <p> e) La ponderación en el grado de compromiso medioambiental del solicitante, que se valorará hasta un máximo del 5% de la puntuación total. </p>
+                  <p> Disposición Adicional Unica. Plazo de solicitud. </p>
+                  <p> El plazo de presentación de solicitudes para el año 2007 será de un mes, contado a partir del día siguiente de la publicación en el Boletín Oficial de la Junta de Andalucía de la presente Orden. </p>
+                  <p> Disposición Transitoria Unica. Régimen transitorio. </p>
+                  <p> La presente Orden no será de aplicación hasta el año 2008 para las Modalidades 1 (OSAF) y 2 (OSGC), salvo en lo establecido en los artículos 10.1.a), 11.2 y 16.2, en relación a la posibilidad de realizar la solicitud, tramitación y notificación por medios telemáticos. </p>
+                  <p> Disposición Derogatoria. </p>
+                  <p> Quedan derogadas cuantas disposiciones de igual o inferior rango en lo que se opongan o contradigan lo dispuesto en la presente Orden. </p>
+                  <p> Disposición Final Unica. Entrada en vigor. </p>
+                  <p> La presente Orden entrará en vigor, para las Modalidades 3 (MGJP) y 4 (RMH), el día siguiente al de su publicación en el Boletín Oficial de la Junta de Andalucía, y para las Modalidades 1 (OSAF) y 2 (OSGC), el 1 de enero de 2008. </p>
+                  <p> Sevilla, 8 de marzo de 2007 </p>
+                  <p> MARIA JOSE LOPEZ GONZALEZ </p>
+                  <p> Consejera de Justicia y Administración Pública </p>
+                  <a name="descargas"/>
+                  <a title="Descargar PDF de la&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;disposición"
+                     class="&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;item_pdf_disposicion"
+                     href="http://www.juntadeandalucia.es/boja/2007/73/d2.pdf"
+                     target="_blank">
+							Descargar PDF </a>
+                  <!--+ |end content-main-disposition +-->
+      <div class="boja_nav">
+                     <a href="http://www.juntadeandalucia.es/boja/2007/73/1" title="Ir a la disposición anterior" class="anterior">
+                        <span>
+                           <img src="http://www.juntadeandalucia.es/themes/images/paginado_antes.gif" alt="anterior" title="Anterior"/>
+                           <em>Disposición anterior</em>
+                        </span>
+                     </a>
+                     <a href="http://www.juntadeandalucia.es/boja/2007/73/3" title="Ir a la disposición siguiente" class="siguiente">
+                        <span>
+                           <img src="http://www.juntadeandalucia.es/themes/images/paginado_despues.gif" alt="siguiente" title="Siguiente"/>
+                           <em>Disposición siguiente</em>
+                        </span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div id="columna" class="grid_5 omega">
+               <p class="titular">
+               BOJA nº
+               73
+               de 
+               13/4/2007</p>
+               <!--+ |end column-main-heading +-->
+      <ul class="listado_ordenado">
+                  <li class="actual">
+                     <a href="http://www.juntadeandalucia.es/boja/2007/73/s1" title="1. Disposiciones generales">
+                        <span class="c_000000">1. </span>Disposiciones generales</a>
+                  </li>
+                  <li>
+                     <a href="http://www.juntadeandalucia.es/boja/2007/73/s2.1" title="2.1. Nombramientos, situaciones e incidencias">
+                        <span class="c_000000">2.1. </span>Nombramientos, situaciones e incidencias</a>
+                  </li>
+                  <li>
+                     <a href="http://www.juntadeandalucia.es/boja/2007/73/s2.2" title="2.2. Oposiciones y concursos">
+                        <span class="c_000000">2.2. </span>Oposiciones y concursos</a>
+                  </li>
+                  <li>
+                     <a href="http://www.juntadeandalucia.es/boja/2007/73/s3" title="3. Otras disposiciones">
+                        <span class="c_000000">3. </span>Otras disposiciones</a>
+                  </li>
+                  <li>
+                     <a href="http://www.juntadeandalucia.es/boja/2007/73/s4" title="4. Administración de justicia">
+                        <span class="c_000000">4. </span>Administración de justicia</a>
+                  </li>
+                  <li>
+                     <a href="http://www.juntadeandalucia.es/boja/2007/73/s5.1"
+                        title="5.1. Subastas y concursos de obras, suministros y servicios públicos">
+                        <span class="c_000000">5.1. </span>Subastas y concursos de obras, suministros y servicios públicos</a>
+                  </li>
+                  <li>
+                     <a href="http://www.juntadeandalucia.es/boja/2007/73/s5.2" title="5.2. Otros anuncios">
+                        <span class="c_000000">5.2. </span>Otros anuncios</a>
+                  </li>
+               </ul>
+   
+               <ul class="listado_pdf">
+                  <li class="item">
+                     <a target="_blank" title="Descargar el boletín completo en PDF"
+                        href="http://www.juntadeandalucia.es/boja/2007/73/boletin.73.pdf">Descargar boletín nº 
+                    73 completo
+                  </a>
+                     <!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<ul>
+   <li class="item"><a title="Descargar fascículo" target="_blank" href="http://www.juntadeandalucia.es/boja/2007/73/fasciculo-1.pdf"> 
+         	        Descargar fascículo 1</a></li>
+   <li class="item"><a title="Descargar fascículo" target="_blank" href="http://www.juntadeandalucia.es/boja/2007/73/fasciculo-2.pdf"> 
+         	        Descargar fascículo 2</a></li>
+</ul></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      
+<div id="pie">
+         <script type="text/javascript" src="http://www.juntadeandalucia.es/themes/urchin.js" space="preserve"> </script>
+         <script type="text/javascript" space="preserve">urchinTracker();</script>
+         <div class="container js">
+            <div class="grid_8 social">
+               <h2>El portal de la Junta en:</h2>
+               <ul class="listado_social">
+                  <li>
+                     <a class="ico_social_30 twitter" title="El portal de la Junta en Twitter" href="http://twitter.com/PortalJunta" shape="rect">
+                        <img alt="Icono de Twitter" src="http://www.juntadeandalucia.es/boja/themes/images/social/30_g_twitter.png"/>
+                        <span>Twitter</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a class="ico_social_30 facebook" title="El portal de la Junta en Facebook" href="http://www.facebook.com/pages/Portal-Junta-de-Andalucía/224442897628994" shape="rect">
+                        <img alt="Icono de Facebook" src="http://www.juntadeandalucia.es/boja/themes/images/social/30_g_facebook.png"/>
+                        <span>Facebook</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a class="ico_social_30 rss" title="El portal de la Junta en Fuentes Web" href="http://www.juntadeandalucia.es/informacion/fuentesweb.html" shape="rect">
+                        <img alt="Icono de RSS" src="http://www.juntadeandalucia.es/boja/themes/images/social/30_g_rss.png"/>
+                        <span>Rss</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a class="ico_social_30 da" title="El portal de la Junta de Datos abiertos" href="http://www.juntadeandalucia.es/datosabiertos/portal.html" shape="rect">
+                        <img alt="Icono de Datos Abiertos" src="http://www.juntadeandalucia.es/boja/themes/images/social/30_g_da.png"/>
+                        <span>Datos abiertos</span>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+            <div class="grid_8 enlaces">
+               <ul>
+                  <li>
+                     <a title="Lista de correos" href="http://www.juntadeandalucia.es/informacion/lista.html" shape="rect">Lista de correos</a>
+                  </li>
+                  <li>
+                     <a title="Accesibilidad" href="http://www.juntadeandalucia.es/informacion/accesibilidad.html" shape="rect">Accesibilidad</a>
+                  </li>
+                  <li>
+                     <a title="Fuentes web" href="http://www.juntadeandalucia.es/informacion/fuentesweb.html" shape="rect">Fuentes web</a>
+                  </li>
+                  <li>
+                     <a title="Informacion legal" href="http://www.juntadeandalucia.es/informacion/legal.html" shape="rect">Legal</a>
+                  </li>
+                  <li>
+                     <a accesskey="8" title="Mapa del sitio" href="http://www.juntadeandalucia.es/informacion/mapaweb.html" shape="rect">Mapa del sitio</a>
+                  </li>
+                  <li>
+                     <a accesskey="9" title="Contacto" href="http://www.juntadeandalucia.es/informacion/contacto.html" shape="rect">Contacto</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div class="clear">
+            <hr/>
+         </div>
+      </div>
+</body>
+</html>
